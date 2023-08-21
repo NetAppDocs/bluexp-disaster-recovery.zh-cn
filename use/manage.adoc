@@ -1,0 +1,108 @@
+---
+sidebar: sidebar 
+permalink: use/manage.html 
+keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter 
+summary: NetApp BlueXP灾难恢复是一种基于云的灾难恢复服务、可自动执行灾难恢复工作流。 
+---
+= 管理站点、计划、数据存储库和虚拟机信息
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/use/
+
+
+[role="lead"]
+您可以快速浏览所有灾难恢复资源、也可以详细了解每个资源：
+
+* 信息板
+* 站点
+* 复制计划
+* 资源组
+
+
+
+
+== 查看BlueXP灾难恢复信息板
+
+使用信息板可一目了然地查看所有BlueXP灾难恢复资源和活动。活动窗格显示最新作业操作活动。
+
+.步骤
+. 从BlueXP左侧导航栏中、选择*保护*>*灾难恢复*。
+. 从顶部菜单中，选择*"Daard*(仪表板*)"。
+. 在信息板中浏览所有灾难恢复计划、合规性、vCenter、虚拟机和资源组。
+. 要查看资源、请选择右侧的箭头。
+. 要查看所有资源组，请选择*查看资源组*。
+
+
+
+
+== 管理vCenter站点
+
+您可以编辑vCenter站点名称和站点类型(内部或AWS)。
+
+.步骤
+. 从顶部菜单中选择*sites*。
+. 选择*Actions*选项 image:../use/icon-horizontal-dots.png["BlueXP灾难恢复服务中的\"Actions\"菜单图标"]  并选择*Edit*。
+. 编辑vCenter站点名称和位置。
+
+
+
+
+== 管理复制计划
+
+您可以禁用、启用和删除复制计划。
+
+* 如果要临时暂停复制计划、您可以将其禁用、然后再启用。
+* 如果您不再需要该计划、可以将其删除。
+
+
+.步骤
+. 从顶部菜单中选择*复制计划*。
+. 要查看计划详细信息，请选择*Actions*选项 image:../use/icon-horizontal-dots.png["BlueXP灾难恢复服务中的\"Actions\"菜单图标"] 并选择*查看计划详情*。
+. 执行以下任一操作：
++
+** 要编辑计划详细信息(更改重复)，请选择*计划详细信息*选项卡，然后选择右侧的*编辑*图标。
+** 要编辑资源映射，请选择*故障转移映射*选项卡，然后选择*编辑*图标。
+** 要添加或编辑虚拟机，请选择*虚拟机*选项卡，然后选择*编辑*图标。
+
+
+. 要对计划执行操作，请选择*Actions*选项 image:../use/icon-horizontal-dots.png["BlueXP灾难恢复服务中的\"Actions\"菜单图标"]  并选择任何选项，如*Test failover*、*failover*、*failback*、*Disable"、*Enable*、 或*删除*。
+
+
+
+
+== 查看数据存储库信息
+
+您可以查看有关源和目标上存在的数据存储库数量的信息。
+
+. 从顶部菜单中，选择*"Daard*(仪表板*)"。
+. 在站点行中选择vCenter。
+. 选择*存储库*。
+. 查看数据存储库信息。
+
+
+
+
+== 查看虚拟机信息
+
+您可以查看有关源和目标上存在的虚拟机数量以及CPU、内存和可用容量的信息。
+
+. 从顶部菜单中，选择*"Daard*(仪表板*)"。
+. 在站点行中选择vCenter。
+. 选择*虚拟机*。
+. 查看虚拟机信息。
+
+
+
+
+== 管理资源组
+
+虽然您可以在创建复制计划过程中添加资源组、但您可能会发现单独添加这些组并稍后在计划中使用这些组会更方便。
+
+您还可以编辑和删除资源组。
+
+.步骤
+. 从顶部菜单中选择*资源组*。
+. 要添加资源组，请选择*Add group*。
+. 要对资源组执行操作，请选择*Actions*选项 image:../use/icon-horizontal-dots.png["BlueXP灾难恢复服务中的\"Actions\"菜单图标"]  并选择任意选项，如*Edit resource group*或*Delete resource group*。
+

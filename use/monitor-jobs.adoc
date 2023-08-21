@@ -1,0 +1,23 @@
+---
+sidebar: sidebar 
+permalink: use/monitor-jobs.html 
+keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter 
+summary: NetApp BlueXP灾难恢复是一种基于云的灾难恢复服务、可自动执行灾难恢复工作流。 
+---
+= 监控灾难恢复作业
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/use/
+
+
+[role="lead"]
+您可以监控所有灾难恢复作业并确定其进度。
+
+.步骤
+. 从BlueXP左侧导航栏中、选择*保护*>*灾难恢复*。
+. 从顶部菜单中选择*作业监控*。
+. 浏览与操作相关的所有作业并查看其时间戳和状态。
+. 要查看特定作业的详细信息、请选择该行。
+. 要刷新信息，请选择*Refresh*。
+

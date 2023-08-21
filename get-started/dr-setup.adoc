@@ -1,0 +1,82 @@
+---
+sidebar: sidebar 
+permalink: get-started/dr-setup.html 
+keywords: bluexp, disaster recovery, 
+summary: 要使用BlueXP灾难恢复、请执行几个步骤进行设置。 
+---
+= 设置BlueXP灾难恢复
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/get-started/
+
+
+[role="lead"]
+要使用BlueXP灾难恢复、请执行几个步骤进行设置。
+
+* 请查看 link:../get-started/dr-prerequisites.html["前提条件"] 以确保您的环境已准备就绪。
+* 在AWS中：
++
+** 在AWS上部署和配置VMware Cloud。
+** 创建Amazon FSx for ONTAP文件系统。配置和配置FSx for ONTAP。
+** 使用VMware帐户并配置软件定义的数据中心(Software-定义 的数据中心、SDDC)。确保SDDC已与FSx for ONTAP建立连接。
+
+
+* 在BlueXP中：
++
+** 为适用于ONTAP 的FSX部署和配置SnapMirror
+** 将内部ONTAP存储工作环境添加到BlueXP。这是源ONTAP集群。
+** 添加BlueXP帐户、将FSxN添加到工作环境、并添加FSx for ONTAP的AWS凭据。
+
+
+
+
+
+
+== 在AWS中设置
+
+在AWS中、您需要执行以下步骤：
+
+* 部署VMware Cloud
+* 配置Amazon FSx for ONTAP
+
+
+
+
+=== 部署VMware Cloud
+
+https://www.vmware.com/products/vmc-on-aws.html["基于 AWS 的 VMware Cloud"^] 为AWS生态系统中基于VMware的工作负载提供云原生体验。每个VMware软件定义的数据中心(SDDC)都在Amazon虚拟私有云(VPC)中运行、并提供完整的VMware堆栈(包括vCenter Server)、NSX-T软件定义的网络、vSAN软件定义的存储以及一个或多个ESXi主机、用于为工作负载提供计算和存储资源。
+
+要在AWS上配置VMC环境、请按照此处的步骤进行操作 https://docs.netapp.com/us-en/netapp-solutions/ehc/aws/aws-setup.html["链接。"^]。指示灯集群还可用于灾难恢复。
+
+
+
+=== 配置Amazon FSx for NetApp ONTAP
+
+适用于NetApp ONTAP 的Amazon FSX是一种完全托管的服务、可提供基于常见NetApp ONTAP 文件系统构建的高度可靠、可扩展、高性能和功能丰富的文件存储。请按照此处的步骤进行操作 https://docs.netapp.com/us-en/netapp-solutions/ehc/aws/aws-native-overview.html["链接。"^] 配置FSx for NetApp ONTAP。
+
+
+
+== 在BlueXP中设置
+
+下一步是在BlueXP中设置灾难恢复。
+
+
+
+=== 在BlueXP中创建连接器
+
+您需要注册测试版或联系NetApp销售代表试用此服务。然后、当您使用BlueXP Connector时、它将包括适用于灾难恢复服务的功能。
+
+要在使用此服务之前在BlueXP中创建Connector、请参阅所述的BlueXP文档 https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html["如何创建连接器"^]。
+
+
+
+=== 为Amazon FSx for NetApp ONTAP配置SnapMirror
+
+下一步是在BlueXP中设置灾难恢复。
+
+. 在BlueXP中、添加帐户。请参见 https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-netapp-accounts.html["有关如何添加帐户的BlueXP文档"^]。
+. 将Amazon FSx for NetApp ONTAP添加到工作环境中。确保与ONTAP集群的SnapMirror关系已建立、并且其目标为FSx for NetApp ONTAP。请参见 https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-creating-fsx-working-environment.html["如何设置FSx for ONTAP工作环境"^]。
+. 在BlueXP中、将SnapMirror部署到FSx for NetApp ONTAP。
+. 在BlueXP中、发现AWS实例上配置的FSx for NetApp ONTAP、并以适当的频率和NetApp Snapshot副本保留将指定的数据存储库卷从内部环境复制到FSx for NetApp ONTAP。
+

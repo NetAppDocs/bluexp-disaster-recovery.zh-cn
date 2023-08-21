@@ -1,0 +1,48 @@
+---
+sidebar: sidebar 
+permalink: use/sites-add.html 
+keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter 
+summary: NetApp BlueXP灾难恢复是一种基于云的灾难恢复服务、可自动执行灾难恢复工作流。 
+---
+= 添加vCenter站点
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/use/
+
+
+[role="lead"]
+在创建灾难恢复计划之前、您需要在BlueXP中添加一个主vCenter站点和一个目标vCenter灾难恢复站点。
+
+添加后、BlueXP灾难恢复会对vCenter环境执行深入发现、包括vCenter集群、ESXi主机、数据存储库、存储库、 虚拟机详细信息、SnapMirror副本和虚拟机网络。
+
+.步骤
+. 登录到BlueXP并从左侧导航栏中选择*保护*>*灾难恢复*。
++
+您将登录BlueXP灾难恢复信息板页面。首次启动此服务时、您需要添加vCenter信息。稍后、信息板将显示有关站点和复制计划的数据。
+
+. 选择*发现vCenter服务器*以输入有关源vCenter站点的信息。
++
+
+TIP: 如果某些vCenter站点已存在、而您希望添加更多vCenter站点、请从顶部菜单中选择*站点*、然后选择*添加*。
+
++
+image:vcenter-add.png["添加vCenter Server屏幕截图 "]
+
+. 添加站点、选择BlueXP Connector并提供vCenter凭据。
+. 要接受源vCenter的自签名证书、请选中此框。
++
+
+NOTE: 自签名证书不如其他证书安全。如果您的vCenter *未*配置证书颁发机构(CA)证书、则应选中此框；否则、与vCenter的连接将不起作用。
+
+. 选择 * 添加 * 。
++
+接下来、您将添加目标vCenter。
+
+. 选择目标站点和位置。如果目标为云、请选择*。
+. 选择 * 添加 * 。
++
+源和目标vCenter将显示在站点列表中。
+
+. 要查看操作进度，请从顶部菜单中选择*Job monitoring (作业监控)*。
+

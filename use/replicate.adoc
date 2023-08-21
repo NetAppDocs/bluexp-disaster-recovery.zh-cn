@@ -1,0 +1,25 @@
+---
+sidebar: sidebar 
+permalink: use/replicate.html 
+keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter 
+summary: NetApp BlueXP灾难恢复是一种基于云的灾难恢复服务、可自动执行灾难恢复工作流。 
+---
+= 将应用程序复制到其他站点
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/use/
+
+
+[role="lead"]
+使用SnapMirror复制将源站点上的VMware应用程序复制到云中的灾难恢复远程站点。
+
+
+TIP: 创建灾难恢复计划、在向导中确定重复情况并启动到灾难恢复站点的复制之后、BlueXP灾难恢复每30分钟验证一次复制是否确实按照计划进行。您可以在"作业监控"页面中监控检查。
+
+.步骤
+. 从BlueXP左侧导航栏中、选择*保护*>*灾难恢复*。
+. 从顶部菜单中选择*复制计划*。
+. 选择灾难恢复计划。
+. 在右侧，选择*Actions*选项 image:../use/icon-horizontal-dots.png["BlueXP灾难恢复服务中的\"Actions\"菜单图标"] 并选择*复本*。
+

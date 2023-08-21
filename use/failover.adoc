@@ -1,0 +1,85 @@
+---
+sidebar: sidebar 
+permalink: use/failover.html 
+keywords: disaster recovery, bluexp disaster recovery, failover, replicate, fail over, vmware, vcenter 
+summary: NetApp BlueXP灾难恢复是一种基于云的灾难恢复服务、可自动执行灾难恢复工作流。 
+---
+= 将应用程序故障转移到远程站点
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/use/
+
+
+[role="lead"]
+发生灾难时、使用FSx for NetApp ONTAP将主内部站点故障转移到AWS站点上的VMware Cloud。
+
+在故障转移期间、会使用最新的SnapMirror Snapshot副本。或者、您也可以从时间点Snapshot副本中选择特定的Snapshot副本(根据SnapMirror的保留策略)。如果您正面临勒索软件等损坏事件、而最近的副本已被泄露或加密、则时间点选项会很有用。BlueXP灾难恢复显示所有可用时间点。
+
+此操作步骤会中断复制关系、使vCenter源VM脱机、并在目标站点上启用读/写。
+
+在开始故障转移之前、您可以对该过程进行测试、以确保在需要时成功完成。此测试不会使虚拟机脱机。
+
+
+
+== 测试故障转移过程
+
+在开始实际故障转移之前、您应测试故障转移过程。
+
+在故障转移测试期间、会临时创建虚拟机。BlueXP灾难恢复不会映射目标卷。相反、它会从选定快照创建一个新的FlexClone卷、并将支持该FlexClone卷的临时数据存储库映射到ESXi主机。
+
+此过程不会占用Amazon FSx for NetApp ONTAP的额外物理容量。初始源卷不会被修改、即使在灾难恢复期间、副本作业也可以继续进行。
+
+完成测试后，应使用*Clean up test*选项重置虚拟机。虽然建议这样做、但不需要这样做。
+
+.步骤
+. 从BlueXP左侧导航栏中、选择*保护*>*灾难恢复*。
+. 从BlueXP灾难恢复顶部菜单中、选择*复制计划*。
+. 选择灾难恢复计划。
+. 在右侧，选择*Actions*选项 image:../use/icon-horizontal-dots.png["BlueXP灾难恢复服务中的\"Actions\"菜单图标"] 并选择*测试故障转移*。
+. 在“Test failover”(测试故障转移)页面中，输入“Test failover”(测试故障转移)并选择*Test failover*(测试故障转移)。
+. 测试完成后、清理测试环境。
+
+
+
+
+== 在故障转移测试后清理测试环境
+
+故障转移测试完成后、您应清理测试环境。此过程会从测试位置、FlexClone和临时数据存储库中删除临时VM。
+
+.步骤
+. 从BlueXP灾难恢复顶部菜单中、选择*复制计划*。
+. 选择灾难恢复计划。
+. 在右侧，选择*Actions*选项 image:../use/icon-horizontal-dots.png["BlueXP灾难恢复服务中的\"Actions\"菜单图标"]  并选择*清理故障转移测试*。
+. 在“Test Failover”(测试故障转移)页面中，输入“Clean up Failover”(清理故障转移)并选择“Clean up Failover test*”(清理故障转移测试)。
+
+
+
+
+== 将源站点故障转移到灾难恢复站点
+
+如果发生灾难、请使用FSx for NetApp ONTAP将源站点按需故障转移到AWS站点上的VMware Cloud。
+
+故障转移过程涉及以下操作：
+
+* 如果选择了最新Snapshot、则会执行SnapMirror更新以复制最新更改。
+* 源虚拟机已关闭。
+* 此时、SnapMirror关系将中断、目标卷将设置为读/写卷。
+* 根据所选的Snapshot、活动文件系统将还原到指定的Snapshot (最新或选定)
+* 数据存储库会根据灾难恢复计划中捕获的信息创建并挂载到VMC集群或主机。
+* 目标虚拟机将根据在"资源组"页面中捕获的顺序进行注册并启动。
+* SnapMirror关系会从目标虚拟机反转到源虚拟机。
+
+
+
+TIP: 故障转移开始后、可以在VMC vCenter (虚拟机、网络和数据存储库)中看到恢复的项目。默认情况下、虚拟机会恢复到工作负载文件夹。
+
+.步骤
+. 从BlueXP左侧导航栏中、选择*保护*>*灾难恢复*。
+. 从BlueXP灾难恢复顶部菜单中、选择*复制计划*。
+. 选择灾难恢复计划。
+. 在右侧，选择*Actions*选项 image:../use/icon-horizontal-dots.png["BlueXP灾难恢复服务中的\"Actions\"菜单图标"] 并选择*故障转移*。
+. 在Test failover页面中、输入灾难恢复计划名称进行确认、然后选择*故障转移*。
+. 为要从中恢复的数据存储库选择Snapshot。  默认值为最新。
+. 要检查进度，请在顶部菜单中选择*Job monitoring (作业监控)*。
+

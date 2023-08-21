@@ -1,0 +1,39 @@
+---
+sidebar: sidebar 
+permalink: release-notes/dr-limitations.html 
+keywords: disaster recovery, bluexp 
+summary: 已知限制用于标识此服务版本不支持或无法与之正确交互的平台、设备或功能。 
+---
+= 限制
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/use/
+
+
+[role="lead"]
+已知限制用于标识此服务版本不支持或无法与之正确交互的平台、设备或功能。
+
+
+
+== BlueXP可能无法发现Amazon FSx for NetApp ONTAP
+
+有时、BlueXP不会发现Amazon FSx for NetApp ONTAP集群。这可能是因为FSx凭据不正确。
+
+*AMAZON*：在BlueXP中添加临时解决策FSx for NetApp ONTAP集群、并定期刷新集群以显示任何更改。
+
+如果您需要从BlueXP灾难恢复服务中删除ONTAP FSx集群、请完成以下步骤：
+
+. 在BlueXP Connector中、使用云提供商提供的连接选项、连接到运行Connector的Linux VM、然后使用重新启动"occm"服务 `docker restart occm` 命令：
++
+请参见 https://docs.netapp.com/us-en/bluexp-setup-admin/task-managing-connectors.html#connect-to-the-linux-vm["管理现有连接器"^]。
+
+. 在BlueXP Canvas中、重新添加Amazon FSx for ONTAP环境并提供FSx凭据。
++
+请参见 https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/getting-started-step1.html["创建Amazon FSx for NetApp ONTAP文件系统"^]。
+
+. 从BlueXP灾难恢复中、选择*站点*、在vCenter行中选择*操作*选项 image:../use/icon-vertical-dots.png["BlueXP灾难恢复服务中的\"Actions\"菜单图标"]，然后从操作菜单中选择*Refresh*以在BlueXP灾难恢复中刷新FSx发现。
++
+此操作将重新发现数据存储库、其虚拟机及其目标关系。
+
+

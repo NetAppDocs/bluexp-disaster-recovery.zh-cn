@@ -1,0 +1,16 @@
+---
+section: get-started
+title: 入门
+entries:
+- title: 了解BlueXP灾难恢复
+  url: "/get-started/dr-intro.html"
+- title: 前提条件
+  url: "/get-started/dr-prerequisites.html"
+- title: 快速入门
+  url: "/get-started/dr-quick-start.html"
+- title: 设置BlueXP灾难恢复
+  url: "/get-started/dr-setup.html"
+- title: 访问BlueXP灾难恢复
+  url: "/get-started/dr-login.html"
+- title: 常见问题解答
+  url: "/get-started/dr-faq.html"

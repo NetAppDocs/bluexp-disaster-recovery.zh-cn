@@ -1,0 +1,76 @@
+---
+sidebar: sidebar 
+permalink: get-started/dr-intro.html 
+keywords: how bluexp disaster recovery works, what is disaster recovery, bluexp, vmware, vcenter, draas, replicate, failover, failback, fail over, fail back 
+summary: 云灾难恢复是一种经济高效的弹性方法、可保护工作负载免受站点中断和数据损坏事件的影响。借助适用于VMware的BlueXP灾难恢复、您可以使用NetApp云存储将运行ONTAP存储的内部VMware工作负载复制到公有云中的VMware软件定义的数据中心、作为灾难恢复站点。 
+---
+= 了解适用于VMware测试版的BlueXP灾难恢复
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/get-started/
+
+
+[role="lead"]
+云灾难恢复是一种经济高效的弹性方法、可保护工作负载免受站点中断和数据损坏事件的影响。借助适用于VMware测试版的BlueXP灾难恢复、您可以使用NetApp云存储将运行ONTAP存储的内部VMware工作负载复制到公有云中的VMware软件定义的数据中心、作为灾难恢复站点。
+
+BlueXP灾难恢复测试版是一种基于云的灾难恢复服务、可自动执行灾难恢复工作流。最初、借助BlueXP灾难恢复测试版、您可以使用Amazon FSx for NetApp ONTAP保护在AWS上运行NetApp存储到VMware Cloud (VMC)的基于NFS的内部VMware工作负载。
+
+BlueXP灾难恢复测试版使用ONTAP SnapMirror技术作为到云的复制传输。这样可以在主站点和二级站点上实现行业最佳的存储效率(数据压缩和重复数据删除)。
+
+测试版支持将内部工作负载灾难恢复到云。
+
+image:draas-onprem-to-cloud.png["显示适用于VMware的BlueXP灾难恢复组件的示意图"]
+
+
+
+== 使用适用于VMware测试版的BlueXP灾难恢复的优势
+
+BlueXP灾难恢复测试版具有以下优势：
+
+* 通过多个时间点恢复操作简化了vCenter发现和恢复应用程序的用户体验 
+* 降低运营成本、并能够以最少的资源创建和调整灾难恢复计划、从而降低总拥有成本
+* 通过虚拟故障转移测试确保持续灾难恢复就绪、不会中断运行
+* 通过IT环境中的动态变化以及在灾难恢复计划中解决该问题的能力、更快地实现价值
+
+
+
+
+== 适用于VMware测试版的BlueXP灾难恢复功能
+
+BlueXP灾难恢复测试版可让您充分利用多种NetApp技术来实现以下目标：
+
+* 使用SnapMirror复制将生产站点上的VMware应用程序复制到云中的灾难恢复远程站点。
+* 发生灾难时、可按需将主站点故障转移到基于AWS的VMware Cloud中的NetApp云卷。
+* 解决灾难后、根据需要从灾难恢复站点故障恢复到主站点。
+
+
+借助NetApp SnapMirror技术、可以将内部VMware工作负载(适用于NFS)复制到在AWS中运行的FSx for NetApp ONTAP。
+
+
+NOTE: vSphere服务器的配置在vSphere Server的BlueXP灾难恢复之外完成。
+
+
+
+== 成本
+
+NetApp不会因使用BlueXP灾难恢复测试版而向您收费。
+
+BlueXP灾难恢复服务在全面上市后应提供按需购买定价或基于订阅的年度计划。
+
+
+
+== BlueXP灾难恢复测试版的工作原理
+
+BlueXP灾难恢复测试版可以恢复从内部复制到Amazon FSx for ONTAP的工作负载。此服务可通过虚拟机注册到虚拟机云(Virtual Machine Cloud、VMC)以及直接在VMware网络虚拟化和安全平台NSX-T上的网络映射、自动执行从SnapMirror级别的恢复所有虚拟机云环境均包含此功能。
+
+BlueXP灾难恢复测试版使用ONTAP SnapMirror技术、该技术可提供高效复制、并保持ONTAP永久增量Snapshot效率。SnapMirror复制可确保应用程序一致的Snapshot副本始终保持同步、并且数据在故障转移后立即可用。
+
+image:dr-architecture-diagram-70.png["该图显示了适用于VMware服务基础架构的BlueXP灾难恢复架构"]
+
+发生灾难时、此服务可通过中断SnapMirror关系并使目标站点处于活动状态来帮助您恢复VMC中的虚拟机。
+
+* 该服务还允许您将虚拟机故障恢复到原始源位置。
+* 您可以在不中断原始虚拟机的情况下测试灾难恢复故障转移过程。此测试通过创建卷的FlexClone将虚拟机恢复到隔离的网络。
+* 对于故障转移或测试故障转移过程、您可以选择要从中恢复虚拟机的最新(默认)或选定Snapshot。
+
