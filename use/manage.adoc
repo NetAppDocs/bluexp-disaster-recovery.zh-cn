@@ -14,24 +14,11 @@ summary: NetApp BlueXP灾难恢复是一种基于云的灾难恢复服务、可�
 [role="lead"]
 您可以快速浏览所有灾难恢复资源、也可以详细了解每个资源：
 
-* 信息板
 * 站点
 * 复制计划
+* 数据存储库
+* 虚拟机
 * 资源组
-
-
-
-
-== 查看BlueXP灾难恢复信息板
-
-使用信息板可一目了然地查看所有BlueXP灾难恢复资源和活动。活动窗格显示最新作业操作活动。
-
-.步骤
-. 从BlueXP左侧导航栏中、选择*保护*>*灾难恢复*。
-. 从顶部菜单中，选择*"Daard*(仪表板*)"。
-. 在信息板中浏览所有灾难恢复计划、合规性、vCenter、虚拟机和资源组。
-. 要查看资源、请选择右侧的箭头。
-. 要查看所有资源组，请选择*查看资源组*。
 
 
 
@@ -66,7 +53,8 @@ summary: NetApp BlueXP灾难恢复是一种基于云的灾难恢复服务、可�
 ** 要添加或编辑虚拟机，请选择*虚拟机*选项卡，然后选择*编辑*图标。
 
 
-. 要对计划执行操作，请选择*Actions*选项 image:../use/icon-horizontal-dots.png["BlueXP灾难恢复服务中的\"Actions\"菜单图标"]  并选择任何选项，如*Test failover*、*failover*、*failback*、*Disable"、*Enable*、 或*删除*。
+. 通过在左上角的面包屑中选择"Replication Plans (复制计划)"、返回计划列表。
+. 要对计划执行操作，请从复制计划列表中选择*Actions*选项 image:../use/icon-horizontal-dots.png["BlueXP灾难恢复服务中的\"Actions\"菜单图标"]  并选择任何选项，如*Edit SCHED*、*Test failover*、*failover*、*failback*、*Disable"、 *Enable*或*Delete*。
 
 
 

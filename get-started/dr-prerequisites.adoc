@@ -14,19 +14,20 @@ summary: 通过验证对您的环境、网络访问、登录和Web浏览器的�
 [role="lead"]
 首先验证您的操作环境、登录、网络访问和Web浏览器是否就绪。
 
-要使用BlueXP灾难恢复、您应确保环境满足所有要求。
+要使用BlueXP灾难恢复、应确保您的环境满足以下要求：
 
 * 使用NetApp存储的内部VMware工作环境
 * 在AWS上：
 +
 ** Amazon FSx for NetApp ONTAP文件系统。请参阅上的Amazon FSx for ONTAP文档 https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/getting-started-step1.html["如何开始"^]。
-** 一个VMware帐户、在AWS上拥有软件定义的数据中心(SDDC)、也称为虚拟机云(Virtual Machine Cloud、VMS)。在VMware Cloud Console中、使用管理员和NSX云管理员这两个服务角色、这两个角色都位于基于AWS的VMware Cloud上。此外、还可以将组织所有者用于组织角色。请参见 https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/vmware-cloud-ontap.html["Virtual Machines Cloud文档"^]。
+** 一个VMware帐户、在AWS上拥有软件定义的数据中心(SDDC)、也称为虚拟机云。在VMware Cloud Console中、使用管理员和NSX云管理员这两个服务角色、这两个角色都位于AWS上的VMware Cloud上。此外、还可以将组织所有者用于组织角色。请参见 https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/vmware-cloud-ontap.html["Virtual Machines Cloud文档"^]。
 ** 将SDDC与Amazon FSx for NetApp ONTAP链接起来。请参见 https://vmc.techzone.vmware.com/fsx-guide#overview["VMware Cloud on AWS与Amazon FSx for NetApp ONTAP集成"^]。
 
 
 * 在BlueXP中：
 +
 ** 需要在NetApp BlueXP中设置BlueXP连接器。使用BlueXP AWS Connector、它可以访问内部vCenter和云。BlueXP Connector需要源vCenter Server和目标vCenter Server的凭据。请参见 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-standard-mode.html["BlueXP快速入门"^] 和 https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-networking-saas-console.html["BlueXP网络信息"^]。
+** 使用BlueXP内部部署连接器或BlueXP AWS连接器、它们可以访问源内部部署vCenter和目标内部部署vCenter。
 ** 已将Amazon FSx for ONTAP和AWS凭据添加到BlueXP工作环境中
 
 

@@ -21,7 +21,7 @@ summary: NetApp BlueXP灾难恢复是一种基于云的灾难恢复服务、可�
 +
 您将登录BlueXP灾难恢复信息板页面。首次启动此服务时、您需要添加vCenter信息。稍后、信息板将显示有关站点和复制计划的数据。
 
-. 选择*发现vCenter服务器*以输入有关源vCenter站点的信息。
+. *Source*：选择*Discover vCenter server*以输入有关源vCenter站点的信息。
 +
 
 TIP: 如果某些vCenter站点已存在、而您希望添加更多vCenter站点、请从顶部菜单中选择*站点*、然后选择*添加*。
@@ -29,20 +29,30 @@ TIP: 如果某些vCenter站点已存在、而您希望添加更多vCenter站点�
 +
 image:vcenter-add.png["添加vCenter Server屏幕截图 "]
 
-. 添加站点、选择BlueXP Connector并提供vCenter凭据。
-. 要接受源vCenter的自签名证书、请选中此框。
++
+.. 添加站点、选择BlueXP Connector并提供vCenter凭据。
+.. 要接受源vCenter的自签名证书、请选中此框。
 +
 
 NOTE: 自签名证书不如其他证书安全。如果您的vCenter *未*配置证书颁发机构(CA)证书、则应选中此框；否则、与vCenter的连接将不起作用。
 
-. 选择 * 添加 * 。
+.. 选择 * 添加 * 。
 +
 接下来、您将添加目标vCenter。
 
-. 选择目标站点和位置。如果目标为云、请选择*。
-. 选择 * 添加 * 。
+
+
+. *目标*：
++
+.. 选择目标站点和位置。如果目标为云、请选择*。
+.. 选择 * 添加 * 。
 +
 源和目标vCenter将显示在站点列表中。
+
+
+
++
+image:sites-list.png["站点页面屏幕截图"]
 
 . 要查看操作进度，请从顶部菜单中选择*Job monitoring (作业监控)*。
 

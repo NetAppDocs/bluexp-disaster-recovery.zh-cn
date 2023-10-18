@@ -4,12 +4,16 @@ title: 使用BlueXP灾难恢复
 entries:
 - title: 使用BlueXP灾难恢复概述
   url: "/use/use-overview.html"
+- title: 在信息板上查看灾难恢复计划的运行状况
+  url: "/use/dashboard-view.html"
 - title: 添加vCenter站点
   url: "/use/sites-add.html"
-- title: 创建灾难恢复计划
+- title: 创建复制计划
   url: "/use/drplan-create.html"
 - title: 复制到其他站点
   url: "/use/replicate.html"
+- title: 迁移到其他站点
+  url: "/use/migrate.html"
 - title: 故障转移到远程站点
   url: "/use/failover.html"
 - title: 将应用程序故障恢复到原始源站点
