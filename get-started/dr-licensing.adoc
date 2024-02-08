@@ -1,0 +1,430 @@
+---
+sidebar: sidebar 
+permalink: get-started/dr-licensing.html 
+keywords: bluexp license, disaster recovery licensing 
+summary: 借助BlueXP灾难恢复、您可以使用不同的许可计划、包括免费试用版、按需购买订阅或自带许可证。 
+---
+= 为BlueXP灾难恢复设置许可
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/get-started/
+
+
+[role="lead"]
+借助BlueXP灾难恢复、您可以使用不同的许可计划、包括免费试用版、按需购买订阅或自带许可证。
+
+您可以使用以下任一许可证类型：
+
+* 注册90天免费试用。
+* 通过Amazon Web Services (AWS) Marketplace购买1年、2年或3年的按需购买(PAYGO)订阅。
+* 自带许可证(BYOL)、这是您从NetApp销售代表或NetApp 支持站点(NSS)获取的NetApp许可证文件(NLL)。您可以直接在BlueXP数字钱包中上传NLG、也可以使用许可证序列号在BlueXP数字钱包中激活BYOL。
+
+
+
+NOTE: 如果至少有一个VM具有复制计划、则BlueXP灾难恢复费用基于源站点上数据存储库的已配置容量计算得出。故障转移数据存储库的容量不包括在容量允许值中。对于BYOL、如果数据超过允许的容量、则服务操作将受到限制、直到您获得额外的容量许可证、在BlueXP数字钱包中升级许可证或在AWS中购买订阅为止。如果您选择AWS订阅、超出合同限制的任何已用容量将根据AWS Marketplace计划收费。
+
+在AWS中设置BYOL或购买订阅后、您可以在BlueXP数字钱包*数据服务许可证*选项卡中查看许可证、或在BlueXP数字钱包*订阅*选项卡中查看活动订阅。
+
+在免费试用结束或许可证或AWS订阅到期后、您仍可在服务中执行以下操作：
+
+* 查看任何资源、例如工作负载或复制计划。
+* 删除任何资源、例如工作负载或复制计划。
+* 运行在试用期、许可证或订阅期间创建的所有计划操作。
+
+
+
+
+== 试用90天免费试用
+
+您可以使用90天免费试用版试用BlueXP灾难恢复。
+
+
+NOTE: 试用期间不会强制实施容量限制。
+
+您可以随时获得许可证或订阅、90天试用期结束前不会向您收费。要在90天试用之后继续、您需要购买BYOL许可证或PAYGO AWS订阅。
+
+在试用期间、您将拥有全部功能。
+
+.步骤
+. 访问 https://console.bluexp.netapp.com/["BlueXP控制台"^]。
+. 登录到BlueXP。
+. 从BlueXP左侧导航栏中、选择*保护*>*灾难恢复*。
++
+如果这是您首次登录此服务、则会显示登录页面。
+
++
+image:draas-landing.png["BlueXP灾难恢复的登录页面屏幕截图"]
+
+. 如果尚未为其他服务添加连接器、请添加一个连接器。
++
+要添加接头、请参见 https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["了解连接器"^]。
+
+. 设置Connector后、在BlueXP灾难恢复登录页面中、选择*开始免费试用*。
++
+image:draas-landing-trial.png["BlueXP灾难恢复的登录页面屏幕截图"]
+
+. 查看免费试用信息并选择*Let's Go。
+
+
+
+
+=== 试用结束后、通过AWS Marketplace进行订阅
+
+免费试用结束后、您可以从NetApp购买许可证、也可以通过AWS Marketplace进行订阅。本操作步骤简要概述了如何直接在AWS Marketplace中订阅。
+
+.步骤
+. 在BlueXP灾难恢复中、您会看到一条消息、指出免费试用即将到期。在消息中，选择*订阅或购买许可证*。
++
+image:draas-license-subscribe.png["BlueXP灾难恢复\"订阅或购买许可证\"页面"]
+
+. 在"订阅或购买许可证"页面中、选择*在AWS Marketplace中订阅*。
+. 在AWS Marketplace中、选择*查看购买选项*。
+. 使用AWS Marketplace订阅BlueXP灾难恢复。
+. 返回到BlueXP灾难恢复后、系统会显示一条消息、指出您已订阅。要在BlueXP数字钱包中查看订阅详细信息，请选择*查看订阅详细信息*，然后在*订阅*页面上查看活动订阅。
++
+image:digital-wallet-subscriptions.png["BlueXP数字钱包订阅选项卡"]
+
+
+
+
+
+=== 试用期结束后、通过NetApp购买BYOL许可证
+
+试用结束后、您可以通过NetApp销售代表或技术支持购买许可证。
+
+.步骤
+. 要购买许可证、请联系您的NetApp销售代表或NetApp支持。
+. 获取许可证后、返回到BlueXP灾难恢复、在免费试用即将到期的消息中、选择*订阅或购买许可证*。
++
+此时将显示"订阅或购买许可证"页面。
+
++
+image:draas-license-subscribe-NetApp-option.png["BlueXP灾难恢复\"订阅或购买许可证\"页面"]
+
+. 选择*向BlueXP*添加许可证。您将转到BlueXP电子钱包。
++
+image:digital-wallet-data-services-licenses-tab.png["BlueXP灾难恢复\"订阅或购买许可证\"页面"]
+
+. 在BlueXP数字钱包中，从*数据服务许可证*选项卡中选择*添加许可证*。
+. 在添加许可证页面中、输入序列号或上传NetApp许可证文件(NLG)。
++
+image:byol-digital-wallet-license-add.png["BlueXP数字钱包添加许可证页面"]
+
+
+
+
+
+=== 结束免费试用
+
+您可以随时停止免费试用、也可以等到免费试用过期。
+
+.步骤
+. 在BlueXP灾难恢复中、选择右上角的*免费试用-查看详细信息*。
+. 在下拉详细信息中，选择*结束免费试用*。
++
+image:draas-trial-end.png["结束免费试用页面"]
+
+. 如果要删除所有数据，请选中*在我的试用结束时删除所有数据*。
++
+此操作将删除所有计划、复制计划、资源组、vCenter和站点。审核数据、操作日志和作业历史记录会保留到产品使用寿命结束为止。
+
++
+
+NOTE: 如果您结束免费试用、并且未要求删除数据、并且未购买许可证或订阅、则在免费试用结束60天后、BlueXP灾难恢复将删除您的所有数据。
+
+. 在文本框中键入"结束试用"。
+. 选择*end*。
+
+
+
+
+== 使用AWS按需购买(PAYGO)订阅
+
+如果您选择使用AWS Marketplace PAYGO订阅、则需要先在AWS中进行设置、然后再在BlueXP中进行设置。
+
+要在AWS中设置PAYGO订阅、请完成以下过程：
+
+* <<第1部分在AWS中配置PAYGO订阅>>
+* <<第2部分在BlueXP中配置PAYGO订阅>>
+* <<Part 3a Associate the new SaaS Marketplace subscription with AWS credentials>> 或
++
+<<Part 3b Associate the new SaaS Marketplace subscription with AWS credentials for annual contracts>>。
+
+
+
+
+
+==== 第1部分在AWS中配置PAYGO订阅
+
+下面简要概括了在AWS中配置PAYGO订阅的步骤。
+
+有关更多详细信息、请参见 https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-aws-accounts.html["管理BlueXP的AWS凭据和市场订阅"^]。
+
+.开始之前
+您必须已与NetApp销售团队合作并获取了报价链接、并且您必须拥有中所述的接受报价的权限 https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html["控制对AWS Marketplace订阅的访问"^]。
+
+.步骤
+. 在AWS控制台中接受适用于NetApp BlueXP的AWS Marketplace私有优惠。
++
+请参阅以下信息：
+
++
+** https://aws.amazon.com/blogs/awsmarketplace/access-your-private-offers-aws-marketplace-console/["通过AWS Marketplace控制台访问您的私人优惠"^]。
+** https://docs.aws.amazon.com/marketplace/latest/buyerguide/private-offers-page.html#private-offers-page-permissions["查看"私人优惠"页面所需的权限"^]。
+
+
+. 查看私人优惠详情、并验证是否符合您的协议。
++
+
+CAUTION: 由于您单击*订阅*后即开始计费，因此如果任何信息不正确，请*不要*接受私人优惠，而是联系您的NetApp销售代表。
+
+. 确认优惠信息正确无误后，请选择*订阅*。
++
+如果报价使用合同列表、还应输入每个服务的商品数量。然后，您可以选择*创建合同*来接受私人报价。
+
+. 在弹出窗口中、选择*设置您的帐户*、此操作会将您重定向到NetApp BlueXP控制台以完成BlueXP Marketplace订阅的配置。
++
+如果优惠使用合同列表，请选择*查看购买选项*，然后*设置您的帐户*。
+
+
+
+
+
+==== 第2部分在BlueXP中配置PAYGO订阅
+
+在AWS控制台中接受私人优惠后、您将转到BlueXP控制台。
+
+.步骤
+. 在BlueXP控制台中、执行以下操作：
++
+.. 输入SaaS Marketplace订阅的显示名称。
+.. 选择应有权访问此市场订阅的NetApp BlueXP帐户。
+.. 选择*替换现有订阅*以将一个NetApp BlueXP帐户中的现有SaaS Marketplace订阅替换为此新创建的订阅。BlueXP将使用此新订阅取代帐户中所有云凭据的现有订阅。
++
+
+NOTE: REPLACE选项仅限于单个NetApp BlueXP帐户。如果您要将多个BlueXP帐户与同一SaaS Marketplace订阅相关联、则需要单独配置它们。
+
++
+
+NOTE: 如果一组云凭据从未与SaaS Marketplace订阅关联、则应按照本操作步骤的下一部分进行配置。
+
+
+
+. 选择*保存*和*完成*。
+. 接下来继续第3部分：
++
+** <<第3a部分将新的Marketplace订阅与AWS凭据关联起来>>
+** <<第3b部分将新的Marketplace订阅与年度合同的AWS凭据相关联>>。
+
+
+
+
+
+
+==== 第3a部分将新的Marketplace订阅与AWS凭据关联起来
+
+在AWS中设置许可证的第3部分。
+
+
+NOTE: 如果您有一份年度合同、请继续此处：
+<<Part 3b Associate the new SaaS Marketplace subscription with AWS credentials for annual contracts>>。
+
+.步骤
+. 访问 https://console.bluexp.netapp.com["NetApp BlueXP控制台"]。
+. 验证订阅详细信息：
++
+.. 从左窗格中，选择*监管*>*Digital Wallet*。
+.. 选择*订阅*选项卡。
++
+image:paygo-digitalwallet-subscriptions.png["BlueXP数字钱包订阅页面"]
+
+.. 查找您在第1部分添加的SaaS Marketplace订阅、并验证您希望使用的计划是否正确。
+
+
+. 查找您的AWS订阅所在的行、展开该行以查看详细信息、并确认您的私人优惠已成功与您的BlueXP帐户关联。
++
+由于AWS Marketplace中的限制、无法在AWS控制台之外获取此优惠的某些详细信息。如果其中一个字段显示"不适用"、则表示无法从AWS控制台检索信息、这不是一个错误。您仍然可以在AWS控制台中检查这些信息。
+
+. 选择BlueXP控制台右上角的*Settings*齿轮，然后选择*凭证*。
++
+image:paygo-digitalwallet-settings.png["BlueXP数字钱包设置菜单"]
+
+. 找到要与新SaaS Marketplace订阅关联的凭据集。
++
+
+TIP: 您可以单击工作环境上方的*查看*来验证这些信息是否正确。
+
+. 选择*操作...*选项并选择*关联订阅*。
+. 在Marketplace订阅下拉菜单中选择您的私人优惠、然后选择*关联*。
++
+
+NOTE: 与这些AWS凭据相关的Marketplace费用现在将通过您刚刚关联的SaaS Marketplace订阅计费。如果您使用年度合同、与这些AWS凭据关联的基础架构成本将计入年度合同的使用量。
+
+. 对您的BlueXP帐户中要与此SaaS Marketplace订阅关联的任何其他AWS凭据重复上述步骤：
++
+.. 对于其他BlueXP帐户中的AWS凭据、请使用BlueXP控制台顶部的*帐户*选项切换帐户并重复这些步骤。
+.. 对于与其他BlueXP连接器相关的AWS凭据、请使用BlueXP控制台顶部的*连接器*选项切换连接器并重复上述步骤。
+
+
+
+
+
+
+==== 第3b部分将新的Marketplace订阅与年度合同的AWS凭据相关联
+
+如果您使用年度合同、BlueXP数字钱包中的信息会有所不同。
+
+. 访问 https://console.bluexp.netapp.com["NetApp BlueXP控制台"]。
+. 验证订阅详细信息：
++
+.. 从左窗格中，选择*监管*>*Digital Wallet*。
+.. 选择*订阅*选项卡。
++
+image:paygo-digitalwallet-subscriptions-annualcontract.png["显示年度合同的BlueXP数字钱包订阅页面"]
+
+.. 查找您在第1部分添加的SaaS Marketplace订阅、并验证您希望使用的计划是否正确。
+
+
+. 查找您的AWS年度合同订阅所在的行、展开该行以查看详细信息、并确认您的私人优惠已成功与您的BlueXP帐户关联。
++
+image:paygo-digitalwallet-subscriptions-annualcontract-associate.png["年度合同的BlueXP数字钱包订阅页面"]
+
+. 在该行上选择*操作...*选项，然后选择*关联订阅*。
++
+image:paygo-digitalwallet-subscriptions-annualcontract-associate-dialog.png["年度合同的BlueXP数字钱包订阅页面"]
+
+. 选择要与订阅关联的帐户，然后选择*Apply*。
++
+
+NOTE: 与这些AWS凭据相关的Marketplace费用现在将通过您刚刚关联的SaaS Marketplace订阅计费。如果您使用年度合同、与这些AWS凭据关联的基础架构成本将计入年度合同的使用量。
+
+. 对您的BlueXP帐户中要与此SaaS Marketplace订阅关联的任何其他AWS凭据重复上述步骤：
++
+.. 对于其他BlueXP帐户中的AWS凭据、请使用BlueXP控制台顶部的*帐户*选项切换帐户并重复这些步骤。
+.. 对于与其他BlueXP连接器相关的AWS凭据、请使用BlueXP控制台顶部的*连接器*选项切换连接器并重复上述步骤。
+
+
+
+
+
+
+==== 自定义您在BlueXP数字钱包订阅视图中看到的内容
+
+您可以自定义"订阅"页面上显示的列。例如、您可能希望执行此操作来查看术语信息。
+
+.步骤
+. 在BlueXP数字钱包订阅页面中、选择右侧的表图标。
+. 在显示的列列表中、选中要在表中显示的列。
+. 选择 * 应用 * 。
+
+
+
+
+== 自带许可证(BYOL)
+
+如果您自带许可证(BYOL)、则设置包括购买许可证、获取NetApp许可证文件(NLL)以及将许可证添加到BlueXP数字钱包。
+
+
+
+=== 购买BlueXP灾难恢复许可证
+
+如果您没有BlueXP灾难恢复许可证、请联系我们购买一个。
+
+. 执行以下操作之一：
++
+** 要购买许可证、请联系NetApp销售人员。
+** 单击BlueXP右下角的聊天图标以申请许可证。
+
+
+
+
+
+
+=== 获取BlueXP灾难恢复许可证文件
+
+购买BlueXP灾难恢复许可证后、您可以通过输入BlueXP灾难恢复序列号和NetApp 支持站点(NSS)帐户或上传NetApp许可证文件(NLG)来激活许可证。
+
+您可以通过NetApp销售代表或NetApp 支持站点 获取NLG。
+
+.开始之前
+开始之前、您需要了解以下信息：
+
+* BlueXP灾难恢复序列号
++
+从您的销售订单中找到此号码、或者联系客户团队了解此信息。
+
+* BlueXP帐户ID
++
+您可以通过选择BlueXP顶部的*帐户*下拉列表、然后选择帐户旁边的*管理帐户*来查找BlueXP帐户ID。您的帐户 ID 位于概述选项卡中。对于无法访问Internet的专用模式站点，请使用*ACCOUNT-HARKSITE1*。
+
+
+
+.从支持站点获取NLG许可证文件的步骤
+. 登录到 https://mysupport.netapp.com["NetApp 支持站点"^]  并选择*Systems*>*软件许可证*。
++
+image:byol-nss-licenses.png["NetApp 支持站点 软件许可证页面"]
+
+. 输入BlueXP灾难恢复许可证序列号。
+. 在许可证密钥列下，选择*获取NetApp许可证文件*。
++
+image:byol-nss-licenses-get.png["NetApp 支持站点 软件许可证页面"]
+
+. 输入您的BlueXP帐户ID (在支持站点上称为租户ID)、然后选择*提交*以下载许可证文件。
+
+
+
+
+=== 将BlueXP灾难恢复许可证添加到BlueXP数字钱包
+
+为BlueXP帐户购买BlueXP灾难恢复许可证后、您需要将该许可证添加到BlueXP电子钱包中。
+
+.步骤
+. 从BlueXP菜单中，选择*监管*>*电子钱包*>*数据服务许可证*。
++
+image:byol-digital-wallet-dataserviceslicenses-tab.png["NetApp BlueXP数字钱包数据服务许可证选项卡"]
+
+. 选择 * 添加许可证 * 。
++
+image:byol-digital-wallet-license-add.png["NetApp BlueXP数字钱包添加许可证页面"]
+
+. 在添加许可证页面中，输入许可证信息并选择*Add License*：
++
+** 如果您有BlueXP许可证序列号并且知道您的NSS帐户，请选择*Enter Serial Number*选项并输入该信息。
++
+如果下拉列表中没有您的 NetApp 支持站点帐户， https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-nss-accounts.html["将NSS帐户添加到BlueXP"^]。
+
+** 如果您有BlueXP许可证文件(安装在非公开站点时需要)，请选择*上传许可证文件*选项并按照提示附加该文件。
+
+
+
+
+.结果
+BlueXP数字钱包现在可通过许可证显示灾难恢复。
+
+image:byol-digital-wallet-licenses-added.png["NetApp BlueXP电子钱包"]
+
+
+
+=== 在BlueXP许可证过期后更新它
+
+如果您的许可期限即将到期、或者您的许可容量即将达到限制、您将在BlueXP灾难恢复UI中收到通知。您可以在BlueXP灾难恢复许可证到期之前对其进行更新、以便不会中断您访问扫描数据的能力。
+
+
+TIP: 此消息也会显示在BlueXP数字钱包和中 https://docs.netapp.com/us-en/bluexp-setup-admin/task-monitor-cm-operations.html#monitoring-operations-status-using-the-notification-center["通知"]。
+
+.步骤
+. 选择BlueXP右下角的聊天图标、请求延长期限或为特定序列号的许可证增加容量。您还可以发送电子邮件以请求更新许可证。
++
+在您为许可证付费并将其注册到NetApp 支持站点 之后、BlueXP会自动更新BlueXP电子钱包中的许可证、并且数据服务许可证页面将在5到10分钟内反映此更改。
+
+. 如果BlueXP无法自动更新许可证(例如、安装在非公开站点时)、则需要手动上传许可证文件。
++
+.. 您可以从NetApp 支持站点 获取许可证文件。
+.. 在BlueXP数字钱包页面的数据服务许可证选项卡中，选择要更新的服务序列号的*Actions...*图标，然后选择*Update License*。
++
+image:digital-wallet-licenses-expired.png["NetApp BlueXP数字钱包显示许可证已过期"]
+
+
+
+

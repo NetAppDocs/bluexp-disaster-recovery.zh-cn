@@ -75,3 +75,9 @@ https://www.vmware.com/products/vmc-on-aws.html["基于 AWS 的 VMware Cloud"^] 
 . 在BlueXP中、将SnapMirror部署到FSx for NetApp ONTAP。
 . 在BlueXP中、发现AWS实例上配置的FSx for NetApp ONTAP、并以适当的频率和NetApp Snapshot副本保留将指定的数据存储库卷从内部环境复制到FSx for NetApp ONTAP。
 
+
+
+
+=== 设置许可
+
+借助BlueXP灾难恢复、您可以注册90天免费试用。

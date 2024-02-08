@@ -14,7 +14,7 @@ summary: 云灾难恢复是一种经济高效的弹性方法、可保护工作�
 [role="lead"]
 云灾难恢复是一种经济高效的弹性方法、可保护工作负载免受站点中断和数据损坏事件的影响。借助适用于VMware的BlueXP灾难恢复预览版、您可以将运行ONTAP存储的内部VMware工作负载复制到使用NetApp云存储的公共云中的VMware软件定义的数据中心、或者复制到使用ONTAP存储作为灾难恢复站点的其他内部VMware环境。
 
-BlueXP灾难恢复预览是一种基于云的灾难恢复服务、可自动执行灾难恢复工作流。最初、借助BlueXP灾难恢复预览版、您可以保护运行NetApp存储且基于NFS的内部VMware工作负载、使其符合以下条件之一：
+BlueXP灾难恢复预览是一种基于云的灾难恢复服务、可自动执行灾难恢复工作流。最初、借助BlueXP灾难恢复服务、您可以保护运行NetApp存储且基于NFS的内部VMware工作负载、使其符合以下条件之一：
 
 * AWS上的VMware Cloud (VMC)与Amazon FSx for NetApp ONTAP或
 * 采用ONTAP存储的另一个基于NFS的内部VMware环境
@@ -26,9 +26,9 @@ image:draas-onprem-to-cloud-onprem.png["显示适用于VMware的BlueXP灾难恢�
 
 
 
-== 使用适用于VMware预览版的BlueXP灾难恢复的优势
+== 使用适用于VMware的BlueXP灾难恢复的优势
 
-BlueXP灾难恢复预览具有以下优势：
+BlueXP灾难恢复具有以下优势：
 
 * 通过多个时间点恢复操作简化了vCenter发现和恢复应用程序的用户体验 
 * 降低运营成本、并能够以最少的资源创建和调整灾难恢复计划、从而降低总拥有成本
@@ -40,7 +40,7 @@ BlueXP灾难恢复预览具有以下优势：
 
 == 适用于VMware的BlueXP灾难恢复预览版可执行的操作
 
-BlueXP灾难恢复预览版可让您充分利用多种NetApp技术来实现以下目标：
+通过BlueXP灾难恢复预览、您可以充分利用多种NetApp技术来实现以下目标：
 
 * 使用SnapMirror复制将内部生产站点上的VMware应用程序复制到云中或内部的灾难恢复远程站点。
 * 将VMware工作负载从原始站点迁移到其他站点。
@@ -55,17 +55,21 @@ NOTE: vSphere服务器的配置在vSphere Server的BlueXP灾难恢复之外完�
 
 == 成本
 
-NetApp不会因使用BlueXP灾难恢复预览版而向您收费。
-
-BlueXP灾难恢复服务在全面上市后应提供按需购买定价或基于订阅的年度计划。
+NetApp不会因使用BlueXP灾难恢复试用版而向您收费。
 
 
 
-== BlueXP灾难恢复预览的工作原理
+== 90天免费试用
 
-BlueXP灾难恢复预览版可以恢复从内部站点复制到Amazon FSx for ONTAP或其他内部站点的工作负载。此服务可通过虚拟机注册到虚拟机云(Virtual Machine Cloud、VMC)以及直接在VMware网络虚拟化和安全平台NSX-T上的网络映射、自动执行从SnapMirror级别的恢复所有虚拟机云环境均包含此功能。
+您可以使用90天免费试用版试用BlueXP灾难恢复。
 
-BlueXP灾难恢复预览使用ONTAP SnapMirror技术、该技术可提供高效复制、并保持ONTAP永久增量Snapshot效率。SnapMirror复制可确保应用程序一致的Snapshot副本始终保持同步、并且数据在故障转移后立即可用。
+
+
+== BlueXP灾难恢复的工作原理
+
+BlueXP灾难恢复可以恢复从内部站点复制到Amazon FSx for ONTAP或其他内部站点的工作负载。此服务可通过虚拟机注册到虚拟机云(Virtual Machine Cloud、VMC)以及直接在VMware网络虚拟化和安全平台NSX-T上的网络映射、自动执行从SnapMirror级别的恢复所有虚拟机云环境均包含此功能。
+
+BlueXP灾难恢复使用ONTAP SnapMirror技术、该技术可提供高效复制、并保持ONTAP永久增量Snapshot效率。SnapMirror复制可确保应用程序一致的Snapshot副本始终保持同步、并且数据在故障转移后立即可用。
 
 image:dr-architecture-diagram-70.png["该图显示了适用于VMware服务基础架构的BlueXP灾难恢复架构"]
 
