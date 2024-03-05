@@ -12,13 +12,34 @@ summary: BlueXP灾难恢复是一种基于云的灾难恢复服务、可自动�
 
 
 [role="lead"]
-了解BlueXP灾难恢复预览版中的新增功能。
+了解BlueXP灾难恢复的新增功能。
+
+
+
+== 2024年3月5日
+
+这是BlueXP灾难恢复的正式发布版本、其中包括以下更新。
+
+* *许可更新*：借助BlueXP灾难恢复、您可以注册90天免费试用或自带许可证(自带许可证、BYOL)、这是您从NetApp销售代表处获得的NetApp许可证文件(NLL)您可以使用许可证序列号在BlueXP电子钱包中激活BYOL。BlueXP灾难恢复费用基于数据存储库的已配置容量计算。
++
+有关为BlueXP灾难恢复设置许可的详细信息、请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-licensing.html["设置许可"]。
+
++
+有关管理*all* BlueXP服务许可证的详细信息，请参阅 https://docs.netapp.com/us-en/bluexp-digital-wallet/task-manage-data-services-licenses.html["管理所有BlueXP服务的许可证"^]。
+
+
+
+* *编辑计划*：在此版本中，您现在可以设置测试合规性和故障转移测试的计划，以确保这些计划在您需要时可以正常工作。
++
+有关详细信息，请参见 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["创建复制计划"]。
+
+
 
 
 
 == 2024年2月1日
 
-此BlueXP灾难恢复版本包括以下更新：
+此BlueXP灾难恢复预览版包括以下更新：
 
 * *网络增强功能*：在此版本中，您现在可以调整VM CPU和RAM值的大小。现在、您还可以为虚拟机选择网络DHCP或静态IP地址。
 +
@@ -55,7 +76,7 @@ summary: BlueXP灾难恢复是一种基于云的灾难恢复服务、可自动�
 
 == 2024年1月11日
 
-此版本的BlueXP灾难恢复包括以下更新：
+此BlueXP灾难恢复预览版包括以下更新：
 
 * 在此版本中、您可以更快速地从信息板访问其他页面上的信息。
 

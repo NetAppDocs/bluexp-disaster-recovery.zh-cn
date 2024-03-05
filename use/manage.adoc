@@ -29,7 +29,7 @@ summary: NetApp BlueXP灾难恢复是一种基于云的灾难恢复服务、可�
 
 .步骤
 . 从顶部菜单中选择*sites*。
-. 选择*Actions*选项 image:../use/icon-horizontal-dots.png["BlueXP灾难恢复服务中的\"Actions\"菜单图标"]  并选择*Edit*。
+. 选择*Actions*选项 image:../use/icon-vertical-dots.png["BlueXP灾难恢复服务中的\"Actions\"菜单图标"]  并选择*Edit*。
 . 编辑vCenter站点名称和位置。
 
 
@@ -45,6 +45,9 @@ summary: NetApp BlueXP灾难恢复是一种基于云的灾难恢复服务、可�
 
 .步骤
 . 从顶部菜单中选择*复制计划*。
++
+image:../use/dr-plan-list2.png["复制计划列表"]
+
 . 要查看计划详细信息，请选择*Actions*选项 image:../use/icon-horizontal-dots.png["BlueXP灾难恢复服务中的\"Actions\"菜单图标"] 并选择*查看计划详情*。
 . 执行以下任一操作：
 +

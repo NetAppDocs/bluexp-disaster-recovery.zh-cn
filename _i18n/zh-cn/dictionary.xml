@@ -209,7 +209,6 @@ BlueXP灾难恢复不需要任何支持。灾难恢复选项将自动显示在Bl
   <block id="7fc964519860ed011389afb142e2370e" category="list-text">在BlueXP中：</block>
   <block id="322e46cbec275f2740ec8387b6dd48fd" category="list-text">将内部ONTAP存储工作环境添加到BlueXP。这是源ONTAP集群。</block>
   <block id="24b72cf7b78b1dabbeedc0e25ff165f8" category="list-text">添加BlueXP帐户、将FSxN添加到工作环境、并添加FSx for ONTAP的AWS凭据。</block>
-  <block id="b8df0b164b6257ea461d9fe9bafba4a0" category="section-title">在AWS中设置</block>
   <block id="832d5bf67a66aafc3f8182b31c2c8086" category="paragraph">在AWS中、您需要执行以下步骤：</block>
   <block id="824ad2eb4e12f7e91aa345fe67fa3e20" category="list-text">部署VMware Cloud</block>
   <block id="4dab2f9796b0af6304d00e21e2b9dfb4" category="inline-link">基于 AWS 的 VMware Cloud</block>
@@ -218,7 +217,6 @@ BlueXP灾难恢复不需要任何支持。灾难恢复选项将自动显示在Bl
   <block id="fd14ed73e21c2af5ff119a635c30df95" category="paragraph">要在AWS上配置VMC环境、请按照此处的步骤进行操作<block ref="2482e32457e6109d0aff0016bbcce7d1" category="inline-link-rx"></block>。指示灯集群还可用于灾难恢复。</block>
   <block id="813470cfb6b19cf55033bfb89dad5bc3" category="section-title">配置Amazon FSx for NetApp ONTAP</block>
   <block id="eb394b51d4a778c72332db5d64a1960b" category="paragraph">适用于NetApp ONTAP 的Amazon FSX是一种完全托管的服务、可提供基于常见NetApp ONTAP 文件系统构建的高度可靠、可扩展、高性能和功能丰富的文件存储。请按照此处的步骤进行操作<block ref="551566e1b64bc66251dbfe6d546a4bef" category="inline-link-rx"></block> 配置FSx for NetApp ONTAP。</block>
-  <block id="a92a4e415b5c7d3fb9b1ef84a6a978ee" category="section-title">在BlueXP中设置</block>
   <block id="496692430255798782df4a20f93d0e46" category="paragraph">下一步是在BlueXP中设置灾难恢复。</block>
   <block id="ccaaa0b1fdb9afd84865d38039f74d41" category="section-title">在BlueXP中创建连接器</block>
   <block id="d29bda09bea50f3d6b0e9d9d61015179" category="inline-link">如何创建连接器</block>
@@ -269,12 +267,10 @@ BlueXP灾难恢复不需要任何支持。灾难恢复选项将自动显示在Bl
   <block id="09a3b2146f5bb00d0655706877fb4488" category="list-text">从BlueXP左侧导航栏中、选择*保护*&gt;*灾难恢复*。</block>
   <block id="04f45bf7defd11ead0b4c56cf8c3f371" category="paragraph">如果这是您首次登录此服务、则会显示登录页面。</block>
   <block id="c6c7eb2270b5edb5f8ecf37392db8b4b" category="inline-image-macro">BlueXP灾难恢复的登录页面屏幕截图</block>
-  <block id="834a404d8022b5474595ce6643b8c962" category="paragraph"><block ref="834a404d8022b5474595ce6643b8c962" category="inline-image-macro-rx" type="image"></block></block>
   <block id="674a6bb0fdee8ed1d2d68faddc33d5e6" category="paragraph">否则、将显示BlueXP灾难恢复信息板。</block>
   <block id="e1d24b3118270d4224a54337f1f63f2c" category="summary">通过验证对您的环境、网络访问、登录和Web浏览器的支持、开始使用BlueXP灾难恢复。</block>
   <block id="ccf3c2f4a4ab48adb4cc5352e480655c" category="doc">BlueXP灾难恢复前提条件</block>
   <block id="84804abf3404a430e85ae3299587a6b0" category="paragraph">首先验证您的操作环境、登录、网络访问和Web浏览器是否就绪。</block>
-  <block id="0a671277a8e95e13cd4ada589094d401" category="list-text">使用NetApp存储的内部VMware工作环境</block>
   <block id="e3bc55f0abc82785380fd56b902bf803" category="list-text">在AWS上：</block>
   <block id="9ff73081ad3af348b09105664054c18f" category="inline-link">如何开始</block>
   <block id="308d77673e39dd171579985cc8579f92" category="list-text">Amazon FSx for NetApp ONTAP文件系统。请参阅上的Amazon FSx for ONTAP文档<block ref="db982a545763422931a00c332a8601c2" category="inline-link-rx"></block>。</block>
@@ -283,7 +279,6 @@ BlueXP灾难恢复不需要任何支持。灾难恢复选项将自动显示在Bl
   <block id="045482367f3cc5727ae8f097479439ee" category="list-text">将SDDC与Amazon FSx for NetApp ONTAP链接起来。请参见<block ref="02b70b195fcb534ea97ab3bf74203889" category="inline-link-rx"></block>。</block>
   <block id="69b085a23d3ed85c84455b9288792bf2" category="inline-link">BlueXP快速入门</block>
   <block id="45e7f38a8238b36c23e85bbe6436ba0b" category="inline-link">BlueXP网络信息</block>
-  <block id="9d59690aa454d56946e79da0ccf17dcd" category="list-text">已将Amazon FSx for ONTAP和AWS凭据添加到BlueXP工作环境中</block>
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">法律声明</block>
   <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="paragraph">法律声明提供对版权声明、商标、专利等的访问。</block>
   <block id="6016a2b341113bf496b719905398ecd2" category="section-title">版权</block>
@@ -337,7 +332,6 @@ BlueXP灾难恢复不需要任何支持。灾难恢复选项将自动显示在Bl
   <block id="0acfc5a5ce6523c8fad77ea0b4d65862" category="section-title">管理vCenter站点</block>
   <block id="f6384b4b10f3ca7cfac8402cfb23ef7f" category="paragraph">您可以编辑vCenter站点名称和站点类型(内部或AWS)。</block>
   <block id="c59beae96d46d2c9b38ce64663e3d9d0" category="list-text">从顶部菜单中选择*sites*。</block>
-  <block id="63488dc67b3dd9f79eef8f84ef97e5a1" category="list-text">选择*Actions*选项 <block ref="2fddd650b01c7f9674be856867aae05d" category="inline-image-macro-rx" type="image"></block>  并选择*Edit*。</block>
   <block id="c4b621211240f640df1e2cfcc6cc5bec" category="list-text">编辑vCenter站点名称和位置。</block>
   <block id="07851e0287e57a794c18de627c09e0e7" category="section-title">管理复制计划</block>
   <block id="5fc6ce3a162e9142e8d530e890bcf33c" category="paragraph">您可以禁用、启用和删除复制计划。</block>
@@ -473,7 +467,6 @@ BlueXP灾难恢复不需要任何支持。灾难恢复选项将自动显示在Bl
   <block id="522cbb900314aeb84eb5a961c5f94672" category="section-title">获得云提供商文件服务支持</block>
   <block id="f6185bb12f5e53c800be8cda7fbca65b" category="paragraph">有关与云提供商文件服务、其基础架构或使用该服务的任何解决方案相关的技术支持、请参阅该产品的BlueXP文档中的"获得帮助"。</block>
   <block id="3880ae5df9fdc4d0fc4a6d00a2239530" category="paragraph">要获得针对BlueXP及其存储解决方案和服务的技术支持、请使用下面所述的支持选项。</block>
-  <block id="5390078526cd7c5bbf99260f6968b5ec" category="paragraph">了解BlueXP灾难恢复预览版中的新增功能。</block>
   <block id="2971377ab46c11db3998ef23731b52cf" category="section-title">2023年10月20日</block>
   <block id="b56e223e6fc7ca1dfacb6233ed47b35e" category="paragraph">此BlueXP灾难恢复预览版包含以下更新。</block>
   <block id="af242308972c98cd4207cc26ee6edaa9" category="paragraph">现在、借助BlueXP灾难恢复功能、您可以保护基于NFS的内部VMware工作负载、使其免受灾难影响、而灾难又发生在公共云之外的另一个基于NFS的内部VMware环境中。BlueXP灾难恢复可安排灾难恢复计划的完成。</block>
@@ -514,7 +507,6 @@ BlueXP灾难恢复不需要任何支持。灾难恢复选项将自动显示在Bl
   <block id="798f01bc27c71f62fd4a64e0bb155f2f" category="paragraph">此过程不会在AWS中的内部ONTAP存储或FSx for NetApp ONTAP存储上占用额外的物理容量。初始源卷不会被修改、即使在灾难恢复期间、副本作业也可以继续进行。</block>
   <block id="fc3e06260a2d82cbcdc61d0edfe814f2" category="paragraph">发生灾难时、可使用FSx for NetApp ONTAP按需将主内部VMware站点故障转移到另一个内部VMware站点或AWS上的VMware Cloud。</block>
   <block id="0e4406e2f319d2b24ab99a69613fbf47" category="list-text">系统会根据复制计划中捕获的信息创建数据存储库并将其挂载到VMware或VMC集群或主机。</block>
-  <block id="f34bf212e5f50a4e5ff41c4313b507d9" category="admonition">故障转移开始后、可以在灾难恢复站点(虚拟机、网络和数据存储库)的vCenter中看到已恢复的VM。默认情况下、虚拟机会恢复到工作负载文件夹。</block>
   <block id="f806e093eb7de418336ba62747d0d9ab" category="list-text">在Test failover页面中、输入复制计划名称进行确认、然后选择*故障转移*。</block>
   <block id="48b7a229446624a8bba6bae8e801d0ab" category="list-text">通过在左上角的面包屑中选择"Replication Plans (复制计划)"、返回计划列表。</block>
   <block id="2ebea8fe68e78bc0ff591a0dfab2033d" category="list-text">要对计划执行操作，请从复制计划列表中选择*Actions*选项 <block ref="2fddd650b01c7f9674be856867aae05d" category="inline-image-macro-rx" type="image"></block>  并选择任何选项，如*Edit SCHED*、*Test failover*、*failover*、*failback*、*Disable"、 *Enable*或*Delete*。</block>
@@ -523,9 +515,6 @@ BlueXP灾难恢复不需要任何支持。灾难恢复选项将自动显示在Bl
   <block id="deddd86c6a5897bccccb85b43b4b28da" category="list-text">从BlueXP灾难恢复顶部菜单中、选择*仪表板*。</block>
   <block id="04edaa59dc99bd9193a5ad37083cc900" category="list-text">查看信息板上的以下信息：</block>
   <block id="b845a02ab309809100805f1256a064e8" category="list-text">*站点*：查看站点的运行状况。站点可以具有以下状态之一：</block>
-  <block id="61e18cf8d6f0ea0411c78989c9db7a39" category="list-text">*运行状况良好*：vCenter已连接且正在运行。</block>
-  <block id="946f03b5b54177213c34641ddacb28d9" category="list-text">*已断开连接*：vCenter无法访问或存在连接问题。</block>
-  <block id="20a720399ff6873fe761ee1db856af10" category="list-text">*已降级*：vCenter无法访问或存在连接问题。</block>
   <block id="e2438a3d730fa8490b06524ee1d8b0ed" category="paragraph">要查看站点详细信息，请选择*查看全部*查看状态，或选择*查看站点*查看全部。</block>
   <block id="18c8e34abace1973ab5a4468dba74870" category="list-text">*复制计划*：查看计划的运行状况。计划可以具有以下状态之一：</block>
   <block id="ddc1e4c30a24a09d9ea40b7e332147a4" category="list-text">*就绪*</block>
@@ -559,23 +548,16 @@ BlueXP灾难恢复不需要任何支持。灾难恢复选项将自动显示在Bl
   <block id="69c0c55ea8cce1b3cc74ab21345b0989" category="list-text">*数据存储库*：根据所选虚拟机、系统会自动选择数据存储库映射。</block>
   <block id="7fceed43db5d7f111f8ef8f9351ffecd" category="paragraph">选择是要将数据迁移(一次性移动)到另一个目标还是以SnapMirror频率复制数据。</block>
   <block id="a6263fdec62a2bd89f463f2208f79331" category="paragraph">如果要复制数据、请确定镜像数据的频率。</block>
-  <block id="774a603b6a7ee18d47215ca2f4362c80" category="admonition">在此预览版中、在BlueXP灾难恢复服务之外配置频率。</block>
   <block id="901540dd7e45eaf2226327527c8d78b4" category="list-text">*Source*：选择*Discover vCenter server*以输入有关源vCenter站点的信息。</block>
   <block id="bc7f3cb185f48d451eb5ef976e8ad82d" category="list-text">*目标*：</block>
   <block id="d23a9d83c87c6eacef309f00a2beb5d3" category="inline-image-macro">站点页面屏幕截图</block>
   <block id="28f8c0c78028f2e899f7af50ce138e1b" category="paragraph"><block ref="28f8c0c78028f2e899f7af50ce138e1b" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="b3dbeaf2ef270574ab4299c7f3ca04fc" category="paragraph">要使用BlueXP灾难恢复、请执行几个步骤在AWS和BlueXP中进行设置。</block>
   <block id="1835d0517fe4ffa8b6a639fa95e369ad" category="list-text">在BlueXP中创建连接器。</block>
   <block id="25cb0baf366c7202daaabd5e60c16293" category="list-text">部署和配置SnapMirror for Amazon FSx for NetApp ONTAP。</block>
-  <block id="97101746d98d1f7232439a75fd3b33ee" category="paragraph">您需要注册预览版或联系NetApp销售代表试用此服务。然后、当您使用BlueXP Connector时、它将包括适用于灾难恢复服务的功能。</block>
   <block id="2a1f2380d9e50746902517055340629f" category="paragraph">使用BlueXP内部部署连接器或BlueXP AWS连接器、它们可以访问源内部部署vCenter和目标内部部署vCenter。</block>
-  <block id="3abca5fc9f26906e4b32323c7e019f0d" category="doc">了解适用于VMware的BlueXP灾难恢复预览版</block>
-  <block id="4589fa3716efb487281f1d798a3f1ba0" category="paragraph">云灾难恢复是一种经济高效的弹性方法、可保护工作负载免受站点中断和数据损坏事件的影响。借助适用于VMware的BlueXP灾难恢复预览版、您可以将运行ONTAP存储的内部VMware工作负载复制到使用NetApp云存储的公共云中的VMware软件定义的数据中心、或者复制到使用ONTAP存储作为灾难恢复站点的其他内部VMware环境。</block>
   <block id="6f5e3fdfa73285ac2283ba492cf2d47b" category="list-text">AWS上的VMware Cloud (VMC)与Amazon FSx for NetApp ONTAP或</block>
   <block id="b374472b15e644f23d1e6b059b5216b9" category="list-text">采用ONTAP存储的另一个基于NFS的内部VMware环境</block>
-  <block id="6e59ee76c6f7c9c37b00ca09ba980203" category="paragraph">BlueXP灾难恢复预览使用ONTAP SnapMirror技术作为到灾难恢复站点的复制传输。这样可以在主站点和二级站点上实现行业最佳的存储效率(数据压缩和重复数据删除)。</block>
   <block id="53c1c0c22e2a647591a0b52427852850" category="paragraph"><block ref="53c1c0c22e2a647591a0b52427852850" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="382e6c225343455c11628109eb882e15" category="section-title">适用于VMware的BlueXP灾难恢复预览版可执行的操作</block>
   <block id="add8d69a5f7975ffd43124657fc5030d" category="list-text">使用SnapMirror复制将内部生产站点上的VMware应用程序复制到云中或内部的灾难恢复远程站点。</block>
   <block id="dcc9d99320099ed731ca2f05b3e501a7" category="list-text">将VMware工作负载从原始站点迁移到其他站点。</block>
   <block id="2aefc74ac286c583100431f62049590d" category="list-text">发生灾难时、可按需将主站点故障转移到灾难恢复站点、灾难恢复站点可以是基于AWS的VMware Cloud和FSx for NetApp ONTAP、也可以是采用ONTAP的内部VMware环境。</block>
@@ -583,15 +565,11 @@ BlueXP灾难恢复不需要任何支持。灾难恢复选项将自动显示在Bl
   <block id="11ee533cc4ce7135332d0b64a9e82e51" category="paragraph"><block ref="11ee533cc4ce7135332d0b64a9e82e51" category="inline-image-macro-rx" type="image"></block></block>
   <block id="20099229ad21726312a6ff50740b0b57" category="paragraph">发生灾难时、此服务可通过中断SnapMirror关系并使目标站点处于活动状态来帮助您恢复其他内部VMware环境或VMC中的虚拟机。</block>
   <block id="a675a2edc95f7fca650a735944e38f96" category="paragraph">要使用BlueXP灾难恢复、应确保您的环境满足以下要求：</block>
-  <block id="aa82bbc3168bf1967b0b9989d3f08515" category="list-text">一个VMware帐户、在AWS上拥有软件定义的数据中心(SDDC)、也称为虚拟机云。在VMware Cloud Console中、使用管理员和NSX云管理员这两个服务角色、这两个角色都位于AWS上的VMware Cloud上。此外、还可以将组织所有者用于组织角色。请参见<block ref="e0529c1c92608a25886bf41835abea27" category="inline-link-rx"></block>。</block>
-  <block id="26c0c642341e386b5fb2162798efefc7" category="list-text">需要在NetApp BlueXP中设置BlueXP连接器。使用BlueXP AWS Connector、它可以访问内部vCenter和云。BlueXP Connector需要源vCenter Server和目标vCenter Server的凭据。请参见<block ref="4b1866f17dc6bd66f88d9d6839084df6" category="inline-link-rx"></block> 和<block ref="8b2e3c99c244ff11d22f3c561bd167b2" category="inline-link-rx"></block>。</block>
-  <block id="7895930f9a8243b9222b0bf7463d1dbd" category="sidebar">灾难恢复到云是一种经济高效的弹性方法、可保护工作负载免受站点中断和数据损坏事件(例如勒索软件)的影响。借助适用于VMware的BlueXP灾难恢复预览版、您可以将运行ONTAP存储的内部VMware工作负载复制到公共云中的VMware软件定义的数据中心、或者复制到作为灾难恢复站点的其他内部站点。</block>
   <block id="96ed64c294e585324853f8f980f9d78e" category="sidebar">将应用程序迁移到其他站点</block>
   <block id="36a7330c410600f4393af365b3d66e29" category="sidebar">BlueXP灾难恢复博客</block>
   <block id="ad80d6168dc288f4361413eeca80dc5f" category="sidebar">迁移到其他站点</block>
   <block id="610937dc327c640656a75f6464a91433" category="summary">BlueXP灾难恢复是一种基于云的灾难恢复服务、可自动执行灾难恢复工作流。借助适用于VMware的BlueXP灾难恢复、您可以使用NetApp云存储将运行ONTAP存储的内部VMware工作负载复制到公有云中的VMware软件定义的数据中心、作为灾难恢复站点。</block>
   <block id="578e9059da07f7d858d4746bbf9af55a" category="section-title">2024年2月1日</block>
-  <block id="9df62cb4d6f151b560e84723841bd523" category="paragraph">此BlueXP灾难恢复版本包括以下更新：</block>
   <block id="c61970ed6417395a368e95032dbce932" category="list-text">*网络增强功能*：在此版本中，您现在可以调整VM CPU和RAM值的大小。现在、您还可以为虚拟机选择网络DHCP或静态IP地址。</block>
   <block id="bb3e5e687ab316872aaebfbeeb4a6605" category="list-text">DHCP：如果选择此选项、则需要提供VM的凭据。</block>
   <block id="302dd2d13eb7b51a95fccbe2fc1ba0b8" category="list-text">静态IP：您可以从源VM选择相同或不同的信息。如果选择与源相同的、则无需输入凭据。另一方面、如果选择使用与源不同的信息、则可以提供凭据、IP地址、子网掩码、DNS和网关信息。</block>
@@ -603,7 +581,6 @@ BlueXP灾难恢复不需要任何支持。灾难恢复选项将自动显示在Bl
   <block id="ed38b69c5713d5b42f77e9c3ec5872a8" category="list-text">*VM启动延迟选项*：创建复制计划时，可以将VM添加到资源组。使用资源组、您可以在每个VM上设置延迟、以便它们按延迟顺序启动。</block>
   <block id="193634e2d37697e73e8a9d15d4dca73d" category="list-text">*应用程序一致的Snapshot副本*：您可以指定创建应用程序一致的Snapshot副本。该服务将使应用程序处于静修状态、然后创建Snapshot以获得一致的应用程序状态。</block>
   <block id="17c3c89f25f7684516a883f30f10b747" category="section-title">2024年1月11日</block>
-  <block id="498bbebab4456541af3524b2dbb2f6c9" category="paragraph">此版本的BlueXP灾难恢复包括以下更新：</block>
   <block id="77a292951e2cd7ee0d1bc7d3db0020ec" category="list-text">在此版本中、您可以更快速地从信息板访问其他页面上的信息。</block>
   <block id="0f354958858456370fa7b64c5f2a913c" category="paragraph"><block ref="929628a652068d14da23775529f8803b" category="inline-link-rx"></block>。</block>
   <block id="2c1f345ff21d3c1b339c0919d325adfc" category="paragraph">下一步是将所需的虚拟机分组到功能资源组中。通过资源组、您可以将一组相关虚拟机分组为符合您要求的逻辑组。例如、组可能包含延迟启动顺序、可在恢复时运行。</block>
@@ -617,7 +594,6 @@ BlueXP灾难恢复不需要任何支持。灾难恢复选项将自动显示在Bl
   <block id="a185f33799a71b88cd6698b98b6a24ba" category="paragraph"><block ref="24a9c3a30da07f8741b28abb153be52b" category="inline-image-macro-rx" type="image"></block></block>
   <block id="13f51fa84ff64a1c633957d1dcf01637" category="paragraph">在将大型环境恢复到较小的目标集群时、或者在无需配置一对一物理VMware基础架构的情况下执行灾难恢复测试时、这一点非常有用。</block>
   <block id="968b5e826ff04540f18ce0baa3466400" category="list-text">*应用程序一致的副本*：指示是否创建应用程序一致的Snapshot副本。该服务将使应用程序处于静修状态、然后创建Snapshot以获得一致的应用程序状态。</block>
-  <block id="ec99466f38bdb41d26e8d8c41d59dcac" category="list-text">*RPO *：输入恢复点目标(RPO)以指示要恢复的数据量(以时间为单位)。例如、如果您输入2小时的RPO、则恢复过程中的数据必须始终不超过2小时。如果发生灾难、您最多可以丢失2小时的数据。此外、还可以输入要为所有数据存储库保留的Snapshot副本数。</block>
   <block id="a0a39a6cc9b29c2c12820ee4ef86be49" category="list-text">*SnapMirror关系*：如果卷已建立SnapMirror关系、则可以选择相应的源数据存储库和目标数据存储库。如果您选择的卷没有SnapMirror关系、则可以通过选择工作环境及其对等SVM来创建一个。</block>
   <block id="4c77d41c045300d2cacb091f19b6d9a5" category="list-text">*一致性组*：创建复制计划时、可以包括来自不同卷和不同SVM的VM。BlueXP灾难恢复创建一致性组快照。</block>
   <block id="436f3832b32bfb2d3cb66d6298a71245" category="list-text">如果指定了恢复点目标(RPO)、则该服务将根据RPO计划主备份并更新二级目标。</block>
@@ -628,139 +604,32 @@ BlueXP灾难恢复不需要任何支持。灾难恢复选项将自动显示在Bl
   <block id="d59e0b46782e48a01966e5c7ccc38d17" category="paragraph">NetApp使用Microsoft Entra ID作为特定于支持和许可的身份验证服务的身份提供程序。</block>
   <block id="7fda53563ff8ebfe855a3a79f568f396" category="summary">借助BlueXP灾难恢复、您可以使用不同的许可计划、包括免费试用版、按需购买订阅或自带许可证。</block>
   <block id="a7193edb26a4b1bca4b7b82254e6dd4b" category="doc">为BlueXP灾难恢复设置许可</block>
-  <block id="487e188799d200e50a0b10ecfcf71c29" category="paragraph">您可以使用以下任一许可证类型：</block>
   <block id="06cda8527230b64a09b1c568fbd2a80e" category="list-text">注册90天免费试用。</block>
-  <block id="562d634497091dd1cf780c100a3b407a" category="list-text">通过Amazon Web Services (AWS) Marketplace购买1年、2年或3年的按需购买(PAYGO)订阅。</block>
-  <block id="a70dde4c33e782ae5fe27d750ac67840" category="list-text">自带许可证(BYOL)、这是您从NetApp销售代表或NetApp 支持站点(NSS)获取的NetApp许可证文件(NLL)。您可以直接在BlueXP数字钱包中上传NLG、也可以使用许可证序列号在BlueXP数字钱包中激活BYOL。</block>
-  <block id="64b0d9155985d2dd6eeb6028b95e61f9" category="admonition">如果至少有一个VM具有复制计划、则BlueXP灾难恢复费用基于源站点上数据存储库的已配置容量计算得出。故障转移数据存储库的容量不包括在容量允许值中。对于BYOL、如果数据超过允许的容量、则服务操作将受到限制、直到您获得额外的容量许可证、在BlueXP数字钱包中升级许可证或在AWS中购买订阅为止。如果您选择AWS订阅、超出合同限制的任何已用容量将根据AWS Marketplace计划收费。</block>
-  <block id="f162f6ba04d470090d59c95f43d89df4" category="paragraph">在AWS中设置BYOL或购买订阅后、您可以在BlueXP数字钱包*数据服务许可证*选项卡中查看许可证、或在BlueXP数字钱包*订阅*选项卡中查看活动订阅。</block>
-  <block id="038d93ce13a2896c1d35fb3fc2f5fd57" category="paragraph">在免费试用结束或许可证或AWS订阅到期后、您仍可在服务中执行以下操作：</block>
   <block id="9a0514da0283645471837a7dd9cdd00a" category="list-text">查看任何资源、例如工作负载或复制计划。</block>
   <block id="1868701c43ed8ccfa46dc8fe93f4252f" category="list-text">删除任何资源、例如工作负载或复制计划。</block>
-  <block id="c07e8b2cbedb447cec03e974351874da" category="list-text">运行在试用期、许可证或订阅期间创建的所有计划操作。</block>
   <block id="d687b9bb1fc0385150b07b1a9aaae7d3" category="section-title">试用90天免费试用</block>
   <block id="1863514dc4e2f913207e4b5eacc1a0a8" category="paragraph">您可以使用90天免费试用版试用BlueXP灾难恢复。</block>
   <block id="88c474e49a0cbbc7ef17d052040cd008" category="admonition">试用期间不会强制实施容量限制。</block>
-  <block id="48147384453590f1039b45c52cc9eca5" category="paragraph">您可以随时获得许可证或订阅、90天试用期结束前不会向您收费。要在90天试用之后继续、您需要购买BYOL许可证或PAYGO AWS订阅。</block>
   <block id="f37d436fdc8600ce24709a8f4435ec79" category="paragraph">在试用期间、您将拥有全部功能。</block>
   <block id="39c87728ab108f5ab751a40319f03bc8" category="list-text">访问<block ref="4d9841a08a6f1c082f5ba73c5d87fcc1" category="inline-link-rx"></block>。</block>
   <block id="771e1ea643a8723d0d0dfad6c2b70ace" category="list-text">如果尚未为其他服务添加连接器、请添加一个连接器。</block>
   <block id="e6e80588e9fe7cf89218fea44300f7ca" category="inline-link">了解连接器</block>
   <block id="7530875db6f7eceea689fdfeb6a12778" category="paragraph">要添加接头、请参见<block ref="d6df7dcc2fc3105e10967a9194806ce5" category="inline-link-rx"></block>。</block>
-  <block id="ac04f975264c50a52d2f6cc638afb39f" category="list-text">设置Connector后、在BlueXP灾难恢复登录页面中、选择*开始免费试用*。</block>
-  <block id="be0511671b1a06d12a8abb3e1a528ddd" category="paragraph"><block ref="be0511671b1a06d12a8abb3e1a528ddd" category="inline-image-macro-rx" type="image"></block></block>
   <block id="9aac5cf8ab754f13e3926b6983853bec" category="list-text">查看免费试用信息并选择*Let's Go。</block>
-  <block id="ad7911fdd21ff5752d10300d0446de95" category="section-title">试用结束后、通过AWS Marketplace进行订阅</block>
-  <block id="e1186eb5e41d3a9e96827c9ab4aef684" category="paragraph">免费试用结束后、您可以从NetApp购买许可证、也可以通过AWS Marketplace进行订阅。本操作步骤简要概述了如何直接在AWS Marketplace中订阅。</block>
-  <block id="acce4a6c25bc51b4930085d68e3cb0cd" category="list-text">在BlueXP灾难恢复中、您会看到一条消息、指出免费试用即将到期。在消息中，选择*订阅或购买许可证*。</block>
   <block id="1584158e2068ac8b1f79bfc70eb2775d" category="inline-image-macro">BlueXP灾难恢复"订阅或购买许可证"页面</block>
-  <block id="3d4db8763fbd87ecc7a4f8101cbec83a" category="paragraph"><block ref="3d4db8763fbd87ecc7a4f8101cbec83a" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="115e74c3b43a13f1983597e5b4ae81a4" category="list-text">在"订阅或购买许可证"页面中、选择*在AWS Marketplace中订阅*。</block>
-  <block id="a06442e94af0d31f4eee679c83de7779" category="list-text">在AWS Marketplace中、选择*查看购买选项*。</block>
-  <block id="266c58f74740e96b35f10409d3036f8f" category="list-text">使用AWS Marketplace订阅BlueXP灾难恢复。</block>
-  <block id="44ff26969211cf5f760425e5016afa73" category="list-text">返回到BlueXP灾难恢复后、系统会显示一条消息、指出您已订阅。要在BlueXP数字钱包中查看订阅详细信息，请选择*查看订阅详细信息*，然后在*订阅*页面上查看活动订阅。</block>
-  <block id="0a504e78221db1ccaf51b7ad21bc16ce" category="inline-image-macro">BlueXP数字钱包订阅选项卡</block>
-  <block id="b8318893a2b8f639b74d86e371957c0e" category="paragraph"><block ref="b8318893a2b8f639b74d86e371957c0e" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ee6d03e51dd7b0fc10c6b3c8fcab3718" category="section-title">试用期结束后、通过NetApp购买BYOL许可证</block>
-  <block id="09df6e80d7c4ba090cf66cd7701a1c4c" category="paragraph">试用结束后、您可以通过NetApp销售代表或技术支持购买许可证。</block>
-  <block id="d290f0e91ae809782a7b9ccd5dd8157a" category="list-text">要购买许可证、请联系您的NetApp销售代表或NetApp支持。</block>
-  <block id="597d0190b11ec0257a1f5198f97f9a2b" category="list-text">获取许可证后、返回到BlueXP灾难恢复、在免费试用即将到期的消息中、选择*订阅或购买许可证*。</block>
-  <block id="180dedb526e274f91d60858c5c4a3860" category="paragraph">此时将显示"订阅或购买许可证"页面。</block>
-  <block id="32bbb007372ce4b973626330548ca221" category="paragraph"><block ref="32bbb007372ce4b973626330548ca221" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b11106bafac141be455d28549bfe177d" category="list-text">选择*向BlueXP*添加许可证。您将转到BlueXP电子钱包。</block>
-  <block id="1128484aa2dddb1a13c46430bcfc4f8c" category="paragraph"><block ref="1128484aa2dddb1a13c46430bcfc4f8c" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="5de6fcf96fdf4957fd1e6d3fb44caf43" category="list-text">在BlueXP数字钱包中，从*数据服务许可证*选项卡中选择*添加许可证*。</block>
-  <block id="9dda386ae07131acd9cdd775b4c604fb" category="list-text">在添加许可证页面中、输入序列号或上传NetApp许可证文件(NLG)。</block>
   <block id="d2ec998008b95e1189b9d8f3dbc6ed64" category="inline-image-macro">BlueXP数字钱包添加许可证页面</block>
-  <block id="57aee2bea99630804d4ce4577e4d3848" category="paragraph"><block ref="57aee2bea99630804d4ce4577e4d3848" category="inline-image-macro-rx" type="image"></block></block>
   <block id="8d4d6551ee286317b2a4f297766952f5" category="section-title">结束免费试用</block>
   <block id="859b0ef2563ddd8c6712d419656bde38" category="paragraph">您可以随时停止免费试用、也可以等到免费试用过期。</block>
   <block id="d940bc2868fa1d10a5c804aa0df8fd1b" category="list-text">在BlueXP灾难恢复中、选择右上角的*免费试用-查看详细信息*。</block>
   <block id="2c6b9011807f7d1e8a37a31be26bb7c0" category="list-text">在下拉详细信息中，选择*结束免费试用*。</block>
   <block id="fc145d0284ba4e60c3b5f315355ac505" category="inline-image-macro">结束免费试用页面</block>
-  <block id="587e300d205e423949127c7c6e81f5c0" category="paragraph"><block ref="587e300d205e423949127c7c6e81f5c0" category="inline-image-macro-rx" type="image"></block></block>
   <block id="3c90e08e219b34e50a8fec5640b6f2e8" category="list-text">如果要删除所有数据，请选中*在我的试用结束时删除所有数据*。</block>
   <block id="cb4cbd8ce32849060814e41e57e5db7f" category="paragraph">此操作将删除所有计划、复制计划、资源组、vCenter和站点。审核数据、操作日志和作业历史记录会保留到产品使用寿命结束为止。</block>
   <block id="fd4452ba53d2010757fb183f23851efd" category="admonition">如果您结束免费试用、并且未要求删除数据、并且未购买许可证或订阅、则在免费试用结束60天后、BlueXP灾难恢复将删除您的所有数据。</block>
   <block id="c3964fe08c9dd95815cc67d8aaee9323" category="list-text">在文本框中键入"结束试用"。</block>
   <block id="44a320573c319d1f30b840c2d11a4e26" category="list-text">选择*end*。</block>
-  <block id="03d76a2a858f58b49cbf5318ea7fae89" category="section-title">使用AWS按需购买(PAYGO)订阅</block>
-  <block id="b54118937870b2a29883c827835c5d7b" category="paragraph">如果您选择使用AWS Marketplace PAYGO订阅、则需要先在AWS中进行设置、然后再在BlueXP中进行设置。</block>
-  <block id="7ea992af35479c98a59ce5b5bbf5b467" category="paragraph">要在AWS中设置PAYGO订阅、请完成以下过程：</block>
-  <block id="7958e0b07aaf6b218402641474a31396" category="list-text"><block ref="e121033f1b5893d6baef892ad6791e78" category="inline-xref-macro-rx"></block></block>
-  <block id="142c7a85b86d51aacb13711eace86b8f" category="list-text"><block ref="b008b5211c1dc1b9e62320810ea2d12b" category="inline-xref-macro-rx"></block></block>
-  <block id="9e9f62e3e7a076cd3479b52d57adc152" category="list-text"><block ref="070345c883c9e12d8d07a6bc3199fa56" category="inline-xref-macro-rx"></block> 或</block>
-  <block id="36597d70ec9bb901e3556096167fab19" category="paragraph"><block ref="3951058806656057a6e70b7ce0e7db12" category="inline-xref-macro-rx"></block>。</block>
-  <block id="1797a05f2f9f21102c18c5d694c4c787" category="section-title">第1部分在AWS中配置PAYGO订阅</block>
-  <block id="71059c267704f257a71846b38b2d3c27" category="paragraph">下面简要概括了在AWS中配置PAYGO订阅的步骤。</block>
-  <block id="a0b5de080d56bb71b1a6a7c72fd88757" category="inline-link">管理BlueXP的AWS凭据和市场订阅</block>
-  <block id="2d3ab30e64f116127b23613f3890a941" category="paragraph">有关更多详细信息、请参见<block ref="19fe580609a1e652d0ab66d2ddde6588" category="inline-link-rx"></block>。</block>
-  <block id="fe9a83cc653d523afe5e4eba7ef3505d" category="inline-link">控制对AWS Marketplace订阅的访问</block>
-  <block id="fa7c2a10a866e331284ef3e62fc62f7f" category="paragraph">您必须已与NetApp销售团队合作并获取了报价链接、并且您必须拥有中所述的接受报价的权限<block ref="b3e8332268f9a285ff69c1a6128887eb" category="inline-link-rx"></block>。</block>
-  <block id="1a6212b88cf9173f8b160dac03acb2f8" category="list-text">在AWS控制台中接受适用于NetApp BlueXP的AWS Marketplace私有优惠。</block>
-  <block id="940a5318d59fd0b8397886ae775c7a24" category="paragraph">请参阅以下信息：</block>
-  <block id="254b97c87fecf1c94b73d6fa9984f5d2" category="inline-link">通过AWS Marketplace控制台访问您的私人优惠</block>
-  <block id="38ca94fa97df0771a81ddfa231152ffc" category="list-text"><block ref="97696286d6c4c1feb27501e7ae44ea4f" category="inline-link-rx"></block>。</block>
-  <block id="f1683b33b8337beb2e1a264bdf05fe3e" category="inline-link">查看"私人优惠"页面所需的权限</block>
-  <block id="90d08fd4b2b506e276b88ea2f0f11c6a" category="list-text"><block ref="0fba40e968c99d0904b96353ca748fd5" category="inline-link-rx"></block>。</block>
-  <block id="be778ac8ea4459f3690f40ef2999cc37" category="list-text">查看私人优惠详情、并验证是否符合您的协议。</block>
-  <block id="604384a772b2e87a191f5b771dfb5a48" category="admonition">由于您单击*订阅*后即开始计费，因此如果任何信息不正确，请*不要*接受私人优惠，而是联系您的NetApp销售代表。</block>
-  <block id="bb19155ccaa161e1a06c7624d967c788" category="list-text">确认优惠信息正确无误后，请选择*订阅*。</block>
-  <block id="4550f447d5f279d11a5ab35c44ad8931" category="paragraph">如果报价使用合同列表、还应输入每个服务的商品数量。然后，您可以选择*创建合同*来接受私人报价。</block>
-  <block id="c4eed6864e856fcf16af8951b7d5d928" category="list-text">在弹出窗口中、选择*设置您的帐户*、此操作会将您重定向到NetApp BlueXP控制台以完成BlueXP Marketplace订阅的配置。</block>
-  <block id="830afba629e1306d5d9562520239014c" category="paragraph">如果优惠使用合同列表，请选择*查看购买选项*，然后*设置您的帐户*。</block>
-  <block id="008faa9bf02793ec80dd22802324e7a8" category="section-title">第2部分在BlueXP中配置PAYGO订阅</block>
-  <block id="3cf4897c65d7180a2547df31556faf36" category="paragraph">在AWS控制台中接受私人优惠后、您将转到BlueXP控制台。</block>
-  <block id="a34c709a45984bcd5ef80347d96295f3" category="list-text">在BlueXP控制台中、执行以下操作：</block>
-  <block id="0cfdbbeff2c2c1a3b7cc8f03c29d3ed8" category="list-text">输入SaaS Marketplace订阅的显示名称。</block>
-  <block id="63828798bd1230f9846eb53c0f428075" category="list-text">选择应有权访问此市场订阅的NetApp BlueXP帐户。</block>
-  <block id="01db4744f6def2fba5458cd9649a04c6" category="list-text">选择*替换现有订阅*以将一个NetApp BlueXP帐户中的现有SaaS Marketplace订阅替换为此新创建的订阅。BlueXP将使用此新订阅取代帐户中所有云凭据的现有订阅。</block>
-  <block id="1f1c5e7358dc4b8dd0f0e08d305922f0" category="admonition">REPLACE选项仅限于单个NetApp BlueXP帐户。如果您要将多个BlueXP帐户与同一SaaS Marketplace订阅相关联、则需要单独配置它们。</block>
-  <block id="7d07a551e8dd304b958fbc6981b73339" category="admonition">如果一组云凭据从未与SaaS Marketplace订阅关联、则应按照本操作步骤的下一部分进行配置。</block>
-  <block id="ce2f1b02050aa24eb599cd0ed025ebaf" category="list-text">选择*保存*和*完成*。</block>
-  <block id="c2ae9406b3d9ee82ed8df853c5d603f0" category="list-text">接下来继续第3部分：</block>
-  <block id="bba06a422953f8a83263cf0521437723" category="list-text"><block ref="e53fbcd40f298359a8d18f7c77c07e73" category="inline-xref-macro-rx"></block></block>
-  <block id="379d8532291451fe1d148068b1d24ef5" category="list-text"><block ref="78411b4f0b47e9549f1651901a1acb65" category="inline-xref-macro-rx"></block>。</block>
-  <block id="9d59028ce6f4747a18b6838a6f09a117" category="section-title">第3a部分将新的Marketplace订阅与AWS凭据关联起来</block>
-  <block id="ebb3379e145480ac6ca3d8e4029db7b1" category="paragraph">在AWS中设置许可证的第3部分。</block>
-  <block id="d3cde1b881639a665a90ac695ae575a0" category="admonition">如果您有一份年度合同、请继续此处：
-<block ref="3951058806656057a6e70b7ce0e7db12" category="inline-xref-macro-rx"></block>。</block>
-  <block id="52aadb7994c5f362fa0f7a83f87dc86c" category="inline-link">NetApp BlueXP控制台</block>
-  <block id="9f1c8017d556a2aef8e6075190b62192" category="list-text">访问<block ref="64efe90ec09bb66157eb6145101787fe" category="inline-link-rx"></block>。</block>
-  <block id="b341a3d298535291adc28f4788d6bda4" category="list-text">验证订阅详细信息：</block>
-  <block id="4e5427e3b406d2b0de29fb0b8534c769" category="list-text">从左窗格中，选择*监管*&gt;*Digital Wallet*。</block>
-  <block id="beb9eb3a3d65f3bfd740e1118980f58f" category="list-text">选择*订阅*选项卡。</block>
-  <block id="f64e9c342f1c729967c3dc578f118af5" category="inline-image-macro">BlueXP数字钱包订阅页面</block>
-  <block id="80b5fc2e9b9ec77d4259fcb518114912" category="paragraph"><block ref="80b5fc2e9b9ec77d4259fcb518114912" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="0ee383b8371095886935f57cc0efb405" category="list-text">查找您在第1部分添加的SaaS Marketplace订阅、并验证您希望使用的计划是否正确。</block>
-  <block id="5b1d7a2b43ecc604d05b4893ae87b59a" category="list-text">查找您的AWS订阅所在的行、展开该行以查看详细信息、并确认您的私人优惠已成功与您的BlueXP帐户关联。</block>
-  <block id="5c5e2e0499bc7f7fecdde6f95f40c1e3" category="paragraph">由于AWS Marketplace中的限制、无法在AWS控制台之外获取此优惠的某些详细信息。如果其中一个字段显示"不适用"、则表示无法从AWS控制台检索信息、这不是一个错误。您仍然可以在AWS控制台中检查这些信息。</block>
-  <block id="a0f95a743b2775b8fba7b5a924f76baa" category="list-text">选择BlueXP控制台右上角的*Settings*齿轮，然后选择*凭证*。</block>
-  <block id="90645583b7cd588fe3443deb803837ac" category="inline-image-macro">BlueXP数字钱包设置菜单</block>
-  <block id="0668ffb1c899644153199c5f324aa49a" category="paragraph"><block ref="0668ffb1c899644153199c5f324aa49a" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="26dbffa561c5a4edb53660827d7e7706" category="list-text">找到要与新SaaS Marketplace订阅关联的凭据集。</block>
-  <block id="7a8b6ea04d251b8c4b172d2d023344b3" category="admonition">您可以单击工作环境上方的*查看*来验证这些信息是否正确。</block>
-  <block id="edec357d0d2cfaa2150bcb333c1fd2ef" category="list-text">选择*操作...*选项并选择*关联订阅*。</block>
-  <block id="5d8e98d15a078287f83c7b70eba894b0" category="list-text">在Marketplace订阅下拉菜单中选择您的私人优惠、然后选择*关联*。</block>
-  <block id="3182f5d22d492f786e8fcab91fd9feb9" category="admonition">与这些AWS凭据相关的Marketplace费用现在将通过您刚刚关联的SaaS Marketplace订阅计费。如果您使用年度合同、与这些AWS凭据关联的基础架构成本将计入年度合同的使用量。</block>
-  <block id="f540d742161049a0c3808e1dd7df679d" category="list-text">对您的BlueXP帐户中要与此SaaS Marketplace订阅关联的任何其他AWS凭据重复上述步骤：</block>
-  <block id="184ea8133c93c8c6b9959e07a778d612" category="list-text">对于其他BlueXP帐户中的AWS凭据、请使用BlueXP控制台顶部的*帐户*选项切换帐户并重复这些步骤。</block>
-  <block id="e7ecf0e2187417bb80965e261f3d687a" category="list-text">对于与其他BlueXP连接器相关的AWS凭据、请使用BlueXP控制台顶部的*连接器*选项切换连接器并重复上述步骤。</block>
-  <block id="37ba0d00ba7eb6590dc502a31b233ba0" category="section-title">第3b部分将新的Marketplace订阅与年度合同的AWS凭据相关联</block>
-  <block id="ea336ec3d892f674d934a8abce41005d" category="paragraph">如果您使用年度合同、BlueXP数字钱包中的信息会有所不同。</block>
-  <block id="fccce5e3f1af2f8b7ad561e91d4b23dc" category="inline-image-macro">显示年度合同的BlueXP数字钱包订阅页面</block>
-  <block id="b55cf2fdb4bb0ed0219814859edac78e" category="paragraph"><block ref="b55cf2fdb4bb0ed0219814859edac78e" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="47df556c07e34b92767e15124f334364" category="list-text">查找您的AWS年度合同订阅所在的行、展开该行以查看详细信息、并确认您的私人优惠已成功与您的BlueXP帐户关联。</block>
-  <block id="882b24b1c144518d9b63aa336fd80830" category="inline-image-macro">年度合同的BlueXP数字钱包订阅页面</block>
-  <block id="7199274914d6d189e642a1bc776a6ece" category="paragraph"><block ref="7199274914d6d189e642a1bc776a6ece" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="a59b15d69a0a5639add7b662e566f795" category="list-text">在该行上选择*操作...*选项，然后选择*关联订阅*。</block>
-  <block id="92385d728bb39452ba6c20c6ad1d1c89" category="paragraph"><block ref="92385d728bb39452ba6c20c6ad1d1c89" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="0c3c921710f2b76a43243e9ec50c48ed" category="list-text">选择要与订阅关联的帐户，然后选择*Apply*。</block>
-  <block id="b695d8dfb120f12e55e72fcb3ab0b334" category="section-title">自定义您在BlueXP数字钱包订阅视图中看到的内容</block>
-  <block id="4b78ade7feb11b930c6c73c65e8b8fab" category="paragraph">您可以自定义"订阅"页面上显示的列。例如、您可能希望执行此操作来查看术语信息。</block>
-  <block id="ffe4097399bcf2ccd6ce57a75a5e95cc" category="list-text">在BlueXP数字钱包订阅页面中、选择右侧的表图标。</block>
-  <block id="c12ac0fd20f9e6821f1832580cecfeb1" category="list-text">在显示的列列表中、选中要在表中显示的列。</block>
-  <block id="24347b3ddf5a25cc9c27e54ae285ade1" category="list-text">选择 * 应用 * 。</block>
   <block id="c584f4f2a6193ac47ece196c84d506a1" category="section-title">自带许可证(BYOL)</block>
   <block id="3906249fde1cef9339402436007bb4f7" category="paragraph">如果您自带许可证(BYOL)、则设置包括购买许可证、获取NetApp许可证文件(NLL)以及将许可证添加到BlueXP数字钱包。</block>
   <block id="4eb472761579fcb29aec7dae0dedc791" category="section-title">购买BlueXP灾难恢复许可证</block>
@@ -769,30 +638,16 @@ BlueXP灾难恢复不需要任何支持。灾难恢复选项将自动显示在Bl
   <block id="14149621358a55a2bcbcb304322f2bdd" category="list-text">要购买许可证、请联系NetApp销售人员。</block>
   <block id="6193e62acb4a86204633b2d093e49546" category="list-text">单击BlueXP右下角的聊天图标以申请许可证。</block>
   <block id="bb5400afe237282fdad364a407fc147b" category="section-title">获取BlueXP灾难恢复许可证文件</block>
-  <block id="b8d2cd6868dbe77b895c0b303b84e606" category="paragraph">购买BlueXP灾难恢复许可证后、您可以通过输入BlueXP灾难恢复序列号和NetApp 支持站点(NSS)帐户或上传NetApp许可证文件(NLG)来激活许可证。</block>
-  <block id="c282acfcc5cf6fe87597852e0ff14861" category="paragraph">您可以通过NetApp销售代表或NetApp 支持站点 获取NLG。</block>
   <block id="e3286b69a705d4ed944e904722ab7c8f" category="paragraph">开始之前、您需要了解以下信息：</block>
   <block id="43ae1d792e09f6126441ea0d91d847c7" category="list-text">BlueXP灾难恢复序列号</block>
   <block id="079aeecf06b109e4316b0a68ea943f2b" category="paragraph">从您的销售订单中找到此号码、或者联系客户团队了解此信息。</block>
   <block id="bcbbd9a155e07caa8b31001adc835c79" category="list-text">BlueXP帐户ID</block>
   <block id="98d8dec8ea6912e160aa222c8e6f76c7" category="paragraph">您可以通过选择BlueXP顶部的*帐户*下拉列表、然后选择帐户旁边的*管理帐户*来查找BlueXP帐户ID。您的帐户 ID 位于概述选项卡中。对于无法访问Internet的专用模式站点，请使用*ACCOUNT-HARKSITE1*。</block>
-  <block id="9bc0fb5986e9fa8a78b9b7288116f843" category="list-title">从支持站点获取NLG许可证文件的步骤</block>
-  <block id="9d2169c1c2855b78a7aeaa4f42d27dc7" category="inline-link">NetApp 支持站点</block>
-  <block id="01673ca951af19981bd5d3822934694b" category="list-text">登录到<block ref="fcc52edac3ce57829c48ee35d97a295d" category="inline-link-rx"></block>  并选择*Systems*&gt;*软件许可证*。</block>
-  <block id="3e2174d13b7a4d1ca02e9d5b0d5a3d1b" category="inline-image-macro">NetApp 支持站点 软件许可证页面</block>
-  <block id="a67b5312cf5e01964e72479ba84c4a4d" category="paragraph"><block ref="a67b5312cf5e01964e72479ba84c4a4d" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="0d4d3fc0b07c5afe649f868f4fc4ee2d" category="list-text">输入BlueXP灾难恢复许可证序列号。</block>
-  <block id="a4627bae6c374481d2758f672760e92c" category="list-text">在许可证密钥列下，选择*获取NetApp许可证文件*。</block>
-  <block id="0dc88bd9e39309759dc3141ddbf53109" category="paragraph"><block ref="0dc88bd9e39309759dc3141ddbf53109" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="3a9ab049ef9711b68ac94e0bc034cb30" category="list-text">输入您的BlueXP帐户ID (在支持站点上称为租户ID)、然后选择*提交*以下载许可证文件。</block>
   <block id="4642741ba5bc33f3309c8ec5bab06682" category="section-title">将BlueXP灾难恢复许可证添加到BlueXP数字钱包</block>
   <block id="ba8afb5484c287f1ace20840bc94d916" category="paragraph">为BlueXP帐户购买BlueXP灾难恢复许可证后、您需要将该许可证添加到BlueXP电子钱包中。</block>
   <block id="7caa9eb74f44350c8dde29c8267cdf24" category="list-text">从BlueXP菜单中，选择*监管*&gt;*电子钱包*&gt;*数据服务许可证*。</block>
-  <block id="f26c55f7e4c7acaff40b2d001a526d9c" category="inline-image-macro">NetApp BlueXP数字钱包数据服务许可证选项卡</block>
-  <block id="bc3b77b089ceea19e1301877f60f58ff" category="paragraph"><block ref="bc3b77b089ceea19e1301877f60f58ff" category="inline-image-macro-rx" type="image"></block></block>
   <block id="c8508c0ce4da6dc634b7c66b1df15681" category="list-text">选择 * 添加许可证 * 。</block>
   <block id="021d7e94275fbce0d19f7cf686aabd40" category="inline-image-macro">NetApp BlueXP数字钱包添加许可证页面</block>
-  <block id="3542d90d77f3ae0f9bc8997ba29978b3" category="paragraph"><block ref="3542d90d77f3ae0f9bc8997ba29978b3" category="inline-image-macro-rx" type="image"></block></block>
   <block id="5fe793b25da4bb065137c8c34e98d41f" category="list-text">在添加许可证页面中，输入许可证信息并选择*Add License*：</block>
   <block id="b628341a05a2d315b4789aadc3fd8caa" category="list-text">如果您有BlueXP许可证序列号并且知道您的NSS帐户，请选择*Enter Serial Number*选项并输入该信息。</block>
   <block id="bae190eec3db4a0dd635ae72756acde8" category="inline-link">将NSS帐户添加到BlueXP</block>
@@ -810,13 +665,8 @@ BlueXP灾难恢复不需要任何支持。灾难恢复选项将自动显示在Bl
   <block id="b23b97d3c26b0f7e2265329756cea9ca" category="paragraph">在您为许可证付费并将其注册到NetApp 支持站点 之后、BlueXP会自动更新BlueXP电子钱包中的许可证、并且数据服务许可证页面将在5到10分钟内反映此更改。</block>
   <block id="5810a6765696da7b12979cf90b9b287c" category="list-text">如果BlueXP无法自动更新许可证(例如、安装在非公开站点时)、则需要手动上传许可证文件。</block>
   <block id="147b35ab5352426bba38d99d810db4ed" category="list-text">您可以从NetApp 支持站点 获取许可证文件。</block>
-  <block id="5fa1887d1557b966123ae9233170a0be" category="list-text">在BlueXP数字钱包页面的数据服务许可证选项卡中，选择要更新的服务序列号的*Actions...*图标，然后选择*Update License*。</block>
-  <block id="4e6cb11bb43a7c0a0a5afccdbed4bdc7" category="inline-image-macro">NetApp BlueXP数字钱包显示许可证已过期</block>
-  <block id="baae92f53a7bd68d60019afb4c90ff25" category="paragraph"><block ref="baae92f53a7bd68d60019afb4c90ff25" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="fa2b0a8f4c50ac4f17fe89c0def5dd7a" category="paragraph">BlueXP灾难恢复预览是一种基于云的灾难恢复服务、可自动执行灾难恢复工作流。最初、借助BlueXP灾难恢复服务、您可以保护运行NetApp存储且基于NFS的内部VMware工作负载、使其符合以下条件之一：</block>
   <block id="3a46f989d3db91bd2030de32947cd608" category="section-title">使用适用于VMware的BlueXP灾难恢复的优势</block>
   <block id="cce8630c08ede8fc88504929ae963b37" category="paragraph">BlueXP灾难恢复具有以下优势：</block>
-  <block id="c9ddf88e1cb9859bd6aa2d140746ddb6" category="paragraph">通过BlueXP灾难恢复预览、您可以充分利用多种NetApp技术来实现以下目标：</block>
   <block id="208ae1835c38717d827d78f2184f1eb8" category="paragraph">NetApp不会因使用BlueXP灾难恢复试用版而向您收费。</block>
   <block id="81a21047304ceb1b7bc762627cb29998" category="section-title">90天免费试用</block>
   <block id="c26aa1f4734bee87e527e8b6fd399ff1" category="paragraph">您可以使用90天免费试用版试用BlueXP灾难恢复。</block>
@@ -831,6 +681,120 @@ BlueXP灾难恢复不需要任何支持。灾难恢复选项将自动显示在Bl
   <block id="9aea41391b3a188365a351addd6cf6fc" category="list-text">如果您是具有现有Connector的BlueXP用户、则在选择"灾难恢复"时、将显示一条有关注册的消息。</block>
   <block id="8f333bfde48f31b2cfcf04c153782963" category="list-text">如果您已在使用此服务、则在选择"灾难恢复"后、可以继续操作。</block>
   <block id="cbef5af23561d0ec620e5d275e7c8eb5" category="inline-image-macro">BlueXP灾难恢复信息板</block>
-  <block id="20846f04d592426362d2217701aadcc0" category="paragraph"><block ref="20846f04d592426362d2217701aadcc0" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b044111e167403664c9e3432eca1f25a" category="sidebar">BlueXP灾难恢复文档</block>
+  <block id="4aca0b59a2fa7d9e86368a58f1e869c9" category="list-text">选择*Actions*选项 <block ref="e282bbe0f95615c6416d0f1c92efdcdd" category="inline-image-macro-rx" type="image"></block>  并选择*Edit*。</block>
+  <block id="f2461bdb5195b41a112c405c95584734" category="inline-image-macro">复制计划列表</block>
+  <block id="cfff02ce3a45ebd0c9288d1fb7097cca" category="paragraph"><block ref="cfff02ce3a45ebd0c9288d1fb7097cca" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c68217420a685b93e20f298ae3ea72c8" category="paragraph">您可以将.sh、.bat或.ps1格式的自定义脚本作为故障转移后过程。通过自定义脚本、您可以在故障转移过程之后让BlueXP灾难恢复运行脚本。例如、您可以使用自定义脚本在故障转移完成后恢复所有数据库事务。</block>
+  <block id="8b4399d7029673ba83df4f916514230b" category="paragraph">测试故障转移操作不会影响生产工作负载、测试站点上使用的SnapMirror关系以及必须继续正常运行的受保护工作负载。</block>
+  <block id="22d1d4bc51673707e71b38cb5d9f8053" category="admonition">故障转移开始后、可以在灾难恢复站点(虚拟机、网络和数据存储库)的vCenter中看到已恢复的VM。默认情况下、虚拟机会恢复到工作负载文件夹。</block>
+  <block id="24391a0c4e58147fa07febdb32887a1a" category="section-title">取消作业</block>
+  <block id="0f6fb16278c8db9e7104435d2ca9b98f" category="paragraph">如果作业正在进行中、而您不希望其继续、则可以将其取消。如果作业停留在同一状态、而您希望释放队列中的下一个操作、则可能需要取消该作业。您可能希望在作业超时之前将其取消。</block>
+  <block id="22b7400444d76583bfa01ad371bebbc5" category="paragraph">要取消作业、请使用Swagger。</block>
+  <block id="90fcc3b3a806bdba15ead6130adbd9a9" category="paragraph">要取消作业、您必须具有帐户ID。</block>
+  <block id="26abc41be60bda806b144bd6ecedad10" category="list-text">在作业监控页面中、记下要取消的作业的ID。</block>
+  <block id="336ff1e9aa6177ea7a71984fa8c241b9" category="inline-link">Swagger</block>
+  <block id="5273316399077a35494eb5acbbcf7801" category="list-text">访问BlueXP灾难恢复Swagger URL：<block ref="9e4854fddaa37e1b0c806d7c99538b64" category="inline-link-rx"></block>。</block>
+  <block id="cfe384e99d913d27036c11c367a847da" category="paragraph"><block ref="cfe384e99d913d27036c11c367a847da" category="inline-link-rx"></block></block>
+  <block id="7a01c0f2bb049f0040198121da3c115e" category="inline-image-macro">显示如何取消作业的Swagger页面</block>
+  <block id="3c54383fbe7b935cfc38e6a4118698cb" category="paragraph"><block ref="3c54383fbe7b935cfc38e6a4118698cb" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5f8add33c48ab0f59f2908faa8d36196" category="inline-link">Swagger文档</block>
+  <block id="e124a230be11158b2df2a4490b5bc010" category="paragraph">有关Swagger的详细信息、请参见<block ref="851cca880157b178ca93e5f9f752f929" category="inline-link-rx"></block>。</block>
+  <block id="ae46b3f9f499c97dfc5b7c1e327aeea1" category="list-text">从Swagger中、从Authorize选项获取安全令牌、也称为_p承载 令牌_。</block>
+  <block id="d46acb5ac038cd8e0a5d3f7165605907" category="list-text">输入帐户ID和作业ID。</block>
+  <block id="b1f85b610b71ac9db3be3c5efe00f9a4" category="list-text">选择 * 试用 * 。</block>
+  <block id="7133b9cf238828da0a287b89ce855ec3" category="paragraph"><block ref="7133b9cf238828da0a287b89ce855ec3" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="0e17ce70dd39a8a056cb5ca0081d4526" category="list-text">*正在运行*：vCenter已连接、运行状况良好且正在运行。</block>
+  <block id="ed4bdaafb191f860f256d0b1e88eb50e" category="list-text">*关闭*：vCenter无法访问或存在连接问题。</block>
+  <block id="45fa526b7f7589c94a8a5911f187838f" category="list-text">*问题描述*：vCenter无法访问或存在连接问题。</block>
+  <block id="f1b3d2c036cfab036f34533fa19f954e" category="paragraph">您可以创建复制计划、还可以编辑合规性和测试计划。</block>
+  <block id="89dd75b1f79276c7e30e794e1c739f04" category="section-title">创建计划</block>
+  <block id="abe3a973462c3c328672dbc95e640218" category="paragraph">如果要在此服务中创建SnapMirror关系、则集群及其SVM对等关系应已在BlueXP灾难恢复之外进行设置。</block>
+  <block id="d5033e157b5ff5f902d411ea87245351" category="list-text">*RPO *：输入恢复点目标(RPO)以指示要恢复的数据量(以时间为单位)。例如、如果您输入60分钟的RPO、则恢复过程中的数据必须始终不超过60分钟。如果发生灾难、您最多可以丢失60分钟的数据。此外、还可以输入要为所有数据存储库保留的Snapshot副本数。</block>
+  <block id="d97200be5ae32d344d6cc35c5789517d" category="section-title">编辑计划以测试合规性并确保故障转移测试正常运行</block>
+  <block id="e670d26caed2e49f16fe367f74a57f21" category="paragraph">您可能需要设置计划来测试合规性和故障转移测试、以确保这些测试在您需要时能够正常工作。</block>
+  <block id="0c9133d8bb2cba28a02319fd78380fa9" category="list-text">*合规性时间影响*：创建复制计划时，服务会默认创建合规性计划。默认合规时间为30分钟。要更改此时间、您可以使用编辑复制计划中的计划。</block>
+  <block id="f1b5b1b3eb29f73ad308b990489fa377" category="list-text">*测试故障转移影响*：您可以根据需要或按计划测试故障转移过程。这样、您就可以测试虚拟机向复制计划中指定的目标进行故障转移的情况。</block>
+  <block id="ab2752a523dd44fcb8640d76a0e117d3" category="paragraph">测试故障转移会创建FlexClone卷、挂载数据存储库并移动该数据存储库上的工作负载。测试故障转移操作不会影响生产工作负载、测试站点上使用的SnapMirror关系以及必须继续正常运行的受保护工作负载。</block>
+  <block id="74af4bc99691d529b32e88a3fd49a4f9" category="paragraph">根据该计划、故障转移测试将运行、并确保工作负载移动到复制计划指定的目标。</block>
+  <block id="3637e54ce6a2873442d292031c4510ac" category="inline-image-macro">显示复制计划列表的屏幕截图</block>
+  <block id="c68e9c6f6cc379f688813c5c5dd9964a" category="paragraph"><block ref="c68e9c6f6cc379f688813c5c5dd9964a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="49ff95b6dcd137f59a6acecf04a4c3b1" category="inline-image-macro">水平点操作菜单</block>
+  <block id="4feceaff4e5d197335e4db8ef5a3caa3" category="list-text">选择*操作* <block ref="6b4b871445179eda383c81faf6cf5a92" category="inline-image-macro-rx" type="image"></block> 图标并选择*编辑计划*。</block>
+  <block id="82f6ffc6da6b694c0ab3c66fb6de3d70" category="list-text">输入希望BlueXP灾难恢复检查测试合规性的频率(以分钟为单位)。</block>
+  <block id="624d6b88f7d5d30d488d6dd3a51f4781" category="list-text">要检查故障转移测试是否运行正常，请选中*按每月计划运行故障转移*。</block>
+  <block id="4e305fe14ce90c5da1d1d11ea08f5fe4" category="list-text">选择要运行这些测试的日期和时间。</block>
+  <block id="294642716409ca930af5721f2db940c1" category="list-text">以yyy-mm-dd格式输入要开始测试的日期。</block>
+  <block id="e3afddca17ec740a7556918c2bbdc013" category="inline-image-macro">屏幕截图、显示可在其中编辑计划的位置</block>
+  <block id="380f2a79a88b8118529d87c864cff3d8" category="paragraph"><block ref="380f2a79a88b8118529d87c864cff3d8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="0a003809d85acf4d6a198955e5780ac3" category="list-text">要在故障转移测试完成后清理测试环境，请选中*测试故障转移后自动清理*。</block>
+  <block id="20ace5d6661ce95df08950b97c500ddc" category="admonition">此过程会从测试位置注销临时VM、删除已创建的FlexClone卷并卸载临时数据存储库。</block>
+  <block id="10492389e94efdebbb66f7b0cd8a1324" category="list-text">选择 * 保存 * 。</block>
+  <block id="8f6793a82f1110a347dbefe3c3758178" category="section-title">故障恢复使用最新的Snapshot副本</block>
+  <block id="9ee4d1cdb3c09e86e561a895a7ab9345" category="paragraph">在当前版本中、故障恢复过程始终使用最新的Snapshot副本。即使您选择了要使用的特定Snapshot副本、也会发生这种情况。</block>
+  <block id="4d519f9cb24d082270f8f88ccccd42e3" category="paragraph">了解BlueXP灾难恢复的新增功能。</block>
+  <block id="592997dde366d5775e7e052816854f74" category="section-title">2024年3月5日</block>
+  <block id="23f1adcf87ca650c2ac077f4be520c97" category="paragraph">这是BlueXP灾难恢复的正式发布版本、其中包括以下更新。</block>
+  <block id="5751cbd481f2486866a7e6d4339df621" category="list-text">*许可更新*：借助BlueXP灾难恢复、您可以注册90天免费试用或自带许可证(自带许可证、BYOL)、这是您从NetApp销售代表处获得的NetApp许可证文件(NLL)您可以使用许可证序列号在BlueXP电子钱包中激活BYOL。BlueXP灾难恢复费用基于数据存储库的已配置容量计算。</block>
+  <block id="cba500373ea886a2bb3e508440756918" category="paragraph">有关为BlueXP灾难恢复设置许可的详细信息、请参阅<block ref="7585b54fad00f1219b8233730153156f" category="inline-link-rx"></block>。</block>
+  <block id="c32aede135606fbfc51d8bd7581b4201" category="inline-link">管理所有BlueXP服务的许可证</block>
+  <block id="4d2e644b683b6f34426a63ff3961ea9d" category="paragraph">有关管理*all* BlueXP服务许可证的详细信息，请参阅<block ref="834374a0b207d980c4d47827175a6637" category="inline-link-rx"></block>。</block>
+  <block id="5938c93734fbca9c12e3827aa5218ed8" category="list-text">*编辑计划*：在此版本中，您现在可以设置测试合规性和故障转移测试的计划，以确保这些计划在您需要时可以正常工作。</block>
+  <block id="4b2bfa262e877a668b7102f58d207f63" category="inline-link">创建复制计划</block>
+  <block id="976dcedce9d4c9dc14db60abc49c5867" category="paragraph">有关详细信息，请参见<block ref="8026234d3eaba16fdffb266108c2804b" category="inline-link-rx"></block>。</block>
+  <block id="0468e5ced7eddf7112cb542d124a006f" category="paragraph">此BlueXP灾难恢复预览版包括以下更新：</block>
+  <block id="c35429358a46b999fafa3eb39893122c" category="inline-link-macro">完成设置许可的步骤</block>
+  <block id="c46b74d8fea462e40a3a35bd54771989" category="paragraph"><block ref="3d00f62ff93b742ed767a11952d4b89c" category="inline-link-macro-rx"></block>。</block>
+  <block id="5f6035a41d2be8c5780281ca63dc230a" category="paragraph">*使用BlueXP灾难恢复需要许可证吗？*
+要进行完全访问、需要BlueXP灾难恢复许可证。但是、您可以使用免费试用版进行试用。</block>
+  <block id="65b8710d9a2596e72f3f9c24620b97a3" category="inline-link-macro">设置BlueXP灾难恢复许可</block>
+  <block id="a4812a60b42128cc371c18f06197d9ab" category="paragraph">有关为BlueXP灾难恢复设置许可的详细信息、请参阅 <block ref="0ba47d7cccc1dc28f47670d48274167c" category="inline-link-macro-rx"></block>。</block>
+  <block id="78a065b9fb649a31c2037ac8b6adf208" category="paragraph">要使用BlueXP灾难恢复、请执行几个步骤在Amazon Web Services (AWS)和BlueXP中进行设置。</block>
+  <block id="456948be6cc17bd9f797492f175ff847" category="section-title">设置AWS</block>
+  <block id="724c7536b89d0d851109ea9f7868da08" category="paragraph">您需要联系您的NetApp销售代表来试用此服务。然后、当您使用BlueXP Connector时、它将包括适用于灾难恢复服务的功能。</block>
+  <block id="0bf14c9d518db90372ef9c78dc9638b2" category="paragraph">您可以自带许可证(BYOL)、这是一个NetApp许可证文件(NLL)。</block>
+  <block id="878214f294066da0bab8a3693a1f802a" category="doc">了解适用于VMware的BlueXP灾难恢复</block>
+  <block id="e04cb1e00b4f2d764efe09d0b22a6b43" category="paragraph">云灾难恢复是一种经济高效的弹性方法、可保护工作负载免受站点中断和数据损坏事件的影响。借助适用于VMware的BlueXP灾难恢复、您可以将运行ONTAP存储的内部VMware工作负载复制到使用NetApp云存储的公共云中的VMware软件定义的数据中心、或者复制到使用ONTAP存储作为灾难恢复站点的其他内部VMware环境。</block>
+  <block id="81cd6d5889a00f3187d6e30af0f9838e" category="paragraph">BlueXP灾难恢复是一种基于云的灾难恢复服务、可自动执行灾难恢复工作流。最初、借助BlueXP灾难恢复服务、您可以保护运行NetApp存储且基于NFS的内部VMware工作负载、使其符合以下条件之一：</block>
+  <block id="fbec25bffbcdefa11c9ca28adb0b824c" category="paragraph">BlueXP灾难恢复使用ONTAP SnapMirror技术作为到灾难恢复站点的复制传输。这样可以在主站点和二级站点上实现行业最佳的存储效率(数据压缩和重复数据删除)。</block>
+  <block id="3c524eb32d863a57c821ef5ffecb96ee" category="section-title">使用适用于VMware的BlueXP灾难恢复可以执行哪些操作</block>
+  <block id="0ad83d5f52e2b8f6dfc6ec26ef91aa38" category="paragraph">通过BlueXP灾难恢复、您可以充分利用多种NetApp技术来实现以下目标：</block>
+  <block id="2020a15d2254ab61244fd58956ac0150" category="paragraph">完整版本的BlueXP灾难恢复服务可与NetApp许可证结合使用。</block>
+  <block id="0b9c6eef4e3d3a222eb04e910d252339" category="section-title">许可</block>
+  <block id="924cc6eaf82618251de609e2689ed733" category="paragraph">您可以使用以下许可证类型：</block>
+  <block id="2caf85d76a31b7bef7132937ff28e9dc" category="list-text">自带许可证(BYOL)、这是您从NetApp销售代表处获得的NetApp许可证文件(NLL)您可以使用许可证序列号在BlueXP电子钱包中激活BYOL。</block>
+  <block id="c809a23426c6fb72cef75816c461ade9" category="paragraph">所有BlueXP服务的许可证均由BlueXP数字钱包服务管理。设置BYOL后、您可以在BlueXP电子钱包中看到此服务的有效许可证。</block>
+  <block id="8eb586b1b79ddd3ae7c3123b39d4420e" category="admonition">如果至少有一个VM具有复制计划、则BlueXP灾难恢复费用基于源站点上数据存储库的已配置容量计算得出。故障转移数据存储库的容量不包括在容量允许值中。对于BYOL、如果数据超过允许的容量、则服务操作将受到限制、直到您获得额外的容量许可证或在BlueXP数字钱包中升级许可证为止。</block>
+  <block id="5ae84730ec695b46a67c1692274ccaf3" category="paragraph">要在90天试用之后继续、您需要从NetApp购买BYOL许可证。</block>
+  <block id="27be91c80d5e97799bb6e73e37370e5d" category="paragraph">您可以随时购买许可证、90天试用期结束前不会向您收费。</block>
+  <block id="da329ee75f8833283c259789372600f6" category="list-text">使用NetApp存储的内部VMware工作环境</block>
+  <block id="0f5757c2302ddb1a6b48cf01d0fe295d" category="list-text">一个VMware帐户、在AWS上拥有软件定义的数据中心(SDDC)、也称为虚拟机云。在VMware Cloud Console中、使用管理员和NSX云管理员的服务角色。此外、还可以将组织所有者用于组织角色。请参见<block ref="e0529c1c92608a25886bf41835abea27" category="inline-link-rx"></block>。</block>
+  <block id="10158aa869cd2a07a9e35313b86f48f8" category="list-text">已将Amazon FSx for ONTAP和AWS凭据添加到BlueXP工作环境中。</block>
+  <block id="fce90829059c8b31e3882fa3db9f644c" category="list-text">需要在BlueXP中设置BlueXP Connector。内部部署和Cloud Connector应同时连接到内部部署和采用ESXis的VMware Cloud (VMC) vCenter。这样、备份、故障转移、故障恢复和迁移功能便可与所需的网络和脚本功能配合使用。</block>
+  <block id="54acd3bad890d9cacb0dd0970cbf3cd4" category="paragraph">BlueXP Connector需要源vCenter Server和目标vCenter Server的凭据。请参见<block ref="4b1866f17dc6bd66f88d9d6839084df6" category="inline-link-rx"></block> 和<block ref="8b2e3c99c244ff11d22f3c561bd167b2" category="inline-link-rx"></block>。</block>
+  <block id="4b23440b522693ef465ede54b1e9df88" category="list-text">要确保应用程序一致性过程成功、请确保满足以下前提条件：</block>
+  <block id="7033a5d3e074f0c7401499ee4e48f38a" category="list-text">确保要保护的虚拟机上正在运行VMware工具(或Open VM工具)。</block>
+  <block id="7c480d19e9a60d89cc5b027f95938aa8" category="list-text">对于运行SQL或Oracle或这两者的Windows VM、数据库应启用其VSS写入程序、并且数据库应处于稳定状态。</block>
+  <block id="af77ac64a97a80925dee7dc916344004" category="list-text">对于在Linux操作系统上运行的Oracle数据库、应为Oracle数据库SYSDBA角色启用操作系统用户身份验证。</block>
+  <block id="952d5792e20104bd51e61d359faac899" category="paragraph">借助BlueXP灾难恢复、您可以免费试用此服务、也可以自带许可证。</block>
+  <block id="dd6dd33362dbc70a36edb35890647f3c" category="paragraph">设置BYOL后，您可以在BlueXP数字钱包*数据服务许可证*选项卡中看到许可证。</block>
+  <block id="e23539b066371b4dcfdd50b7d80417d8" category="paragraph">在免费试用结束或许可证过期后、您仍可在服务中执行以下操作：</block>
+  <block id="1594f78ebbb281f7b5359eb6d2b89912" category="list-text">运行在试用期内或在许可证下创建的所有计划操作。</block>
+  <block id="a14b332e4d6b9ee17b484a7fb805179f" category="paragraph">您可以随时获得许可证、90天试用期结束前不会向您收费。要在90天试用之后继续、您需要购买BYOL许可证。</block>
+  <block id="01c014f2e37e5bf6d3ce893bea0197cb" category="list-text">设置Connector后、在BlueXP灾难恢复登录页面中、用于添加Connector的按钮会更改为用于开始免费试用的按钮。选择*开始免费试用*。</block>
+  <block id="b9ef842238fa8d82db6b7559f33adc6c" category="paragraph">试用期结束后、您可以通过NetApp销售代表购买许可证</block>
+  <block id="ecfbb42aa9e2f3b94bd289d87aaf5ea3" category="list-text">要购买许可证、请联系您的NetApp销售代表。</block>
+  <block id="9bdfa376bcb2fa79aff92c39d0b24fcd" category="list-text">获得许可证后、返回到BlueXP灾难恢复。选择右上角的*查看付款方式*选项。或者，在免费试用即将到期的消息中，选择*订阅或购买许可证*。</block>
+  <block id="97bcf0f36d751871efb4e9140f54f17d" category="paragraph"><block ref="97bcf0f36d751871efb4e9140f54f17d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d2a39678e393e2b473354681a2c1e5f4" category="inline-image-macro">BlueXP数字钱包数据服务许可证选项卡</block>
+  <block id="e220d51686433f8f5a05d755bc58c162" category="paragraph"><block ref="e220d51686433f8f5a05d755bc58c162" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e3585ef220efaa70fe392bb8e133b54e" category="list-text">在BlueXP数字钱包中，从*数据服务许可证*选项卡中选择*添加许可证*。</block>
+  <block id="7578ebad24c71aee2f2992e5efe1118d" category="list-text">在添加许可证页面中、输入序列号和NetApp 支持站点 帐户信息。</block>
+  <block id="c6711fc66daa9915490ca9f9bdc7f08f" category="paragraph"><block ref="c6711fc66daa9915490ca9f9bdc7f08f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="be94b7e6fbf892064754b145ecdeb994" category="paragraph"><block ref="be94b7e6fbf892064754b145ecdeb994" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="17456408ade135981b9345bc87881dc3" category="paragraph">从NetApp销售代表处购买BlueXP灾难恢复许可证后、您可以通过输入BlueXP灾难恢复序列号和NetApp 支持站点(NSS)帐户信息来激活此许可证。</block>
+  <block id="c9b34ae6e6872c8ec153a41cea722706" category="paragraph"><block ref="c9b34ae6e6872c8ec153a41cea722706" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="9fc7e8cb24850b1f0912cebc8da32620" category="list-text">访问BlueXP电子钱包。</block>
+  <block id="7b6dca09bf0ef612bac047a313d66cbf" category="list-text">选择*数据服务许可证*选项卡，选择要更新的服务序列号的*操作...*图标，然后选择*更新许可证*。</block>
+  <block id="be976ba4e18c887ae57e14f6ebfbbab3" category="sidebar">灾难恢复到云是一种经济高效的弹性方法、可保护工作负载免受站点中断和数据损坏事件(例如勒索软件)的影响。借助适用于VMware的BlueXP灾难恢复、您可以将运行ONTAP存储的内部VMware工作负载复制到公共云中的VMware软件定义的数据中心、或者复制到作为灾难恢复站点的其他内部站点。</block>
 </blocks>

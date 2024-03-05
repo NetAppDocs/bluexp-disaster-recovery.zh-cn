@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: get-started/dr-setup.html 
-keywords: bluexp, disaster recovery, 
+keywords: bluexp, disaster recovery, aws, amazon web services 
 summary: 要使用BlueXP灾难恢复、请执行几个步骤进行设置。 
 ---
 = 设置BlueXP灾难恢复
@@ -12,14 +12,14 @@ summary: 要使用BlueXP灾难恢复、请执行几个步骤进行设置。
 
 
 [role="lead"]
-要使用BlueXP灾难恢复、请执行几个步骤在AWS和BlueXP中进行设置。
+要使用BlueXP灾难恢复、请执行几个步骤在Amazon Web Services (AWS)和BlueXP中进行设置。
 
 
 TIP: 请查看 link:../get-started/dr-prerequisites.html["前提条件"] 以确保您的环境已准备就绪。
 
 
 
-== 在AWS中设置
+== 设置AWS
 
 在AWS中、您需要执行以下步骤：
 
@@ -44,7 +44,7 @@ https://www.vmware.com/products/vmc-on-aws.html["基于 AWS 的 VMware Cloud"^] 
 
 
 
-== 在BlueXP中设置
+== 设置BlueXP灾难恢复
 
 下一步是在BlueXP中设置灾难恢复。
 
@@ -58,7 +58,7 @@ https://www.vmware.com/products/vmc-on-aws.html["基于 AWS 的 VMware Cloud"^] 
 
 === 在BlueXP中创建连接器
 
-您需要注册预览版或联系NetApp销售代表试用此服务。然后、当您使用BlueXP Connector时、它将包括适用于灾难恢复服务的功能。
+您需要联系您的NetApp销售代表来试用此服务。然后、当您使用BlueXP Connector时、它将包括适用于灾难恢复服务的功能。
 
 要在使用此服务之前在BlueXP中创建Connector、请参阅所述的BlueXP文档 https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html["如何创建连接器"^]。
 
@@ -81,3 +81,7 @@ https://www.vmware.com/products/vmc-on-aws.html["基于 AWS 的 VMware Cloud"^] 
 === 设置许可
 
 借助BlueXP灾难恢复、您可以注册90天免费试用。
+
+您可以自带许可证(BYOL)、这是一个NetApp许可证文件(NLL)。
+
+有关为BlueXP灾难恢复设置许可的详细信息、请参阅 link:../get-started/dr-licensing.html["设置BlueXP灾难恢复许可"]。

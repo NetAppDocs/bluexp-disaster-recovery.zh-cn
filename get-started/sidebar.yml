@@ -12,5 +12,7 @@ entries:
   url: "/get-started/dr-login.html"
 - title: 设置BlueXP灾难恢复
   url: "/get-started/dr-setup.html"
+- title: 设置许可
+  url: "/get-started/dr-licensing.html"
 - title: 常见问题解答
   url: "/get-started/dr-faq.html"

@@ -4,7 +4,7 @@ permalink: get-started/dr-intro.html
 keywords: how bluexp disaster recovery works, what is disaster recovery, bluexp, vmware, vcenter, draas, replicate, failover, failback, fail over, fail back 
 summary: 云灾难恢复是一种经济高效的弹性方法、可保护工作负载免受站点中断和数据损坏事件的影响。借助适用于VMware的BlueXP灾难恢复、您可以使用NetApp云存储将运行ONTAP存储的内部VMware工作负载复制到公有云中的VMware软件定义的数据中心、作为灾难恢复站点。 
 ---
-= 了解适用于VMware的BlueXP灾难恢复预览版
+= 了解适用于VMware的BlueXP灾难恢复
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -12,15 +12,15 @@ summary: 云灾难恢复是一种经济高效的弹性方法、可保护工作�
 
 
 [role="lead"]
-云灾难恢复是一种经济高效的弹性方法、可保护工作负载免受站点中断和数据损坏事件的影响。借助适用于VMware的BlueXP灾难恢复预览版、您可以将运行ONTAP存储的内部VMware工作负载复制到使用NetApp云存储的公共云中的VMware软件定义的数据中心、或者复制到使用ONTAP存储作为灾难恢复站点的其他内部VMware环境。
+云灾难恢复是一种经济高效的弹性方法、可保护工作负载免受站点中断和数据损坏事件的影响。借助适用于VMware的BlueXP灾难恢复、您可以将运行ONTAP存储的内部VMware工作负载复制到使用NetApp云存储的公共云中的VMware软件定义的数据中心、或者复制到使用ONTAP存储作为灾难恢复站点的其他内部VMware环境。
 
-BlueXP灾难恢复预览是一种基于云的灾难恢复服务、可自动执行灾难恢复工作流。最初、借助BlueXP灾难恢复服务、您可以保护运行NetApp存储且基于NFS的内部VMware工作负载、使其符合以下条件之一：
+BlueXP灾难恢复是一种基于云的灾难恢复服务、可自动执行灾难恢复工作流。最初、借助BlueXP灾难恢复服务、您可以保护运行NetApp存储且基于NFS的内部VMware工作负载、使其符合以下条件之一：
 
 * AWS上的VMware Cloud (VMC)与Amazon FSx for NetApp ONTAP或
 * 采用ONTAP存储的另一个基于NFS的内部VMware环境
 
 
-BlueXP灾难恢复预览使用ONTAP SnapMirror技术作为到灾难恢复站点的复制传输。这样可以在主站点和二级站点上实现行业最佳的存储效率(数据压缩和重复数据删除)。
+BlueXP灾难恢复使用ONTAP SnapMirror技术作为到灾难恢复站点的复制传输。这样可以在主站点和二级站点上实现行业最佳的存储效率(数据压缩和重复数据删除)。
 
 image:draas-onprem-to-cloud-onprem.png["显示适用于VMware的BlueXP灾难恢复组件的示意图"]
 
@@ -38,9 +38,9 @@ BlueXP灾难恢复具有以下优势：
 
 
 
-== 适用于VMware的BlueXP灾难恢复预览版可执行的操作
+== 使用适用于VMware的BlueXP灾难恢复可以执行哪些操作
 
-通过BlueXP灾难恢复预览、您可以充分利用多种NetApp技术来实现以下目标：
+通过BlueXP灾难恢复、您可以充分利用多种NetApp技术来实现以下目标：
 
 * 使用SnapMirror复制将内部生产站点上的VMware应用程序复制到云中或内部的灾难恢复远程站点。
 * 将VMware工作负载从原始站点迁移到其他站点。
@@ -57,11 +57,34 @@ NOTE: vSphere服务器的配置在vSphere Server的BlueXP灾难恢复之外完�
 
 NetApp不会因使用BlueXP灾难恢复试用版而向您收费。
 
+完整版本的BlueXP灾难恢复服务可与NetApp许可证结合使用。
+
+
+
+== 许可
+
+您可以使用以下许可证类型：
+
+* 注册90天免费试用。
+* 自带许可证(BYOL)、这是您从NetApp销售代表处获得的NetApp许可证文件(NLL)您可以使用许可证序列号在BlueXP电子钱包中激活BYOL。
+
+
+所有BlueXP服务的许可证均由BlueXP数字钱包服务管理。设置BYOL后、您可以在BlueXP电子钱包中看到此服务的有效许可证。
+
+
+NOTE: 如果至少有一个VM具有复制计划、则BlueXP灾难恢复费用基于源站点上数据存储库的已配置容量计算得出。故障转移数据存储库的容量不包括在容量允许值中。对于BYOL、如果数据超过允许的容量、则服务操作将受到限制、直到您获得额外的容量许可证或在BlueXP数字钱包中升级许可证为止。
+
+有关为BlueXP灾难恢复设置许可的详细信息、请参阅 link:../get-started/dr-licensing.html["设置BlueXP灾难恢复许可"]。
+
 
 
 == 90天免费试用
 
 您可以使用90天免费试用版试用BlueXP灾难恢复。
+
+要在90天试用之后继续、您需要从NetApp购买BYOL许可证。
+
+您可以随时购买许可证、90天试用期结束前不会向您收费。
 
 
 

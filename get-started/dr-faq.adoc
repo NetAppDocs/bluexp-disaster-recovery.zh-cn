@@ -17,5 +17,10 @@ summary: 如果您只是想快速了解问题解答，此常见问题解答会�
 *BlueXP灾难恢复URL是什么？*
 对于URL、在浏览器中输入： https://console.bluexp.netapp.com/["https://console.bluexp.netapp.com/"^] 以访问BlueXP控制台。
 
+*使用BlueXP灾难恢复需要许可证吗？*
+要进行完全访问、需要BlueXP灾难恢复许可证。但是、您可以使用免费试用版进行试用。
+
+有关为BlueXP灾难恢复设置许可的详细信息、请参阅 link:../get-started/dr-licensing.html["设置BlueXP灾难恢复许可"]。
+
 *如何访问BlueXP灾难恢复？*
 BlueXP灾难恢复不需要任何支持。灾难恢复选项将自动显示在BlueXP左侧导航栏中。
