@@ -98,7 +98,7 @@ image:dr-architecture-diagram-70.png["该图显示了适用于VMware服务基础
 
 下图显示了从内部到内部的灾难恢复计划的架构。
 
-image:dr-architecture-diagram-onprem-to-onprem.png["该图显示了适用于VMware服务基础架构的BlueXP灾难恢复架构"]
+image:dr-architecture-diagram-onprem-to-onprem2.png["该图显示了适用于VMware服务基础架构的BlueXP灾难恢复架构"]
 
 发生灾难时、此服务可通过中断SnapMirror关系并使目标站点处于活动状态来帮助您恢复其他内部VMware环境或VMC中的虚拟机。
 

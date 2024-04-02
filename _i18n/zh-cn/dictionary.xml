@@ -562,7 +562,6 @@ BlueXP灾难恢复不需要任何支持。灾难恢复选项将自动显示在Bl
   <block id="dcc9d99320099ed731ca2f05b3e501a7" category="list-text">将VMware工作负载从原始站点迁移到其他站点。</block>
   <block id="2aefc74ac286c583100431f62049590d" category="list-text">发生灾难时、可按需将主站点故障转移到灾难恢复站点、灾难恢复站点可以是基于AWS的VMware Cloud和FSx for NetApp ONTAP、也可以是采用ONTAP的内部VMware环境。</block>
   <block id="a6a42e8e3070730d19bfd86d6a1d66fe" category="paragraph">下图显示了从内部到内部的灾难恢复计划的架构。</block>
-  <block id="11ee533cc4ce7135332d0b64a9e82e51" category="paragraph"><block ref="11ee533cc4ce7135332d0b64a9e82e51" category="inline-image-macro-rx" type="image"></block></block>
   <block id="20099229ad21726312a6ff50740b0b57" category="paragraph">发生灾难时、此服务可通过中断SnapMirror关系并使目标站点处于活动状态来帮助您恢复其他内部VMware环境或VMC中的虚拟机。</block>
   <block id="a675a2edc95f7fca650a735944e38f96" category="paragraph">要使用BlueXP灾难恢复、应确保您的环境满足以下要求：</block>
   <block id="96ed64c294e585324853f8f980f9d78e" category="sidebar">将应用程序迁移到其他站点</block>
@@ -797,4 +796,5 @@ BlueXP灾难恢复不需要任何支持。灾难恢复选项将自动显示在Bl
   <block id="9fc7e8cb24850b1f0912cebc8da32620" category="list-text">访问BlueXP电子钱包。</block>
   <block id="7b6dca09bf0ef612bac047a313d66cbf" category="list-text">选择*数据服务许可证*选项卡，选择要更新的服务序列号的*操作...*图标，然后选择*更新许可证*。</block>
   <block id="be976ba4e18c887ae57e14f6ebfbbab3" category="sidebar">灾难恢复到云是一种经济高效的弹性方法、可保护工作负载免受站点中断和数据损坏事件(例如勒索软件)的影响。借助适用于VMware的BlueXP灾难恢复、您可以将运行ONTAP存储的内部VMware工作负载复制到公共云中的VMware软件定义的数据中心、或者复制到作为灾难恢复站点的其他内部站点。</block>
+  <block id="67d87f62e2f6294a12829113edfa11b8" category="paragraph"><block ref="67d87f62e2f6294a12829113edfa11b8" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>
