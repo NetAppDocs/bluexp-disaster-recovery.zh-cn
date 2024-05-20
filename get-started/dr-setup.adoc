@@ -82,6 +82,6 @@ https://www.vmware.com/products/vmc-on-aws.html["基于 AWS 的 VMware Cloud"^] 
 
 借助BlueXP灾难恢复、您可以注册90天免费试用。
 
-您可以自带许可证(BYOL)、这是一个NetApp许可证文件(NLL)。
+您可以通过AWS Marketplace购买按需购买(PAYGO)订阅、也可以自带许可证(自带许可证、BYOL)、这是一个NetApp许可证文件(NLL)。
 
 有关为BlueXP灾难恢复设置许可的详细信息、请参阅 link:../get-started/dr-licensing.html["设置BlueXP灾难恢复许可"]。
