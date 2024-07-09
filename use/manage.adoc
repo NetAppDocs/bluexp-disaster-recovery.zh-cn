@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: use/manage.html 
-keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter 
-summary: NetApp BlueXP灾难恢复是一种基于云的灾难恢复服务、可自动执行灾难恢复工作流。 
+keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter, replication plans, resource groups 
+summary: 您可以快速浏览所有BlueXP灾难恢复资源、并管理vCenter站点、资源组和复制计划。 
 ---
-= 管理站点、计划、数据存储库和虚拟机信息
+= 管理站点、资源组、复制计划、数据存储库和虚拟机信息
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -15,10 +15,10 @@ summary: NetApp BlueXP灾难恢复是一种基于云的灾难恢复服务、可�
 您可以快速浏览所有灾难恢复资源、也可以详细了解每个资源：
 
 * 站点
+* 资源组
 * 复制计划
 * 数据存储库
 * 虚拟机
-* 资源组
 
 
 
@@ -35,9 +35,23 @@ summary: NetApp BlueXP灾难恢复是一种基于云的灾难恢复服务、可�
 
 
 
+== 管理资源组
+
+虽然您可以在创建复制计划过程中添加资源组、但您可能会发现单独添加这些组并稍后在计划中使用这些组会更方便。
+
+您还可以编辑和删除资源组。
+
+.步骤
+. 从顶部菜单中选择*资源组*。
+. 要添加资源组，请选择*Add group*。
+. 要对资源组执行操作，请选择*Actions*选项 image:../use/icon-horizontal-dots.png["BlueXP灾难恢复服务中的\"Actions\"菜单图标"]  并选择任意选项，如*Edit resource group*或*Delete resource group*。
+
+
+
+
 == 管理复制计划
 
-您可以禁用、启用和删除复制计划。
+您可以禁用、启用和删除复制计划。您可以更改计划。
 
 * 如果要临时暂停复制计划、您可以将其禁用、然后再启用。
 * 如果您不再需要该计划、可以将其删除。
@@ -53,11 +67,19 @@ image:../use/dr-plan-list2.png["复制计划列表"]
 +
 ** 要编辑计划详细信息(更改重复)，请选择*计划详细信息*选项卡，然后选择右侧的*编辑*图标。
 ** 要编辑资源映射，请选择*故障转移映射*选项卡，然后选择*编辑*图标。
-** 要添加或编辑虚拟机，请选择*虚拟机*选项卡，然后选择*编辑*图标。
+** 要添加或编辑虚拟机，请选择*Virtual Machines*选项卡，然后选择*Add VMs*选项或*Edit*图标。
 
 
 . 通过在左上角的面包屑中选择"Replication Plans (复制计划)"、返回计划列表。
 . 要对计划执行操作，请从复制计划列表中选择*Actions*选项 image:../use/icon-horizontal-dots.png["BlueXP灾难恢复服务中的\"Actions\"菜单图标"]  并选择任何选项，如*Edit SCHED*、*Test failover*、*failover*、*failback*、*Disable"、 *Enable*或*Delete*。
+. 要设置或更改测试故障转移计划或设置合规性频率检查，请选择计划右侧的*Actions*选项 image:../use/icon-horizontal-dots.png["BlueXP灾难恢复服务中的\"Actions\"菜单图标"] ，然后选择*Edit d볆 뮮*。
++
+.. 在编辑计划页面中、输入希望故障转移合规性检查的频率(以分钟为单位)。
+.. 选中*按计划运行测试故障转移*。
+.. 在重复选项中、选择每日、每周或每月计划。
+.. 选择 * 保存 * 。
+
+
 
 
 
@@ -82,18 +104,4 @@ image:../use/dr-plan-list2.png["复制计划列表"]
 . 在站点行中选择vCenter。
 . 选择*虚拟机*。
 . 查看虚拟机信息。
-
-
-
-
-== 管理资源组
-
-虽然您可以在创建复制计划过程中添加资源组、但您可能会发现单独添加这些组并稍后在计划中使用这些组会更方便。
-
-您还可以编辑和删除资源组。
-
-.步骤
-. 从顶部菜单中选择*资源组*。
-. 要添加资源组，请选择*Add group*。
-. 要对资源组执行操作，请选择*Actions*选项 image:../use/icon-horizontal-dots.png["BlueXP灾难恢复服务中的\"Actions\"菜单图标"]  并选择任意选项，如*Edit resource group*或*Delete resource group*。
 

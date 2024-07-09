@@ -1,0 +1,153 @@
+---
+sidebar: sidebar 
+permalink: reference/vcenter-privileges.html 
+keywords: disaster recovery, bluexp, vcenter, 
+summary: '要使BlueXP灾难恢复能够执行其服务、vCenter帐户必须至少具有一组vCenter权限、例如注册和取消注册数据存储库、启动和停止VM以及重新配置虚拟机(VM)。下表列出了BlueXP灾难恢复与vCenter集群连接所需的所有特权。' 
+---
+= BlueXP灾难恢复所需的vCenter特权
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/use/
+
+
+[role="lead"]
+要使BlueXP灾难恢复能够执行其服务、vCenter帐户必须至少具有一组vCenter权限、例如注册和取消注册数据存储库、启动和停止VM以及重新配置虚拟机(VM)。下表列出了BlueXP灾难恢复与vCenter集群连接所需的所有特权。
+
+[cols="25,35a,40a"]
+|===
+| 键入 | 权限名称 | 说明 
+
+
+| *数据存储库*  a| 
+数据存储库。 配置数据存储库
+ a| 
+用于配置数据存储库。
+
+
+
+|   a| 
+数据存储库。 删除数据存储库
+ a| 
+用于删除数据存储库。
+
+
+
+| *虚拟机*  a| 
+虚拟机。配置。更改设置
+ a| 
+用于更改常规虚拟机设置。
+
+
+
+|   a| 
+虚拟机。配置。修改设备设置
+ a| 
+用于更改现有设备的属性。
+
+
+
+|   a| 
+虚拟机。配置。从路径重新加载
+ a| 
+用于更改VM配置修补程序、同时保留VM的标识。VMware vCenter Site Recovery Manager等解决方案可通过此操作在故障转移和故障恢复期间维护VM标识。
+
+
+
+|   a| 
+虚拟机。配置。重命名
+ a| 
+用于重命名VM或修改VM的关联节点。
+
+
+
+|   a| 
+虚拟机。配置。重置子系统信息
+ a| 
+用于编辑VM的子操作系统信息。
+
+
+
+|   a| 
+虚拟机。配置。更改内存
+ a| 
+用于更改分配给虚拟机的内存量。
+
+
+
+|   a| 
+虚拟机。配置。更改CPU计数
+ a| 
+用于更改虚拟CPU的数量。
+
+
+
+| *虚拟机子系统*  a| 
+虚拟机。 子系统操作。 子系统操作修改
+ a| 
+启用涉及更改VM中子操作系统的VM子操作、例如将文件传输到VM。
+
+
+
+| *虚拟机交互*  a| 
+虚拟机。交互。关闭
+ a| 
+用于关闭已启动的虚拟机。此操作将关闭子操作系统。
+
+
+
+|   a| 
+虚拟机。交互。启动
+ a| 
+用于启动已关闭的VM并恢复已暂停的VM。
+
+
+
+|   a| 
+安装Virtual Machine.Interaction.VMware Tools
+ a| 
+用于挂载VMware Tools CD安装程序并将其作为子操作系统的CD-ROM卸载。
+
+
+
+| *虚拟机清单*  a| 
+虚拟机.Inventory.Create new
+ a| 
+用于创建VM并为其执行分配资源。
+
+
+
+|   a| 
+virtual Machine.Inventory.Register
+ a| 
+用于将现有虚拟机添加到vCenter Server或主机清单中。
+
+
+
+|   a| 
+虚拟机.Inventory.Unregign
+ a| 
+用于从vCenter Server或主机清单中取消注册虚拟机。
+
+
+
+| *虚拟机状况*  a| 
+虚拟机。 Snapshot管理。 创建快照
+ a| 
+用于从虚拟机的当前状态创建快照。
+
+
+
+|   a| 
+虚拟机。 Snapshot管理。 删除Snapshot
+ a| 
+用于从快照历史记录中删除快照。
+
+
+
+|   a| 
+虚拟机。 Snapshot管理。 还原为快照
+ a| 
+用于将虚拟机设置为其在给定快照下所处的状态。
+
+|===

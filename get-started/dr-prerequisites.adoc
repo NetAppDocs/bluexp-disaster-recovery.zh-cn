@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: get-started/dr-prerequisites.html 
-keywords: what are bluexp disaster recovery requirements, disaster recovery prerequisites 
-summary: 通过验证对您的环境、网络访问、登录和Web浏览器的支持、开始使用BlueXP灾难恢复。 
+keywords: what are bluexp disaster recovery requirements, disaster recovery prerequisites, bluexp disaster recovery 
+summary: 在使用BlueXP灾难恢复之前、您应确保环境满足ONTAP存储、VMware vCenter集群和BlueXP要求。 
 ---
 = BlueXP灾难恢复前提条件
 :hardbreaks:
@@ -12,32 +12,101 @@ summary: 通过验证对您的环境、网络访问、登录和Web浏览器的�
 
 
 [role="lead"]
-首先验证您的操作环境、登录、网络访问和Web浏览器是否就绪。
+在使用BlueXP灾难恢复之前、您应确保环境满足ONTAP存储、VMware vCenter集群和BlueXP要求。
 
-要使用BlueXP灾难恢复、应确保您的环境满足以下要求：
 
-* 使用NetApp存储的内部VMware工作环境
-* 在AWS上：
+
+== ONTAP存储前提条件
+
+这些前提条件适用于ONTAP或Amazon FSx for NetApp ONTAP实例。
+
+* 源集群和目标集群必须具有对等关系。
+* 要托管灾难恢复卷的SVM必须位于目标集群上。
+* 源SVM和目标SVM必须具有对等关系。
 +
-** Amazon FSx for NetApp ONTAP文件系统。请参阅上的Amazon FSx for ONTAP文档 https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/getting-started-step1.html["如何开始"^]。
-** 一个VMware帐户、在AWS上拥有软件定义的数据中心(SDDC)、也称为虚拟机云。在VMware Cloud Console中、使用管理员和NSX云管理员的服务角色。此外、还可以将组织所有者用于组织角色。请参见 https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/vmware-cloud-ontap.html["Virtual Machines Cloud文档"^]。
-** 将SDDC与Amazon FSx for NetApp ONTAP链接起来。请参见 https://vmc.techzone.vmware.com/fsx-guide#overview["VMware Cloud on AWS与Amazon FSx for NetApp ONTAP集成"^]。
 
+NOTE: 不应提前在目标SVM或SVM中创建灾难恢复卷。BlueXP灾难恢复将根据复制计划的需要创建目标卷。
 
-* 在BlueXP中：
+* 如果使用Amazon FSx for NetApp ONTAP进行部署、则需满足以下前提条件：
 +
-** 已将Amazon FSx for ONTAP和AWS凭据添加到BlueXP工作环境中。
-** 需要在BlueXP中设置BlueXP Connector。内部部署和Cloud Connector应同时连接到内部部署和采用ESXis的VMware Cloud (VMC) vCenter。这样、备份、故障转移、故障恢复和迁移功能便可与所需的网络和脚本功能配合使用。
+** VPC中必须存在用于托管VMware灾难恢复数据存储库的Amazon FSx for NetApp ONTAP实例。请参阅上的Amazon FSx for ONTAP文档 https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/getting-started-step1.html["如何开始"^]。
+
+
+
+
+
+
+== VMware vCenter集群前提条件
+
+这些前提条件既适用于内部vCenter集群、也适用于VMware Cloud for AWS软件定义的数据中心(SDDC)。
+
+* 您希望BlueXP灾难恢复管理的所有VMware集群都必须托管在ONTAP卷上。
+* 要由BlueXP灾难恢复管理的所有VMware数据存储库都必须使用以下协议之一：
 +
-BlueXP Connector需要源vCenter Server和目标vCenter Server的凭据。请参见 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-standard-mode.html["BlueXP快速入门"^] 和 https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-networking-saas-console.html["BlueXP网络信息"^]。
+** NFS
+** 使用iSCSI协议的VMFS (目前正在进行技术预览)
 
-** 要确保应用程序一致性过程成功、请确保满足以下前提条件：
+
+* 如果您使用的是VMware Cloud SDDC、则需满足以下前提条件。
 +
-*** 确保要保护的虚拟机上正在运行VMware工具(或Open VM工具)。
-*** 对于运行SQL或Oracle或这两者的Windows VM、数据库应启用其VSS写入程序、并且数据库应处于稳定状态。
-*** 对于在Linux操作系统上运行的Oracle数据库、应为Oracle数据库SYSDBA角色启用操作系统用户身份验证。
+** 在VMware Cloud Console中、使用管理员和NSX云管理员的服务角色。此外、还可以将组织所有者用于组织角色。请参阅 https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/vmware-cloud-ontap.html["《将VMware云基础与AWS FSx for NetApp ONTAP结合使用》文档"^]。
+** 将VMware Cloud SDDC与Amazon FSx for NetApp ONTAP实例链接起来。请参阅 https://vmc.techzone.vmware.com/fsx-guide#overview["VMware Cloud on AWS与Amazon FSx for NetApp ONTAP的集成部署信息"^]。
 
 
 
 
+
+
+== BlueXP前提条件
+
+
+
+=== 收集ONTAP和VMware的凭据
+
+* 必须将Amazon FSx for ONTAP和AWS凭据添加到BlueXP工作空间内的工作环境中、以用于管理BlueXP灾难恢复。
+* BlueXP灾难恢复需要vCenter凭据。在BlueXP灾难恢复中添加站点时、需要输入vCenter凭据。
++
+有关所需vCenter特权的列表，请参见 link:../reference/vcenter-privileges.html["BlueXP灾难恢复所需的vCenter特权"]。有关如何添加站点的说明，请参阅 link:../use/sites-add.html["添加站点"]。
+
+
+
+
+
+=== 添加BlueXP帐户
+
+在BlueXP中、如果您还没有帐户、则需要添加帐户。请参阅 https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-netapp-accounts.html["有关如何添加帐户的BlueXP文档"^]。
+
+
+
+=== 创建BlueXP Connector
+
+必须在BlueXP中设置BlueXP连接器。使用BlueXP Connector时、它将包括灾难恢复服务的相应功能。
+
+* BlueXP灾难恢复仅适用于标准模式的Connector部署。请参阅。 https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-standard-mode.html["标准模式下的BlueXP入门"^]
+* 所需BlueXP连接器的类型：
++
+** *内部到内部灾难恢复*：在灾难恢复站点中安装BlueXP内部部署连接器。请参阅 https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.html["在内部安装和设置连接器"^]。
+** *从内部部署到AWS*：在AWS VPC中安装BlueXP Connector for AWS。请参阅 https://docs.netapp.com/us-en/bluexp-setup-admin/concept-install-options-aws.html["AWS中的连接器安装选项"^]。
++
+
+TIP: 对于内部到内部、请使用BlueXP内部部署连接器。对于从内部到AWS的环境、请使用BlueXP AWS Connector、它可以访问源内部vCenter和目标内部vCenter。
+
+** 安装的BlueXP Connector必须能够访问BlueXP灾难恢复要管理的任何VMware集群。
+
+
+* 必须将要由BlueXP灾难恢复管理的所有ONTAP阵列添加到BlueXP工作空间中用于管理BlueXP灾难恢复的任何工作环境中。
++
+请参阅。 https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["发现内部ONTAP 集群"^]
+
+
+
+
+
+== 工作负载前提条件
+
+要确保应用程序一致性过程成功、请应用以下前提条件：
+
+* 确保要保护的虚拟机上正在运行VMware工具(或Open VM工具)。
+* 对于运行Microsoft SQL Server和/或Oracle数据库的Windows VM、这些数据库应启用VSS写入程序。
+* 对于在Linux操作系统上运行的Oracle数据库、应为Oracle数据库SYSDBA角色启用操作系统用户身份验证。
 

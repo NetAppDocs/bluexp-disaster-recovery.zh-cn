@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: use/monitor-jobs.html 
-keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter 
-summary: NetApp BlueXP灾难恢复是一种基于云的灾难恢复服务、可自动执行灾难恢复工作流。 
+keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter, monitor 
+summary: NetApp BlueXP灾难恢复是一种基于云的灾难恢复服务、可自动执行灾难恢复工作流。您可以监控所有灾难恢复作业并确定其进度。 
 ---
 = 监控灾难恢复作业
 :hardbreaks:
@@ -20,34 +20,4 @@ summary: NetApp BlueXP灾难恢复是一种基于云的灾难恢复服务、可�
 . 浏览与操作相关的所有作业并查看其时间戳和状态。
 . 要查看特定作业的详细信息、请选择该行。
 . 要刷新信息，请选择*Refresh*。
-
-
-
-
-== 取消作业
-
-如果作业正在进行中、而您不希望其继续、则可以将其取消。如果作业停留在同一状态、而您希望释放队列中的下一个操作、则可能需要取消该作业。您可能希望在作业超时之前将其取消。
-
-要取消作业、请使用Swagger。
-
-.开始之前
-要取消作业、您必须具有帐户ID。
-
-.步骤
-. 从BlueXP左侧导航栏中、选择*保护*>*灾难恢复*。
-. 从顶部菜单中选择*作业监控*。
-. 在作业监控页面中、记下要取消的作业的ID。
-. 访问BlueXP灾难恢复Swagger URL： https://snapcenter.cloudmanager.cloud.netapp.com/api-doc/#/Jobs/put_jobmanager_v2_jobs__jobId_["Swagger"^]。
-+
-"https://snapcenter.cloudmanager.cloud.netapp.com/api-doc/#/Jobs/put_jobmanager_v2_jobs__jobId_"[]
-
-+
-image:dr-swagger-job-cancel.png["显示如何取消作业的Swagger页面"]
-
-+
-有关Swagger的详细信息、请参见 https://swagger.io/docs/["Swagger文档"^]。
-
-. 从Swagger中、从Authorize选项获取安全令牌、也称为_p承载 令牌_。
-. 输入帐户ID和作业ID。
-. 选择 * 试用 * 。
 

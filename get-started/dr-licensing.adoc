@@ -75,12 +75,8 @@ image:draas-landing2.png["BlueXP灾难恢复的登录页面屏幕截图"]
 
 .步骤
 . 在BlueXP灾难恢复中、您会看到一条消息、指出免费试用即将到期。在消息中，选择*订阅或购买许可证*。
-+
-image:draas-license-subscribe2.png["BlueXP灾难恢复支付方法页面"]
-
 . 选择*在AWS Marketplace中订阅*。
-. 在AWS Marketplace中、选择*查看购买选项*。
-. 使用AWS Marketplace订阅BlueXP灾难恢复。
+. 在AWS Marketplace中、选择*查看购买选项*。使用AWS Marketplace订阅BlueXP灾难恢复。
 . 返回到BlueXP灾难恢复后、系统会显示一条消息、指出您已订阅。
 +
 要在BlueXP数字钱包中查看订阅详细信息，请选择*查看订阅详细信息*，然后在*订阅*页面上查看活动订阅。

@@ -178,7 +178,6 @@
   <block id="405e835e0544bb4cc8bbd26a2c840b54" category="section-title">2023年5月18日</block>
   <block id="acff175f1bababdb2baa1348412d501d" category="paragraph">这是BlueXP灾难恢复的初始版本。</block>
   <block id="49bd2ef4087967b81353d56e27be132a" category="summary">借助适用于VMware的BlueXP灾难恢复、您可以使用NetApp云存储将运行ONTAP存储的内部VMware工作负载复制到公有云中的VMware软件定义的数据中心、作为灾难恢复站点。</block>
-  <block id="02fce9b41a6b2efe9c45de00491f5b15" category="summary">云灾难恢复是一种经济高效的弹性方法、可保护工作负载免受站点中断和数据损坏事件的影响。借助适用于VMware的BlueXP灾难恢复、您可以使用NetApp云存储将运行ONTAP存储的内部VMware工作负载复制到公有云中的VMware软件定义的数据中心、作为灾难恢复站点。</block>
   <block id="a3c972b2a97e85a689b9fc36b1658dcf" category="inline-image-macro">显示适用于VMware的BlueXP灾难恢复组件的示意图</block>
   <block id="3f3839e5200c4d2924e47db9048f7236" category="list-text">通过多个时间点恢复操作简化了vCenter发现和恢复应用程序的用户体验 </block>
   <block id="2b62fc3f49aa92691e24ff085ed87ebe" category="list-text">降低运营成本、并能够以最少的资源创建和调整灾难恢复计划、从而降低总拥有成本</block>
@@ -203,30 +202,13 @@ BlueXP灾难恢复不需要任何支持。灾难恢复选项将自动显示在Bl
   <block id="b5b8e67d6a37d24ad73c89e4c7ac8c9e" category="inline-link-macro">前提条件</block>
   <block id="12e2dc5fcef627451410583ca25001f8" category="list-text">请查看 <block ref="92ab8b24e9e19913fbd62d38b5e3558b" category="inline-link-macro-rx"></block> 以确保您的环境已准备就绪。</block>
   <block id="5ca24c4b6c87e148e5e8719ec8dd13ee" category="list-text">在AWS上部署和配置VMware Cloud。</block>
-  <block id="87eb524d6c04a253599327cc1c7a60ee" category="list-text">创建Amazon FSx for ONTAP文件系统。配置和配置FSx for ONTAP。</block>
-  <block id="4c3419728723e5cec0fdd6c5e0a79fbb" category="list-text">使用VMware帐户并配置软件定义的数据中心(Software-定义 的数据中心、SDDC)。确保SDDC已与FSx for ONTAP建立连接。</block>
-  <block id="7fc964519860ed011389afb142e2370e" category="list-text">在BlueXP中：</block>
-  <block id="322e46cbec275f2740ec8387b6dd48fd" category="list-text">将内部ONTAP存储工作环境添加到BlueXP。这是源ONTAP集群。</block>
-  <block id="24b72cf7b78b1dabbeedc0e25ff165f8" category="list-text">添加BlueXP帐户、将FSxN添加到工作环境、并添加FSx for ONTAP的AWS凭据。</block>
   <block id="832d5bf67a66aafc3f8182b31c2c8086" category="paragraph">在AWS中、您需要执行以下步骤：</block>
   <block id="824ad2eb4e12f7e91aa345fe67fa3e20" category="list-text">部署VMware Cloud</block>
   <block id="4dab2f9796b0af6304d00e21e2b9dfb4" category="inline-link">基于 AWS 的 VMware Cloud</block>
   <block id="1b38656c5ec12ea70e00624b8b3d9551" category="paragraph"><block ref="aa736dbc3fc450bce1fb1f5726a687eb" category="inline-link-rx"></block> 为AWS生态系统中基于VMware的工作负载提供云原生体验。每个VMware软件定义的数据中心(SDDC)都在Amazon虚拟私有云(VPC)中运行、并提供完整的VMware堆栈(包括vCenter Server)、NSX-T软件定义的网络、vSAN软件定义的存储以及一个或多个ESXi主机、用于为工作负载提供计算和存储资源。</block>
   <block id="2a304a1348456ccd2234cd71a81bd338" category="inline-link">链接。</block>
   <block id="fd14ed73e21c2af5ff119a635c30df95" category="paragraph">要在AWS上配置VMC环境、请按照此处的步骤进行操作<block ref="2482e32457e6109d0aff0016bbcce7d1" category="inline-link-rx"></block>。指示灯集群还可用于灾难恢复。</block>
-  <block id="813470cfb6b19cf55033bfb89dad5bc3" category="section-title">配置Amazon FSx for NetApp ONTAP</block>
-  <block id="eb394b51d4a778c72332db5d64a1960b" category="paragraph">适用于NetApp ONTAP 的Amazon FSX是一种完全托管的服务、可提供基于常见NetApp ONTAP 文件系统构建的高度可靠、可扩展、高性能和功能丰富的文件存储。请按照此处的步骤进行操作<block ref="551566e1b64bc66251dbfe6d546a4bef" category="inline-link-rx"></block> 配置FSx for NetApp ONTAP。</block>
-  <block id="496692430255798782df4a20f93d0e46" category="paragraph">下一步是在BlueXP中设置灾难恢复。</block>
-  <block id="ccaaa0b1fdb9afd84865d38039f74d41" category="section-title">在BlueXP中创建连接器</block>
-  <block id="d29bda09bea50f3d6b0e9d9d61015179" category="inline-link">如何创建连接器</block>
-  <block id="32ed92d70b140ee92a015de26f8ca076" category="paragraph">要在使用此服务之前在BlueXP中创建Connector、请参阅所述的BlueXP文档<block ref="3be6fdd970ee3d2f07a043a29363ec05" category="inline-link-rx"></block>。</block>
-  <block id="42a965f76897c36cbf37b815d06aff80" category="section-title">为Amazon FSx for NetApp ONTAP配置SnapMirror</block>
   <block id="8578ea7cebd82d3ffa5a16500e105552" category="inline-link">有关如何添加帐户的BlueXP文档</block>
-  <block id="c1396f684f657bba5e27617a98a6991b" category="list-text">在BlueXP中、添加帐户。请参见<block ref="774d23f949c92eac0cff5269d4337483" category="inline-link-rx"></block>。</block>
-  <block id="7d7445247cf277d14bdf223b814aef8a" category="inline-link">如何设置FSx for ONTAP工作环境</block>
-  <block id="0a4d5f87126861e7aba9f8041c6ece27" category="list-text">将Amazon FSx for NetApp ONTAP添加到工作环境中。确保与ONTAP集群的SnapMirror关系已建立、并且其目标为FSx for NetApp ONTAP。请参见<block ref="196f9f190bce8cf361111930a46ad787" category="inline-link-rx"></block>。</block>
-  <block id="c08a2521245530f9a6691450378e81e8" category="list-text">在BlueXP中、将SnapMirror部署到FSx for NetApp ONTAP。</block>
-  <block id="8d6b654ad4c184e8b1a0e93a42951353" category="list-text">在BlueXP中、发现AWS实例上配置的FSx for NetApp ONTAP、并以适当的频率和NetApp Snapshot副本保留将指定的数据存储库卷从内部环境复制到FSx for NetApp ONTAP。</block>
   <block id="ee21d19e70e4611d4c782f9439377ba0" category="summary">只需几步即可开始使用NetApp BlueXP灾难恢复服务。</block>
   <block id="6923c085091f4d4b0d464355d7771240" category="doc">BlueXP灾难恢复快速入门</block>
   <block id="917c67acabedb60df299e96c679e04f8" category="paragraph">下面概述了开始使用BlueXP灾难恢复所需的步骤。每个步骤中的链接将转到一个页面，其中提供了更多详细信息。</block>
@@ -235,9 +217,6 @@ BlueXP灾难恢复不需要任何支持。灾难恢复选项将自动显示在Bl
   <block id="d73fd850784e1d8dbda69ab3ca51e7cf" category="inline-link-macro">确保您的环境满足这些要求</block>
   <block id="5b73a71df82c1c509b1e335875c6c2a0" category="paragraph"><block ref="ef4e7a1c239c49290925a35bbbb1cc25" category="inline-link-macro-rx"></block>。</block>
   <block id="aada29daee1d64ed0fe907043855cb7e" category="inline-image-macro">两个</block>
-  <block id="218c645ebeb94f20d179bea9a6e08957" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> 设置灾难恢复服务</block>
-  <block id="cc6726e02ea7bc25f1ed413652107bdb" category="inline-link-macro">完成设置服务的步骤</block>
-  <block id="d55182b1f34fe59147eb3414ea0b2408" category="paragraph"><block ref="3bb756b4dc36bf4ce11b422d7c4281f9" category="inline-link-macro-rx"></block>。</block>
   <block id="ca8a2087e5557e317599344687a57391" category="inline-image-macro">三个</block>
   <block id="fb35cdd7029fec15aadbdddd879fa161" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> 下一步是什么？</block>
   <block id="0d5e44db30a371573d3409dc5db80551" category="paragraph">设置服务后、接下来可以执行以下操作。</block>
@@ -251,7 +230,6 @@ BlueXP灾难恢复不需要任何支持。灾难恢复选项将自动显示在Bl
   <block id="4f1f3c6d1472c505e740ebe57c2881ce" category="inline-link-macro">将应用程序故障恢复到原始源站点</block>
   <block id="5faa19197effc4c0fdc74b32045263ef" category="list-text"><block ref="6fbeff9687fcc9f06bd89057c3ed5a34" category="inline-link-macro-rx"></block>。</block>
   <block id="b7cd69eed80f723036ef0a99b8bb375e" category="inline-link-macro">管理站点、计划、数据存储库和虚拟机信息</block>
-  <block id="958608aea56e4e43ac86c03981cb1773" category="list-text"><block ref="9b74f5806b489674a9e6e3007bd00474" category="inline-link-macro-rx"></block>。</block>
   <block id="01a7e7f1580e9ccf4f0275e9f79a32dd" category="inline-link-macro">监控灾难恢复操作</block>
   <block id="899a3601f4e45edcb69bd9d82c68fbef" category="list-text"><block ref="698cc22cc758157d8f18359f8b528216" category="inline-link-macro-rx"></block>。</block>
   <block id="976795b09ce57d46e36268967ec95a95" category="summary">通过访问BlueXP中的服务开始使用BlueXP灾难恢复。</block>
@@ -267,17 +245,8 @@ BlueXP灾难恢复不需要任何支持。灾难恢复选项将自动显示在Bl
   <block id="04f45bf7defd11ead0b4c56cf8c3f371" category="paragraph">如果这是您首次登录此服务、则会显示登录页面。</block>
   <block id="c6c7eb2270b5edb5f8ecf37392db8b4b" category="inline-image-macro">BlueXP灾难恢复的登录页面屏幕截图</block>
   <block id="674a6bb0fdee8ed1d2d68faddc33d5e6" category="paragraph">否则、将显示BlueXP灾难恢复信息板。</block>
-  <block id="e1d24b3118270d4224a54337f1f63f2c" category="summary">通过验证对您的环境、网络访问、登录和Web浏览器的支持、开始使用BlueXP灾难恢复。</block>
   <block id="ccf3c2f4a4ab48adb4cc5352e480655c" category="doc">BlueXP灾难恢复前提条件</block>
-  <block id="84804abf3404a430e85ae3299587a6b0" category="paragraph">首先验证您的操作环境、登录、网络访问和Web浏览器是否就绪。</block>
-  <block id="e3bc55f0abc82785380fd56b902bf803" category="list-text">在AWS上：</block>
   <block id="9ff73081ad3af348b09105664054c18f" category="inline-link">如何开始</block>
-  <block id="308d77673e39dd171579985cc8579f92" category="list-text">Amazon FSx for NetApp ONTAP文件系统。请参阅上的Amazon FSx for ONTAP文档<block ref="db982a545763422931a00c332a8601c2" category="inline-link-rx"></block>。</block>
-  <block id="6f80b0ccdeb06755d08fcd10b6efd13c" category="inline-link">Virtual Machines Cloud文档</block>
-  <block id="f2dcae9fff997e552832417884acefaa" category="inline-link">VMware Cloud on AWS与Amazon FSx for NetApp ONTAP集成</block>
-  <block id="045482367f3cc5727ae8f097479439ee" category="list-text">将SDDC与Amazon FSx for NetApp ONTAP链接起来。请参见<block ref="02b70b195fcb534ea97ab3bf74203889" category="inline-link-rx"></block>。</block>
-  <block id="69b085a23d3ed85c84455b9288792bf2" category="inline-link">BlueXP快速入门</block>
-  <block id="45e7f38a8238b36c23e85bbe6436ba0b" category="inline-link">BlueXP网络信息</block>
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">法律声明</block>
   <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="paragraph">法律声明提供对版权声明、商标、专利等的访问。</block>
   <block id="6016a2b341113bf496b719905398ecd2" category="section-title">版权</block>
@@ -322,7 +291,6 @@ BlueXP灾难恢复不需要任何支持。灾难恢复选项将自动显示在Bl
   <block id="d0d1a7100fd604152ac7b93eb1abc016" category="list-text">在右侧，选择*Actions*选项 <block ref="2fddd650b01c7f9674be856867aae05d" category="inline-image-macro-rx" type="image"></block> 并选择*故障转移*。</block>
   <block id="c8876c4e46fed1dae800753bc202e67d" category="list-text">为要从中恢复的数据存储库选择Snapshot。  默认值为最新。</block>
   <block id="0362f1f30abcc40f31c3c6618b1a15c3" category="list-text">要检查进度，请在顶部菜单中选择*Job monitoring (作业监控)*。</block>
-  <block id="5e2bff09ac9b58d2dd6c2458c5ccea11" category="doc">管理站点、计划、数据存储库和虚拟机信息</block>
   <block id="ceeed92bd86d67dc2a2a6016ed40a571" category="paragraph">您可以快速浏览所有灾难恢复资源、也可以详细了解每个资源：</block>
   <block id="3faa64303d5f5bcd043bb88f6768e603" category="list-text">站点</block>
   <block id="a8fc43ecd23ee9eb5e9efa5c60cb20b9" category="list-text">复制计划</block>
@@ -333,7 +301,6 @@ BlueXP灾难恢复不需要任何支持。灾难恢复选项将自动显示在Bl
   <block id="c59beae96d46d2c9b38ce64663e3d9d0" category="list-text">从顶部菜单中选择*sites*。</block>
   <block id="c4b621211240f640df1e2cfcc6cc5bec" category="list-text">编辑vCenter站点名称和位置。</block>
   <block id="07851e0287e57a794c18de627c09e0e7" category="section-title">管理复制计划</block>
-  <block id="5fc6ce3a162e9142e8d530e890bcf33c" category="paragraph">您可以禁用、启用和删除复制计划。</block>
   <block id="3058d1612836b55d5c4e71a540ba0c44" category="list-text">如果要临时暂停复制计划、您可以将其禁用、然后再启用。</block>
   <block id="98a6ed9560bddac4a68acf12bb7ce31c" category="list-text">如果您不再需要该计划、可以将其删除。</block>
   <block id="eff6d6d4d66ab65f33be5de8b62e16d3" category="list-text">从顶部菜单中选择*复制计划*。</block>
@@ -341,7 +308,6 @@ BlueXP灾难恢复不需要任何支持。灾难恢复选项将自动显示在Bl
   <block id="690ae5d914fd57de729046d81d5d2ffa" category="list-text">执行以下任一操作：</block>
   <block id="5b10db4f07efa25e382abdf259d01eb2" category="list-text">要编辑计划详细信息(更改重复)，请选择*计划详细信息*选项卡，然后选择右侧的*编辑*图标。</block>
   <block id="843b9bb43d8bfd905c71d66766381bb3" category="list-text">要编辑资源映射，请选择*故障转移映射*选项卡，然后选择*编辑*图标。</block>
-  <block id="8a0bade43f38138c2baa54ba51a11c49" category="list-text">要添加或编辑虚拟机，请选择*虚拟机*选项卡，然后选择*编辑*图标。</block>
   <block id="a6dcfee4cd10f2ad60c3d81bc2a3b8ad" category="section-title">查看数据存储库信息</block>
   <block id="432624070ae1b8a0b19fd42c048a224c" category="paragraph">您可以查看有关源和目标上存在的数据存储库数量的信息。</block>
   <block id="5e141a758f792ce4ad7e1b2107b1f7a4" category="list-text">在站点行中选择vCenter。</block>
@@ -383,7 +349,6 @@ BlueXP灾难恢复不需要任何支持。灾难恢复选项将自动显示在Bl
   <block id="c34daecc192d502d04e27e0d11bc8acd" category="list-text">在应用程序页面的左侧、选择要复制并分配给选定组的虚拟机。</block>
   <block id="deea58ba2c2a385f7b93c144b2d694e1" category="paragraph">选定虚拟机将自动添加到组1、并启动新的组2。每次将虚拟机添加到最后一个组时、都会添加另一个组。</block>
   <block id="4039eb9aa82f9a49f8096e652825e9c9" category="inline-image-macro">显示"Add Replication Plan &amp;gt；Applications to replication"页面的屏幕截图</block>
-  <block id="021b658b4aef5f65124081043c92d29b" category="paragraph"><block ref="9ef4e2dba2a1d5ecef743359d937a39f" category="inline-image-macro-rx" type="image"></block></block>
   <block id="f60de6a7e37982bbcf6e675308bbbeb8" category="list-text">(可选)执行以下任一操作：</block>
   <block id="8702576026497ff97614ecf3a246c6e5" category="list-text">要更改组，请单击组*Edit*图标。</block>
   <block id="20b76027356378e48612a50cf35cca8a" category="list-text">要从组中删除虚拟机，请选择*X*。</block>
@@ -409,7 +374,6 @@ BlueXP灾难恢复不需要任何支持。灾难恢复选项将自动显示在Bl
   <block id="e0623856c2a2db53c0560ff5b20115df" category="section-title">确认复制计划</block>
   <block id="a879d1d71a73bdb6127bcb571303177d" category="paragraph">最后、花几分钟时间确认复制计划。</block>
   <block id="26ff2655fb5643a3e76370d9248a31df" category="admonition">您可以稍后禁用或删除复制计划。</block>
-  <block id="3ef49e9516f56dc6f2792feb59c1b116" category="list-text">查看每个选项卡中的信息：计划详细信息、故障转移映射、虚拟机。</block>
   <block id="47324a4e5509aeccc192aa7b07cbcac7" category="list-text">选择*添加计划*。</block>
   <block id="a9980df200522b9bbaa257521bc396fe" category="paragraph">该计划将添加到计划列表中。</block>
   <block id="a9233ff25d3c8ffa3e005e6e453381fc" category="paragraph">在创建灾难恢复计划之前、您需要在BlueXP中添加一个主vCenter站点和一个目标vCenter灾难恢复站点。</block>
@@ -506,7 +470,6 @@ BlueXP灾难恢复不需要任何支持。灾难恢复选项将自动显示在Bl
   <block id="798f01bc27c71f62fd4a64e0bb155f2f" category="paragraph">此过程不会在AWS中的内部ONTAP存储或FSx for NetApp ONTAP存储上占用额外的物理容量。初始源卷不会被修改、即使在灾难恢复期间、副本作业也可以继续进行。</block>
   <block id="fc3e06260a2d82cbcdc61d0edfe814f2" category="paragraph">发生灾难时、可使用FSx for NetApp ONTAP按需将主内部VMware站点故障转移到另一个内部VMware站点或AWS上的VMware Cloud。</block>
   <block id="0e4406e2f319d2b24ab99a69613fbf47" category="list-text">系统会根据复制计划中捕获的信息创建数据存储库并将其挂载到VMware或VMC集群或主机。</block>
-  <block id="f806e093eb7de418336ba62747d0d9ab" category="list-text">在Test failover页面中、输入复制计划名称进行确认、然后选择*故障转移*。</block>
   <block id="48b7a229446624a8bba6bae8e801d0ab" category="list-text">通过在左上角的面包屑中选择"Replication Plans (复制计划)"、返回计划列表。</block>
   <block id="2ebea8fe68e78bc0ff591a0dfab2033d" category="list-text">要对计划执行操作，请从复制计划列表中选择*Actions*选项 <block ref="2fddd650b01c7f9674be856867aae05d" category="inline-image-macro-rx" type="image"></block>  并选择任何选项，如*Edit SCHED*、*Test failover*、*failover*、*failback*、*Disable"、 *Enable*或*Delete*。</block>
   <block id="8fcc9f88ea38569445e7602709323556" category="summary">NetApp BlueXP灾难恢复是一种基于云的灾难恢复服务、可自动执行灾难恢复工作流。</block>
@@ -551,9 +514,6 @@ BlueXP灾难恢复不需要任何支持。灾难恢复选项将自动显示在Bl
   <block id="bc7f3cb185f48d451eb5ef976e8ad82d" category="list-text">*目标*：</block>
   <block id="d23a9d83c87c6eacef309f00a2beb5d3" category="inline-image-macro">站点页面屏幕截图</block>
   <block id="28f8c0c78028f2e899f7af50ce138e1b" category="paragraph"><block ref="28f8c0c78028f2e899f7af50ce138e1b" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="1835d0517fe4ffa8b6a639fa95e369ad" category="list-text">在BlueXP中创建连接器。</block>
-  <block id="25cb0baf366c7202daaabd5e60c16293" category="list-text">部署和配置SnapMirror for Amazon FSx for NetApp ONTAP。</block>
-  <block id="2a1f2380d9e50746902517055340629f" category="paragraph">使用BlueXP内部部署连接器或BlueXP AWS连接器、它们可以访问源内部部署vCenter和目标内部部署vCenter。</block>
   <block id="6f5e3fdfa73285ac2283ba492cf2d47b" category="list-text">AWS上的VMware Cloud (VMC)与Amazon FSx for NetApp ONTAP或</block>
   <block id="b374472b15e644f23d1e6b059b5216b9" category="list-text">采用ONTAP存储的另一个基于NFS的内部VMware环境</block>
   <block id="53c1c0c22e2a647591a0b52427852850" category="paragraph"><block ref="53c1c0c22e2a647591a0b52427852850" category="inline-image-macro-rx" type="image"></block></block>
@@ -562,7 +522,6 @@ BlueXP灾难恢复不需要任何支持。灾难恢复选项将自动显示在Bl
   <block id="2aefc74ac286c583100431f62049590d" category="list-text">发生灾难时、可按需将主站点故障转移到灾难恢复站点、灾难恢复站点可以是基于AWS的VMware Cloud和FSx for NetApp ONTAP、也可以是采用ONTAP的内部VMware环境。</block>
   <block id="a6a42e8e3070730d19bfd86d6a1d66fe" category="paragraph">下图显示了从内部到内部的灾难恢复计划的架构。</block>
   <block id="20099229ad21726312a6ff50740b0b57" category="paragraph">发生灾难时、此服务可通过中断SnapMirror关系并使目标站点处于活动状态来帮助您恢复其他内部VMware环境或VMC中的虚拟机。</block>
-  <block id="a675a2edc95f7fca650a735944e38f96" category="paragraph">要使用BlueXP灾难恢复、应确保您的环境满足以下要求：</block>
   <block id="96ed64c294e585324853f8f980f9d78e" category="sidebar">将应用程序迁移到其他站点</block>
   <block id="36a7330c410600f4393af365b3d66e29" category="sidebar">BlueXP灾难恢复博客</block>
   <block id="ad80d6168dc288f4361413eeca80dc5f" category="sidebar">迁移到其他站点</block>
@@ -664,21 +623,6 @@ BlueXP灾难恢复不需要任何支持。灾难恢复选项将自动显示在Bl
   <block id="c68217420a685b93e20f298ae3ea72c8" category="paragraph">您可以将.sh、.bat或.ps1格式的自定义脚本作为故障转移后过程。通过自定义脚本、您可以在故障转移过程之后让BlueXP灾难恢复运行脚本。例如、您可以使用自定义脚本在故障转移完成后恢复所有数据库事务。</block>
   <block id="8b4399d7029673ba83df4f916514230b" category="paragraph">测试故障转移操作不会影响生产工作负载、测试站点上使用的SnapMirror关系以及必须继续正常运行的受保护工作负载。</block>
   <block id="22d1d4bc51673707e71b38cb5d9f8053" category="admonition">故障转移开始后、可以在灾难恢复站点(虚拟机、网络和数据存储库)的vCenter中看到已恢复的VM。默认情况下、虚拟机会恢复到工作负载文件夹。</block>
-  <block id="24391a0c4e58147fa07febdb32887a1a" category="section-title">取消作业</block>
-  <block id="0f6fb16278c8db9e7104435d2ca9b98f" category="paragraph">如果作业正在进行中、而您不希望其继续、则可以将其取消。如果作业停留在同一状态、而您希望释放队列中的下一个操作、则可能需要取消该作业。您可能希望在作业超时之前将其取消。</block>
-  <block id="22b7400444d76583bfa01ad371bebbc5" category="paragraph">要取消作业、请使用Swagger。</block>
-  <block id="90fcc3b3a806bdba15ead6130adbd9a9" category="paragraph">要取消作业、您必须具有帐户ID。</block>
-  <block id="26abc41be60bda806b144bd6ecedad10" category="list-text">在作业监控页面中、记下要取消的作业的ID。</block>
-  <block id="336ff1e9aa6177ea7a71984fa8c241b9" category="inline-link">Swagger</block>
-  <block id="5273316399077a35494eb5acbbcf7801" category="list-text">访问BlueXP灾难恢复Swagger URL：<block ref="9e4854fddaa37e1b0c806d7c99538b64" category="inline-link-rx"></block>。</block>
-  <block id="cfe384e99d913d27036c11c367a847da" category="paragraph"><block ref="cfe384e99d913d27036c11c367a847da" category="inline-link-rx"></block></block>
-  <block id="7a01c0f2bb049f0040198121da3c115e" category="inline-image-macro">显示如何取消作业的Swagger页面</block>
-  <block id="3c54383fbe7b935cfc38e6a4118698cb" category="paragraph"><block ref="3c54383fbe7b935cfc38e6a4118698cb" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="5f8add33c48ab0f59f2908faa8d36196" category="inline-link">Swagger文档</block>
-  <block id="e124a230be11158b2df2a4490b5bc010" category="paragraph">有关Swagger的详细信息、请参见<block ref="851cca880157b178ca93e5f9f752f929" category="inline-link-rx"></block>。</block>
-  <block id="ae46b3f9f499c97dfc5b7c1e327aeea1" category="list-text">从Swagger中、从Authorize选项获取安全令牌、也称为_p承载 令牌_。</block>
-  <block id="d46acb5ac038cd8e0a5d3f7165605907" category="list-text">输入帐户ID和作业ID。</block>
-  <block id="b1f85b610b71ac9db3be3c5efe00f9a4" category="list-text">选择 * 试用 * 。</block>
   <block id="7133b9cf238828da0a287b89ce855ec3" category="paragraph"><block ref="7133b9cf238828da0a287b89ce855ec3" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0e17ce70dd39a8a056cb5ca0081d4526" category="list-text">*正在运行*：vCenter已连接、运行状况良好且正在运行。</block>
   <block id="ed4bdaafb191f860f256d0b1e88eb50e" category="list-text">*关闭*：vCenter无法访问或存在连接问题。</block>
@@ -706,8 +650,6 @@ BlueXP灾难恢复不需要任何支持。灾难恢复选项将自动显示在Bl
   <block id="0a003809d85acf4d6a198955e5780ac3" category="list-text">要在故障转移测试完成后清理测试环境，请选中*测试故障转移后自动清理*。</block>
   <block id="20ace5d6661ce95df08950b97c500ddc" category="admonition">此过程会从测试位置注销临时VM、删除已创建的FlexClone卷并卸载临时数据存储库。</block>
   <block id="10492389e94efdebbb66f7b0cd8a1324" category="list-text">选择 * 保存 * 。</block>
-  <block id="8f6793a82f1110a347dbefe3c3758178" category="section-title">故障恢复使用最新的Snapshot副本</block>
-  <block id="9ee4d1cdb3c09e86e561a895a7ab9345" category="paragraph">在当前版本中、故障恢复过程始终使用最新的Snapshot副本。即使您选择了要使用的特定Snapshot副本、也会发生这种情况。</block>
   <block id="4d519f9cb24d082270f8f88ccccd42e3" category="paragraph">了解BlueXP灾难恢复的新增功能。</block>
   <block id="592997dde366d5775e7e052816854f74" category="section-title">2024年3月5日</block>
   <block id="23f1adcf87ca650c2ac077f4be520c97" category="paragraph">这是BlueXP灾难恢复的正式发布版本、其中包括以下更新。</block>
@@ -719,18 +661,13 @@ BlueXP灾难恢复不需要任何支持。灾难恢复选项将自动显示在Bl
   <block id="4b2bfa262e877a668b7102f58d207f63" category="inline-link">创建复制计划</block>
   <block id="976dcedce9d4c9dc14db60abc49c5867" category="paragraph">有关详细信息，请参见<block ref="8026234d3eaba16fdffb266108c2804b" category="inline-link-rx"></block>。</block>
   <block id="0468e5ced7eddf7112cb542d124a006f" category="paragraph">此BlueXP灾难恢复预览版包括以下更新：</block>
-  <block id="c35429358a46b999fafa3eb39893122c" category="inline-link-macro">完成设置许可的步骤</block>
-  <block id="c46b74d8fea462e40a3a35bd54771989" category="paragraph"><block ref="3d00f62ff93b742ed767a11952d4b89c" category="inline-link-macro-rx"></block>。</block>
   <block id="5f6035a41d2be8c5780281ca63dc230a" category="paragraph">*使用BlueXP灾难恢复需要许可证吗？*
 要进行完全访问、需要BlueXP灾难恢复许可证。但是、您可以使用免费试用版进行试用。</block>
   <block id="65b8710d9a2596e72f3f9c24620b97a3" category="inline-link-macro">设置BlueXP灾难恢复许可</block>
   <block id="a4812a60b42128cc371c18f06197d9ab" category="paragraph">有关为BlueXP灾难恢复设置许可的详细信息、请参阅 <block ref="0ba47d7cccc1dc28f47670d48274167c" category="inline-link-macro-rx"></block>。</block>
   <block id="78a065b9fb649a31c2037ac8b6adf208" category="paragraph">要使用BlueXP灾难恢复、请执行几个步骤在Amazon Web Services (AWS)和BlueXP中进行设置。</block>
-  <block id="456948be6cc17bd9f797492f175ff847" category="section-title">设置AWS</block>
-  <block id="724c7536b89d0d851109ea9f7868da08" category="paragraph">您需要联系您的NetApp销售代表来试用此服务。然后、当您使用BlueXP Connector时、它将包括适用于灾难恢复服务的功能。</block>
   <block id="878214f294066da0bab8a3693a1f802a" category="doc">了解适用于VMware的BlueXP灾难恢复</block>
   <block id="e04cb1e00b4f2d764efe09d0b22a6b43" category="paragraph">云灾难恢复是一种经济高效的弹性方法、可保护工作负载免受站点中断和数据损坏事件的影响。借助适用于VMware的BlueXP灾难恢复、您可以将运行ONTAP存储的内部VMware工作负载复制到使用NetApp云存储的公共云中的VMware软件定义的数据中心、或者复制到使用ONTAP存储作为灾难恢复站点的其他内部VMware环境。</block>
-  <block id="81cd6d5889a00f3187d6e30af0f9838e" category="paragraph">BlueXP灾难恢复是一种基于云的灾难恢复服务、可自动执行灾难恢复工作流。最初、借助BlueXP灾难恢复服务、您可以保护运行NetApp存储且基于NFS的内部VMware工作负载、使其符合以下条件之一：</block>
   <block id="fbec25bffbcdefa11c9ca28adb0b824c" category="paragraph">BlueXP灾难恢复使用ONTAP SnapMirror技术作为到灾难恢复站点的复制传输。这样可以在主站点和二级站点上实现行业最佳的存储效率(数据压缩和重复数据删除)。</block>
   <block id="3c524eb32d863a57c821ef5ffecb96ee" category="section-title">使用适用于VMware的BlueXP灾难恢复可以执行哪些操作</block>
   <block id="0ad83d5f52e2b8f6dfc6ec26ef91aa38" category="paragraph">通过BlueXP灾难恢复、您可以充分利用多种NetApp技术来实现以下目标：</block>
@@ -740,14 +677,7 @@ BlueXP灾难恢复不需要任何支持。灾难恢复选项将自动显示在Bl
   <block id="c809a23426c6fb72cef75816c461ade9" category="paragraph">所有BlueXP服务的许可证均由BlueXP数字钱包服务管理。设置BYOL后、您可以在BlueXP电子钱包中看到此服务的有效许可证。</block>
   <block id="8eb586b1b79ddd3ae7c3123b39d4420e" category="admonition">如果至少有一个VM具有复制计划、则BlueXP灾难恢复费用基于源站点上数据存储库的已配置容量计算得出。故障转移数据存储库的容量不包括在容量允许值中。对于BYOL、如果数据超过允许的容量、则服务操作将受到限制、直到您获得额外的容量许可证或在BlueXP数字钱包中升级许可证为止。</block>
   <block id="27be91c80d5e97799bb6e73e37370e5d" category="paragraph">您可以随时购买许可证、90天试用期结束前不会向您收费。</block>
-  <block id="da329ee75f8833283c259789372600f6" category="list-text">使用NetApp存储的内部VMware工作环境</block>
-  <block id="0f5757c2302ddb1a6b48cf01d0fe295d" category="list-text">一个VMware帐户、在AWS上拥有软件定义的数据中心(SDDC)、也称为虚拟机云。在VMware Cloud Console中、使用管理员和NSX云管理员的服务角色。此外、还可以将组织所有者用于组织角色。请参见<block ref="e0529c1c92608a25886bf41835abea27" category="inline-link-rx"></block>。</block>
-  <block id="10158aa869cd2a07a9e35313b86f48f8" category="list-text">已将Amazon FSx for ONTAP和AWS凭据添加到BlueXP工作环境中。</block>
-  <block id="fce90829059c8b31e3882fa3db9f644c" category="list-text">需要在BlueXP中设置BlueXP Connector。内部部署和Cloud Connector应同时连接到内部部署和采用ESXis的VMware Cloud (VMC) vCenter。这样、备份、故障转移、故障恢复和迁移功能便可与所需的网络和脚本功能配合使用。</block>
-  <block id="54acd3bad890d9cacb0dd0970cbf3cd4" category="paragraph">BlueXP Connector需要源vCenter Server和目标vCenter Server的凭据。请参见<block ref="4b1866f17dc6bd66f88d9d6839084df6" category="inline-link-rx"></block> 和<block ref="8b2e3c99c244ff11d22f3c561bd167b2" category="inline-link-rx"></block>。</block>
-  <block id="4b23440b522693ef465ede54b1e9df88" category="list-text">要确保应用程序一致性过程成功、请确保满足以下前提条件：</block>
   <block id="7033a5d3e074f0c7401499ee4e48f38a" category="list-text">确保要保护的虚拟机上正在运行VMware工具(或Open VM工具)。</block>
-  <block id="7c480d19e9a60d89cc5b027f95938aa8" category="list-text">对于运行SQL或Oracle或这两者的Windows VM、数据库应启用其VSS写入程序、并且数据库应处于稳定状态。</block>
   <block id="af77ac64a97a80925dee7dc916344004" category="list-text">对于在Linux操作系统上运行的Oracle数据库、应为Oracle数据库SYSDBA角色启用操作系统用户身份验证。</block>
   <block id="e23539b066371b4dcfdd50b7d80417d8" category="paragraph">在免费试用结束或许可证过期后、您仍可在服务中执行以下操作：</block>
   <block id="1594f78ebbb281f7b5359eb6d2b89912" category="list-text">运行在试用期内或在许可证下创建的所有计划操作。</block>
@@ -777,11 +707,7 @@ BlueXP灾难恢复不需要任何支持。灾难恢复选项将自动显示在Bl
   <block id="ad7911fdd21ff5752d10300d0446de95" category="section-title">试用结束后、通过AWS Marketplace进行订阅</block>
   <block id="e1186eb5e41d3a9e96827c9ab4aef684" category="paragraph">免费试用结束后、您可以从NetApp购买许可证、也可以通过AWS Marketplace进行订阅。本操作步骤简要概述了如何直接在AWS Marketplace中订阅。</block>
   <block id="acce4a6c25bc51b4930085d68e3cb0cd" category="list-text">在BlueXP灾难恢复中、您会看到一条消息、指出免费试用即将到期。在消息中，选择*订阅或购买许可证*。</block>
-  <block id="89642db6eeb3c89414135d980b0f379c" category="inline-image-macro">BlueXP灾难恢复支付方法页面</block>
-  <block id="cd54cee81e627d252868fbc3cfc5731c" category="paragraph"><block ref="cd54cee81e627d252868fbc3cfc5731c" category="inline-image-macro-rx" type="image"></block></block>
   <block id="584a50ae29d097d233ebd86ad952d305" category="list-text">选择*在AWS Marketplace中订阅*。</block>
-  <block id="a06442e94af0d31f4eee679c83de7779" category="list-text">在AWS Marketplace中、选择*查看购买选项*。</block>
-  <block id="266c58f74740e96b35f10409d3036f8f" category="list-text">使用AWS Marketplace订阅BlueXP灾难恢复。</block>
   <block id="717132172ed170ccb94cc8674c35dfbd" category="list-text">返回到BlueXP灾难恢复后、系统会显示一条消息、指出您已订阅。</block>
   <block id="6678054c83157276d9287735dd3e1d92" category="paragraph">要在BlueXP数字钱包中查看订阅详细信息，请选择*查看订阅详细信息*，然后在*订阅*页面上查看活动订阅。</block>
   <block id="0a504e78221db1ccaf51b7ad21bc16ce" category="inline-image-macro">BlueXP数字钱包订阅选项卡</block>
@@ -796,10 +722,186 @@ BlueXP灾难恢复不需要任何支持。灾难恢复选项将自动显示在Bl
   <block id="595da0c0edf936a84fa3d6a69bbbb4e5" category="paragraph"><block ref="595da0c0edf936a84fa3d6a69bbbb4e5" category="inline-image-macro-rx" type="image"></block></block>
   <block id="5d50de45dd75ac0ea74e9c427687d113" category="list-text">在BlueXP数字钱包中，从*数据服务许可证*选项卡中选择*添加许可证*。</block>
   <block id="7744384d0e7b78819bc53ca36ef36369" category="list-text">选择*数据服务许可证*选项卡，选择要更新的服务序列号对应的*操作...*图标，然后选择*更新许可证*。</block>
-  <block id="fe16d01759ec350f7a6eaad418e37316" category="paragraph">BlueXP灾难恢复服务可与NetApp许可证或通过Amazon Web Services Marketplace按年订阅的计划结合使用。</block>
   <block id="577219605d1e6146de9dc5b1e218ce65" category="paragraph">要在90天试用之后继续、您需要从云提供商处获取按需购买(PAYGO)订阅、或者从NetApp购买BYOL许可证。</block>
   <block id="d66d706cd022ab39ed6479a713135515" category="paragraph"><block ref="d66d706cd022ab39ed6479a713135515" category="inline-image-macro-rx" type="image"></block></block>
   <block id="991e816286764c3a5ea9b023c35e1d77" category="paragraph"><block ref="991e816286764c3a5ea9b023c35e1d77" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="f356176c4e01ac702abad1ad2e11449a" category="paragraph">您可以通过AWS Marketplace购买按需购买(PAYGO)订阅、也可以自带许可证(自带许可证、BYOL)、这是一个NetApp许可证文件(NLL)。</block>
   <block id="b45dfe874eaba6a97e58e0436eba2402" category="sidebar">BlueXP灾难恢复即服务实验室按需入门</block>
+  <block id="439704735653d5132727cb9c21bc97c8" category="paragraph">BlueXP灾难恢复是一种基于云的灾难恢复服务、可自动执行灾难恢复工作流。最初、借助BlueXP灾难恢复服务、您可以保护基于NFS的内部工作负载、在技术预览中、您可以将运行NetApp存储的VMware vSphere虚拟机文件系统(VMFS)数据存储库配置为以下项之一：</block>
+  <block id="d5368fed025a9875e8a424b419508bef" category="admonition">此版本支持通过技术预览将内部VMware工作负载灾难恢复到具有VMware vSphere虚拟机文件系统(Virtual Machine File System、VMFS)数据存储库的内部VMware环境。NetApp不会对任何预览的工作负载容量收取任何费用。</block>
+  <block id="0dc4a26bb39078be4974284a72d54f64" category="paragraph">BlueXP灾难恢复服务可与NetApp许可证或通过Amazon Web Services按年订阅的计划结合使用。</block>
+  <block id="66a7384fcc7d6c71e8da6dc152b82593" category="admonition">某些版本包含技术预览版。NetApp不会对任何预览的工作负载容量收取任何费用。有关最新技术预览的信息、请参见 <block ref="431ce6b88c6d5399033553c1891688aa" category="inline-link-macro-rx"></block> 。</block>
+  <block id="cb29907626b2fabe5961e9265140cc76" category="list-text">在AWS Marketplace中、选择*查看购买选项*。使用AWS Marketplace订阅BlueXP灾难恢复。</block>
+  <block id="82dea2c8434a1770d46c03eb8b4c2389" category="summary">在使用BlueXP灾难恢复之前、您应确保环境满足ONTAP存储、VMware vCenter集群和BlueXP要求。</block>
+  <block id="d28c14a0fc5b1bfa37eb72dd0ac54a13" category="section-title">ONTAP存储前提条件</block>
+  <block id="911d68300fa1a1a181b338683eb2e1b9" category="paragraph">这些前提条件适用于ONTAP或Amazon FSx for NetApp ONTAP实例。</block>
+  <block id="07a02bd33ebc759fa2827fd098fe4d5b" category="list-text">源集群和目标集群必须具有对等关系。</block>
+  <block id="4a240de94d3b8b2cf85c70ef705ec1ad" category="list-text">要托管灾难恢复卷的SVM必须位于目标集群上。</block>
+  <block id="49a62cf19d5f5549f15f53e7cc0931a4" category="list-text">源SVM和目标SVM必须具有对等关系。</block>
+  <block id="03d4e4f8142b74599e73a9baef34f455" category="admonition">不应提前在目标SVM或SVM中创建灾难恢复卷。BlueXP灾难恢复将根据复制计划的需要创建目标卷。</block>
+  <block id="3c6fc169e2cb30ab2f19198ee948214f" category="list-text">如果使用Amazon FSx for NetApp ONTAP进行部署、则需满足以下前提条件：</block>
+  <block id="416e7e2f04e50d9ce77de6997e876b89" category="list-text">VPC中必须存在用于托管VMware灾难恢复数据存储库的Amazon FSx for NetApp ONTAP实例。请参阅上的Amazon FSx for ONTAP文档<block ref="db982a545763422931a00c332a8601c2" category="inline-link-rx"></block>。</block>
+  <block id="78ac16e6d697b73a4da8c7145ce2ebf3" category="section-title">VMware vCenter集群前提条件</block>
+  <block id="e43184d3dcdfbef8d9c719533929f538" category="paragraph">这些前提条件既适用于内部vCenter集群、也适用于VMware Cloud for AWS软件定义的数据中心(SDDC)。</block>
+  <block id="f5091f12fda6dcb8b160780e3352bbd5" category="list-text">您希望BlueXP灾难恢复管理的所有VMware集群都必须托管在ONTAP卷上。</block>
+  <block id="a103c229873d833279c49def9ebe9fc3" category="list-text">要由BlueXP灾难恢复管理的所有VMware数据存储库都必须使用以下协议之一：</block>
+  <block id="1d1a594959ec615f56516f5d0f5e8ddb" category="list-text">NFS</block>
+  <block id="47e0fa80d3fa1add35dfaada74c496e9" category="list-text">使用iSCSI协议的VMFS (目前正在进行技术预览)</block>
+  <block id="b48bd09b37dbbe2233bba9ccc258e634" category="list-text">如果您使用的是VMware Cloud SDDC、则需满足以下前提条件。</block>
+  <block id="7fc6ed2196514db323edb5f8ee464448" category="inline-link">《将VMware云基础与AWS FSx for NetApp ONTAP结合使用》文档</block>
+  <block id="f2fc5fa158eeee58eae505a362a866b3" category="list-text">在VMware Cloud Console中、使用管理员和NSX云管理员的服务角色。此外、还可以将组织所有者用于组织角色。请参阅<block ref="87df9e87408172a2291d5738f3ae5f4f" category="inline-link-rx"></block>。</block>
+  <block id="4e1ddb83fcf4e704fe454a7d694377b4" category="inline-link">VMware Cloud on AWS与Amazon FSx for NetApp ONTAP的集成部署信息</block>
+  <block id="7122f5fb62a64795817462bf41ff7862" category="list-text">将VMware Cloud SDDC与Amazon FSx for NetApp ONTAP实例链接起来。请参阅<block ref="703588ab376df01744e79984f081d5fd" category="inline-link-rx"></block>。</block>
+  <block id="96888c442fac1de0bbc3ba9d00f296a4" category="section-title">BlueXP前提条件</block>
+  <block id="2111321b91f7f03ee0c9d795126e728d" category="section-title">收集ONTAP和VMware的凭据</block>
+  <block id="40d6832bb97021f07389b0bb1371ebc8" category="list-text">必须将Amazon FSx for ONTAP和AWS凭据添加到BlueXP工作空间内的工作环境中、以用于管理BlueXP灾难恢复。</block>
+  <block id="a3322827dcb371ce03fcea3e6f6dac4b" category="list-text">BlueXP灾难恢复需要vCenter凭据。在BlueXP灾难恢复中添加站点时、需要输入vCenter凭据。</block>
+  <block id="af48f45a45fa68c1e7482428d13d3ae2" category="inline-link-macro">BlueXP灾难恢复所需的vCenter特权</block>
+  <block id="663ac415354a0662169e04ba51a80ee1" category="inline-link-macro">添加站点</block>
+  <block id="04d842fd50a052e8aa0d29fecc18a42b" category="paragraph">有关所需vCenter特权的列表，请参见 <block ref="2c677a2a2de566e8f203663d6f65fae2" category="inline-link-macro-rx"></block>。有关如何添加站点的说明，请参阅 <block ref="4e15c40290645aa1bfcc516405624ad3" category="inline-link-macro-rx"></block>。</block>
+  <block id="d5e44723931260e9fb1d91641ec67565" category="section-title">添加BlueXP帐户</block>
+  <block id="55d6d6a5af12f879c7cc9cc76ddabdec" category="paragraph">在BlueXP中、如果您还没有帐户、则需要添加帐户。请参阅<block ref="774d23f949c92eac0cff5269d4337483" category="inline-link-rx"></block>。</block>
+  <block id="a5085066220b6bc77291e8a3ba481c5a" category="section-title">创建BlueXP Connector</block>
+  <block id="6bdd2270b2444eb60c9eb649a9ca2c48" category="paragraph">必须在BlueXP中设置BlueXP连接器。使用BlueXP Connector时、它将包括灾难恢复服务的相应功能。</block>
+  <block id="d45c08fd27c89f889429a0d0279aa820" category="inline-link">标准模式下的BlueXP入门</block>
+  <block id="9617f94c4d0db3b59bc87478ad69a2e3" category="list-text">BlueXP灾难恢复仅适用于标准模式的Connector部署。请参阅。<block ref="8d7d3151883721ed32dc6ccb054ca1c1" category="inline-link-rx"></block></block>
+  <block id="7355396a11c2997a2e012d54ec400c23" category="list-text">所需BlueXP连接器的类型：</block>
+  <block id="1fb392a56edc456b1bc3eddb57b0906b" category="inline-link">在内部安装和设置连接器</block>
+  <block id="4606ca846bc1047c423bf2f388cae62e" category="list-text">*内部到内部灾难恢复*：在灾难恢复站点中安装BlueXP内部部署连接器。请参阅<block ref="1757fdffe316429694b3d2e3fbccb91f" category="inline-link-rx"></block>。</block>
+  <block id="eca3237a9ea860ef946ba4cdd489bc59" category="inline-link">AWS中的连接器安装选项</block>
+  <block id="5429b4727bb6860d719abc5d18c2c7ee" category="list-text">*从内部部署到AWS*：在AWS VPC中安装BlueXP Connector for AWS。请参阅<block ref="5b7871abcfa07c659c7f1c6cfa3aafba" category="inline-link-rx"></block>。</block>
+  <block id="12162c662baf903fc463cab971a2c144" category="admonition">对于内部到内部、请使用BlueXP内部部署连接器。对于从内部到AWS的环境、请使用BlueXP AWS Connector、它可以访问源内部vCenter和目标内部vCenter。</block>
+  <block id="b44186c8f26107b5ae7810b1a74e8093" category="list-text">安装的BlueXP Connector必须能够访问BlueXP灾难恢复要管理的任何VMware集群。</block>
+  <block id="a342d0b5394cc9bc5595d491d2a70101" category="list-text">必须将要由BlueXP灾难恢复管理的所有ONTAP阵列添加到BlueXP工作空间中用于管理BlueXP灾难恢复的任何工作环境中。</block>
+  <block id="c5fbee6586294d81141f8dd158707985" category="inline-link">发现内部ONTAP 集群</block>
+  <block id="c99bafeb844cf906e2f562103d12d623" category="paragraph">请参阅。<block ref="8cab2f9c49f209aeaa6ba3d7ce4342f6" category="inline-link-rx"></block></block>
+  <block id="9d5cd03b2fcfbe5b4558a93d2fd07ca2" category="section-title">工作负载前提条件</block>
+  <block id="6a84d76f499de61c5fe29550fe09a932" category="paragraph">要确保应用程序一致性过程成功、请应用以下前提条件：</block>
+  <block id="53967495fd407c118c305a84866ca152" category="list-text">对于运行Microsoft SQL Server和/或Oracle数据库的Windows VM、这些数据库应启用VSS写入程序。</block>
+  <block id="a906261e8914cac100bb85be774d5451" category="list-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> 设置BlueXP灾难恢复服务</block>
+  <block id="bba2d28657478d7f1f8cfa1202334b6c" category="inline-link-macro">设置服务的基础架构</block>
+  <block id="922a3f684ad3f3d8beda0f750bdbb18f" category="list-text"><block ref="d5f560af5db6cf4511b8e34e3209d0d9" category="inline-link-macro-rx"></block>(英文)</block>
+  <block id="143a2ad68b93a4241fb25dee71d34878" category="list-text"><block ref="eaa54a57026891d12cbf928afd176564" category="inline-link-macro-rx"></block>(英文)</block>
+  <block id="0b513f7730ddab41ea5b37d6963c756d" category="inline-link-macro">将vCenter站点添加到BlueXP灾难恢复</block>
+  <block id="1e92a19963b0c5825cc688d14c3c7952" category="list-text"><block ref="2502be63ed2d6f89316c7fbe34a648d3" category="inline-link-macro-rx"></block>(英文)</block>
+  <block id="b65e0d1bdfae52b7003edeca0851a1cd" category="inline-link-macro">创建第一个资源组</block>
+  <block id="2694ce9387b386ed8def037e0ef2a01c" category="list-text"><block ref="92830d5aa0eb820db09685f71801553b" category="inline-link-macro-rx"></block>(英文)</block>
+  <block id="81b20ae68e2b688ed9a18df38cce62c6" category="inline-link-macro">创建第一个复制计划</block>
+  <block id="1bef08da93920d58af9116d6cc82018e" category="list-text"><block ref="3447feddfbfb06a3f88061bcb344494c" category="inline-link-macro-rx"></block>(英文)</block>
+  <block id="e111b7436e71ef6b7b99d4ab60693716" category="inline-link-macro">管理站点、资源组和复制计划</block>
+  <block id="9c0c127bbcf25422e200cf3bf5c94728" category="list-text"><block ref="b808936e11943a7ce505d2bf605d808d" category="inline-link-macro-rx"></block>(英文)</block>
+  <block id="7297a33a5c9a50db535ceb180e4e6c29" category="doc">为BlueXP灾难恢复设置基础架构</block>
+  <block id="fc75fa7bbac9e87518d6f17a91cfce8b" category="section-title">准备好进行BlueXP灾难恢复</block>
+  <block id="1c1d912a4b5c8c14cabacde67a6ba702" category="list-text">验证您的生产环境。</block>
+  <block id="23c17aafeb6f23d40515eff8b860e5f4" category="list-text">确保要保护的VM托管在NFS数据存储库(使用ONTAP NFS卷)或VMFS数据存储库(使用NetApp iSCSI LUN)上。</block>
+  <block id="179525e812f4f22c9d701388e129164d" category="list-text">确保您拥有内部ONTAP阵列、vCenter和AWS托管的VMware云实例的凭据和访问密钥。</block>
+  <block id="013c9bec06c7786c33c0cfb5f4a32bcf" category="list-text">创建或验证灾难恢复站点。</block>
+  <block id="6d269e8a65127766658cd3b13af2c081" category="list-text">创建或验证您的Amazon FSx文件系统是否已准备就绪。</block>
+  <block id="d7398479ae0f9ae38ae2ed32d89ad5a7" category="list-text">确保源VM和目标VM已建立对等关系。</block>
+  <block id="c279ea5c4d51358b229e0e39c4308144" category="section-title">设置适用于AWS SDDC的VMware Cloud</block>
+  <block id="fd087c8a3a1df61c75b0ddc129a87874" category="paragraph">设置适用于AWS软件定义的数据中心(SDDC)的VMware Cloud。</block>
+  <block id="b667fcb6ff2b158ecaa3e62d1e56452e" category="list-text">创建Amazon FSx for ONTAP文件系统。配置和配置FSx for ONTAP。适用于NetApp ONTAP 的Amazon FSX是一种完全托管的服务、可提供基于常见NetApp ONTAP 文件系统构建的高度可靠、可扩展、高性能和功能丰富的文件存储。</block>
+  <block id="c2ca61cdaafcad548af5836df039fcb3" category="inline-link">适用于NetApp ONTAP 的Amazon FSX快速入门</block>
+  <block id="ef30511465fed8e5a5b5c3a9aae4795a" category="list-text">按照此处和此处的步骤<block ref="551566e1b64bc66251dbfe6d546a4bef" category="inline-link-rx"></block><block ref="594efabf60d7236eeecf072ead1cf02b" category="inline-link-rx"></block> 配置和配置FSx for NetApp ONTAP。</block>
+  <block id="e65c19fddc907d69ae5172a0084b710b" category="list-text">将Amazon FSx for NetApp ONTAP添加到工作环境中、并添加FSx for ONTAP的AWS凭据。</block>
+  <block id="95e1164f78d2b6799a19e13081137cbd" category="list-text">使用VMware帐户并配置SDDC。确保SDDC已与FSx for ONTAP建立连接。</block>
+  <block id="23b186d0b29dfdb5e0e175ad6de4147e" category="paragraph">您可以购买以下产品之一：</block>
+  <block id="e5cadf619f38981c2b6059a9e6577ec3" category="list-text">AWS Marketplace的按需购买(PAYGO)订阅</block>
+  <block id="90d5e71753c6b7ee358df340daa5fe4c" category="list-text">自带许可证(自带许可证、BYOL)、这是一个NetApp许可证文件(NLL)。</block>
+  <block id="8e794011cc1f1c5c04b70473672767c4" category="paragraph">请参阅 <block ref="0ba47d7cccc1dc28f47670d48274167c" category="inline-link-macro-rx"></block>。</block>
+  <block id="b63b041aeb212763ffab8f16313f009d" category="inline-link-macro">BlueXP灾难恢复通知</block>
+  <block id="54ad6e999d021c5f10d0b688267e8d17" category="paragraph"><block ref="54ad6e999d021c5f10d0b688267e8d17" category="inline-link-macro-rx"></block></block>
+  <block id="30bc3f8ec3b5e171c9e8c063eec0ebce" category="summary">要使BlueXP灾难恢复能够执行其服务、vCenter帐户必须至少具有一组vCenter权限、例如注册和取消注册数据存储库、启动和停止VM以及重新配置虚拟机(VM)。下表列出了BlueXP灾难恢复与vCenter集群连接所需的所有特权。</block>
+  <block id="a1fa27779242b4902f7ae3bdd5c6d508" category="cell">键入</block>
+  <block id="f31fadcb7ced5ed0e7fbc3d65d0ab660" category="cell">权限名称</block>
+  <block id="b5a7adde1af5c87d7fd797b6245c2a39" category="cell">说明</block>
+  <block id="2051881d2c94079273dde07614b52317" category="cell">*数据存储库*</block>
+  <block id="39e17557e52f8908bd58f0aa8f90e589" category="paragraph">数据存储库。 配置数据存储库</block>
+  <block id="b0156af1fabe28340f5f515de85b8ba2" category="paragraph">用于配置数据存储库。</block>
+  <block id="16ca70be6373a69d7a7a4054b8740d5f" category="paragraph">数据存储库。 删除数据存储库</block>
+  <block id="5d7a7f943775e5b9f23c14409254d31f" category="paragraph">用于删除数据存储库。</block>
+  <block id="0d710447bc4b3d240dbec4ffdff78d7f" category="cell">*虚拟机*</block>
+  <block id="0d027ba13a066afab0e72091146c32c3" category="paragraph">虚拟机。配置。更改设置</block>
+  <block id="ac5fed24b3778885bc91821ce7badce7" category="paragraph">用于更改常规虚拟机设置。</block>
+  <block id="877b1c9b324b92cc7eb4c734fa176de9" category="paragraph">虚拟机。配置。修改设备设置</block>
+  <block id="a470a1e5aa63361f7bba6f9b3753f58d" category="paragraph">用于更改现有设备的属性。</block>
+  <block id="1c48d7d8b2a2dfea7d4778be6f8adce8" category="paragraph">虚拟机。配置。从路径重新加载</block>
+  <block id="a21bfc06d31dc57593c8038b2c5c0e18" category="paragraph">用于更改VM配置修补程序、同时保留VM的标识。VMware vCenter Site Recovery Manager等解决方案可通过此操作在故障转移和故障恢复期间维护VM标识。</block>
+  <block id="936b25ae8b1305df4de41cc7edd3fb3c" category="paragraph">虚拟机。配置。重命名</block>
+  <block id="eb6647b772f29fe6d76a2ff596d8da2e" category="paragraph">用于重命名VM或修改VM的关联节点。</block>
+  <block id="4553fbef402a1d8731c1816f91ce505e" category="paragraph">虚拟机。配置。重置子系统信息</block>
+  <block id="c0acbac48fd78801142c21bfcc2d7f80" category="paragraph">用于编辑VM的子操作系统信息。</block>
+  <block id="b7f2f93f9ded16ef0cf42386d0a084de" category="paragraph">虚拟机。配置。更改内存</block>
+  <block id="7e417510f4c5b448e5e913a6e30e26c2" category="paragraph">用于更改分配给虚拟机的内存量。</block>
+  <block id="0a90330abb3eb200a7ba0bf8a956104c" category="paragraph">虚拟机。配置。更改CPU计数</block>
+  <block id="7099548d8fb2bdd522f5dd68ea188fa2" category="paragraph">用于更改虚拟CPU的数量。</block>
+  <block id="9dea3c37393731c874e9363f748cf20b" category="cell">*虚拟机子系统*</block>
+  <block id="5254bee77444f0715c2e30f4220be885" category="paragraph">虚拟机。 子系统操作。 子系统操作修改</block>
+  <block id="864141f9bd9cc6a2551f6a1a984099e3" category="paragraph">启用涉及更改VM中子操作系统的VM子操作、例如将文件传输到VM。</block>
+  <block id="21cb03054cbe3a67055ca3df7a2ab77b" category="cell">*虚拟机交互*</block>
+  <block id="075d18862c516c291ccc18b4ef715fe5" category="paragraph">虚拟机。交互。关闭</block>
+  <block id="198a48c49bf020db667c8efb024e757e" category="paragraph">用于关闭已启动的虚拟机。此操作将关闭子操作系统。</block>
+  <block id="10bd34b60a2bda547e4bc8e9973f3e31" category="paragraph">虚拟机。交互。启动</block>
+  <block id="3fc8744b9995cd14b4bb7379533c3ba6" category="paragraph">用于启动已关闭的VM并恢复已暂停的VM。</block>
+  <block id="5192d6f694edc454343369b22dbfc5c6" category="paragraph">安装Virtual Machine.Interaction.VMware Tools</block>
+  <block id="30519066cd3534ef7d314b2c9aacd55d" category="paragraph">用于挂载VMware Tools CD安装程序并将其作为子操作系统的CD-ROM卸载。</block>
+  <block id="66fdc82624c87dcd5ceb484e44a95fdd" category="cell">*虚拟机清单*</block>
+  <block id="bb9a532fb645f8d94cb7c827a61302ea" category="paragraph">虚拟机.Inventory.Create new</block>
+  <block id="00b57b9dfd38ba20e57b6ef930030e86" category="paragraph">用于创建VM并为其执行分配资源。</block>
+  <block id="c28cfecb65a13c8091d476d8c65457e1" category="paragraph">virtual Machine.Inventory.Register</block>
+  <block id="8e8abc11ed45aba5690c57962484db6d" category="paragraph">用于将现有虚拟机添加到vCenter Server或主机清单中。</block>
+  <block id="db6d9006d2f72f5cf22c40fa1220b43a" category="paragraph">虚拟机.Inventory.Unregign</block>
+  <block id="fa8ff1e1f1b39d6eb3b65050b2b1d275" category="paragraph">用于从vCenter Server或主机清单中取消注册虚拟机。</block>
+  <block id="3d021ff57844dddc6d9f4674f6934243" category="cell">*虚拟机状况*</block>
+  <block id="a9b3b608e7046721eb5ab1e0dbaf0c7d" category="paragraph">虚拟机。 Snapshot管理。 创建快照</block>
+  <block id="0386636d5860b389e6185a8e3d1fc157" category="paragraph">用于从虚拟机的当前状态创建快照。</block>
+  <block id="18f05db9c4723f1a48e0cddc8e00ec23" category="paragraph">虚拟机。 Snapshot管理。 删除Snapshot</block>
+  <block id="653c42e482faf281af92e05d3ba79031" category="paragraph">用于从快照历史记录中删除快照。</block>
+  <block id="d3aa03526082ef556ffca1a6a35a1775" category="paragraph">虚拟机。 Snapshot管理。 还原为快照</block>
+  <block id="3817fbf7d76df44f4565ed3cde76a690" category="paragraph">用于将虚拟机设置为其在给定快照下所处的状态。</block>
+  <block id="d8e45589bc9d86b39aed3bcde52935ac" category="section-title">2024年7月5日</block>
+  <block id="7ee40b46e664d0d7baaad4da422c7457" category="list-text">*支持AFF A系列*：此版本支持NetApp AFF A系列硬件平台。</block>
+  <block id="a1961f9eb07acee12f93a3f0b929745e" category="list-text">*支持从内部到内部的VMware VMFS数据存储库*：此版本包括对受内部存储保护的VMware vSphere虚拟机文件系统(VMFS)数据存储库上装载的VM的_技术预览_支持。在此版本中、支持通过技术预览将内部VMware工作负载灾难恢复到具有VMFS数据存储库的内部VMware环境。</block>
+  <block id="710abd7c1d5a2a3be1aa4c7dbff890cf" category="admonition">NetApp不会对任何预览的工作负载容量收取任何费用。</block>
+  <block id="282dc334473cc4944da587c83b4a1761" category="list-text">*复制计划更新*：您可以通过以下方式更轻松地添加复制计划：在"Applications"页面上按数据存储库筛选VM、并在"Resource Mapping "页面上选择更多目标详细信息。</block>
+  <block id="a1975f713c38b2cbf1c095ed7dbadabe" category="list-text">*编辑复制计划*：此版本增强了故障转移映射页面，以使其更清晰。</block>
+  <block id="e9558a079e21d43034f54a99b19f2ad7" category="inline-link">管理计划</block>
+  <block id="583edef1d12ac8fcf925b864da2d76c6" category="paragraph">请参阅<block ref="a8a4a23c947d3e2e3dc169027b7cac12" category="inline-link-rx"></block>。</block>
+  <block id="2343906acc207119786e118da0bbadf7" category="list-text">*编辑虚拟机*：在此版本中，在计划中编辑虚拟机的过程包括一些小的UI改进。</block>
+  <block id="5f1df9fa6d6ce95c36680ae870250af7" category="inline-link">管理VM</block>
+  <block id="f7e4cafc0e54e03cc0ff738b39e333cb" category="paragraph">请参阅<block ref="1d44a072309f2a4f38fd6e17ed7eb631" category="inline-link-rx"></block>。</block>
+  <block id="51c73608632a284eecfb3fce29106b26" category="list-text">*故障转移更新*：在启动故障转移之前，您现在可以确定VM的状态以及它们是否已启动。现在、您可以通过故障转移过程立即创建快照或选择快照。</block>
+  <block id="ab132121a366abdd7667443cc98f3a69" category="paragraph">请参阅<block ref="1cbf59ee3e77dd0082612a21b0900f81" category="inline-link-rx"></block>。</block>
+  <block id="66dacd6d538323484187ed3f8c9ef650" category="list-text">*故障转移测试计划*：您现在可以编辑故障转移测试并为故障转移测试设置每日、每周和每月计划。</block>
+  <block id="42b40c3ce2e25adae8327795c655116d" category="list-text">*前提条件信息更新*：BlueXP灾难恢复前提条件信息已更新。</block>
+  <block id="8a62eb7f743049ce2523fe7eb67fb48f" category="paragraph">请参阅<block ref="dfd63f4ad4adb15a66b44e212e2488b7" category="inline-link-rx"></block>。</block>
+  <block id="2e57ab34890abd985ae5cff7c16db6f6" category="list-text">在"Applications"页面的左侧、可以选择搜索数据存储库。</block>
+  <block id="9d84acdf93849adb3b0acbaaf1af7071" category="paragraph"><block ref="0a9d2462a8c27f9a697547bddae93987" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8020af4fa709c3156161baa6bf00e88a" category="inline-image-macro">复制计划、资源映射选项卡</block>
+  <block id="0d5dff4bbd2c70484d25c822afa80986" category="paragraph"><block ref="0d5dff4bbd2c70484d25c822afa80986" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="da06c5c1d28e308403236438dda209dc" category="list-text">*源数据中心和目标数据中心*</block>
+  <block id="bf0db130eb2746cb5707eb7ebd4e997b" category="list-text">*目标主机*(可选)</block>
+  <block id="228db5aff5c10fb4007bcfc106b96eac" category="list-text">*目标集群*(可选)</block>
+  <block id="396f79fd09d35663fad706f8d93d48ba" category="list-text">*目标虚拟机文件夹*(可选)：使用此文件夹创建新的根文件夹以存储选定虚拟机。</block>
+  <block id="210dfd955522333f74e13d0843ab02ff" category="paragraph">此部分可能已启用或禁用、具体取决于您的选择。</block>
+  <block id="30cb4638cdd1e514eba27473e745afb4" category="paragraph">在测试映射选项卡上、虚拟机和存储库映射处于禁用状态。</block>
+  <block id="ebcc6bc6ad0c177b30c661fc23c0f951" category="list-text">查看每个选项卡中的信息：计划详细信息、故障转移映射、VM。</block>
+  <block id="711c35de4b0430b043159f5d91f6752f" category="inline-image-macro">故障转移页面</block>
+  <block id="c29c6e0ccfc363d2f29bc8ad4397f5bb" category="paragraph"><block ref="c29c6e0ccfc363d2f29bc8ad4397f5bb" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="418818fc05931805b481fbdf48b3a075" category="list-text">在故障转移页面中、立即启动快照或为要从中恢复的数据存储库选择快照。默认值为最新。</block>
+  <block id="51d5fa513676d68f3e574487650b021d" category="paragraph">在发生故障转移之前、系统将为当前源创建快照并将其复制到当前目标。</block>
+  <block id="7d0da89e5c4df500c537ba4145ed8fae" category="list-text">或者，如果您希望即使检测到通常会阻止故障转移发生的错误，也进行故障转移，请选择*Force Failover。</block>
+  <block id="544bb990c26b075198ab3593eb235cab" category="list-text">在框中键入"Failover (故障转移)"。</block>
+  <block id="d3c41fabd7d85897eb0f306101f87e33" category="list-text">选择*故障转移*。</block>
+  <block id="9aaabae265e2785e58b6618d73b8e267" category="summary">您可以快速浏览所有BlueXP灾难恢复资源、并管理vCenter站点、资源组和复制计划。</block>
+  <block id="592189bb19e09b41686c42842ae7f60a" category="doc">管理站点、资源组、复制计划、数据存储库和虚拟机信息</block>
+  <block id="88947748ef8b3b00cf2cf0c3999a702e" category="paragraph">您可以禁用、启用和删除复制计划。您可以更改计划。</block>
+  <block id="fa62d17ad222d305b611f8c161aab288" category="list-text">要添加或编辑虚拟机，请选择*Virtual Machines*选项卡，然后选择*Add VMs*选项或*Edit*图标。</block>
+  <block id="714c8620cd504e0c90291fad7b5c119f" category="list-text">要设置或更改测试故障转移计划或设置合规性频率检查，请选择计划右侧的*Actions*选项 <block ref="2fddd650b01c7f9674be856867aae05d" category="inline-image-macro-rx" type="image"></block> ，然后选择*Edit d볆 뮮*。</block>
+  <block id="6774836d1489d59b22c26b6c62f0749c" category="list-text">在编辑计划页面中、输入希望故障转移合规性检查的频率(以分钟为单位)。</block>
+  <block id="919f04c7393ca337da4d5ecf62b924fc" category="list-text">选中*按计划运行测试故障转移*。</block>
+  <block id="87446024d70eefcd64c28443544975b4" category="list-text">在重复选项中、选择每日、每周或每月计划。</block>
+  <block id="a1d594c41e91785ad3637cf3bff4ade5" category="summary">NetApp BlueXP灾难恢复是一种基于云的灾难恢复服务、可自动执行灾难恢复工作流。您可以监控所有灾难恢复作业并确定其进度。</block>
+  <block id="554cfab3938e21d9270bd6b75931f96f" category="sidebar">视频</block>
+  <block id="63d5049791d9d79d86e9a108b0a999ca" category="sidebar">参考</block>
+  <block id="b80f9ccd1ed052ae2d1a95c50bd37d8b" category="sidebar">BlueXP灾难恢复所需的vCenter特权</block>
 </blocks>

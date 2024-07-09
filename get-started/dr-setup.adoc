@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: get-started/dr-setup.html 
-keywords: bluexp, disaster recovery, aws, amazon web services 
+keywords: bluexp, disaster recovery, aws, amazon web services, amazon fsx for netapp ontap 
 summary: 要使用BlueXP灾难恢复、请执行几个步骤进行设置。 
 ---
-= 设置BlueXP灾难恢复
+= 为BlueXP灾难恢复设置基础架构
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -19,13 +19,37 @@ TIP: 请查看 link:../get-started/dr-prerequisites.html["前提条件"] 以确�
 
 
 
-== 设置AWS
+== 准备好进行BlueXP灾难恢复
 
-在AWS中、您需要执行以下步骤：
+* 验证您的生产环境。
++
+** 确保要保护的VM托管在NFS数据存储库(使用ONTAP NFS卷)或VMFS数据存储库(使用NetApp iSCSI LUN)上。
+** 确保您拥有内部ONTAP阵列、vCenter和AWS托管的VMware云实例的凭据和访问密钥。
 
-* 在AWS上部署和配置VMware Cloud。
-* 创建Amazon FSx for ONTAP文件系统。配置和配置FSx for ONTAP。
-* 使用VMware帐户并配置软件定义的数据中心(Software-定义 的数据中心、SDDC)。确保SDDC已与FSx for ONTAP建立连接。
+
+* 创建或验证灾难恢复站点。
++
+** 创建或验证您的Amazon FSx文件系统是否已准备就绪。
+** 确保源VM和目标VM已建立对等关系。
+
+
+
+
+
+
+== 设置适用于AWS SDDC的VMware Cloud
+
+设置适用于AWS软件定义的数据中心(SDDC)的VMware Cloud。
+
+* 创建Amazon FSx for ONTAP文件系统。配置和配置FSx for ONTAP。适用于NetApp ONTAP 的Amazon FSX是一种完全托管的服务、可提供基于常见NetApp ONTAP 文件系统构建的高度可靠、可扩展、高性能和功能丰富的文件存储。
+* 按照此处和此处的步骤 https://docs.netapp.com/us-en/netapp-solutions/ehc/aws/aws-native-overview.html["链接。"^] https://docs.netapp.com/us-en/bluexp-fsx-ontap/start/task-getting-started-fsx.html["适用于NetApp ONTAP 的Amazon FSX快速入门"] 配置和配置FSx for NetApp ONTAP。
+* 将Amazon FSx for NetApp ONTAP添加到工作环境中、并添加FSx for ONTAP的AWS凭据。
+* 在AWS中、您需要执行以下步骤：
++
+** 在AWS上部署和配置VMware Cloud。
+** 使用VMware帐户并配置SDDC。确保SDDC已与FSx for ONTAP建立连接。
+
+
 
 
 
@@ -38,50 +62,14 @@ https://www.vmware.com/products/vmc-on-aws.html["基于 AWS 的 VMware Cloud"^] 
 
 
 
-=== 配置Amazon FSx for NetApp ONTAP
-
-适用于NetApp ONTAP 的Amazon FSX是一种完全托管的服务、可提供基于常见NetApp ONTAP 文件系统构建的高度可靠、可扩展、高性能和功能丰富的文件存储。请按照此处的步骤进行操作 https://docs.netapp.com/us-en/netapp-solutions/ehc/aws/aws-native-overview.html["链接。"^] 配置FSx for NetApp ONTAP。
-
-
-
-== 设置BlueXP灾难恢复
-
-下一步是在BlueXP中设置灾难恢复。
-
-* 在BlueXP中创建连接器。
-* 部署和配置SnapMirror for Amazon FSx for NetApp ONTAP。
-* 将内部ONTAP存储工作环境添加到BlueXP。这是源ONTAP集群。
-* 添加BlueXP帐户、将FSxN添加到工作环境、并添加FSx for ONTAP的AWS凭据。
-
-
-
-
-=== 在BlueXP中创建连接器
-
-您需要联系您的NetApp销售代表来试用此服务。然后、当您使用BlueXP Connector时、它将包括适用于灾难恢复服务的功能。
-
-要在使用此服务之前在BlueXP中创建Connector、请参阅所述的BlueXP文档 https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html["如何创建连接器"^]。
-
-使用BlueXP内部部署连接器或BlueXP AWS连接器、它们可以访问源内部部署vCenter和目标内部部署vCenter。
-
-
-
-=== 为Amazon FSx for NetApp ONTAP配置SnapMirror
-
-下一步是在BlueXP中设置灾难恢复。
-
-. 在BlueXP中、添加帐户。请参见 https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-netapp-accounts.html["有关如何添加帐户的BlueXP文档"^]。
-. 将Amazon FSx for NetApp ONTAP添加到工作环境中。确保与ONTAP集群的SnapMirror关系已建立、并且其目标为FSx for NetApp ONTAP。请参见 https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-creating-fsx-working-environment.html["如何设置FSx for ONTAP工作环境"^]。
-. 在BlueXP中、将SnapMirror部署到FSx for NetApp ONTAP。
-. 在BlueXP中、发现AWS实例上配置的FSx for NetApp ONTAP、并以适当的频率和NetApp Snapshot副本保留将指定的数据存储库卷从内部环境复制到FSx for NetApp ONTAP。
-
-
-
-
-=== 设置许可
+== 设置许可
 
 借助BlueXP灾难恢复、您可以注册90天免费试用。
 
-您可以通过AWS Marketplace购买按需购买(PAYGO)订阅、也可以自带许可证(自带许可证、BYOL)、这是一个NetApp许可证文件(NLL)。
+您可以购买以下产品之一：
 
-有关为BlueXP灾难恢复设置许可的详细信息、请参阅 link:../get-started/dr-licensing.html["设置BlueXP灾难恢复许可"]。
+* AWS Marketplace的按需购买(PAYGO)订阅
+* 自带许可证(自带许可证、BYOL)、这是一个NetApp许可证文件(NLL)。
+
+
+请参阅 link:../get-started/dr-licensing.html["设置BlueXP灾难恢复许可"]。

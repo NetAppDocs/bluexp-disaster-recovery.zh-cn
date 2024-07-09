@@ -16,12 +16,6 @@ summary: 已知限制用于标识此服务版本不支持或无法与之正确�
 
 
 
-== 故障恢复使用最新的Snapshot副本
-
-在当前版本中、故障恢复过程始终使用最新的Snapshot副本。即使您选择了要使用的特定Snapshot副本、也会发生这种情况。
-
-
-
 == BlueXP可能无法发现Amazon FSx for NetApp ONTAP
 
 有时、BlueXP不会发现Amazon FSx for NetApp ONTAP集群。这可能是因为FSx凭据不正确。
