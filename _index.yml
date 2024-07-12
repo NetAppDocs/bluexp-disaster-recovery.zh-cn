@@ -33,10 +33,6 @@ indexpage:
       url: "/use/failover.html"
     - title: 将应用程序故障恢复到原始源站点
       url: "/use/failback.html"
-    - title: 管理站点、计划、数据存储库和虚拟机信息
-      url: "/use/manage.html"
-    - title: 监控灾难恢复作业
-      url: "/use/monitor-jobs.html"
   - title: 博客和社区
     links:
     - title: NetApp 社区
