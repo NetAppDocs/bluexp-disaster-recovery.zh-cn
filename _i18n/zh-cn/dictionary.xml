@@ -904,4 +904,24 @@ BlueXP灾难恢复不需要任何支持。灾难恢复选项将自动显示在Bl
   <block id="554cfab3938e21d9270bd6b75931f96f" category="sidebar">视频</block>
   <block id="63d5049791d9d79d86e9a108b0a999ca" category="sidebar">参考</block>
   <block id="b80f9ccd1ed052ae2d1a95c50bd37d8b" category="sidebar">BlueXP灾难恢复所需的vCenter特权</block>
+  <block id="f4c84d2d214fb7f3e3cae921398c8e4a" category="section-title">2024年7月17日</block>
+  <block id="e96e73e43a84335e9de1d02f80f7d655" category="list-text">*故障转移测试计划*：此版本包括故障转移测试计划结构的更新，支持每日和每周计划需要更新。此更新要求您禁用并重新启用所有现有复制计划、以便能够使用新的每日和每周故障转移测试计划。这是一次性要求。</block>
+  <block id="7043d4fb27c94bc9a206c106cef9d80c" category="paragraph">方法如下：</block>
+  <block id="2ae04d8f24d0c8f552b0d3857c0953b3" category="list-text">选择一个计划、然后选择操作图标以显示下拉菜单。</block>
+  <block id="dbf8ea65a71d9e2042b03a97a0da4095" category="list-text">选择 * 禁用 * 。</block>
+  <block id="9ffe587f372d96c9b0db66cfe333c0cf" category="list-text">几分钟后，选择*Enable*。</block>
+  <block id="dc6efda4f2a86706d886df508f873039" category="list-text">*复制计划更新*：此版本包含对复制计划数据的更新，可解决"未找到快照"问题。这要求您将所有复制计划中的保留数量更改为1、然后启动按需快照。此过程将创建一个新备份并删除所有较早的备份。</block>
+  <block id="3d3e2652059a9417e7a9b8801e83b99d" category="list-text">选择复制计划，单击*故障转移映射*选项卡，然后单击*编辑*铅笔图标。</block>
+  <block id="f05351f8a712da4ff1e724d342c4670b" category="list-text">单击*数据存储库*箭头将其展开。</block>
+  <block id="ee9e0fb0a09a468f33fa6f2dabc4ff49" category="inline-image-macro">编辑故障转移映射页面</block>
+  <block id="7cbc4647aa042fa4dbc711ee9aa94612" category="paragraph"><block ref="7cbc4647aa042fa4dbc711ee9aa94612" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="0d59b78804ed5feec9399254629a60f1" category="list-text">记下复制计划中的保留计数值。完成这些步骤后、您需要恢复此原始值。</block>
+  <block id="e9c686cd7f0fc0f9a24375142cf2639b" category="list-text">将此计数减少为1。</block>
+  <block id="94eec0eecc897e0613b4dca05f1db3b5" category="list-text">启动按需快照。为此，请在复制计划页面上，选择该计划，单击操作图标，然后选择*立即创建快照*。</block>
+  <block id="4be920e5d3a5c6a1a13e6a9ed1ea0d96" category="list-text">成功完成快照作业后、将复制计划中的计数增加回您在第一步中记下的原始值。</block>
+  <block id="fcf0bc475de9e6576c18ef6dcf5d7506" category="list-text">对所有现有复制计划重复上述步骤。</block>
+  <block id="f51ae48fcef0eb66752ca677561d408c" category="section-title">更改故障转移计划的保留计数</block>
+  <block id="b138bbcc2a9cc6e505caed49815b326b" category="paragraph">您可以更改保留的数据存储库数量。</block>
+  <block id="2aef38b97efb9369d3e496e8d062d8fd" category="paragraph"><block ref="2aef38b97efb9369d3e496e8d062d8fd" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="51c600bec26d8fec2fcc4cb42728fd01" category="list-text">更改复制计划中保留计数的值。</block>
 </blocks>
