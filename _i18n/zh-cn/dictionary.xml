@@ -862,7 +862,6 @@ BlueXP灾难恢复不需要任何支持。灾难恢复选项将自动显示在Bl
   <block id="7ee40b46e664d0d7baaad4da422c7457" category="list-text">*支持AFF A系列*：此版本支持NetApp AFF A系列硬件平台。</block>
   <block id="a1961f9eb07acee12f93a3f0b929745e" category="list-text">*支持从内部到内部的VMware VMFS数据存储库*：此版本包括对受内部存储保护的VMware vSphere虚拟机文件系统(VMFS)数据存储库上装载的VM的_技术预览_支持。在此版本中、支持通过技术预览将内部VMware工作负载灾难恢复到具有VMFS数据存储库的内部VMware环境。</block>
   <block id="710abd7c1d5a2a3be1aa4c7dbff890cf" category="admonition">NetApp不会对任何预览的工作负载容量收取任何费用。</block>
-  <block id="282dc334473cc4944da587c83b4a1761" category="list-text">*复制计划更新*：您可以通过以下方式更轻松地添加复制计划：在"Applications"页面上按数据存储库筛选VM、并在"Resource Mapping "页面上选择更多目标详细信息。</block>
   <block id="a1975f713c38b2cbf1c095ed7dbadabe" category="list-text">*编辑复制计划*：此版本增强了故障转移映射页面，以使其更清晰。</block>
   <block id="e9558a079e21d43034f54a99b19f2ad7" category="inline-link">管理计划</block>
   <block id="583edef1d12ac8fcf925b864da2d76c6" category="paragraph">请参阅<block ref="a8a4a23c947d3e2e3dc169027b7cac12" category="inline-link-rx"></block>。</block>
@@ -924,4 +923,15 @@ BlueXP灾难恢复不需要任何支持。灾难恢复选项将自动显示在Bl
   <block id="b138bbcc2a9cc6e505caed49815b326b" category="paragraph">您可以更改保留的数据存储库数量。</block>
   <block id="2aef38b97efb9369d3e496e8d062d8fd" category="paragraph"><block ref="2aef38b97efb9369d3e496e8d062d8fd" category="inline-image-macro-rx" type="image"></block></block>
   <block id="51c600bec26d8fec2fcc4cb42728fd01" category="list-text">更改复制计划中保留计数的值。</block>
+  <block id="895b67d31a903fc743f186c56aeecff6" category="section-title">2024 年 8 月 2 日</block>
+  <block id="8bf3903af15d79402b4af83735a56d33" category="list-text">*支持使用FC*从内部到内部的VMware VMFS数据存储库：此版本包含一个_technology preview_支持在VMware vSphere虚拟机文件系统(VMFS)数据存储库上挂载的VM、以便将FC保护到内部存储。以前、该服务提供了一个技术预览版、支持iCI的VMFS数据存储库。在此版本中、BlueXP灾难恢复支持对内部VMware工作负载进行技术预览、并将技术预览迁移到具有FC VMFS数据存储库的内部VMware环境。</block>
+  <block id="b9dbe1e85847c069664ebe888e76d35c" category="list-text">*作业取消*：在此版本中、您现在可以在作业监控器UI中取消作业。</block>
+  <block id="4639d0e2e2909a747265c2f704128bca" category="inline-link">监控作业</block>
+  <block id="5ef55533619d84d0298304b37a76eeff" category="paragraph">请参阅<block ref="786959fe8223b685d5c08f8e62246672" category="inline-link-rx"></block>。</block>
+  <block id="7967654ba38c10467e0d83677de0e180" category="list-text">*复制计划更新*：您可以通过在“应用程序”页面上按数据存储库筛选VM并选择//来更轻松地添加复制计划 <block ref="8aa3c94c171b2c9d7252afb28ee019a7" category="inline-link-macro-rx"></block>。请参阅<block ref="5cf2140f2775e5f1ccc24bb836a069a3" category="inline-link-rx"></block>。 NG资源映射页面上的更多目标详细信息。</block>
+  <block id="24391a0c4e58147fa07febdb32887a1a" category="section-title">取消作业</block>
+  <block id="eead8518396b0c1b849be084fbe4f31a" category="paragraph">如果作业正在进行中或处于已排队状态、而您不希望其继续、则可以将其取消。如果作业停留在同一状态、而您希望释放队列中的下一个操作、则可能需要取消该作业。您可能希望在作业超时之前将其取消。</block>
+  <block id="26abc41be60bda806b144bd6ecedad10" category="list-text">在作业监控页面中、记下要取消的作业的ID。</block>
+  <block id="49e474835558193a9bed54c7dadf777e" category="paragraph">作业必须处于"进行中"或"已排队"状态。</block>
+  <block id="98d5e6f769dc6d114da618f41d9ba70d" category="list-text">在操作列中，选择*Cancel*。</block>
 </blocks>

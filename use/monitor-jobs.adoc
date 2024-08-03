@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: use/monitor-jobs.html 
-keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter, monitor 
+keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter, monitor, bluexp 
 summary: NetApp BlueXP灾难恢复是一种基于云的灾难恢复服务、可自动执行灾难恢复工作流。您可以监控所有灾难恢复作业并确定其进度。 
 ---
 = 监控灾难恢复作业
@@ -20,4 +20,20 @@ summary: NetApp BlueXP灾难恢复是一种基于云的灾难恢复服务、可�
 . 浏览与操作相关的所有作业并查看其时间戳和状态。
 . 要查看特定作业的详细信息、请选择该行。
 . 要刷新信息，请选择*Refresh*。
+
+
+
+
+== 取消作业
+
+如果作业正在进行中或处于已排队状态、而您不希望其继续、则可以将其取消。如果作业停留在同一状态、而您希望释放队列中的下一个操作、则可能需要取消该作业。您可能希望在作业超时之前将其取消。
+
+.步骤
+. 从BlueXP左侧导航栏中、选择*保护*>*灾难恢复*。
+. 从顶部菜单中选择*作业监控*。
+. 在作业监控页面中、记下要取消的作业的ID。
++
+作业必须处于"进行中"或"已排队"状态。
+
+. 在操作列中，选择*Cancel*。
 

@@ -16,6 +16,23 @@ summary: BlueXP灾难恢复是一种基于云的灾难恢复服务、可自动�
 
 
 
+== 2024 年 8 月 2 日
+
+此BlueXP灾难恢复版本包括以下更新：
+
+* *支持使用FC*从内部到内部的VMware VMFS数据存储库：此版本包含一个_technology preview_支持在VMware vSphere虚拟机文件系统(VMFS)数据存储库上挂载的VM、以便将FC保护到内部存储。以前、该服务提供了一个技术预览版、支持iCI的VMFS数据存储库。在此版本中、BlueXP灾难恢复支持对内部VMware工作负载进行技术预览、并将技术预览迁移到具有FC VMFS数据存储库的内部VMware环境。
++
+
+NOTE: NetApp不会对任何预览的工作负载容量收取任何费用。
+
+* *作业取消*：在此版本中、您现在可以在作业监控器UI中取消作业。
++
+请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/monitor-jobs.html["监控作业"]。
+
+
+
+
+
 == 2024年7月17日
 
 此BlueXP灾难恢复版本包括以下更新：
@@ -65,10 +82,7 @@ image:use/dr-plan-failover-edit.png["编辑故障转移映射页面"]
 
 NOTE: NetApp不会对任何预览的工作负载容量收取任何费用。
 
-* *复制计划更新*：您可以通过以下方式更轻松地添加复制计划：在"Applications"页面上按数据存储库筛选VM、并在"Resource Mapping "页面上选择更多目标详细信息。
-+
-请参见 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["创建复制计划"]。
-
+* *复制计划更新*：您可以通过在“应用程序”页面上按数据存储库筛选VM并选择//来更轻松地添加复制计划 link:../use/drplan-create.html["创建复制计划"]。请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["创建复制计划"]。 NG资源映射页面上的更多目标详细信息。
 * *编辑复制计划*：此版本增强了故障转移映射页面，以使其更清晰。
 +
 请参阅 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/manage.html["管理计划"]。
