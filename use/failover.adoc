@@ -84,7 +84,7 @@ TIP: 故障转移开始后、可以在灾难恢复站点(虚拟机、网络和�
 . 选择复制计划。
 . 在右侧，选择*Actions*选项 image:../use/icon-horizontal-dots.png["BlueXP灾难恢复服务中的\"Actions\"菜单图标"] 并选择*故障转移*。
 +
-image:dr-plan-failover.png["故障转移页面"]
+image:dr-plan-failover2.png["故障转移页面"]
 
 . 在故障转移页面中、立即启动快照或为要从中恢复的数据存储库选择快照。默认值为最新。
 +
