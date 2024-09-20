@@ -336,9 +336,6 @@ BlueXP灾难恢复不需要任何支持。灾难恢复选项将自动显示在Bl
   <block id="b2f702d4d241c0d53726eedc499ac784" category="paragraph">此类计划有时称为_Blueprints_。</block>
   <block id="4f27ef77939e5393adc6b44aec83a6b7" category="paragraph">向导将引导您完成以下步骤：</block>
   <block id="8705d6076cb452e919a6e22862427440" category="list-text">选择vCenter Server</block>
-  <block id="8b89ed4b8e4a4b16d551a86114a0c361" category="list-text">选择要复制的VM并分配组</block>
-  <block id="0ee5515fd7a8d972a5df4c4eb08b18f2" category="list-text">确定重复</block>
-  <block id="febc3cdab40dc222679ce1e42cce7011" category="list-text">查看计划</block>
   <block id="d72f4a94d857178ae5cb1420995137e4" category="inline-image-macro">显示添加复制计划&amp;gt；添加计划页面的屏幕截图</block>
   <block id="6961a5b80d0429840ea8a9232c79ec6f" category="paragraph"><block ref="b3b324f474892662518dcbec32158ea5" category="inline-image-macro-rx" type="image"></block></block>
   <block id="466ea193e548e9ef8d853f2da4829a3e" category="list-text">为复制计划创建一个名称。</block>
@@ -920,8 +917,6 @@ BlueXP灾难恢复不需要任何支持。灾难恢复选项将自动显示在Bl
   <block id="7906e2e007c3bad108fcd7ed7311a131" category="paragraph"><block ref="7906e2e007c3bad108fcd7ed7311a131" category="inline-image-macro-rx" type="image"></block></block>
   <block id="6dbc81f47f4a822cd11ce7c8403756ed" category="list-text">在故障转移映射选项卡中、选择每个资源右侧的向下箭头并映射每个资源。</block>
   <block id="022ab008c31f5588f9d15da4dc3439fb" category="list-text">*计算资源*：选择*计算资源*旁边的向下箭头。</block>
-  <block id="023cde6974e67dee3aff7c64e3290e80" category="list-text">源集群</block>
-  <block id="221533a77747ed01c409141d8985b5fe" category="list-text">目标集群(可选)</block>
   <block id="5bfe17be68350c18dc777bcfabdd7a8f" category="list-text">*虚拟网络*：在故障转移映射选项卡中，选择*虚拟网络*旁边的向下箭头。输入或选择源虚拟LAN和目标区块。</block>
   <block id="a358a5c755a9f869690207e2a0726737" category="list-text">*Virtual Machines*：在故障转移映射选项卡中，选择*Virtual Machines*旁边的向下箭头。</block>
   <block id="909f84e264f0200a692127b28fbdbaaf" category="paragraph">选择与相应网段的网络映射。区块应已配置、因此请选择适当的区块以映射虚拟机。</block>
@@ -934,4 +929,47 @@ BlueXP灾难恢复不需要任何支持。灾难恢复选项将自动显示在Bl
   <block id="10936c8535aaede0ed75f5d8d4fa6aaf" category="list-text">*保留数量*：输入要保留的快照数量。</block>
   <block id="b23c862689b973964a4b79af3d87b2de" category="list-text">*源和目标数据存储库*：如果卷已建立SnapMirror关系、则可以选择相应的源和目标数据存储库。如果您选择的卷没有SnapMirror关系、则可以通过选择工作环境及其对等SVM来创建一个。</block>
   <block id="8772d236d3c62b688c3b57224d982ee1" category="paragraph"><block ref="8772d236d3c62b688c3b57224d982ee1" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1267d6fc2aff2a3372b02b4d25a9f397" category="list-text">执行故障转移测试；虚拟机是临时创建的。BlueXP  灾难恢复会从选定的Snapshot创建一个新的FlexClone卷、并将为FlexClone卷提供支持的临时数据存储库映射到ESXi主机。此过程不会在AWS中的内部ONTAP存储或FSx for NetApp ONTAP存储上占用额外的物理容量。初始源卷不会被修改、即使在灾难恢复期间、副本作业也可以继续进行。</block>
+  <block id="76e4d72594030fca0b96279d0f8392dc" category="section-title">可能有助于BlueXP  灾难恢复的术语</block>
+  <block id="b7b26d16c3d1d84d3872afa1f04c92d6" category="paragraph">了解一些与灾难恢复相关的术语可能会对您有所帮助。</block>
+  <block id="7f800e59a5bd3f98ce900fa6e543f67d" category="list-text">*站点*：通常与物理数据中心或云提供商关联的逻辑容器。</block>
+  <block id="1060a69dfe06a51ad97fdd63bb36b6c6" category="list-text">*资源组*：一种逻辑容器，可用于将多个VM作为一个单元进行管理。</block>
+  <block id="01f306e8e2e64b0a1d39d18d7594ecf5" category="list-text">*复制计划*：有关备份频率以及如何处理故障转移事件的一组规则。计划分配给一个或多个资源组。</block>
+  <block id="84c20a0b7ce2eb1001004d644d0ca57e" category="section-title">等待故障恢复完成、然后再运行发现</block>
+  <block id="a59aaedc864081e6c1a7bd46bcdf9813" category="paragraph">完成故障转移后、请勿手动在源vCenter上启动发现。等待故障恢复完成、然后在源vCenter上启动发现。</block>
+  <block id="eaecda6db64f5346d5c63bfe0094e040" category="section-title">2024年9月20日</block>
+  <block id="ee811bd919a27bd2eb705f65ed45e4f6" category="paragraph">此BlueXP  灾难恢复版本包含以下更新。</block>
+  <block id="b077aa4f9a421cc2e2782608fb5caf4f" category="list-text">*支持从内部到内部的VMware VMFS数据存储库*：此版本支持在VMware vSphere虚拟机文件系统(VMFS)数据存储库上挂载的VM、以便将iSCSI和FC保护到内部存储。以前、该服务提供了一个_technology preview_、支持iSCSI和FC的VMFS数据存储库。</block>
+  <block id="0eb65976c0b0c5ffa90b07d4a062e509" category="paragraph">以下是有关iSCSI和FC协议的一些其他注意事项：</block>
+  <block id="d671bd2f503deef1e03581ce8d516507" category="list-text">FC支持的是客户端前端协议、而不是复制协议。</block>
+  <block id="cf1967c6d778937fae37b9e43582b1b6" category="list-text">BlueXP  灾难恢复仅支持每个ONTAP卷具有一个LUN。此卷不应具有多个LUN。</block>
+  <block id="f3a37c3560d0027bc0f49abfab4ab0e3" category="list-text">对于任何复制计划、目标ONTAP卷应使用与托管受保护VM的源ONTAP卷相同的协议。例如、如果源使用FC协议、则目标也应使用FC。</block>
+  <block id="3baff38a392d31950fc8d4d62ea2adc0" category="list-text">选择vCenter Server。</block>
+  <block id="cfb3b856fe141dd537038393a8052d33" category="list-text">选择要复制的VM并分配组。</block>
+  <block id="8e635b1aadad234871ba0e012309361f" category="list-text">确定重复情况、运行子系统托管的脚本、设置启动顺序并选择恢复点目标。</block>
+  <block id="1c10305a999dce53cb52dd4f6b8d89ff" category="list-text">查看计划。</block>
+  <block id="054b753af44fc4eeee43c9ba6037caaa" category="doc">创建灾难恢复报告</block>
+  <block id="282dfbc5927b79619ad76e7f3cbfe3c6" category="paragraph">查看灾难恢复报告可以帮助您分析灾难恢复准备情况。预先设计的报告包括故障转移和故障恢复摘要、所有站点上的复制详细信息以及去年的作业详细信息。您还可以创建自定义报告。</block>
+  <block id="08efd64e87408e4769275d6a11482ddf" category="paragraph">您可以下载PDF格式的报告。</block>
+  <block id="b775ae7fb34855ffeede56666da9a15c" category="list-text">从顶部菜单中选择*Reports*。</block>
+  <block id="44f0d43cd92781ec793d9ba50c2d422e" category="inline-image-macro">报告页面</block>
+  <block id="a73757daae33bff01ded292e39f3ddaf" category="paragraph"><block ref="a73757daae33bff01ded292e39f3ddaf" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="3ccbbafbdd477e2f028bfd34e03f436b" category="list-text">在创建或下载报告之前，请单击*Refresh*选项刷新数据。</block>
+  <block id="c83e2a522238e98593e337bd5a7311b5" category="list-text">从*Ready-MADE*选项卡中选择一个报告，或在*Custom*选项卡中创建您自己的报告。</block>
+  <block id="70db9063910acf1265d5a518168c69cd" category="list-text">单击*Download*下载报告。</block>
+  <block id="0656a1b7f286656b2fc85b91fe54f0dd" category="section-title">创建您自己的灾难恢复报告</block>
+  <block id="8eaafa07b3ff6e9aa5dbe62e7cc8c77c" category="paragraph">您可以创建自定义报告、在其中指定站点、复制计划和数据。您可以指定是否包括上一年的故障转移和故障恢复摘要、每个复制计划的虚拟机详细信息以及上一年每个复制计划的作业详细信息。</block>
+  <block id="036f7e4b10d318ae312cdfbb79a225fe" category="list-text">在创建报告之前，请单击*Refresh*选项刷新数据。</block>
+  <block id="27c38bec0a8c0321e9a3236a8a9d4e76" category="list-text">选择*自定义*选项卡。</block>
+  <block id="c3c616a8c2970d4d1156559952705700" category="list-text">选择*Add*以添加新报告。</block>
+  <block id="402199b58c216d8c9be526288150639b" category="inline-image-macro">添加自定义报告对话框</block>
+  <block id="8224443416aacfdb9c8d006355a8489a" category="paragraph"><block ref="8224443416aacfdb9c8d006355a8489a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="4d6c444c23609646be63340436709d5f" category="list-text">选择用于自定义报告的选项：</block>
+  <block id="f6068daa29dbb05a7ead1e3b5a48bbee" category="list-text">数据</block>
+  <block id="478109b22c544f0e3bed80d9622cc572" category="list-text">过去一年的故障转移和故障恢复摘要</block>
+  <block id="d9848020098abdd6a6adf5b664e0a02c" category="list-text">每个复制计划的VM详细信息</block>
+  <block id="2eac16c021d7f4e2d342be672e454649" category="list-text">过去一年每个复制计划的作业详细信息</block>
+  <block id="65db0a5300ccaa6099d24aaf16150200" category="paragraph">您的自定义报告将显示在自定义报告列表中。</block>
+  <block id="b7a41431aa1eee1607db390ac47d2a65" category="admonition">要查看报告中包含的所有部位或计划、请单击报告名称或计划名称右侧的数字。</block>
+  <block id="a99780537c030fe162f59c129be8e471" category="list-text">单击*下载*下载您的自定义报告。</block>
 </blocks>

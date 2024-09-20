@@ -16,6 +16,12 @@ summary: 已知限制用于标识此服务版本不支持或无法与之正确�
 
 
 
+== 等待故障恢复完成、然后再运行发现
+
+完成故障转移后、请勿手动在源vCenter上启动发现。等待故障恢复完成、然后在源vCenter上启动发现。
+
+
+
 == BlueXP可能无法发现Amazon FSx for NetApp ONTAP
 
 有时、BlueXP不会发现Amazon FSx for NetApp ONTAP集群。这可能是因为FSx凭据不正确。

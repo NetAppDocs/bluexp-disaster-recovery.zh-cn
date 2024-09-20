@@ -16,6 +16,24 @@ summary: BlueXP灾难恢复是一种基于云的灾难恢复服务、可自动�
 
 
 
+== 2024年9月20日
+
+此BlueXP  灾难恢复版本包含以下更新。
+
+* *支持从内部到内部的VMware VMFS数据存储库*：此版本支持在VMware vSphere虚拟机文件系统(VMFS)数据存储库上挂载的VM、以便将iSCSI和FC保护到内部存储。以前、该服务提供了一个_technology preview_、支持iSCSI和FC的VMFS数据存储库。
++
+以下是有关iSCSI和FC协议的一些其他注意事项：
+
++
+** FC支持的是客户端前端协议、而不是复制协议。
+** BlueXP  灾难恢复仅支持每个ONTAP卷具有一个LUN。此卷不应具有多个LUN。
+** 对于任何复制计划、目标ONTAP卷应使用与托管受保护VM的源ONTAP卷相同的协议。例如、如果源使用FC协议、则目标也应使用FC。
+
+
+
+
+
+
 == 2024 年 8 月 2 日
 
 此BlueXP灾难恢复版本包括以下更新：
