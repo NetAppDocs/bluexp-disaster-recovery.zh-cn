@@ -61,20 +61,20 @@ NOTE: 不应提前在目标SVM或SVM中创建灾难恢复卷。BlueXP灾难恢�
 
 
 
+=== 开始使用BlueXP
+
+如果您尚未执行此操作、 https://docs.netapp.com/us-en/bluexp-setup-admin/task-sign-up-saas.html["注册BlueXP  并创建组织"^]
+
+
+
 === 收集ONTAP和VMware的凭据
 
-* 必须将Amazon FSx for ONTAP和AWS凭据添加到BlueXP工作空间内的工作环境中、以用于管理BlueXP灾难恢复。
+* 必须将Amazon FSx for ONTAP和AWS凭据添加到BlueXP  项目的工作环境中、以用于管理BlueXP  灾难恢复。
 * BlueXP灾难恢复需要vCenter凭据。在BlueXP灾难恢复中添加站点时、需要输入vCenter凭据。
 +
 有关所需vCenter特权的列表，请参见 link:../reference/vcenter-privileges.html["BlueXP灾难恢复所需的vCenter特权"]。有关如何添加站点的说明，请参阅 link:../use/sites-add.html["添加站点"]。
 
 
-
-
-
-=== 添加BlueXP帐户
-
-在BlueXP中、如果您还没有帐户、则需要添加帐户。请参阅 https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-netapp-accounts.html["有关如何添加帐户的BlueXP文档"^]。
 
 
 
@@ -94,7 +94,7 @@ TIP: 对于内部到内部、请使用BlueXP内部部署连接器。对于从内
 ** 安装的BlueXP Connector必须能够访问BlueXP灾难恢复要管理的任何VMware集群。
 
 
-* 必须将要由BlueXP灾难恢复管理的所有ONTAP阵列添加到BlueXP工作空间中用于管理BlueXP灾难恢复的任何工作环境中。
+* 必须将要由BlueXP  灾难恢复管理的所有ONTAP阵列添加到BlueXP  项目中要用于管理BlueXP  灾难恢复的任何工作环境中。
 +
 请参阅。 https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["发现内部ONTAP 集群"^]
 
