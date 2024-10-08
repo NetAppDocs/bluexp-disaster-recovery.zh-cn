@@ -185,8 +185,6 @@
   <block id="942a771213d3b59ba27960f61d97b1ac" category="inline-link"><block ref="942a771213d3b59ba27960f61d97b1ac" category="inline-link-rx"></block></block>
   <block id="6a203fd0003e1b252502653eca1a6c02" category="paragraph">*BlueXP灾难恢复URL是什么？*
 对于URL、在浏览器中输入：<block ref="6db7b50bf17b27cbede9f07c4fbc973e" category="inline-link-rx"></block> 以访问BlueXP控制台。</block>
-  <block id="1510b9c9694467bb88815a127c906757" category="paragraph">*如何访问BlueXP灾难恢复？*
-BlueXP灾难恢复不需要任何支持。灾难恢复选项将自动显示在BlueXP左侧导航栏中。</block>
   <block id="89f19c30a67510e64ff4f90eede35bff" category="summary">要使用BlueXP灾难恢复、请执行几个步骤进行设置。</block>
   <block id="7b6761de8fbe584a66fa50ad6fa3dd19" category="doc">设置BlueXP灾难恢复</block>
   <block id="b5b8e67d6a37d24ad73c89e4c7ac8c9e" category="inline-link-macro">前提条件</block>
@@ -690,7 +688,6 @@ BlueXP灾难恢复不需要任何支持。灾难恢复选项将自动显示在Bl
   <block id="d66d706cd022ab39ed6479a713135515" category="paragraph"><block ref="d66d706cd022ab39ed6479a713135515" category="inline-image-macro-rx" type="image"></block></block>
   <block id="991e816286764c3a5ea9b023c35e1d77" category="paragraph"><block ref="991e816286764c3a5ea9b023c35e1d77" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b45dfe874eaba6a97e58e0436eba2402" category="sidebar">BlueXP灾难恢复即服务实验室按需入门</block>
-  <block id="439704735653d5132727cb9c21bc97c8" category="paragraph">BlueXP灾难恢复是一种基于云的灾难恢复服务、可自动执行灾难恢复工作流。最初、借助BlueXP灾难恢复服务、您可以保护基于NFS的内部工作负载、在技术预览中、您可以将运行NetApp存储的VMware vSphere虚拟机文件系统(VMFS)数据存储库配置为以下项之一：</block>
   <block id="d5368fed025a9875e8a424b419508bef" category="admonition">此版本支持通过技术预览将内部VMware工作负载灾难恢复到具有VMware vSphere虚拟机文件系统(Virtual Machine File System、VMFS)数据存储库的内部VMware环境。NetApp不会对任何预览的工作负载容量收取任何费用。</block>
   <block id="0dc4a26bb39078be4974284a72d54f64" category="paragraph">BlueXP灾难恢复服务可与NetApp许可证或通过Amazon Web Services按年订阅的计划结合使用。</block>
   <block id="66a7384fcc7d6c71e8da6dc152b82593" category="admonition">某些版本包含技术预览版。NetApp不会对任何预览的工作负载容量收取任何费用。有关最新技术预览的信息、请参见 <block ref="431ce6b88c6d5399033553c1891688aa" category="inline-link-macro-rx"></block> 。</block>
@@ -709,7 +706,6 @@ BlueXP灾难恢复不需要任何支持。灾难恢复选项将自动显示在Bl
   <block id="f5091f12fda6dcb8b160780e3352bbd5" category="list-text">您希望BlueXP灾难恢复管理的所有VMware集群都必须托管在ONTAP卷上。</block>
   <block id="a103c229873d833279c49def9ebe9fc3" category="list-text">要由BlueXP灾难恢复管理的所有VMware数据存储库都必须使用以下协议之一：</block>
   <block id="1d1a594959ec615f56516f5d0f5e8ddb" category="list-text">NFS</block>
-  <block id="47e0fa80d3fa1add35dfaada74c496e9" category="list-text">使用iSCSI协议的VMFS (目前正在进行技术预览)</block>
   <block id="b48bd09b37dbbe2233bba9ccc258e634" category="list-text">如果您使用的是VMware Cloud SDDC、则需满足以下前提条件。</block>
   <block id="7fc6ed2196514db323edb5f8ee464448" category="inline-link">《将VMware云基础与AWS FSx for NetApp ONTAP结合使用》文档</block>
   <block id="f2fc5fa158eeee58eae505a362a866b3" category="list-text">在VMware Cloud Console中、使用管理员和NSX云管理员的服务角色。此外、还可以将组织所有者用于组织角色。请参阅<block ref="87df9e87408172a2291d5738f3ae5f4f" category="inline-link-rx"></block>。</block>
@@ -967,4 +963,7 @@ BlueXP灾难恢复不需要任何支持。灾难恢复选项将自动显示在Bl
   <block id="0ca08a23718c0a91743dd6c0146ca353" category="paragraph">要为Cloud Volumes ONTAP启用以下关键工作流、需要将NetApp支持站点凭据与您的BlueXP  组织相关联：</block>
   <block id="c81c8e01f5d906ae1ab0c5c606f06b05" category="paragraph">将NSS凭据与您的BlueXP  组织相关联与与与BlueXP  用户登录相关联的NSS帐户不同。</block>
   <block id="8166996cb4a59c147200d89a061bb49c" category="paragraph">这些NSS凭据与您的特定BlueXP  组织ID相关联。属于BlueXP  组织的用户可以从*Support &gt; NSS Management*访问这些凭据。</block>
+  <block id="d4f0533448e4984685ae016d36dba83a" category="paragraph">*如何访问BlueXP  灾难恢复？*BlueXP灾难恢复不需要任何支持。灾难恢复选项将自动显示在BlueXP左侧导航栏中。</block>
+  <block id="bc483ba843f73e5d609495aa94d035b9" category="paragraph">BlueXP灾难恢复是一种基于云的灾难恢复服务、可自动执行灾难恢复工作流。借助BlueXP  灾难恢复服务、您可以保护运行NetApp存储的iSCSI和FC的内部、基于NFS的工作负载和VMware vSphere虚拟机文件系统(Virtual Machine File System、VMFS)数据存储库、使其符合以下条件之一：</block>
+  <block id="412e382a6d6d3bd8a3bfd94b856f9f4e" category="list-text">使用iSCSI或FC协议的VMFS</block>
 </blocks>

@@ -44,7 +44,7 @@ NOTE: 不应提前在目标SVM或SVM中创建灾难恢复卷。BlueXP灾难恢�
 * 要由BlueXP灾难恢复管理的所有VMware数据存储库都必须使用以下协议之一：
 +
 ** NFS
-** 使用iSCSI协议的VMFS (目前正在进行技术预览)
+** 使用iSCSI或FC协议的VMFS
 
 
 * 如果您使用的是VMware Cloud SDDC、则需满足以下前提条件。
