@@ -27,7 +27,7 @@ summary: 通过访问BlueXP中的服务开始使用BlueXP灾难恢复。
 如果这是您首次登录此服务、则会显示登录页面、您可以注册免费试用。
 
 +
-image:draas-landing3-free-trial.png["BlueXP灾难恢复的登录页面屏幕截图"]
+image:draas-landing4-free-trial.png["BlueXP灾难恢复的登录页面屏幕截图"]
 
 +
 否则、将显示BlueXP灾难恢复信息板。

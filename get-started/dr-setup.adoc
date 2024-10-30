@@ -59,17 +59,3 @@ TIP: 请查看 link:../get-started/dr-prerequisites.html["前提条件"] 以确�
 https://www.vmware.com/products/vmc-on-aws.html["基于 AWS 的 VMware Cloud"^] 为AWS生态系统中基于VMware的工作负载提供云原生体验。每个VMware软件定义的数据中心(SDDC)都在Amazon虚拟私有云(VPC)中运行、并提供完整的VMware堆栈(包括vCenter Server)、NSX-T软件定义的网络、vSAN软件定义的存储以及一个或多个ESXi主机、用于为工作负载提供计算和存储资源。
 
 要在AWS上配置VMC环境、请按照此处的步骤进行操作 https://docs.netapp.com/us-en/netapp-solutions/ehc/aws/aws-setup.html["链接。"^]。指示灯集群还可用于灾难恢复。
-
-
-
-== 设置许可
-
-借助BlueXP灾难恢复、您可以注册90天免费试用。
-
-您可以购买以下产品之一：
-
-* AWS Marketplace的按需购买(PAYGO)订阅
-* 自带许可证(自带许可证、BYOL)、这是一个NetApp许可证文件(NLL)。
-
-
-请参阅 link:../get-started/dr-licensing.html["设置BlueXP灾难恢复许可"]。

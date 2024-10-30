@@ -157,7 +157,6 @@
   <block id="72c3ee7ae5024979fb220d6277567140" category="inline-image-macro">BlueXP灾难恢复服务中的"Actions"菜单图标</block>
   <block id="4d77d74745ed3cdc84af5ddf8b6f4a2e" category="list-text">从BlueXP灾难恢复中、选择*站点*、在vCenter行中选择*操作*选项 <block ref="e282bbe0f95615c6416d0f1c92efdcdd" category="inline-image-macro-rx" type="image"></block>，然后从操作菜单中选择*Refresh*以在BlueXP灾难恢复中刷新FSx发现。</block>
   <block id="97f038e2f4284e7bd85ce8986351f37a" category="paragraph">此操作将重新发现数据存储库、其虚拟机及其目标关系。</block>
-  <block id="490414e0366b091220802d406e52c076" category="doc">新增功能</block>
   <block id="ca8395d0f02816c74d48e7e263466096" category="section-title">2023年8月1日</block>
   <block id="08e4438284e48b3ad77e9a0d04037ea7" category="inline-link-macro">选择要复制的应用程序并分配资源组</block>
   <block id="847c11e2bf47a2c63ba2cf24f4cfa928" category="inline-link-macro">将应用程序复制到其他站点</block>
@@ -186,7 +185,6 @@
   <block id="6a203fd0003e1b252502653eca1a6c02" category="paragraph">*BlueXP灾难恢复URL是什么？*
 对于URL、在浏览器中输入：<block ref="6db7b50bf17b27cbede9f07c4fbc973e" category="inline-link-rx"></block> 以访问BlueXP控制台。</block>
   <block id="89f19c30a67510e64ff4f90eede35bff" category="summary">要使用BlueXP灾难恢复、请执行几个步骤进行设置。</block>
-  <block id="7b6761de8fbe584a66fa50ad6fa3dd19" category="doc">设置BlueXP灾难恢复</block>
   <block id="b5b8e67d6a37d24ad73c89e4c7ac8c9e" category="inline-link-macro">前提条件</block>
   <block id="12e2dc5fcef627451410583ca25001f8" category="list-text">请查看 <block ref="92ab8b24e9e19913fbd62d38b5e3558b" category="inline-link-macro-rx"></block> 以确保您的环境已准备就绪。</block>
   <block id="5ca24c4b6c87e148e5e8719ec8dd13ee" category="list-text">在AWS上部署和配置VMware Cloud。</block>
@@ -328,19 +326,10 @@
   <block id="466ea193e548e9ef8d853f2da4829a3e" category="list-text">为复制计划创建一个名称。</block>
   <block id="ad05d9be76290e8ea731306ed4911c41" category="list-text">从源vCenter和目标vCenter列表中选择源vCenter和目标vCenter。</block>
   <block id="e6cd86d61f4639c8a27006c6c29b3e9f" category="list-text">选择 * 下一步 * 。</block>
-  <block id="e8116ba94e27bac1f555b5e19aa9832f" category="admonition">每个资源组可以包含一个或多个虚拟机。虚拟机将根据您在此列出的顺序启动。</block>
-  <block id="c34daecc192d502d04e27e0d11bc8acd" category="list-text">在应用程序页面的左侧、选择要复制并分配给选定组的虚拟机。</block>
-  <block id="deea58ba2c2a385f7b93c144b2d694e1" category="paragraph">选定虚拟机将自动添加到组1、并启动新的组2。每次将虚拟机添加到最后一个组时、都会添加另一个组。</block>
   <block id="4039eb9aa82f9a49f8096e652825e9c9" category="inline-image-macro">显示"Add Replication Plan &amp;gt；Applications to replication"页面的屏幕截图</block>
   <block id="f60de6a7e37982bbcf6e675308bbbeb8" category="list-text">(可选)执行以下任一操作：</block>
-  <block id="20b76027356378e48612a50cf35cca8a" category="list-text">要从组中删除虚拟机，请选择*X*。</block>
-  <block id="d2423d65cf9bb1427253eab5f5a436be" category="list-text">要将虚拟机移动到其他组、请将其拖放到新组中。</block>
   <block id="84ffccfa6f5368695a086e51333e6494" category="list-text">如果有多个资源组，请确保这些组的顺序与应执行的操作顺序一致。</block>
-  <block id="878f58d3a7fbed70b83e44701e315e44" category="paragraph">组中的每个虚拟机将根据此处的顺序按顺序启动。两个组并行启动。</block>
-  <block id="6dbf7ac6599ff616bd2b944224978963" category="list-text">(可选)单击*Edit*图标重命名组。</block>
   <block id="94884044f731a17cf6d266f3acc71d30" category="section-title">将源资源映射到目标</block>
-  <block id="3fcacb0423fe728907bf295cee2250ca" category="paragraph">在资源映射步骤中、指定源环境中的资源应如何映射到目标。</block>
-  <block id="cb095b2d36014cd7a8ae2363f8694981" category="admonition">SnapMirror处于卷级别。因此、所有虚拟机都会复制到复制目标。确保选择属于数据存储库的所有虚拟机。如果未选中它们、则仅处理属于复制计划一部分的虚拟机。</block>
   <block id="15be2bc9d482c70a11a63e89eada5ce4" category="list-text">在"Resource MAPPING (资源映射)"页面中、要对故障转移和测试操作使用相同的映射、请选中此框。</block>
   <block id="137f19e6e2dc1219f33553b812627bc2" category="list-text">虚拟机</block>
   <block id="eff845e03ea7f765e5646b3de0aa3188" category="list-text">数据存储库</block>
@@ -352,8 +341,6 @@
   <block id="061664c141fcaa8d32bae574640392e5" category="list-text">*复制*：在重复复制中、使目标副本与源副本中的更改保持最新。</block>
   <block id="a807f56da9b717d84bb632ebfde49e6e" category="inline-image-macro">显示添加复制计划和重复项的屏幕截图</block>
   <block id="b6b37c618f509f4cd72b3116ce0f0a69" category="paragraph"><block ref="b647bf0b099c797a2c2c6a3a40882045" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="e0623856c2a2db53c0560ff5b20115df" category="section-title">确认复制计划</block>
-  <block id="a879d1d71a73bdb6127bcb571303177d" category="paragraph">最后、花几分钟时间确认复制计划。</block>
   <block id="26ff2655fb5643a3e76370d9248a31df" category="admonition">您可以稍后禁用或删除复制计划。</block>
   <block id="47324a4e5509aeccc192aa7b07cbcac7" category="list-text">选择*添加计划*。</block>
   <block id="a9980df200522b9bbaa257521bc396fe" category="paragraph">该计划将添加到计划列表中。</block>
@@ -452,7 +439,6 @@
   <block id="fc3e06260a2d82cbcdc61d0edfe814f2" category="paragraph">发生灾难时、可使用FSx for NetApp ONTAP按需将主内部VMware站点故障转移到另一个内部VMware站点或AWS上的VMware Cloud。</block>
   <block id="0e4406e2f319d2b24ab99a69613fbf47" category="list-text">系统会根据复制计划中捕获的信息创建数据存储库并将其挂载到VMware或VMC集群或主机。</block>
   <block id="48b7a229446624a8bba6bae8e801d0ab" category="list-text">通过在左上角的面包屑中选择"Replication Plans (复制计划)"、返回计划列表。</block>
-  <block id="2ebea8fe68e78bc0ff591a0dfab2033d" category="list-text">要对计划执行操作，请从复制计划列表中选择*Actions*选项 <block ref="2fddd650b01c7f9674be856867aae05d" category="inline-image-macro-rx" type="image"></block>  并选择任何选项，如*Edit SCHED*、*Test failover*、*failover*、*failback*、*Disable"、 *Enable*或*Delete*。</block>
   <block id="8fcc9f88ea38569445e7602709323556" category="summary">NetApp BlueXP灾难恢复是一种基于云的灾难恢复服务、可自动执行灾难恢复工作流。</block>
   <block id="6c7035d9b69fd476492cd72377f29453" category="paragraph">使用BlueXP灾难恢复信息板、您可以确定灾难恢复站点和复制计划的运行状况。您可以快速确定哪些站点和计划运行状况良好、已断开连接或已降级。</block>
   <block id="deddd86c6a5897bccccb85b43b4b28da" category="list-text">从BlueXP灾难恢复顶部菜单中、选择*仪表板*。</block>
@@ -516,9 +502,6 @@
   <block id="17c3c89f25f7684516a883f30f10b747" category="section-title">2024年1月11日</block>
   <block id="77a292951e2cd7ee0d1bc7d3db0020ec" category="list-text">在此版本中、您可以更快速地从信息板访问其他页面上的信息。</block>
   <block id="0f354958858456370fa7b64c5f2a913c" category="paragraph"><block ref="929628a652068d14da23775529f8803b" category="inline-link-rx"></block>。</block>
-  <block id="2c1f345ff21d3c1b339c0919d325adfc" category="paragraph">下一步是将所需的虚拟机分组到功能资源组中。通过资源组、您可以将一组相关虚拟机分组为符合您要求的逻辑组。例如、组可能包含延迟启动顺序、可在恢复时运行。</block>
-  <block id="dc304d3d6524acb70870c5c55a21ebb9" category="list-text">*DHCP*：如果选择此选项，则只需提供VM的凭据。</block>
-  <block id="13c796f8f63d49fc45ecbb42db3b6868" category="list-text">*静态IP*：您可以从源虚拟机中选择相同或不同的信息。如果选择与源相同的、则无需输入凭据。另一方面、如果您选择使用与源不同的信息、则可以提供凭据、VM的IP地址、子网掩码、DNS和网关信息。应在全局级别或每个VM级别提供VM子操作系统凭据。</block>
   <block id="27469d5f3bff97989e2a320de315084a" category="inline-image-macro">显示添加复制计划&amp;gt；资源映射&amp;gt；虚拟机的屏幕截图</block>
   <block id="13f51fa84ff64a1c633957d1dcf01637" category="paragraph">在将大型环境恢复到较小的目标集群时、或者在无需配置一对一物理VMware基础架构的情况下执行灾难恢复测试时、这一点非常有用。</block>
   <block id="4c77d41c045300d2cacb091f19b6d9a5" category="list-text">*一致性组*：创建复制计划时、可以包括来自不同卷和不同SVM的VM。BlueXP灾难恢复创建一致性组快照。</block>
@@ -530,11 +513,8 @@
   <block id="d59e0b46782e48a01966e5c7ccc38d17" category="paragraph">NetApp使用Microsoft Entra ID作为特定于支持和许可的身份验证服务的身份提供程序。</block>
   <block id="7fda53563ff8ebfe855a3a79f568f396" category="summary">借助BlueXP灾难恢复、您可以使用不同的许可计划、包括免费试用版、按需购买订阅或自带许可证。</block>
   <block id="a7193edb26a4b1bca4b7b82254e6dd4b" category="doc">为BlueXP灾难恢复设置许可</block>
-  <block id="06cda8527230b64a09b1c568fbd2a80e" category="list-text">注册90天免费试用。</block>
   <block id="9a0514da0283645471837a7dd9cdd00a" category="list-text">查看任何资源、例如工作负载或复制计划。</block>
   <block id="1868701c43ed8ccfa46dc8fe93f4252f" category="list-text">删除任何资源、例如工作负载或复制计划。</block>
-  <block id="d687b9bb1fc0385150b07b1a9aaae7d3" category="section-title">试用90天免费试用</block>
-  <block id="1863514dc4e2f913207e4b5eacc1a0a8" category="paragraph">您可以使用90天免费试用版试用BlueXP灾难恢复。</block>
   <block id="88c474e49a0cbbc7ef17d052040cd008" category="admonition">试用期间不会强制实施容量限制。</block>
   <block id="f37d436fdc8600ce24709a8f4435ec79" category="paragraph">在试用期间、您将拥有全部功能。</block>
   <block id="39c87728ab108f5ab751a40319f03bc8" category="list-text">访问<block ref="4d9841a08a6f1c082f5ba73c5d87fcc1" category="inline-link-rx"></block>。</block>
@@ -571,13 +551,10 @@
   <block id="3a46f989d3db91bd2030de32947cd608" category="section-title">使用适用于VMware的BlueXP灾难恢复的优势</block>
   <block id="cce8630c08ede8fc88504929ae963b37" category="paragraph">BlueXP灾难恢复具有以下优势：</block>
   <block id="208ae1835c38717d827d78f2184f1eb8" category="paragraph">NetApp不会因使用BlueXP灾难恢复试用版而向您收费。</block>
-  <block id="81a21047304ceb1b7bc762627cb29998" category="section-title">90天免费试用</block>
-  <block id="c26aa1f4734bee87e527e8b6fd399ff1" category="paragraph">您可以使用90天免费试用版试用BlueXP灾难恢复。</block>
   <block id="49cc6e59fe89d60aa8a69d475908ad17" category="section-title">BlueXP灾难恢复的工作原理</block>
   <block id="53bb415fa5ffe0063bff5bf128aceea8" category="paragraph">BlueXP灾难恢复可以恢复从内部站点复制到Amazon FSx for ONTAP或其他内部站点的工作负载。此服务可通过虚拟机注册到虚拟机云(Virtual Machine Cloud、VMC)以及直接在VMware网络虚拟化和安全平台NSX-T上的网络映射、自动执行从SnapMirror级别的恢复所有虚拟机云环境均包含此功能。</block>
   <block id="79121a92993faaa181b6eb7b104f73ea" category="paragraph">BlueXP灾难恢复使用ONTAP SnapMirror技术、该技术可提供高效复制、并保持ONTAP永久增量Snapshot效率。SnapMirror复制可确保应用程序一致的Snapshot副本始终保持同步、并且数据在故障转移后立即可用。</block>
   <block id="e907b41f5f3d7332bee5a43fbbf78a08" category="section-title">设置许可</block>
-  <block id="64f8f55f5eb85f10374cb9251379aa7d" category="paragraph">借助BlueXP灾难恢复、您可以注册90天免费试用。</block>
   <block id="db9425c5e893fb09212aa796b71ab4ff" category="paragraph"><block ref="db9425c5e893fb09212aa796b71ab4ff" category="inline-image-macro-rx" type="image"></block></block>
   <block id="9aea41391b3a188365a351addd6cf6fc" category="list-text">如果您是具有现有Connector的BlueXP用户、则在选择"灾难恢复"时、将显示一条有关注册的消息。</block>
   <block id="cbef5af23561d0ec620e5d275e7c8eb5" category="inline-image-macro">BlueXP灾难恢复信息板</block>
@@ -641,12 +618,10 @@
   <block id="2caf85d76a31b7bef7132937ff28e9dc" category="list-text">自带许可证(BYOL)、这是您从NetApp销售代表处获得的NetApp许可证文件(NLL)您可以使用许可证序列号在BlueXP电子钱包中激活BYOL。</block>
   <block id="c809a23426c6fb72cef75816c461ade9" category="paragraph">所有BlueXP服务的许可证均由BlueXP数字钱包服务管理。设置BYOL后、您可以在BlueXP电子钱包中看到此服务的有效许可证。</block>
   <block id="8eb586b1b79ddd3ae7c3123b39d4420e" category="admonition">如果至少有一个VM具有复制计划、则BlueXP灾难恢复费用基于源站点上数据存储库的已配置容量计算得出。故障转移数据存储库的容量不包括在容量允许值中。对于BYOL、如果数据超过允许的容量、则服务操作将受到限制、直到您获得额外的容量许可证或在BlueXP数字钱包中升级许可证为止。</block>
-  <block id="27be91c80d5e97799bb6e73e37370e5d" category="paragraph">您可以随时购买许可证、90天试用期结束前不会向您收费。</block>
   <block id="7033a5d3e074f0c7401499ee4e48f38a" category="list-text">确保要保护的虚拟机上正在运行VMware工具(或Open VM工具)。</block>
   <block id="af77ac64a97a80925dee7dc916344004" category="list-text">对于在Linux操作系统上运行的Oracle数据库、应为Oracle数据库SYSDBA角色启用操作系统用户身份验证。</block>
   <block id="e23539b066371b4dcfdd50b7d80417d8" category="paragraph">在免费试用结束或许可证过期后、您仍可在服务中执行以下操作：</block>
   <block id="1594f78ebbb281f7b5359eb6d2b89912" category="list-text">运行在试用期内或在许可证下创建的所有计划操作。</block>
-  <block id="a14b332e4d6b9ee17b484a7fb805179f" category="paragraph">您可以随时获得许可证、90天试用期结束前不会向您收费。要在90天试用之后继续、您需要购买BYOL许可证。</block>
   <block id="01c014f2e37e5bf6d3ce893bea0197cb" category="list-text">设置Connector后、在BlueXP灾难恢复登录页面中、用于添加Connector的按钮会更改为用于开始免费试用的按钮。选择*开始免费试用*。</block>
   <block id="b9ef842238fa8d82db6b7559f33adc6c" category="paragraph">试用期结束后、您可以通过NetApp销售代表购买许可证</block>
   <block id="9bdfa376bcb2fa79aff92c39d0b24fcd" category="list-text">获得许可证后、返回到BlueXP灾难恢复。选择右上角的*查看付款方式*选项。或者，在免费试用即将到期的消息中，选择*订阅或购买许可证*。</block>
@@ -662,7 +637,6 @@
   <block id="b7005516f0c1f875afae2146a2fb3617" category="list-text">*许可更新*： 借助BlueXP灾难恢复、您可以注册90天免费试用、在Amazon Marketplace购买按需购买(PAYGO)订阅、或自带许可证(BYOL)、这是您从NetApp销售代表或NetApp 支持站点(NSS)获取的NetApp许可证文件(NLL)。</block>
   <block id="eb9506998f4dca4bcb82fe962448b79b" category="paragraph">有关为BlueXP灾难恢复设置许可的详细信息、请参阅 <block ref="eaa54a57026891d12cbf928afd176564" category="inline-link-macro-rx"></block>。</block>
   <block id="8deb19747c06e3643bab5716cb645635" category="paragraph">如果这是您首次登录此服务、则会显示登录页面、您可以注册免费试用。</block>
-  <block id="ac3c6e071ee2b6acd7920433ae08c475" category="paragraph"><block ref="ac3c6e071ee2b6acd7920433ae08c475" category="inline-image-macro-rx" type="image"></block></block>
   <block id="dd1ef091f49695b9c14e0e34da748ab7" category="list-text">如果尚未添加BlueXP Connector、则需要添加Connector。要添加接头、请参见<block ref="d6df7dcc2fc3105e10967a9194806ce5" category="inline-link-rx"></block>。</block>
   <block id="e2066cd1f4f96874fad4da9c48f8715b" category="list-text">如果您已在使用此服务、则在选择"Disaster Recovery (灾难恢复)"时、将显示信息板。</block>
   <block id="7cc1b1d71d565ea421a16ed9422fe6c2" category="list-text">通过Amazon Web Services (AWS) Marketplace购买按需购买(PAYGO)订阅。</block>
@@ -684,7 +658,6 @@
   <block id="595da0c0edf936a84fa3d6a69bbbb4e5" category="paragraph"><block ref="595da0c0edf936a84fa3d6a69bbbb4e5" category="inline-image-macro-rx" type="image"></block></block>
   <block id="5d50de45dd75ac0ea74e9c427687d113" category="list-text">在BlueXP数字钱包中，从*数据服务许可证*选项卡中选择*添加许可证*。</block>
   <block id="7744384d0e7b78819bc53ca36ef36369" category="list-text">选择*数据服务许可证*选项卡，选择要更新的服务序列号对应的*操作...*图标，然后选择*更新许可证*。</block>
-  <block id="577219605d1e6146de9dc5b1e218ce65" category="paragraph">要在90天试用之后继续、您需要从云提供商处获取按需购买(PAYGO)订阅、或者从NetApp购买BYOL许可证。</block>
   <block id="d66d706cd022ab39ed6479a713135515" category="paragraph"><block ref="d66d706cd022ab39ed6479a713135515" category="inline-image-macro-rx" type="image"></block></block>
   <block id="991e816286764c3a5ea9b023c35e1d77" category="paragraph"><block ref="991e816286764c3a5ea9b023c35e1d77" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b45dfe874eaba6a97e58e0436eba2402" category="sidebar">BlueXP灾难恢复即服务实验室按需入门</block>
@@ -760,10 +733,6 @@
   <block id="ef30511465fed8e5a5b5c3a9aae4795a" category="list-text">按照此处和此处的步骤<block ref="551566e1b64bc66251dbfe6d546a4bef" category="inline-link-rx"></block><block ref="594efabf60d7236eeecf072ead1cf02b" category="inline-link-rx"></block> 配置和配置FSx for NetApp ONTAP。</block>
   <block id="e65c19fddc907d69ae5172a0084b710b" category="list-text">将Amazon FSx for NetApp ONTAP添加到工作环境中、并添加FSx for ONTAP的AWS凭据。</block>
   <block id="95e1164f78d2b6799a19e13081137cbd" category="list-text">使用VMware帐户并配置SDDC。确保SDDC已与FSx for ONTAP建立连接。</block>
-  <block id="23b186d0b29dfdb5e0e175ad6de4147e" category="paragraph">您可以购买以下产品之一：</block>
-  <block id="e5cadf619f38981c2b6059a9e6577ec3" category="list-text">AWS Marketplace的按需购买(PAYGO)订阅</block>
-  <block id="90d5e71753c6b7ee358df340daa5fe4c" category="list-text">自带许可证(自带许可证、BYOL)、这是一个NetApp许可证文件(NLL)。</block>
-  <block id="8e794011cc1f1c5c04b70473672767c4" category="paragraph">请参阅 <block ref="0ba47d7cccc1dc28f47670d48274167c" category="inline-link-macro-rx"></block>。</block>
   <block id="b63b041aeb212763ffab8f16313f009d" category="inline-link-macro">BlueXP灾难恢复通知</block>
   <block id="54ad6e999d021c5f10d0b688267e8d17" category="paragraph"><block ref="54ad6e999d021c5f10d0b688267e8d17" category="inline-link-macro-rx"></block></block>
   <block id="30bc3f8ec3b5e171c9e8c063eec0ebce" category="summary">要使BlueXP灾难恢复能够执行其服务、vCenter帐户必须至少具有一组vCenter权限、例如注册和取消注册数据存储库、启动和停止VM以及重新配置虚拟机(VM)。下表列出了BlueXP灾难恢复与vCenter集群连接所需的所有特权。</block>
@@ -829,11 +798,9 @@
   <block id="66dacd6d538323484187ed3f8c9ef650" category="list-text">*故障转移测试计划*：您现在可以编辑故障转移测试并为故障转移测试设置每日、每周和每月计划。</block>
   <block id="42b40c3ce2e25adae8327795c655116d" category="list-text">*前提条件信息更新*：BlueXP灾难恢复前提条件信息已更新。</block>
   <block id="8a62eb7f743049ce2523fe7eb67fb48f" category="paragraph">请参阅<block ref="dfd63f4ad4adb15a66b44e212e2488b7" category="inline-link-rx"></block>。</block>
-  <block id="2e57ab34890abd985ae5cff7c16db6f6" category="list-text">在"Applications"页面的左侧、可以选择搜索数据存储库。</block>
   <block id="8020af4fa709c3156161baa6bf00e88a" category="inline-image-macro">复制计划、资源映射选项卡</block>
   <block id="210dfd955522333f74e13d0843ab02ff" category="paragraph">此部分可能已启用或禁用、具体取决于您的选择。</block>
   <block id="30cb4638cdd1e514eba27473e745afb4" category="paragraph">在测试映射选项卡上、虚拟机和存储库映射处于禁用状态。</block>
-  <block id="ebcc6bc6ad0c177b30c661fc23c0f951" category="list-text">查看每个选项卡中的信息：计划详细信息、故障转移映射、VM。</block>
   <block id="711c35de4b0430b043159f5d91f6752f" category="inline-image-macro">故障转移页面</block>
   <block id="418818fc05931805b481fbdf48b3a075" category="list-text">在故障转移页面中、立即启动快照或为要从中恢复的数据存储库选择快照。默认值为最新。</block>
   <block id="51d5fa513676d68f3e574487650b021d" category="paragraph">在发生故障转移之前、系统将为当前源创建快照并将其复制到当前目标。</block>
@@ -862,7 +829,6 @@
   <block id="3d3e2652059a9417e7a9b8801e83b99d" category="list-text">选择复制计划，单击*故障转移映射*选项卡，然后单击*编辑*铅笔图标。</block>
   <block id="f05351f8a712da4ff1e724d342c4670b" category="list-text">单击*数据存储库*箭头将其展开。</block>
   <block id="ee9e0fb0a09a468f33fa6f2dabc4ff49" category="inline-image-macro">编辑故障转移映射页面</block>
-  <block id="7cbc4647aa042fa4dbc711ee9aa94612" category="paragraph"><block ref="7cbc4647aa042fa4dbc711ee9aa94612" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0d59b78804ed5feec9399254629a60f1" category="list-text">记下复制计划中的保留计数值。完成这些步骤后、您需要恢复此原始值。</block>
   <block id="e9c686cd7f0fc0f9a24375142cf2639b" category="list-text">将此计数减少为1。</block>
   <block id="94eec0eecc897e0613b4dca05f1db3b5" category="list-text">启动按需快照。为此，请在复制计划页面上，选择该计划，单击操作图标，然后选择*立即创建快照*。</block>
@@ -885,20 +851,14 @@
   <block id="fa463eaf10ea5f2243e402c5c574ce96" category="list-text">在操作列中，选择*取消作业*。</block>
   <block id="348a99edae23b1f4e21c5ce75d209a50" category="paragraph">要查看详细信息，请选择每个选项下面的*view*链接。</block>
   <block id="116910f73246efc93a920caaa2ef1743" category="list-text">从BlueXP  灾难恢复顶部菜单中，选择*Replication Plans (复制计划)*，然后选择*Add*(添加)。或者，如果您刚刚开始使用该服务，请从信息板中选择*添加复制计划*。</block>
-  <block id="eb77d8ecba8e316a4e630e7bf375a3a8" category="paragraph"><block ref="5e75e554f1dcac67727f8f9c18b64267" category="inline-image-macro-rx" type="image"></block></block>
   <block id="caa1e25984e775c1ab44cfd42620d720" category="inline-image-macro">铅笔图标</block>
-  <block id="5b7027891924f15fc8ce9c7972c44183" category="list-text">要更改组，请单击组*Edit* <block ref="8254d7ced29032ec76a59e7648759881" category="inline-image-macro-rx" type="image"></block> 图标。</block>
   <block id="7906e2e007c3bad108fcd7ed7311a131" category="paragraph"><block ref="7906e2e007c3bad108fcd7ed7311a131" category="inline-image-macro-rx" type="image"></block></block>
   <block id="6dbc81f47f4a822cd11ce7c8403756ed" category="list-text">在故障转移映射选项卡中、选择每个资源右侧的向下箭头并映射每个资源。</block>
   <block id="022ab008c31f5588f9d15da4dc3439fb" category="list-text">*计算资源*：选择*计算资源*旁边的向下箭头。</block>
-  <block id="5bfe17be68350c18dc777bcfabdd7a8f" category="list-text">*虚拟网络*：在故障转移映射选项卡中，选择*虚拟网络*旁边的向下箭头。输入或选择源虚拟LAN和目标区块。</block>
   <block id="a358a5c755a9f869690207e2a0726737" category="list-text">*Virtual Machines*：在故障转移映射选项卡中，选择*Virtual Machines*旁边的向下箭头。</block>
   <block id="909f84e264f0200a692127b28fbdbaaf" category="paragraph">选择与相应网段的网络映射。区块应已配置、因此请选择适当的区块以映射虚拟机。</block>
   <block id="298abc17ab4bb709de80b68dc38dde2a" category="list-text">*IP地址类型*：在复制计划的虚拟机部分中映射源位置和目标位置之间的网络时，BlueXP  灾难恢复提供两个选项：DHCP或静态IP。对于静态IP、请配置子网、网关和DNS服务器。此外、输入虚拟机的凭据。</block>
   <block id="c28e8a3b83f3f2cce376fe3daa7ad95d" category="paragraph"><block ref="64eb1ec301597178e47fa7deed0121dc" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="3512b090e0a9611bcc510311033bd346" category="list-text">*源VM CPU和RAM*：在虚拟机详细信息下，您可以选择调整VM CPU和RAM参数的大小。</block>
-  <block id="f11e7e84949ffa34e841d9d0b17d1d5d" category="list-text">*Boot Delay*：您可以修改资源组中所有选定虚拟机的引导顺序。默认情况下、系统会使用在选择资源组期间选择的引导顺序；但是、您可以在此阶段进行更改。使用此字段、您可以调整启动操作的延迟(以分钟为单位)。</block>
-  <block id="c9d8e0d238ab275582f95ccf81088af0" category="list-text">*创建应用程序一致的副本*：指示是否创建应用程序一致的Snapshot副本。该服务将使应用程序处于静修状态、然后创建Snapshot以获得一致的应用程序状态。</block>
   <block id="453e68e2eb0de34242ac9895a818d82a" category="list-text">*多 个存储库*：在故障转移映射选项卡中，选择*多 个存储库*旁边的向下箭头。根据所选虚拟机、系统会自动选择数据存储库映射。</block>
   <block id="10936c8535aaede0ed75f5d8d4fa6aaf" category="list-text">*保留数量*：输入要保留的快照数量。</block>
   <block id="b23c862689b973964a4b79af3d87b2de" category="list-text">*源和目标数据存储库*：如果卷已建立SnapMirror关系、则可以选择相应的源和目标数据存储库。如果您选择的卷没有SnapMirror关系、则可以通过选择工作环境及其对等SVM来创建一个。</block>
@@ -919,33 +879,9 @@
   <block id="cf1967c6d778937fae37b9e43582b1b6" category="list-text">BlueXP  灾难恢复仅支持每个ONTAP卷具有一个LUN。此卷不应具有多个LUN。</block>
   <block id="f3a37c3560d0027bc0f49abfab4ab0e3" category="list-text">对于任何复制计划、目标ONTAP卷应使用与托管受保护VM的源ONTAP卷相同的协议。例如、如果源使用FC协议、则目标也应使用FC。</block>
   <block id="3baff38a392d31950fc8d4d62ea2adc0" category="list-text">选择vCenter Server。</block>
-  <block id="cfb3b856fe141dd537038393a8052d33" category="list-text">选择要复制的VM并分配组。</block>
   <block id="8e635b1aadad234871ba0e012309361f" category="list-text">确定重复情况、运行子系统托管的脚本、设置启动顺序并选择恢复点目标。</block>
   <block id="1c10305a999dce53cb52dd4f6b8d89ff" category="list-text">查看计划。</block>
   <block id="054b753af44fc4eeee43c9ba6037caaa" category="doc">创建灾难恢复报告</block>
-  <block id="282dfbc5927b79619ad76e7f3cbfe3c6" category="paragraph">查看灾难恢复报告可以帮助您分析灾难恢复准备情况。预先设计的报告包括故障转移和故障恢复摘要、所有站点上的复制详细信息以及去年的作业详细信息。您还可以创建自定义报告。</block>
-  <block id="08efd64e87408e4769275d6a11482ddf" category="paragraph">您可以下载PDF格式的报告。</block>
-  <block id="b775ae7fb34855ffeede56666da9a15c" category="list-text">从顶部菜单中选择*Reports*。</block>
-  <block id="44f0d43cd92781ec793d9ba50c2d422e" category="inline-image-macro">报告页面</block>
-  <block id="a73757daae33bff01ded292e39f3ddaf" category="paragraph"><block ref="a73757daae33bff01ded292e39f3ddaf" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="3ccbbafbdd477e2f028bfd34e03f436b" category="list-text">在创建或下载报告之前，请单击*Refresh*选项刷新数据。</block>
-  <block id="c83e2a522238e98593e337bd5a7311b5" category="list-text">从*Ready-MADE*选项卡中选择一个报告，或在*Custom*选项卡中创建您自己的报告。</block>
-  <block id="70db9063910acf1265d5a518168c69cd" category="list-text">单击*Download*下载报告。</block>
-  <block id="0656a1b7f286656b2fc85b91fe54f0dd" category="section-title">创建您自己的灾难恢复报告</block>
-  <block id="8eaafa07b3ff6e9aa5dbe62e7cc8c77c" category="paragraph">您可以创建自定义报告、在其中指定站点、复制计划和数据。您可以指定是否包括上一年的故障转移和故障恢复摘要、每个复制计划的虚拟机详细信息以及上一年每个复制计划的作业详细信息。</block>
-  <block id="036f7e4b10d318ae312cdfbb79a225fe" category="list-text">在创建报告之前，请单击*Refresh*选项刷新数据。</block>
-  <block id="27c38bec0a8c0321e9a3236a8a9d4e76" category="list-text">选择*自定义*选项卡。</block>
-  <block id="c3c616a8c2970d4d1156559952705700" category="list-text">选择*Add*以添加新报告。</block>
-  <block id="402199b58c216d8c9be526288150639b" category="inline-image-macro">添加自定义报告对话框</block>
-  <block id="8224443416aacfdb9c8d006355a8489a" category="paragraph"><block ref="8224443416aacfdb9c8d006355a8489a" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="4d6c444c23609646be63340436709d5f" category="list-text">选择用于自定义报告的选项：</block>
-  <block id="f6068daa29dbb05a7ead1e3b5a48bbee" category="list-text">数据</block>
-  <block id="478109b22c544f0e3bed80d9622cc572" category="list-text">过去一年的故障转移和故障恢复摘要</block>
-  <block id="d9848020098abdd6a6adf5b664e0a02c" category="list-text">每个复制计划的VM详细信息</block>
-  <block id="2eac16c021d7f4e2d342be672e454649" category="list-text">过去一年每个复制计划的作业详细信息</block>
-  <block id="65db0a5300ccaa6099d24aaf16150200" category="paragraph">您的自定义报告将显示在自定义报告列表中。</block>
-  <block id="b7a41431aa1eee1607db390ac47d2a65" category="admonition">要查看报告中包含的所有部位或计划、请单击报告名称或计划名称右侧的数字。</block>
-  <block id="a99780537c030fe162f59c129be8e471" category="list-text">单击*下载*下载您的自定义报告。</block>
   <block id="fca90381d84b0e9a022fdeac2012d4ab" category="paragraph">您需要BlueXP  灾难恢复序列号。从您的销售订单中找到此号码、或者联系客户团队了解此信息。</block>
   <block id="20efb062527877ed8fd82ba191b8951b" category="paragraph">*将许可证添加到BlueXP  数字钱包*购买BlueXP  灾难恢复许可证后，您需要将许可证添加到BlueXP  数字钱包。</block>
   <block id="61b173efd5c260fd3e3f446d9d4b37e7" category="section-title">开始使用BlueXP</block>
@@ -966,4 +902,91 @@
   <block id="d4f0533448e4984685ae016d36dba83a" category="paragraph">*如何访问BlueXP  灾难恢复？*BlueXP灾难恢复不需要任何支持。灾难恢复选项将自动显示在BlueXP左侧导航栏中。</block>
   <block id="bc483ba843f73e5d609495aa94d035b9" category="paragraph">BlueXP灾难恢复是一种基于云的灾难恢复服务、可自动执行灾难恢复工作流。借助BlueXP  灾难恢复服务、您可以保护运行NetApp存储的iSCSI和FC的内部、基于NFS的工作负载和VMware vSphere虚拟机文件系统(Virtual Machine File System、VMFS)数据存储库、使其符合以下条件之一：</block>
   <block id="412e382a6d6d3bd8a3bfd94b856f9f4e" category="list-text">使用iSCSI或FC协议的VMFS</block>
+  <block id="63f202b7fcd80e9277a9e585cd35c7ae" category="list-text">注册30天免费试用。</block>
+  <block id="5ef05167488611c5bd4ff0f410595ce4" category="section-title">30天免费试用</block>
+  <block id="fcb9470411433141a8e2828e6e6743a1" category="paragraph">您可以使用30天免费试用版试用BlueXP灾难恢复。</block>
+  <block id="2653bc3ce497c58d463194da74daede0" category="paragraph">要在30天试用之后继续、您需要从云提供商处获取按需购买(PAYGO)订阅、或者从NetApp购买BYOL许可证。</block>
+  <block id="5ea3b0a3d2edc96d5ac390dd8d481432" category="paragraph">您可以随时购买许可证、30天试用期结束前不会向您收费。</block>
+  <block id="b22e0a0c145eff4bd34bc6c46894b2a1" category="section-title">试用30天免费试用</block>
+  <block id="039ed52e082d57c29ee6dcf82a85a0e7" category="paragraph">您可以使用30天免费试用版试用BlueXP灾难恢复。</block>
+  <block id="dd8751ceddb247aced4307ca6fddff51" category="paragraph">要在试用之后继续、您需要购买BYOL许可证或PAYGO AWS订阅。您可以随时获得许可证、在试用结束之前不会向您收费。</block>
+  <block id="58e6ab5634cec392e37e4f0d5f8f8db8" category="paragraph"><block ref="58e6ab5634cec392e37e4f0d5f8f8db8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6339437d88aaa794dbaa48ee62597c24" category="doc">BlueXP  灾难恢复中的新增功能</block>
+  <block id="1992f2f9fa5c0cbd3b61255b9dd507bd" category="section-title">2024年10月30日</block>
+  <block id="51ca1579fc5d4f066bdbf640a4814d76" category="list-text">*报告*：在此版本中，您现在可以生成和下载报告，以帮助您分析环境。预先设计的报告汇总故障转移和故障恢复、显示所有站点上的复制详细信息、并显示过去七天的作业详细信息。</block>
+  <block id="023cf8170104660fc796a64fdad98afa" category="paragraph">请参阅<block ref="cca93cc3cfc082fe882eefc731706487" category="inline-link-rx"></block>。</block>
+  <block id="978337672bd8dff65bfbecb42cf21f9d" category="list-text">*30天免费试用*：在此版本中，您现在可以注册30天免费试用BlueXP  灾难恢复。以前、免费试用期限为90天。</block>
+  <block id="1cb57fbf1f1452e87f62dd668ea03759" category="paragraph">请参阅<block ref="7585b54fad00f1219b8233730153156f" category="inline-link-rx"></block>。</block>
+  <block id="7c63c33c2146d3ce95c7487c1ebbe27e" category="list-text">*禁用和启用复制计划*：先前版本对故障转移测试计划结构进行了更新，这是支持每日和每周计划所必需的。此更新要求您禁用并重新启用所有现有复制计划、以便能够使用新的每日和每周故障转移测试计划。这是一次性要求。</block>
+  <block id="128ecd2ba12e92192724c8e3ed360ffc" category="list-text">*文件夹映射*：创建复制计划并映射计算资源时，现在可以映射文件夹，以便将VM恢复到为数据中心、集群和主机指定的文件夹中。</block>
+  <block id="b7d245c9fa7100d1b04bb8e37530f630" category="list-text">*可用于故障转移、故障恢复和测试故障转移的VM详细信息*：发生故障时、如果您要启动故障转移、执行故障恢复或测试故障转移、现在可以查看VM的详细信息并确定哪些VM未重新启动。</block>
+  <block id="5b7e4b08598b495e5e802015cfda0817" category="list-text">*按顺序启动的虚拟机启动延迟*：创建复制计划时，现在可以为计划中的每个虚拟机设置启动延迟。这样、您就可以设置VM的启动顺序、以确保优先级为一个的所有VM在后续优先级的VM启动之前都处于运行状态。</block>
+  <block id="6bf75b2b973c4e4b2e97cb286b4a0b22" category="list-text">*VM操作系统信息*：创建复制计划时，您现在可以看到该计划中每个VM的操作系统。这有助于确定如何将虚拟机分组到一个资源组中。</block>
+  <block id="c216ae779db45238ce5f187a4e9efc0e" category="list-text">*虚拟机名称别名*：创建复制计划时、现在可以在灾难恢复SIT上的虚拟机名称中添加前缀和后缀。这样、您就可以为计划中的VM使用一个更具描述性的名称。</block>
+  <block id="0b0c4a58a22974b8eb46383cdfabf354" category="list-text">*清理旧快照*：在此版本中、您可以删除超出指定保留数量的不再需要的任何快照。降低快照保留数量后、快照可能会逐渐累积、您现在可以将其删除以释放空间。您可以随时按需执行此操作、也可以在删除复制计划时执行此操作。</block>
+  <block id="3eddfb488d257605e7713c24d210beee" category="inline-link">管理站点、资源组、复制计划、数据存储库和虚拟机信息</block>
+  <block id="310c40c0ef022c90f1370d1fe91ca720" category="paragraph">有关详细信息，请参见<block ref="db7c318fcbcad8cfb9a44ac897b870b2" category="inline-link-rx"></block>。</block>
+  <block id="718c1087c683dccc1ea79ed6fa0fd10b" category="list-text">*同步快照*：在此版本中、您现在可以同步源和目标之间不同步的快照。如果在BlueXP  灾难恢复之外的目标上删除了快照、则可能会发生这种情况。该服务会每24小时自动删除一次源上的快照。但是、您可以按需执行此操作。通过此功能、您可以确保快照在所有站点之间保持一致。</block>
+  <block id="9a3a6422d384602f3e19e123263dc99f" category="paragraph">有关详细信息，请参见<block ref="59c3623215c45197e971057378c86d42" category="inline-link-rx"></block>。</block>
+  <block id="21045c570180940ef07c18bb23d0427d" category="list-text">选择要复制的虚拟机(VM)并分配组。</block>
+  <block id="220cf85b4d919dc13e0c6317aa2e2b17" category="list-text">扇出架构中的1对多</block>
+  <block id="f2cdd0bbe9f89ecac35fe20b5c70e9fb" category="paragraph">下一步是将所需的VM分组到功能资源组中。通过资源组、您可以将一组依赖虚拟机分组为符合您要求的逻辑组。例如、组可能包含延迟启动顺序、可在恢复时运行。</block>
+  <block id="4d179ba15a8047d595a41bbd6175c3be" category="paragraph">在复制计划中选择应用程序时、您可以查看该计划中每个VM的操作系统。这有助于确定如何将虚拟机分组到一个资源组中。</block>
+  <block id="7eb18c1801bc45dc00317e09e6cc2211" category="admonition">每个资源组可以包含一个或多个VM。VM将根据此处包含的顺序启动。</block>
+  <block id="236861b5b0d7380c86b58343dda04a42" category="list-text">(可选)在应用程序页面的左侧、按虚拟机的数据存储库筛选虚拟机。</block>
+  <block id="794c0f8f77c0af0e4613492580e6d7ab" category="list-text">在应用程序页面的左侧、选择要保护的VM并将其分配给选定组。</block>
+  <block id="87661bcc452e9da5afed70a3b9cf3e39" category="paragraph">选定虚拟机将自动添加到组1、并启动一个新的组2。每次将虚拟机添加到最后一个组时、都会添加另一个组。</block>
+  <block id="81c61db52db9a56a1819f55910f10afa" category="paragraph"><block ref="37056fc036b85c73069e7f1371212abb" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="bcc94af8bc9c7e6ef8fd57214884e7f1" category="list-text">要更改组的名称，请单击组*Edit*<block ref="8254d7ced29032ec76a59e7648759881" category="inline-image-macro-rx" type="image"></block>图标。</block>
+  <block id="a218e8ce5f9879c5e643831c2aa0e36a" category="list-text">要从组中删除某个VM，请选择该VM旁边的*X*。</block>
+  <block id="a63398300e6fbe20dc11a32121bd6bfa" category="list-text">要将虚拟机移动到其他组、请将其拖放到新组中。</block>
+  <block id="86cbb58fb6d06cab306fbf4379c5c40e" category="paragraph">组中的每个VM都会根据此处的顺序依次启动。</block>
+  <block id="b09b7f24f5b2d0187b19263b47fb2cdf" category="paragraph">在资源映射步骤中、指定源环境中的资源应如何映射到目标。创建复制计划时、您可以为计划中的每个VM设置启动延迟和顺序。这样、您就可以设置VM的启动顺序。</block>
+  <block id="da06c5c1d28e308403236438dda209dc" category="list-text">*源数据中心和目标数据中心*</block>
+  <block id="7067fdfe055fabd950bd45a1a17e1642" category="list-text">*目标集群*</block>
+  <block id="2c0a2cae30cf923c64bbed704e923521" category="list-text">*目标主机*(可选)：选择集群后、您可以设置此信息。</block>
+  <block id="6d9f48430941cb04802ac18d9c695e65" category="admonition">如果vCenter配置了Distributed Resource Scheduler (DRS)来管理集群中的多个主机、则无需选择主机。如果选择主机、则BlueXP  灾难恢复会将所有VM置于选定主机上。</block>
+  <block id="999becf997185f87ea1b5bd029bf5b34" category="list-text">*目标VM文件夹*(可选)：创建一个新的根文件夹以存储选定的VM。</block>
+  <block id="b309697bdbe88c0e59d4f6201fe75801" category="list-text">*虚拟网络*：在故障转移映射选项卡中，选择*虚拟网络*旁边的向下箭头。选择源虚拟LAN和目标区块。</block>
+  <block id="59b1abd434d2a560773c9f089cc8679a" category="paragraph">如果对默认设置进行了任何更改、则需要提供凭据。</block>
+  <block id="0a8bc9b2bb8f581fa27738fc437d64b3" category="paragraph">根据您的选择、此部分可能会显示不同的字段。</block>
+  <block id="25f9829876988ad5a8f8d2b64655ff19" category="list-text">*DHCP*：如果希望VM从DHCP服务器获取网络配置信息，请选择此设置。如果选择此选项、则只需提供虚拟机的凭据即可。</block>
+  <block id="16bd7bddefb51b87ff4fbcf4c8831a1d" category="list-text">*静态IP*：如果要手动指定IP配置信息，请选择此设置。您可以从源VM选择相同或不同的信息。如果选择与源相同的、则无需输入凭据。另一方面、如果您选择使用与源不同的信息、则可以提供凭据、VM的IP地址、子网掩码、DNS和网关信息。应在全局级别或每个VM级别提供VM子操作系统凭据。</block>
+  <block id="7b2b025be41dbbc4cda9601c1b5523a5" category="list-text">*目标VM前缀和后缀*：在虚拟机详细信息下、您可以选择为VM名称添加前缀和后缀。</block>
+  <block id="230dc85a08275a2466390ae799703f92" category="list-text">*源VM CPU和RAM*：在虚拟机详细信息下，您可以选择调整VM CPU和RAM参数的大小。</block>
+  <block id="97bbe2658500151382594a4fae0afc57" category="paragraph"><block ref="1dcb46a6f5cf6fb93122072f061a9e9e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="77506f26f3b4a989168bfd6da6435808" category="list-text">*Boot Order*：您可以在故障转移后修改资源组中所有选定虚拟机的启动顺序。默认情况下、系统会使用在选择资源组期间选择的引导顺序；但是、您可以在此阶段进行更改。这有助于确保优先级为一个的所有虚拟机在后续优先级为VM启动之前都在运行。</block>
+  <block id="f4acab8352ab5ba21dd2d6ce32fc9f2a" category="paragraph">引导顺序编号仅适用于资源组。如果一个组中有一个"2"、另一个组中有一个"2"、则第一个组中的VM将按其顺序启动、第二个组中的VM将按其顺序启动。</block>
+  <block id="8cad29fca944093d9257fcd28c5a17d5" category="list-text">顺序启动：为每个VM分配一个唯一编号、以便按分配的顺序启动、例如1、2、3、4、5</block>
+  <block id="8043065a3a1affdc7e75a0083d3349b1" category="list-text">同时启动：为所有VM分配相同的数量以同时启动它们、例如1、1、1、1、2、2、3、4、4。</block>
+  <block id="aa54fb3621577f63cab9b508032a995d" category="list-text">*Boot Delay*：调整启动操作的延迟(以分钟为单位)。</block>
+  <block id="517ed43dc67f057cadcb1c29ecbd75ef" category="admonition">要将启动顺序重置为默认值，请选择*将VM设置重置为默认值*，然后选择要更改回默认值的设置。</block>
+  <block id="739e8f4c4549d6d4a7768c6850d47495" category="list-text">*创建应用程序一致的副本*：指示是否创建应用程序一致的Snapshot副本。该服务将使应用程序处于静修状态、然后创建一个快照、以获得一致的应用程序状态。在Windows上运行的Oracle以及在Windows上运行的Linux和SQL Server支持此功能。</block>
+  <block id="2a4ddf396205dca12c00a6eb7e16285a" category="section-title">查看复制计划</block>
+  <block id="f7056dbdafc88dd1c68fb0eec6b47aac" category="paragraph">最后、花几分钟时间查看复制计划。</block>
+  <block id="6662bb47d30d156ce5604e1d8adf7ae1" category="list-text">查看每个选项卡中的信息：计划详细信息、故障转移映射和VM。</block>
+  <block id="09ae37e8df35c2c5f71701a8407cc944" category="list-text">要对计划执行操作，请从复制计划列表中选择计划右侧的*Actions*选项<block ref="2fddd650b01c7f9674be856867aae05d" category="inline-image-macro-rx" type="image"></block>，然后选择任意选项，如*Edit SCHEDUses*、*Test failover*、*failover*、*failback*、*Migrate*、*Tshot now *、*Clean up old Snap像*、*Disable"、*Enable*或*Delete*。</block>
+  <block id="ed5712a5338a0cddb9b90afe427576e5" category="section-title">按需协调快照</block>
+  <block id="1a9494ac0598f12cb8f1849630ab6e42" category="paragraph">您可以同步源和目标之间不同步的快照。如果在BlueXP  灾难恢复之外的目标上删除了快照、则可能会发生这种情况。该服务会每24小时自动删除一次源上的快照。但是、您可以按需执行此操作。通过此功能、您可以确保快照在所有站点之间保持一致。</block>
+  <block id="2cf81891cc338c800419b4136c4ad8f4" category="list-text">从复制计划列表中，选择计划右侧的*操作*选项<block ref="2fddd650b01c7f9674be856867aae05d" category="inline-image-macro-rx" type="image"></block>，然后选择*同步快照*。</block>
+  <block id="08bb8fbd3da836cf3622737c948a4ede" category="list-text">查看核对信息。</block>
+  <block id="571a21bebeed1a6e73b024d56871482d" category="list-text">选择*同步*。</block>
+  <block id="2dcc77d52e005461a9eab86fef63c3f9" category="section-title">删除复制计划</block>
+  <block id="0f6c94cfa5509a16442ca505884acf3e" category="paragraph">如果您不再需要复制计划、则可以将其删除。如果删除了复制计划、则还可以删除该计划创建的主快照和二级快照。</block>
+  <block id="f9f0145001aafc948bb966c2faef499c" category="list-text">选择计划右侧的*Actions*选项<block ref="2fddd650b01c7f9674be856867aae05d" category="inline-image-macro-rx" type="image"></block>，然后选择*Delete*。</block>
+  <block id="e28e746e68d02b24d2750571a0776bd0" category="list-text">选择是要删除主快照、二级快照还是仅删除计划创建的元数据。</block>
+  <block id="90486e8ee3ac6fe6a17dab32429bf3ee" category="list-text">键入"delete"确认删除。</block>
+  <block id="0f024621e0673f1f4e657983682d6e72" category="list-text">选择 * 删除 * 。</block>
+  <block id="835e92deb53775d3ce75f1bab2ff7fe5" category="list-text">选择复制计划后、选择操作菜单、然后选择*清理旧快照"以删除目标上的旧快照、以匹配新的保留数量。</block>
+  <block id="4fcb591c27b70823ff71112c0db6af4f" category="summary">查看灾难恢复报告可以帮助您分析灾难恢复准备情况。预先设计的报告包括故障转移和故障恢复摘要、所有站点上的复制详细信息以及去年的作业详细信息。</block>
+  <block id="8c909df77f7b5e2e6b77ff66ee6bd3e7" category="paragraph">查看灾难恢复报告可以帮助您分析灾难恢复准备情况。预先设计的报告包括过去七天帐户内所有站点的测试故障转移摘要、复制计划详细信息和作业详细信息。</block>
+  <block id="50772b7f62153c22aff0a022f47038ef" category="paragraph">您可以下载HTML或JSON格式的报告。</block>
+  <block id="a023ebf9b7aa4bcf4be9bcca1ad988b9" category="admonition">您可以使用浏览器的选项将HTML页面转换为PDF。</block>
+  <block id="cd463f7ca5dbc8268a82ea8d8f5e4281" category="paragraph">下载链接的有效期为六小时。</block>
+  <block id="5e521694fac83ef0acfcb6f722d2b3cf" category="list-text">从BlueXP  左侧导航栏中，选择*保护*&gt;*灾难恢复*&gt;*复制计划*。</block>
+  <block id="40f8ac7caaab02ab3b9834517b54c7a4" category="list-text">从页面顶部选择*创建报告*。</block>
+  <block id="32e3f74f58555c69fe922de2e2c5a1fb" category="list-text">选择文件格式类型以及过去7天内的时间段。</block>
+  <block id="bf18811faac9b8e4fcaebab51afd1113" category="list-text">选择 * 创建 * 。</block>
+  <block id="5da6bcdd6ceb1c5910fb17277177402d" category="admonition">此报告可能需要几分钟才能显示。</block>
+  <block id="ab6b0c72784c216662673e59f1357cc1" category="list-text">要下载报告，请选择*下载报告*，然后在管理员的下载文件夹中选择该报告。</block>
 </blocks>
