@@ -251,10 +251,7 @@
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">开放源代码</block>
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">通知文件提供有关 NetApp 软件中使用的第三方版权和许可证的信息。</block>
   <block id="39229a488a735eac754ba7939d38eb84" category="summary">NetApp BlueXP灾难恢复是一种基于云的灾难恢复服务、可自动执行灾难恢复工作流。</block>
-  <block id="d34b4bcb3837c0a762467791173875e9" category="paragraph">此操作步骤会中断复制关系、使vCenter源VM脱机、并在目标站点上启用读/写。</block>
-  <block id="f3fefbabf14888fe609e623e88e6d6b0" category="paragraph">在开始故障转移之前、您可以对该过程进行测试、以确保在需要时成功完成。此测试不会使虚拟机脱机。</block>
   <block id="ec841432c6696238519b70833f9640bb" category="section-title">测试故障转移过程</block>
-  <block id="4ea0903496e6a96b4d38cbc3147c75b4" category="paragraph">在开始实际故障转移之前、您应测试故障转移过程。</block>
   <block id="41d102e0aefecc8e8cf5fb028eebff10" category="paragraph">完成测试后，应使用*Clean up test*选项重置虚拟机。虽然建议这样做、但不需要这样做。</block>
   <block id="993fa63b963af23582ff24b97fea4894" category="list-text">从BlueXP左侧导航栏中、选择*保护*&gt;*灾难恢复*。</block>
   <block id="6fe8001389ba90ef56a7cfdc85d6ea94" category="list-text">从BlueXP灾难恢复顶部菜单中、选择*复制计划*。</block>
@@ -333,7 +330,6 @@
   <block id="15be2bc9d482c70a11a63e89eada5ce4" category="list-text">在"Resource MAPPING (资源映射)"页面中、要对故障转移和测试操作使用相同的映射、请选中此框。</block>
   <block id="137f19e6e2dc1219f33553b812627bc2" category="list-text">虚拟机</block>
   <block id="eff845e03ea7f765e5646b3de0aa3188" category="list-text">数据存储库</block>
-  <block id="4a09c644b8fb308e15cee7a781de0061" category="list-text">要为测试环境设置不同的映射，请取消选中该框并选择*Test Mappings *选项卡。像以往一样浏览每个选项卡、但这次是针对测试环境。</block>
   <block id="0516742190fe9dfeaffe988ba6abe786" category="admonition">您可以稍后测试整个计划。现在、您要为测试环境设置映射。</block>
   <block id="3f015374311e085394976bb9595d4f23" category="section-title">确定重复情况</block>
   <block id="709c15cd0537a2fac696156d542aebf9" category="list-text">在重复页面中，选择*Migrate*或*Copate*。</block>
@@ -432,9 +428,6 @@
   <block id="135b308ed83c53f1516b7c754566d1c4" category="paragraph-title">开始之前</block>
   <block id="dd6963ed0ddd7c005bc031c271ee4ef9" category="paragraph">在启动复制之前、您应已创建复制计划并选择复制应用程序。然后，“操作”菜单中将显示*“重新添加”选项。</block>
   <block id="e95b50cfb71995cd2a2c4c00f88795c2" category="list-text">选择复制计划。</block>
-  <block id="237fc1578b6bac5b1a9df1f5a0574382" category="paragraph">发生灾难时、请将主内部VMware站点故障转移到另一个内部VMware站点或AWS上的VMware Cloud。</block>
-  <block id="bca7fedd313ec1ddb72ef082465dc688" category="paragraph">在故障转移期间、会使用最新的SnapMirror Snapshot副本。或者、您也可以从时间点Snapshot副本中选择特定的Snapshot副本(根据SnapMirror的保留策略)。如果您正面临勒索软件等损坏事件、而最近的副本已被泄露或加密、则时间点选项会很有用。BlueXP灾难恢复显示所有可用时间点。</block>
-  <block id="5b1fcb2efae86b8cb653fb1d94894408" category="paragraph">在故障转移测试期间、会临时创建虚拟机。BlueXP灾难恢复不会映射目标卷。相反、它会从选定Snapshot创建一个新的FlexClone卷、并将支持该FlexClone卷的临时数据存储库映射到ESXi主机。</block>
   <block id="798f01bc27c71f62fd4a64e0bb155f2f" category="paragraph">此过程不会在AWS中的内部ONTAP存储或FSx for NetApp ONTAP存储上占用额外的物理容量。初始源卷不会被修改、即使在灾难恢复期间、副本作业也可以继续进行。</block>
   <block id="fc3e06260a2d82cbcdc61d0edfe814f2" category="paragraph">发生灾难时、可使用FSx for NetApp ONTAP按需将主内部VMware站点故障转移到另一个内部VMware站点或AWS上的VMware Cloud。</block>
   <block id="0e4406e2f319d2b24ab99a69613fbf47" category="list-text">系统会根据复制计划中捕获的信息创建数据存储库并将其挂载到VMware或VMC集群或主机。</block>
@@ -465,7 +458,6 @@
   <block id="946772510dcd559e9d7d09458b2abd6f" category="list-text"><block ref="4c49990f7ea38fc4135c764bbfcd7786" category="inline-link-macro-rx"></block> 将主站点上的数据迁移到另一个站点。</block>
   <block id="46da469bb05d1d3a2c620e2963f1531a" category="list-text"><block ref="698cc22cc758157d8f18359f8b528216" category="inline-link-macro-rx"></block> 在作业监控页面上。</block>
   <block id="3c47c0bca0e482b13e82a95a95df0741" category="list-text">输入复制计划名称以确认并开始故障恢复。</block>
-  <block id="fd8c5ff28502522b67b13efd7595e358" category="paragraph">添加vCenter站点后、即可创建灾难恢复或_Replication pl뮮_。选择源和目标vCenter、选择资源组、然后对应用程序的还原和启动方式进行分组。例如、您可以对与一个应用程序关联的虚拟机进行分组、也可以对具有类似层的应用程序进行分组。</block>
   <block id="d813bc25d25a7f816dde51c17f6c6ba0" category="list-text">映射源环境中的资源与目标之间的映射关系。</block>
   <block id="e1328bf0fb353d2296414458d7dbcdf0" category="paragraph">在创建复制计划时、您可以在以下配置之一中定义源卷和目标卷之间的SnapMirror关系：</block>
   <block id="b946e483d79abae55d4acfcf242d2034" category="list-text">一致性组中的多对一</block>
@@ -504,12 +496,6 @@
   <block id="0f354958858456370fa7b64c5f2a913c" category="paragraph"><block ref="929628a652068d14da23775529f8803b" category="inline-link-rx"></block>。</block>
   <block id="27469d5f3bff97989e2a320de315084a" category="inline-image-macro">显示添加复制计划&amp;gt；资源映射&amp;gt；虚拟机的屏幕截图</block>
   <block id="13f51fa84ff64a1c633957d1dcf01637" category="paragraph">在将大型环境恢复到较小的目标集群时、或者在无需配置一对一物理VMware基础架构的情况下执行灾难恢复测试时、这一点非常有用。</block>
-  <block id="4c77d41c045300d2cacb091f19b6d9a5" category="list-text">*一致性组*：创建复制计划时、可以包括来自不同卷和不同SVM的VM。BlueXP灾难恢复创建一致性组快照。</block>
-  <block id="436f3832b32bfb2d3cb66d6298a71245" category="list-text">如果指定了恢复点目标(RPO)、则该服务将根据RPO计划主备份并更新二级目标。</block>
-  <block id="db0b972911bb657f80d12b2f6b007b86" category="list-text">如果VM来自同一个卷和同一个SVM、则该服务将执行标准ONTAP快照并更新二级目标。</block>
-  <block id="e8363aaad82f774ed9651b7f7c17c5b4" category="list-text">如果VM来自不同的卷和同一个SVM、则该服务会创建一个一致性组Snapshot、其中包括所有卷并更新二级目标。</block>
-  <block id="d32ce27dcbfd9839065d47ddfb554762" category="list-text">如果VM来自不同的卷和不同的SVM、则该服务会通过将所有卷包含在相同或不同集群中来执行一致性组开始阶段和提交阶段Snapshot、并更新二级目标。</block>
-  <block id="3b82d309bad3607f9368c1de90e8ea3c" category="list-text">在故障转移期间、您可以选择任何Snapshot。如果您选择最新Snapshot、该服务将创建按需备份、更新目标、并使用该Snapshot进行故障转移。</block>
   <block id="d59e0b46782e48a01966e5c7ccc38d17" category="paragraph">NetApp使用Microsoft Entra ID作为特定于支持和许可的身份验证服务的身份提供程序。</block>
   <block id="7fda53563ff8ebfe855a3a79f568f396" category="summary">借助BlueXP灾难恢复、您可以使用不同的许可计划、包括免费试用版、按需购买订阅或自带许可证。</block>
   <block id="a7193edb26a4b1bca4b7b82254e6dd4b" category="doc">为BlueXP灾难恢复设置许可</block>
@@ -562,7 +548,6 @@
   <block id="4aca0b59a2fa7d9e86368a58f1e869c9" category="list-text">选择*Actions*选项 <block ref="e282bbe0f95615c6416d0f1c92efdcdd" category="inline-image-macro-rx" type="image"></block>  并选择*Edit*。</block>
   <block id="f2461bdb5195b41a112c405c95584734" category="inline-image-macro">复制计划列表</block>
   <block id="cfff02ce3a45ebd0c9288d1fb7097cca" category="paragraph"><block ref="cfff02ce3a45ebd0c9288d1fb7097cca" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="c68217420a685b93e20f298ae3ea72c8" category="paragraph">您可以将.sh、.bat或.ps1格式的自定义脚本作为故障转移后过程。通过自定义脚本、您可以在故障转移过程之后让BlueXP灾难恢复运行脚本。例如、您可以使用自定义脚本在故障转移完成后恢复所有数据库事务。</block>
   <block id="8b4399d7029673ba83df4f916514230b" category="paragraph">测试故障转移操作不会影响生产工作负载、测试站点上使用的SnapMirror关系以及必须继续正常运行的受保护工作负载。</block>
   <block id="22d1d4bc51673707e71b38cb5d9f8053" category="admonition">故障转移开始后、可以在灾难恢复站点(虚拟机、网络和数据存储库)的vCenter中看到已恢复的VM。默认情况下、虚拟机会恢复到工作负载文件夹。</block>
   <block id="7133b9cf238828da0a287b89ce855ec3" category="paragraph"><block ref="7133b9cf238828da0a287b89ce855ec3" category="inline-image-macro-rx" type="image"></block></block>
@@ -572,7 +557,6 @@
   <block id="f1b3d2c036cfab036f34533fa19f954e" category="paragraph">您可以创建复制计划、还可以编辑合规性和测试计划。</block>
   <block id="89dd75b1f79276c7e30e794e1c739f04" category="section-title">创建计划</block>
   <block id="abe3a973462c3c328672dbc95e640218" category="paragraph">如果要在此服务中创建SnapMirror关系、则集群及其SVM对等关系应已在BlueXP灾难恢复之外进行设置。</block>
-  <block id="d5033e157b5ff5f902d411ea87245351" category="list-text">*RPO *：输入恢复点目标(RPO)以指示要恢复的数据量(以时间为单位)。例如、如果您输入60分钟的RPO、则恢复过程中的数据必须始终不超过60分钟。如果发生灾难、您最多可以丢失60分钟的数据。此外、还可以输入要为所有数据存储库保留的Snapshot副本数。</block>
   <block id="d97200be5ae32d344d6cc35c5789517d" category="section-title">编辑计划以测试合规性并确保故障转移测试正常运行</block>
   <block id="e670d26caed2e49f16fe367f74a57f21" category="paragraph">您可能需要设置计划来测试合规性和故障转移测试、以确保这些测试在您需要时能够正常工作。</block>
   <block id="0c9133d8bb2cba28a02319fd78380fa9" category="list-text">*合规性时间影响*：创建复制计划时，服务会默认创建合规性计划。默认合规时间为30分钟。要更改此时间、您可以使用编辑复制计划中的计划。</block>
@@ -856,12 +840,8 @@
   <block id="6dbc81f47f4a822cd11ce7c8403756ed" category="list-text">在故障转移映射选项卡中、选择每个资源右侧的向下箭头并映射每个资源。</block>
   <block id="022ab008c31f5588f9d15da4dc3439fb" category="list-text">*计算资源*：选择*计算资源*旁边的向下箭头。</block>
   <block id="a358a5c755a9f869690207e2a0726737" category="list-text">*Virtual Machines*：在故障转移映射选项卡中，选择*Virtual Machines*旁边的向下箭头。</block>
-  <block id="909f84e264f0200a692127b28fbdbaaf" category="paragraph">选择与相应网段的网络映射。区块应已配置、因此请选择适当的区块以映射虚拟机。</block>
-  <block id="298abc17ab4bb709de80b68dc38dde2a" category="list-text">*IP地址类型*：在复制计划的虚拟机部分中映射源位置和目标位置之间的网络时，BlueXP  灾难恢复提供两个选项：DHCP或静态IP。对于静态IP、请配置子网、网关和DNS服务器。此外、输入虚拟机的凭据。</block>
   <block id="c28e8a3b83f3f2cce376fe3daa7ad95d" category="paragraph"><block ref="64eb1ec301597178e47fa7deed0121dc" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="453e68e2eb0de34242ac9895a818d82a" category="list-text">*多 个存储库*：在故障转移映射选项卡中，选择*多 个存储库*旁边的向下箭头。根据所选虚拟机、系统会自动选择数据存储库映射。</block>
   <block id="10936c8535aaede0ed75f5d8d4fa6aaf" category="list-text">*保留数量*：输入要保留的快照数量。</block>
-  <block id="b23c862689b973964a4b79af3d87b2de" category="list-text">*源和目标数据存储库*：如果卷已建立SnapMirror关系、则可以选择相应的源和目标数据存储库。如果您选择的卷没有SnapMirror关系、则可以通过选择工作环境及其对等SVM来创建一个。</block>
   <block id="8772d236d3c62b688c3b57224d982ee1" category="paragraph"><block ref="8772d236d3c62b688c3b57224d982ee1" category="inline-image-macro-rx" type="image"></block></block>
   <block id="1267d6fc2aff2a3372b02b4d25a9f397" category="list-text">执行故障转移测试；虚拟机是临时创建的。BlueXP  灾难恢复会从选定的Snapshot创建一个新的FlexClone卷、并将为FlexClone卷提供支持的临时数据存储库映射到ESXi主机。此过程不会在AWS中的内部ONTAP存储或FSx for NetApp ONTAP存储上占用额外的物理容量。初始源卷不会被修改、即使在灾难恢复期间、副本作业也可以继续进行。</block>
   <block id="76e4d72594030fca0b96279d0f8392dc" category="section-title">可能有助于BlueXP  灾难恢复的术语</block>
@@ -928,12 +908,10 @@
   <block id="310c40c0ef022c90f1370d1fe91ca720" category="paragraph">有关详细信息，请参见<block ref="db7c318fcbcad8cfb9a44ac897b870b2" category="inline-link-rx"></block>。</block>
   <block id="718c1087c683dccc1ea79ed6fa0fd10b" category="list-text">*同步快照*：在此版本中、您现在可以同步源和目标之间不同步的快照。如果在BlueXP  灾难恢复之外的目标上删除了快照、则可能会发生这种情况。该服务会每24小时自动删除一次源上的快照。但是、您可以按需执行此操作。通过此功能、您可以确保快照在所有站点之间保持一致。</block>
   <block id="9a3a6422d384602f3e19e123263dc99f" category="paragraph">有关详细信息，请参见<block ref="59c3623215c45197e971057378c86d42" category="inline-link-rx"></block>。</block>
-  <block id="21045c570180940ef07c18bb23d0427d" category="list-text">选择要复制的虚拟机(VM)并分配组。</block>
   <block id="220cf85b4d919dc13e0c6317aa2e2b17" category="list-text">扇出架构中的1对多</block>
   <block id="f2cdd0bbe9f89ecac35fe20b5c70e9fb" category="paragraph">下一步是将所需的VM分组到功能资源组中。通过资源组、您可以将一组依赖虚拟机分组为符合您要求的逻辑组。例如、组可能包含延迟启动顺序、可在恢复时运行。</block>
   <block id="4d179ba15a8047d595a41bbd6175c3be" category="paragraph">在复制计划中选择应用程序时、您可以查看该计划中每个VM的操作系统。这有助于确定如何将虚拟机分组到一个资源组中。</block>
   <block id="7eb18c1801bc45dc00317e09e6cc2211" category="admonition">每个资源组可以包含一个或多个VM。VM将根据此处包含的顺序启动。</block>
-  <block id="236861b5b0d7380c86b58343dda04a42" category="list-text">(可选)在应用程序页面的左侧、按虚拟机的数据存储库筛选虚拟机。</block>
   <block id="794c0f8f77c0af0e4613492580e6d7ab" category="list-text">在应用程序页面的左侧、选择要保护的VM并将其分配给选定组。</block>
   <block id="87661bcc452e9da5afed70a3b9cf3e39" category="paragraph">选定虚拟机将自动添加到组1、并启动一个新的组2。每次将虚拟机添加到最后一个组时、都会添加另一个组。</block>
   <block id="81c61db52db9a56a1819f55910f10afa" category="paragraph"><block ref="37056fc036b85c73069e7f1371212abb" category="inline-image-macro-rx" type="image"></block></block>
@@ -950,7 +928,6 @@
   <block id="b309697bdbe88c0e59d4f6201fe75801" category="list-text">*虚拟网络*：在故障转移映射选项卡中，选择*虚拟网络*旁边的向下箭头。选择源虚拟LAN和目标区块。</block>
   <block id="59b1abd434d2a560773c9f089cc8679a" category="paragraph">如果对默认设置进行了任何更改、则需要提供凭据。</block>
   <block id="0a8bc9b2bb8f581fa27738fc437d64b3" category="paragraph">根据您的选择、此部分可能会显示不同的字段。</block>
-  <block id="25f9829876988ad5a8f8d2b64655ff19" category="list-text">*DHCP*：如果希望VM从DHCP服务器获取网络配置信息，请选择此设置。如果选择此选项、则只需提供虚拟机的凭据即可。</block>
   <block id="16bd7bddefb51b87ff4fbcf4c8831a1d" category="list-text">*静态IP*：如果要手动指定IP配置信息，请选择此设置。您可以从源VM选择相同或不同的信息。如果选择与源相同的、则无需输入凭据。另一方面、如果您选择使用与源不同的信息、则可以提供凭据、VM的IP地址、子网掩码、DNS和网关信息。应在全局级别或每个VM级别提供VM子操作系统凭据。</block>
   <block id="7b2b025be41dbbc4cda9601c1b5523a5" category="list-text">*目标VM前缀和后缀*：在虚拟机详细信息下、您可以选择为VM名称添加前缀和后缀。</block>
   <block id="230dc85a08275a2466390ae799703f92" category="list-text">*源VM CPU和RAM*：在虚拟机详细信息下，您可以选择调整VM CPU和RAM参数的大小。</block>
@@ -961,7 +938,6 @@
   <block id="8043065a3a1affdc7e75a0083d3349b1" category="list-text">同时启动：为所有VM分配相同的数量以同时启动它们、例如1、1、1、1、2、2、3、4、4。</block>
   <block id="aa54fb3621577f63cab9b508032a995d" category="list-text">*Boot Delay*：调整启动操作的延迟(以分钟为单位)。</block>
   <block id="517ed43dc67f057cadcb1c29ecbd75ef" category="admonition">要将启动顺序重置为默认值，请选择*将VM设置重置为默认值*，然后选择要更改回默认值的设置。</block>
-  <block id="739e8f4c4549d6d4a7768c6850d47495" category="list-text">*创建应用程序一致的副本*：指示是否创建应用程序一致的Snapshot副本。该服务将使应用程序处于静修状态、然后创建一个快照、以获得一致的应用程序状态。在Windows上运行的Oracle以及在Windows上运行的Linux和SQL Server支持此功能。</block>
   <block id="2a4ddf396205dca12c00a6eb7e16285a" category="section-title">查看复制计划</block>
   <block id="f7056dbdafc88dd1c68fb0eec6b47aac" category="paragraph">最后、花几分钟时间查看复制计划。</block>
   <block id="6662bb47d30d156ce5604e1d8adf7ae1" category="list-text">查看每个选项卡中的信息：计划详细信息、故障转移映射和VM。</block>
@@ -989,4 +965,36 @@
   <block id="bf18811faac9b8e4fcaebab51afd1113" category="list-text">选择 * 创建 * 。</block>
   <block id="5da6bcdd6ceb1c5910fb17277177402d" category="admonition">此报告可能需要几分钟才能显示。</block>
   <block id="ab6b0c72784c216662673e59f1357cc1" category="list-text">要下载报告，请选择*下载报告*，然后在管理员的下载文件夹中选择该报告。</block>
+  <block id="fa9f16c02f8fd7bab6992dec65c5838d" category="paragraph">添加vCenter站点后、即可创建灾难恢复或_Replication pl뮮_。选择源和目标vCenter、选择资源组、然后对应用程序的还原和启动方式进行分组。例如、您可以对与一个应用程序关联的虚拟机(VM)进行分组、也可以对具有类似层的应用程序进行分组。</block>
+  <block id="cfb3b856fe141dd537038393a8052d33" category="list-text">选择要复制的VM并分配组。</block>
+  <block id="50e34508d81a64564e31500b942aef1c" category="paragraph">创建计划时、应遵循以下准则：</block>
+  <block id="05bbe166de3c0c72c8dde33285c35767" category="list-text">对计划中的所有VM使用相同的凭据。</block>
+  <block id="98ce844145386e78d8c9d936d1b8591b" category="list-text">对计划中的所有VM使用相同的脚本。</block>
+  <block id="970b99aab999d5cc3afca09ebfb3ae92" category="list-text">对计划中的所有VM使用相同的子网、DNS和网关。</block>
+  <block id="7168b459722d34d971b0a9d5df12edfd" category="list-text">(可选)在应用程序页面的左侧、按虚拟机的数据存储库筛选虚拟机。您还可以按名称搜索特定虚拟机。</block>
+  <block id="279787f60e646efb226912fa8f3b8402" category="paragraph">VM的默认值已映射。映射使用的设置与VM在生产环境中使用的设置相同(相同的IP地址、子网掩码和网关)。</block>
+  <block id="09c449fd502e27ce701683f14fc1207c" category="paragraph">选择与相应网段的网络映射。区块应已配置、因此请选择适当的区块以映射虚拟机。</block>
+  <block id="3380eb8d26d8e7c43e790421698a18a1" category="list-text">*IP地址类型*：重新配置VM配置以满足目标虚拟网络要求。BlueXP  灾难恢复提供两种选项：DHCP或静态IP。对于静态IP、请配置子网掩码、网关和DNS服务器。此外、输入VM的凭据。</block>
+  <block id="8914a354aeff1b07a47e178ccae21e27" category="list-text">*DHCP*：如果希望VM从DHCP服务器获取网络配置信息，请选择此设置。如果选择此选项、则只需提供虚拟机的凭据即可。</block>
+  <block id="fac29f06ba242d5478f84ec94ec5b901" category="list-text">*脚本*：您可以将.sh、.bat或.ps1格式的自定义脚本作为故障转移后进程。通过自定义脚本、您可以在故障转移过程之后让BlueXP灾难恢复运行脚本。例如、您可以使用自定义脚本在故障转移完成后恢复所有数据库事务。</block>
+  <block id="df6b8c791e4694210c8862ed040048ef" category="list-text">*创建应用程序一致的副本*：指示是否创建应用程序一致的Snapshot副本。该服务将使应用程序处于静修状态、然后创建一个快照、以获得一致的应用程序状态。在Windows上运行的Oracle以及在Windows上运行的Linux和SQL Server支持此功能。</block>
+  <block id="708b68cf49e909f729ce67863a2f6de3" category="list-text">*DRAMORes*：选择*DRAMORes*旁边的向下箭头。根据VM的选择、系统会自动选择数据存储库映射。</block>
+  <block id="c5bb1e7845a8d9ffe23d02cceec9e4bf" category="list-text">*RPO *：输入恢复点目标(RPO)以指示要恢复的数据量(以时间为单位)。例如、如果您输入60分钟的RPO、则恢复过程中的数据必须始终不超过60分钟。如果发生灾难、您最多可以丢失60分钟的数据。此外、还可以输入要为所有数据存储库保留的Snapshot副本数。</block>
+  <block id="27ee5986957f012b4e37ee29afe29c7f" category="list-text">*源和目标数据存储库*：如果存在多个(扇出) SnapMirror关系、则可以选择要使用的目标。如果卷已建立SnapMirror关系、则会显示相应的源数据存储库和目标数据存储库。如果某个卷没有SnapMirror关系、您现在可以通过选择目标集群、目标SVM并提供卷名称来创建一个。此服务将创建卷和SnapMirror关系。</block>
+  <block id="3c65044e501ce692cb21ad3d837dab25" category="list-text">指定恢复点目标(RPO)后、该服务将根据RPO计划主备份并更新二级目标。</block>
+  <block id="950fa88679103c3c7c4e449423d8bfcc" category="list-text">如果VM来自同一个卷和同一个SVM、则该服务将执行标准ONTAP快照并更新二级目标。</block>
+  <block id="a47d6910008cc9bb73921a36d6609a08" category="list-text">如果VM来自不同的卷和同一个SVM、则该服务会通过包含所有卷来创建一致性组快照并更新二级目标。</block>
+  <block id="3cc1e8e247fa51b1c7d6f2a7c029a515" category="list-text">如果VM来自不同的卷和不同的SVM、则该服务会通过将所有卷包含在相同或不同集群中来执行一致性组开始阶段和提交阶段快照、并更新二级目标。</block>
+  <block id="0657f436653f92c50e703ca7f83a706d" category="list-text">在故障转移期间、您可以选择任何快照。如果您选择最新Snapshot、该服务将创建按需备份、更新目标、并使用该Snapshot进行故障转移。</block>
+  <block id="e829ce8109ca652cb970cd9d2014a52e" category="section-title">测试映射</block>
+  <block id="a8c55ad0456d667323e1ede0b2d4845d" category="list-text">要为测试环境设置不同的映射，请取消选中该框并选择*Test Mappings *选项卡。</block>
+  <block id="3d2d89948829d5041f9ae015297d638b" category="list-text">像以往一样浏览每个选项卡、但这次是针对测试环境。</block>
+  <block id="74ba4c0b5e2da8a64b8dee1c0d8ba2eb" category="paragraph">发生灾难时、请将主内部VMware站点故障转移到另一个内部VMware站点或AWS上的VMware Cloud。您可以在需要时测试故障转移过程以确保成功。</block>
+  <block id="0c872b5a115ced9be728f92faac40bc4" category="paragraph">在故障转移期间、将使用最新的SnapMirror Snapshot副本。或者、您也可以根据SnapMirror的保留策略从时间点快照中选择特定快照。如果您正面临勒索软件等损坏事件、而最近的副本已被泄露或加密、则时间点选项会很有用。BlueXP灾难恢复显示所有可用时间点。</block>
+  <block id="1770bdbefb7e2bbdf6308648d1575a65" category="paragraph">根据生产站点是否运行正常以及您是否出于非关键基础架构故障的原因而故障转移到灾难恢复站点、此过程会有所不同：</block>
+  <block id="8c071d3171ba12aa39f1703883b86a42" category="list-text">无法访问源vCenter或ONTAP集群的严重生产站点故障：BlueXP  灾难恢复允许您选择要还原的任何可用快照。</block>
+  <block id="5c23500391ed1ff22df3528a468b5a9e" category="list-text">生产环境运行状况良好：您可以"立即创建快照"或选择先前创建的快照。</block>
+  <block id="45412678755135d74955408e5c42d8aa" category="paragraph">此过程将中断复制关系、使vCenter源VM脱机、在灾难恢复vCenter中将卷注册为数据存储库、使用计划中的故障转移规则重新启动受保护的VM、并在目标站点上启用读/写。</block>
+  <block id="386733f1fba6df33919f466a94320062" category="paragraph">在开始故障转移之前、您可以对该过程进行测试。此测试不会使虚拟机脱机。</block>
+  <block id="fcdc7ca99a3d01f2be061a078a0a8c1b" category="paragraph">在故障转移测试期间、会临时创建虚拟机。BlueXP灾难恢复不会映射目标卷。相反、它会从选定快照创建一个新的FlexClone卷、并将支持该FlexClone卷的临时数据存储库映射到ESXi主机。</block>
 </blocks>
