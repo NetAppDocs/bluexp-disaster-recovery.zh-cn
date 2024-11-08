@@ -401,10 +401,8 @@
   <block id="d2821a0bfab67d1ac8b7770287a7e5fa" category="paragraph"><block ref="5e6f535f5269a2222938cba2b978dc6c" category="inline-link-rx"></block>。</block>
   <block id="0d2ad64b559232943585fd7b1d8a6a97" category="section-title">2023年9月27日</block>
   <block id="0c31e0b40d23036cf9c9e0c4345b96d6" category="paragraph">此BlueXP灾难恢复预览版包括以下更新：</block>
-  <block id="83c8a47ea17763c3093bdee6c91d4c7c" category="list-text">*信息板更新*：现在您可以单击信息板上的选项、以便于快速查看信息。此外、信息板现在还会显示故障转移和迁移的状态。</block>
   <block id="be74a2f8b73ed15a46d21c202566b3bb" category="inline-link">在信息板上查看灾难恢复计划的运行状况</block>
   <block id="d1181cbae4acc0d9feb9f608b3ee586f" category="paragraph">请参见<block ref="cdc1638a4873b7c2cfc1c5962a5d03ab" category="inline-link-rx"></block>。</block>
-  <block id="6285873a780e650e27e2cde2a54a7c13" category="list-text">*复制计划更新*：</block>
   <block id="056f6fba19f65e991a1c38d676e1c20d" category="list-text">*RPO *：现在可以在复制计划的数据存储库部分中输入恢复点目标(RPO)和保留计数。这表示必须存在的数据量、这些数据量不应早于设置的时间。例如、如果您将其设置为5分钟、则在发生灾难时、系统可能会丢失长达5分钟的数据、而不会影响业务关键型需求。</block>
   <block id="6b4866d6790f0b6c044df7d2894f1313" category="paragraph">请参见<block ref="5cf2140f2775e5f1ccc24bb836a069a3" category="inline-link-rx"></block>。</block>
   <block id="ff7e9f26eed12684568d409b38d71bcc" category="list-text">*网络增强功能*：在复制计划的虚拟机部分中映射源位置和目标位置之间的网络时、BlueXP灾难恢复现在提供两个选项：DHCP或静态IP。以前仅支持DHCP。对于静态IP、您需要配置子网、网关和DNS服务器。此外、您现在还可以输入虚拟机的凭据。</block>
@@ -418,10 +416,6 @@
   <block id="f84b964a31258c14e682925c71bbbd80" category="list-text">多对多</block>
   <block id="b1026ebb435e887031ec24334255046b" category="paragraph">BlueXP灾难恢复预览是一种基于云的灾难恢复服务、可自动执行灾难恢复工作流。最初、借助BlueXP灾难恢复预览版、您可以使用Amazon FSx for ONTAP保护在AWS上将NetApp存储迁移到VMware Cloud (VMC)的基于NFS的内部VMware工作负载。</block>
   <block id="8f34806925352860a20b553ca661087f" category="paragraph">此版本包含以下更新：</block>
-  <block id="3c588cce706af28ae858573fe547adee" category="list-text">*启动顺序的资源组更新*：创建灾难恢复或复制计划时，可以将虚拟机添加到功能正常的资源组中。通过资源组、您可以将一组相关虚拟机置于符合您要求的逻辑组中。例如、组可以包含可在恢复时执行的启动顺序。在此版本中、每个资源组可以包含一个或多个虚拟机。虚拟机将根据您将其纳入计划的顺序启动。请参见<block ref="290954acdd6fc55b493b2726d4197a5a" category="inline-link-rx"></block>。</block>
-  <block id="df189cdccc86fb97d3dabac525f1ea4a" category="list-text">*复制验证*：在创建灾难恢复或复制计划、在向导中确定重复情况并启动向灾难恢复站点的复制之后、BlueXP灾难恢复每30分钟验证一次复制是否根据计划实际进行。您可以在"作业监控器"页面中监控进度。请参见 <block ref="e2d34ab7e7f8a76fb6ba2dcd38a58bb2" category="inline-link-rx"></block>。</block>
-  <block id="8b2ef00da71b5ca9de3b177a60a87cf4" category="list-text">*复制计划显示恢复点目标(RPO)传输计划*：创建灾难恢复或复制计划时、请选择VM。在此版本中、您现在可以查看与数据存储库或虚拟机关联的每个卷的SnapMirror。您还可以查看与SnapMirror计划关联的RPO传输计划。RPO可帮助您确定备份计划是否足以在发生灾难后进行恢复。请参见<block ref="5cf2140f2775e5f1ccc24bb836a069a3" category="inline-link-rx"></block>。</block>
-  <block id="7a1d90df184c04b8d0dc0ca260e46e67" category="list-text">*作业监视器更新*：“作业监视器”页现在包含一个刷新选项，以便您可以获得最新的操作状态。请参见 <block ref="701085704c7bdf4268d7fbe3111fe8b9" category="inline-link-rx"></block>。</block>
   <block id="25d037b5df7f2e04a4d6a1a3bc33caa7" category="paragraph">BlueXP灾难恢复是一种基于云的灾难恢复服务、可自动执行灾难恢复工作流。最初、借助BlueXP灾难恢复预览版、您可以使用Amazon FSx for ONTAP保护在AWS上将NetApp存储迁移到VMware Cloud (VMC)的基于NFS的内部VMware工作负载。</block>
   <block id="06ac9795c624b3d11d868c539799e690" category="summary">通过BlueXP灾难恢复、您可以使用SnapMirror复制功能将源站点上的VMware应用程序复制到云中的灾难恢复远程站点。</block>
   <block id="45f720a21ddc7fdf66bae8fdaea1d53e" category="admonition">创建灾难恢复计划、在向导中确定重复情况并启动到灾难恢复站点的复制之后、BlueXP灾难恢复每30分钟验证一次复制是否确实按照计划进行。您可以在"作业监控器"页面中监控进度。</block>
@@ -481,16 +475,10 @@
   <block id="ad80d6168dc288f4361413eeca80dc5f" category="sidebar">迁移到其他站点</block>
   <block id="610937dc327c640656a75f6464a91433" category="summary">BlueXP灾难恢复是一种基于云的灾难恢复服务、可自动执行灾难恢复工作流。借助适用于VMware的BlueXP灾难恢复、您可以使用NetApp云存储将运行ONTAP存储的内部VMware工作负载复制到公有云中的VMware软件定义的数据中心、作为灾难恢复站点。</block>
   <block id="578e9059da07f7d858d4746bbf9af55a" category="section-title">2024年2月1日</block>
-  <block id="c61970ed6417395a368e95032dbce932" category="list-text">*网络增强功能*：在此版本中，您现在可以调整VM CPU和RAM值的大小。现在、您还可以为虚拟机选择网络DHCP或静态IP地址。</block>
   <block id="bb3e5e687ab316872aaebfbeeb4a6605" category="list-text">DHCP：如果选择此选项、则需要提供VM的凭据。</block>
   <block id="302dd2d13eb7b51a95fccbe2fc1ba0b8" category="list-text">静态IP：您可以从源VM选择相同或不同的信息。如果选择与源相同的、则无需输入凭据。另一方面、如果选择使用与源不同的信息、则可以提供凭据、IP地址、子网掩码、DNS和网关信息。</block>
   <block id="1a390a4e18b059462c8f07ea2ea02106" category="paragraph">有关详细信息，请参见<block ref="5cf2140f2775e5f1ccc24bb836a069a3" category="inline-link-rx"></block>。</block>
-  <block id="18d156337647f6bf6b3408e6bf902c50" category="list-text">*自定义脚本*现在可作为故障转移后的过程包含在内。通过自定义脚本、您可以在故障转移过程之后让BlueXP灾难恢复运行脚本。例如、您可以使用自定义脚本在故障转移完成后恢复所有数据库事务。</block>
   <block id="162522900f68ffca5220e53ec0e2c907" category="paragraph">有关详细信息，请参见<block ref="7cdfded96340b83fb1e5d3c286b13377" category="inline-link-rx"></block>。</block>
-  <block id="8d416397bb32c8298a01a75068b98f3c" category="list-text">*SnapMirror关系*：现在可以在制定复制计划时创建SnapMirror关系。以前、您必须在BlueXP灾难恢复之外创建此关系。</block>
-  <block id="1d73761c9dd4b9338f6974eee8d2a449" category="list-text">*一致性组*：创建复制计划时、可以包括来自不同卷和不同SVM的VM。BlueXP灾难恢复可通过包含所有卷来创建一致性组快照、并更新所有二级位置。</block>
-  <block id="ed38b69c5713d5b42f77e9c3ec5872a8" category="list-text">*VM启动延迟选项*：创建复制计划时，可以将VM添加到资源组。使用资源组、您可以在每个VM上设置延迟、以便它们按延迟顺序启动。</block>
-  <block id="193634e2d37697e73e8a9d15d4dca73d" category="list-text">*应用程序一致的Snapshot副本*：您可以指定创建应用程序一致的Snapshot副本。该服务将使应用程序处于静修状态、然后创建Snapshot以获得一致的应用程序状态。</block>
   <block id="17c3c89f25f7684516a883f30f10b747" category="section-title">2024年1月11日</block>
   <block id="77a292951e2cd7ee0d1bc7d3db0020ec" category="list-text">在此版本中、您可以更快速地从信息板访问其他页面上的信息。</block>
   <block id="0f354958858456370fa7b64c5f2a913c" category="paragraph"><block ref="929628a652068d14da23775529f8803b" category="inline-link-rx"></block>。</block>
@@ -579,11 +567,9 @@
   <block id="4d519f9cb24d082270f8f88ccccd42e3" category="paragraph">了解BlueXP灾难恢复的新增功能。</block>
   <block id="592997dde366d5775e7e052816854f74" category="section-title">2024年3月5日</block>
   <block id="23f1adcf87ca650c2ac077f4be520c97" category="paragraph">这是BlueXP灾难恢复的正式发布版本、其中包括以下更新。</block>
-  <block id="5751cbd481f2486866a7e6d4339df621" category="list-text">*许可更新*：借助BlueXP灾难恢复、您可以注册90天免费试用或自带许可证(自带许可证、BYOL)、这是您从NetApp销售代表处获得的NetApp许可证文件(NLL)您可以使用许可证序列号在BlueXP电子钱包中激活BYOL。BlueXP灾难恢复费用基于数据存储库的已配置容量计算。</block>
   <block id="cba500373ea886a2bb3e508440756918" category="paragraph">有关为BlueXP灾难恢复设置许可的详细信息、请参阅<block ref="7585b54fad00f1219b8233730153156f" category="inline-link-rx"></block>。</block>
   <block id="c32aede135606fbfc51d8bd7581b4201" category="inline-link">管理所有BlueXP服务的许可证</block>
   <block id="4d2e644b683b6f34426a63ff3961ea9d" category="paragraph">有关管理*all* BlueXP服务许可证的详细信息，请参阅<block ref="834374a0b207d980c4d47827175a6637" category="inline-link-rx"></block>。</block>
-  <block id="5938c93734fbca9c12e3827aa5218ed8" category="list-text">*编辑计划*：在此版本中，您现在可以设置测试合规性和故障转移测试的计划，以确保这些计划在您需要时可以正常工作。</block>
   <block id="4b2bfa262e877a668b7102f58d207f63" category="inline-link">创建复制计划</block>
   <block id="976dcedce9d4c9dc14db60abc49c5867" category="paragraph">有关详细信息，请参见<block ref="8026234d3eaba16fdffb266108c2804b" category="inline-link-rx"></block>。</block>
   <block id="0468e5ced7eddf7112cb542d124a006f" category="paragraph">此BlueXP灾难恢复预览版包括以下更新：</block>
@@ -617,8 +603,6 @@
   <block id="be976ba4e18c887ae57e14f6ebfbbab3" category="sidebar">灾难恢复到云是一种经济高效的弹性方法、可保护工作负载免受站点中断和数据损坏事件(例如勒索软件)的影响。借助适用于VMware的BlueXP灾难恢复、您可以将运行ONTAP存储的内部VMware工作负载复制到公共云中的VMware软件定义的数据中心、或者复制到作为灾难恢复站点的其他内部站点。</block>
   <block id="93716955add4f66b2af685a33bac4789" category="section-title">2024年5月15日</block>
   <block id="9df62cb4d6f151b560e84723841bd523" category="paragraph">此BlueXP灾难恢复版本包括以下更新：</block>
-  <block id="7f1d1e9df7ef6953a6e373e29826ca55" category="list-text">*将VMware工作负载从内部复制到内部*现已作为正式发布功能发布。以前、它是功能有限的技术预览版。</block>
-  <block id="b7005516f0c1f875afae2146a2fb3617" category="list-text">*许可更新*： 借助BlueXP灾难恢复、您可以注册90天免费试用、在Amazon Marketplace购买按需购买(PAYGO)订阅、或自带许可证(BYOL)、这是您从NetApp销售代表或NetApp 支持站点(NSS)获取的NetApp许可证文件(NLL)。</block>
   <block id="eb9506998f4dca4bcb82fe962448b79b" category="paragraph">有关为BlueXP灾难恢复设置许可的详细信息、请参阅 <block ref="eaa54a57026891d12cbf928afd176564" category="inline-link-macro-rx"></block>。</block>
   <block id="8deb19747c06e3643bab5716cb645635" category="paragraph">如果这是您首次登录此服务、则会显示登录页面、您可以注册免费试用。</block>
   <block id="dd1ef091f49695b9c14e0e34da748ab7" category="list-text">如果尚未添加BlueXP Connector、则需要添加Connector。要添加接头、请参见<block ref="d6df7dcc2fc3105e10967a9194806ce5" category="inline-link-rx"></block>。</block>
@@ -768,19 +752,12 @@
   <block id="d3aa03526082ef556ffca1a6a35a1775" category="paragraph">虚拟机。 Snapshot管理。 还原为快照</block>
   <block id="3817fbf7d76df44f4565ed3cde76a690" category="paragraph">用于将虚拟机设置为其在给定快照下所处的状态。</block>
   <block id="d8e45589bc9d86b39aed3bcde52935ac" category="section-title">2024年7月5日</block>
-  <block id="7ee40b46e664d0d7baaad4da422c7457" category="list-text">*支持AFF A系列*：此版本支持NetApp AFF A系列硬件平台。</block>
-  <block id="a1961f9eb07acee12f93a3f0b929745e" category="list-text">*支持从内部到内部的VMware VMFS数据存储库*：此版本包括对受内部存储保护的VMware vSphere虚拟机文件系统(VMFS)数据存储库上装载的VM的_技术预览_支持。在此版本中、支持通过技术预览将内部VMware工作负载灾难恢复到具有VMFS数据存储库的内部VMware环境。</block>
   <block id="710abd7c1d5a2a3be1aa4c7dbff890cf" category="admonition">NetApp不会对任何预览的工作负载容量收取任何费用。</block>
-  <block id="a1975f713c38b2cbf1c095ed7dbadabe" category="list-text">*编辑复制计划*：此版本增强了故障转移映射页面，以使其更清晰。</block>
   <block id="e9558a079e21d43034f54a99b19f2ad7" category="inline-link">管理计划</block>
   <block id="583edef1d12ac8fcf925b864da2d76c6" category="paragraph">请参阅<block ref="a8a4a23c947d3e2e3dc169027b7cac12" category="inline-link-rx"></block>。</block>
-  <block id="2343906acc207119786e118da0bbadf7" category="list-text">*编辑虚拟机*：在此版本中，在计划中编辑虚拟机的过程包括一些小的UI改进。</block>
   <block id="5f1df9fa6d6ce95c36680ae870250af7" category="inline-link">管理VM</block>
   <block id="f7e4cafc0e54e03cc0ff738b39e333cb" category="paragraph">请参阅<block ref="1d44a072309f2a4f38fd6e17ed7eb631" category="inline-link-rx"></block>。</block>
-  <block id="51c73608632a284eecfb3fce29106b26" category="list-text">*故障转移更新*：在启动故障转移之前，您现在可以确定VM的状态以及它们是否已启动。现在、您可以通过故障转移过程立即创建快照或选择快照。</block>
   <block id="ab132121a366abdd7667443cc98f3a69" category="paragraph">请参阅<block ref="1cbf59ee3e77dd0082612a21b0900f81" category="inline-link-rx"></block>。</block>
-  <block id="66dacd6d538323484187ed3f8c9ef650" category="list-text">*故障转移测试计划*：您现在可以编辑故障转移测试并为故障转移测试设置每日、每周和每月计划。</block>
-  <block id="42b40c3ce2e25adae8327795c655116d" category="list-text">*前提条件信息更新*：BlueXP灾难恢复前提条件信息已更新。</block>
   <block id="8a62eb7f743049ce2523fe7eb67fb48f" category="paragraph">请参阅<block ref="dfd63f4ad4adb15a66b44e212e2488b7" category="inline-link-rx"></block>。</block>
   <block id="8020af4fa709c3156161baa6bf00e88a" category="inline-image-macro">复制计划、资源映射选项卡</block>
   <block id="210dfd955522333f74e13d0843ab02ff" category="paragraph">此部分可能已启用或禁用、具体取决于您的选择。</block>
@@ -804,12 +781,10 @@
   <block id="63d5049791d9d79d86e9a108b0a999ca" category="sidebar">参考</block>
   <block id="b80f9ccd1ed052ae2d1a95c50bd37d8b" category="sidebar">BlueXP灾难恢复所需的vCenter特权</block>
   <block id="f4c84d2d214fb7f3e3cae921398c8e4a" category="section-title">2024年7月17日</block>
-  <block id="e96e73e43a84335e9de1d02f80f7d655" category="list-text">*故障转移测试计划*：此版本包括故障转移测试计划结构的更新，支持每日和每周计划需要更新。此更新要求您禁用并重新启用所有现有复制计划、以便能够使用新的每日和每周故障转移测试计划。这是一次性要求。</block>
   <block id="7043d4fb27c94bc9a206c106cef9d80c" category="paragraph">方法如下：</block>
   <block id="2ae04d8f24d0c8f552b0d3857c0953b3" category="list-text">选择一个计划、然后选择操作图标以显示下拉菜单。</block>
   <block id="dbf8ea65a71d9e2042b03a97a0da4095" category="list-text">选择 * 禁用 * 。</block>
   <block id="9ffe587f372d96c9b0db66cfe333c0cf" category="list-text">几分钟后，选择*Enable*。</block>
-  <block id="dc6efda4f2a86706d886df508f873039" category="list-text">*复制计划更新*：此版本包含对复制计划数据的更新，可解决"未找到快照"问题。这要求您将所有复制计划中的保留数量更改为1、然后启动按需快照。此过程将创建一个新备份并删除所有较早的备份。</block>
   <block id="3d3e2652059a9417e7a9b8801e83b99d" category="list-text">选择复制计划，单击*故障转移映射*选项卡，然后单击*编辑*铅笔图标。</block>
   <block id="f05351f8a712da4ff1e724d342c4670b" category="list-text">单击*数据存储库*箭头将其展开。</block>
   <block id="ee9e0fb0a09a468f33fa6f2dabc4ff49" category="inline-image-macro">编辑故障转移映射页面</block>
@@ -823,15 +798,12 @@
   <block id="2aef38b97efb9369d3e496e8d062d8fd" category="paragraph"><block ref="2aef38b97efb9369d3e496e8d062d8fd" category="inline-image-macro-rx" type="image"></block></block>
   <block id="51c600bec26d8fec2fcc4cb42728fd01" category="list-text">更改复制计划中保留计数的值。</block>
   <block id="895b67d31a903fc743f186c56aeecff6" category="section-title">2024 年 8 月 2 日</block>
-  <block id="b9dbe1e85847c069664ebe888e76d35c" category="list-text">*作业取消*：在此版本中、您现在可以在作业监控器UI中取消作业。</block>
   <block id="4639d0e2e2909a747265c2f704128bca" category="inline-link">监控作业</block>
   <block id="5ef55533619d84d0298304b37a76eeff" category="paragraph">请参阅<block ref="786959fe8223b685d5c08f8e62246672" category="inline-link-rx"></block>。</block>
-  <block id="7967654ba38c10467e0d83677de0e180" category="list-text">*复制计划更新*：您可以通过在“应用程序”页面上按数据存储库筛选VM并选择//来更轻松地添加复制计划 <block ref="8aa3c94c171b2c9d7252afb28ee019a7" category="inline-link-macro-rx"></block>。请参阅<block ref="5cf2140f2775e5f1ccc24bb836a069a3" category="inline-link-rx"></block>。 NG资源映射页面上的更多目标详细信息。</block>
   <block id="24391a0c4e58147fa07febdb32887a1a" category="section-title">取消作业</block>
   <block id="eead8518396b0c1b849be084fbe4f31a" category="paragraph">如果作业正在进行中或处于已排队状态、而您不希望其继续、则可以将其取消。如果作业停留在同一状态、而您希望释放队列中的下一个操作、则可能需要取消该作业。您可能希望在作业超时之前将其取消。</block>
   <block id="26abc41be60bda806b144bd6ecedad10" category="list-text">在作业监控页面中、记下要取消的作业的ID。</block>
   <block id="49e474835558193a9bed54c7dadf777e" category="paragraph">作业必须处于"进行中"或"已排队"状态。</block>
-  <block id="1ff3f27272f2855394e8e2cf0abfa836" category="list-text">*支持使用FC*从内部到内部的VMware VMFS数据存储库：此版本包含一个_technology preview_支持在VMware vSphere虚拟机文件系统(VMFS)数据存储库上挂载的VM、以便将FC保护到内部存储。以前、该服务提供了一个技术预览版、支持将VMFS数据存储库用于iSCSI。</block>
   <block id="fa463eaf10ea5f2243e402c5c574ce96" category="list-text">在操作列中，选择*取消作业*。</block>
   <block id="348a99edae23b1f4e21c5ce75d209a50" category="paragraph">要查看详细信息，请选择每个选项下面的*view*链接。</block>
   <block id="116910f73246efc93a920caaa2ef1743" category="list-text">从BlueXP  灾难恢复顶部菜单中，选择*Replication Plans (复制计划)*，然后选择*Add*(添加)。或者，如果您刚刚开始使用该服务，请从信息板中选择*添加复制计划*。</block>
@@ -852,8 +824,6 @@
   <block id="84c20a0b7ce2eb1001004d644d0ca57e" category="section-title">等待故障恢复完成、然后再运行发现</block>
   <block id="a59aaedc864081e6c1a7bd46bcdf9813" category="paragraph">完成故障转移后、请勿手动在源vCenter上启动发现。等待故障恢复完成、然后在源vCenter上启动发现。</block>
   <block id="eaecda6db64f5346d5c63bfe0094e040" category="section-title">2024年9月20日</block>
-  <block id="ee811bd919a27bd2eb705f65ed45e4f6" category="paragraph">此BlueXP  灾难恢复版本包含以下更新。</block>
-  <block id="b077aa4f9a421cc2e2782608fb5caf4f" category="list-text">*支持从内部到内部的VMware VMFS数据存储库*：此版本支持在VMware vSphere虚拟机文件系统(VMFS)数据存储库上挂载的VM、以便将iSCSI和FC保护到内部存储。以前、该服务提供了一个_technology preview_、支持iSCSI和FC的VMFS数据存储库。</block>
   <block id="0eb65976c0b0c5ffa90b07d4a062e509" category="paragraph">以下是有关iSCSI和FC协议的一些其他注意事项：</block>
   <block id="d671bd2f503deef1e03581ce8d516507" category="list-text">FC支持的是客户端前端协议、而不是复制协议。</block>
   <block id="cf1967c6d778937fae37b9e43582b1b6" category="list-text">BlueXP  灾难恢复仅支持每个ONTAP卷具有一个LUN。此卷不应具有多个LUN。</block>
@@ -893,20 +863,10 @@
   <block id="58e6ab5634cec392e37e4f0d5f8f8db8" category="paragraph"><block ref="58e6ab5634cec392e37e4f0d5f8f8db8" category="inline-image-macro-rx" type="image"></block></block>
   <block id="6339437d88aaa794dbaa48ee62597c24" category="doc">BlueXP  灾难恢复中的新增功能</block>
   <block id="1992f2f9fa5c0cbd3b61255b9dd507bd" category="section-title">2024年10月30日</block>
-  <block id="51ca1579fc5d4f066bdbf640a4814d76" category="list-text">*报告*：在此版本中，您现在可以生成和下载报告，以帮助您分析环境。预先设计的报告汇总故障转移和故障恢复、显示所有站点上的复制详细信息、并显示过去七天的作业详细信息。</block>
   <block id="023cf8170104660fc796a64fdad98afa" category="paragraph">请参阅<block ref="cca93cc3cfc082fe882eefc731706487" category="inline-link-rx"></block>。</block>
-  <block id="978337672bd8dff65bfbecb42cf21f9d" category="list-text">*30天免费试用*：在此版本中，您现在可以注册30天免费试用BlueXP  灾难恢复。以前、免费试用期限为90天。</block>
   <block id="1cb57fbf1f1452e87f62dd668ea03759" category="paragraph">请参阅<block ref="7585b54fad00f1219b8233730153156f" category="inline-link-rx"></block>。</block>
-  <block id="7c63c33c2146d3ce95c7487c1ebbe27e" category="list-text">*禁用和启用复制计划*：先前版本对故障转移测试计划结构进行了更新，这是支持每日和每周计划所必需的。此更新要求您禁用并重新启用所有现有复制计划、以便能够使用新的每日和每周故障转移测试计划。这是一次性要求。</block>
-  <block id="128ecd2ba12e92192724c8e3ed360ffc" category="list-text">*文件夹映射*：创建复制计划并映射计算资源时，现在可以映射文件夹，以便将VM恢复到为数据中心、集群和主机指定的文件夹中。</block>
-  <block id="b7d245c9fa7100d1b04bb8e37530f630" category="list-text">*可用于故障转移、故障恢复和测试故障转移的VM详细信息*：发生故障时、如果您要启动故障转移、执行故障恢复或测试故障转移、现在可以查看VM的详细信息并确定哪些VM未重新启动。</block>
-  <block id="5b7e4b08598b495e5e802015cfda0817" category="list-text">*按顺序启动的虚拟机启动延迟*：创建复制计划时，现在可以为计划中的每个虚拟机设置启动延迟。这样、您就可以设置VM的启动顺序、以确保优先级为一个的所有VM在后续优先级的VM启动之前都处于运行状态。</block>
-  <block id="6bf75b2b973c4e4b2e97cb286b4a0b22" category="list-text">*VM操作系统信息*：创建复制计划时，您现在可以看到该计划中每个VM的操作系统。这有助于确定如何将虚拟机分组到一个资源组中。</block>
-  <block id="c216ae779db45238ce5f187a4e9efc0e" category="list-text">*虚拟机名称别名*：创建复制计划时、现在可以在灾难恢复SIT上的虚拟机名称中添加前缀和后缀。这样、您就可以为计划中的VM使用一个更具描述性的名称。</block>
-  <block id="0b0c4a58a22974b8eb46383cdfabf354" category="list-text">*清理旧快照*：在此版本中、您可以删除超出指定保留数量的不再需要的任何快照。降低快照保留数量后、快照可能会逐渐累积、您现在可以将其删除以释放空间。您可以随时按需执行此操作、也可以在删除复制计划时执行此操作。</block>
   <block id="3eddfb488d257605e7713c24d210beee" category="inline-link">管理站点、资源组、复制计划、数据存储库和虚拟机信息</block>
   <block id="310c40c0ef022c90f1370d1fe91ca720" category="paragraph">有关详细信息，请参见<block ref="db7c318fcbcad8cfb9a44ac897b870b2" category="inline-link-rx"></block>。</block>
-  <block id="718c1087c683dccc1ea79ed6fa0fd10b" category="list-text">*同步快照*：在此版本中、您现在可以同步源和目标之间不同步的快照。如果在BlueXP  灾难恢复之外的目标上删除了快照、则可能会发生这种情况。该服务会每24小时自动删除一次源上的快照。但是、您可以按需执行此操作。通过此功能、您可以确保快照在所有站点之间保持一致。</block>
   <block id="9a3a6422d384602f3e19e123263dc99f" category="paragraph">有关详细信息，请参见<block ref="59c3623215c45197e971057378c86d42" category="inline-link-rx"></block>。</block>
   <block id="220cf85b4d919dc13e0c6317aa2e2b17" category="list-text">扇出架构中的1对多</block>
   <block id="f2cdd0bbe9f89ecac35fe20b5c70e9fb" category="paragraph">下一步是将所需的VM分组到功能资源组中。通过资源组、您可以将一组依赖虚拟机分组为符合您要求的逻辑组。例如、组可能包含延迟启动顺序、可在恢复时运行。</block>
@@ -997,4 +957,79 @@
   <block id="45412678755135d74955408e5c42d8aa" category="paragraph">此过程将中断复制关系、使vCenter源VM脱机、在灾难恢复vCenter中将卷注册为数据存储库、使用计划中的故障转移规则重新启动受保护的VM、并在目标站点上启用读/写。</block>
   <block id="386733f1fba6df33919f466a94320062" category="paragraph">在开始故障转移之前、您可以对该过程进行测试。此测试不会使虚拟机脱机。</block>
   <block id="fcdc7ca99a3d01f2be061a078a0a8c1b" category="paragraph">在故障转移测试期间、会临时创建虚拟机。BlueXP灾难恢复不会映射目标卷。相反、它会从选定快照创建一个新的FlexClone卷、并将支持该FlexClone卷的临时数据存储库映射到ESXi主机。</block>
+  <block id="b4f4dc0bb14114cf289b66587d52c9a4" category="doc">支持使用FC从内部到内部的VMware VMFS数据存储库</block>
+  <block id="e0b7491fa7ed8915c350ab7831389ebf" category="paragraph">此版本为VMware vSphere虚拟机文件系统(VMFS)数据存储库上挂载的VM提供了一个_technology preview_支持、用于将FC保护到内部存储。以前、该服务提供了一个技术预览版、支持将VMFS数据存储库用于iSCSI。</block>
+  <block id="8b0a520b04093a504975b99493c33a06" category="section-title">作业取消</block>
+  <block id="e37d535f557154a6dd6ed413e0e7782c" category="paragraph">在此版本中、您现在可以在作业监控器UI中取消作业。</block>
+  <block id="5d95f17e7ddbf703465910039fd80c35" category="doc">支持从内部到内部的VMware VMFS数据存储库</block>
+  <block id="089160f6b14935d2f39adf9a95c5da5a" category="paragraph">此版本支持在VMware vSphere虚拟机文件系统(Virtual Machine File System、VMFS)数据存储库上挂载的VM、以便将iSCSI和FC保护到内部存储。以前、该服务提供了一个_technology preview_、支持iSCSI和FC的VMFS数据存储库。</block>
+  <block id="c5562ce2e22a86c247849904ecef3dc8" category="doc">报告</block>
+  <block id="5139de9c5a9b2b36569213d7e9b32f21" category="paragraph">现在、您可以生成并下载报告、以帮助您分析环境。预先设计的报告汇总故障转移和故障恢复、显示所有站点上的复制详细信息、并显示过去七天的作业详细信息。</block>
+  <block id="7a9cfed0d96577c6b811d11dfc152202" category="paragraph">现在、您可以注册30天免费试用BlueXP  灾难恢复。以前、免费试用期限为90天。</block>
+  <block id="3d1d28bb2a74cb6e16888dd71e05374a" category="section-title">禁用和启用复制计划</block>
+  <block id="6f963c01bb5a207fe21d3d9137892d53" category="paragraph">先前版本对故障转移测试计划结构进行了更新、需要更新以支持每日和每周计划。此更新要求您禁用并重新启用所有现有复制计划、以便能够使用新的每日和每周故障转移测试计划。这是一次性要求。</block>
+  <block id="2c4b676c68e03ba0114109310daeb0bb" category="section-title">文件夹映射</block>
+  <block id="3bdb4d4a16c6f952e581bc706b1882f1" category="paragraph">现在、在创建复制计划并映射计算资源时、您可以映射文件夹、以便在为数据中心、集群和主机指定的文件夹中恢复VM。</block>
+  <block id="ddf914c371b7feb4383b7444a99b5fd7" category="section-title">可用于故障转移、故障恢复和测试故障转移的VM详细信息</block>
+  <block id="363712ac31c5614bfddfdcfad95b6a12" category="paragraph">如果发生故障、并且您正在启动故障转移、执行故障恢复或测试故障转移、现在可以查看VM的详细信息并确定哪些VM未重新启动。</block>
+  <block id="5f20b8908706e397cd745a0bb1264de2" category="section-title">VM启动延迟、按顺序启动</block>
+  <block id="7e15dbae84fa8dee12ba906ffe20a1d1" category="paragraph">现在、在创建复制计划时、您可以为计划中的每个VM设置启动延迟。这样、您就可以设置VM的启动顺序、以确保优先级为一个的所有VM在后续优先级的VM启动之前都处于运行状态。</block>
+  <block id="bb121112267374f0e2c29742b8091ab6" category="section-title">VM操作系统信息</block>
+  <block id="1df70ff252045f8a47784f3a1371818c" category="paragraph">创建复制计划时、您现在可以看到该计划中每个VM的操作系统。这有助于确定如何将虚拟机分组到一个资源组中。</block>
+  <block id="09a63cfb0d6c3a3392c3872099b3fba5" category="section-title">VM名称别名</block>
+  <block id="dcdfd42c566ed1c481f3c772573f39e0" category="paragraph">现在、在创建复制计划时、您可以向灾难恢复SIT上的虚拟机名称添加前缀和后缀。这样、您就可以为计划中的VM使用一个更具描述性的名称。</block>
+  <block id="126e7b7b7fdb43e70f3e1542c1f0b51a" category="section-title">清理旧快照</block>
+  <block id="61a7f53a93554e648fe2eb9ad8dd6468" category="paragraph">您可以删除超出指定保留数量的不再需要的任何快照。降低快照保留数量后、快照可能会逐渐累积、您现在可以将其删除以释放空间。您可以随时按需执行此操作、也可以在删除复制计划时执行此操作。</block>
+  <block id="8cd43e146a4fc163d690bdc8bdc47fc6" category="section-title">协调快照</block>
+  <block id="4472d2b5ab8a2ba1ff5429790d72930f" category="paragraph">现在、您可以协调源和目标之间不同步的快照。如果在BlueXP  灾难恢复之外的目标上删除了快照、则可能会发生这种情况。该服务会每24小时自动删除一次源上的快照。但是、您可以按需执行此操作。通过此功能、您可以确保快照在所有站点之间保持一致。</block>
+  <block id="59f6d69ae1140104749a0349a031e880" category="section-title">故障转移测试计划</block>
+  <block id="e1229c7ad0ab8ec8028a9d0383ad8106" category="paragraph">此版本更新了故障转移测试计划结构、支持每日和每周计划需要使用此结构。此更新要求您禁用并重新启用所有现有复制计划、以便能够使用新的每日和每周故障转移测试计划。这是一次性要求。</block>
+  <block id="acd962f8090b530f4e4c526ecbf56b61" category="section-title">复制计划更新</block>
+  <block id="7df13e1b4ece3e3deb4fbe809d05ea7c" category="paragraph">此版本包含对复制计划数据的更新、可解决"Snapshot not found (找不到快照)"问题。这要求您将所有复制计划中的保留数量更改为1、然后启动按需快照。此过程将创建一个新备份并删除所有较早的备份。</block>
+  <block id="dd201962e893b06992d33a2eaba2ffb4" category="section-title">支持AFF A系列</block>
+  <block id="7e074b8e5be6e37ff994dec8db0daff1" category="paragraph">此版本支持NetApp AFF A系列硬件平台。</block>
+  <block id="04865156d99b396070246fd919c01f72" category="paragraph">此版本为受内部存储保护的VMware vSphere虚拟机文件系统(VMFS)数据存储库上装载的VM提供了_technology preview_支持。在此版本中、支持通过技术预览将内部VMware工作负载灾难恢复到具有VMFS数据存储库的内部VMware环境。</block>
+  <block id="0f9f40db25fcedefd723c0bb676ca1ed" category="paragraph">您可以通过以下方式更轻松地添加复制计划：在"Applications"页面上按数据存储库筛选VM、并在"Resource Mapping "页面上选择更多目标详细信息。请参阅<block ref="5cf2140f2775e5f1ccc24bb836a069a3" category="inline-link-rx"></block>。</block>
+  <block id="243b4ade55314e7ac41d77333eebc25c" category="section-title">编辑复制计划</block>
+  <block id="8fba0556e394667a98e03ac72f0425c1" category="paragraph">此版本对故障转移映射页面进行了增强、以使其更加清晰。</block>
+  <block id="ef7d051518cc0e9d684615d2573a82f1" category="section-title">编辑VM</block>
+  <block id="abbe3932aad6fdc33c1f5375a61f5b50" category="paragraph">在此版本中、编辑计划中的VM的过程包括一些小的UI改进。</block>
+  <block id="dc1e07a914c069a9af948be662e1eee8" category="section-title">故障转移更新</block>
+  <block id="30de1fbee43629f7336cc76e23ad2d9b" category="paragraph">现在、在启动故障转移之前、您可以确定虚拟机的状态以及虚拟机是否已启动。现在、您可以通过故障转移过程立即创建快照或选择快照。</block>
+  <block id="7a432f13dc69203884162d5181283bdd" category="paragraph">现在、您可以编辑故障转移测试、并为故障转移测试设置每日、每周和每月计划。</block>
+  <block id="9223735a44654f830630e16621e06b02" category="section-title">更新前提条件信息</block>
+  <block id="e94ad49f98ee43c3d580fe32a77e65a9" category="paragraph">已更新BlueXP  灾难恢复前提条件信息。</block>
+  <block id="dfc3ff60c25f075fd5633bb257473951" category="section-title">将VMware工作负载从内部复制到内部</block>
+  <block id="675fb6431a706ae38f335d519b868c98" category="paragraph">此功能现已作为全面上市功能发布。以前、它是功能有限的技术预览版。</block>
+  <block id="c03b667390566320b1f84fd433ac2cb0" category="section-title">许可更新</block>
+  <block id="016554ecf94b4419b9d1a5bbfda0964c" category="paragraph">借助BlueXP  灾难恢复、您可以注册90天免费试用、通过Amazon Marketplace购买按需购买(PAYGO)订阅、或者自带许可证(BYOL)、这是您从NetApp销售代表或NetApp支持站点(NSS)获取的NetApp许可证文件(NLL)。</block>
+  <block id="7ef9558992630c5660225d491e47ed1b" category="paragraph">借助BlueXP  灾难恢复、您可以注册90天免费试用或自带许可证(自带许可证、BYOL)、这是您从NetApp销售代表处获取的NetApp许可证文件(NLL)您可以使用许可证序列号在BlueXP电子钱包中激活BYOL。BlueXP灾难恢复费用基于数据存储库的已配置容量计算。</block>
+  <block id="cc50c331ee974cc0e4de144fdea1db6b" category="section-title">编辑计划</block>
+  <block id="382435e4c4253ed5f6764c8ef821291f" category="paragraph">在此版本中、您现在可以设置计划来测试合规性和故障转移测试、以确保这些计划在您需要时能够正常工作。</block>
+  <block id="39fbd21560b88d32b617eacef07d54ae" category="section-title">网络增强</block>
+  <block id="4b1f0871766c4b8679290f6038e6a351" category="paragraph">在此版本中、您现在可以调整VM CPU和RAM值的大小。现在、您还可以为虚拟机选择网络DHCP或静态IP地址。</block>
+  <block id="083d10ed5645a35b897f5756cc2b537c" category="section-title">自定义脚本</block>
+  <block id="a0a21dea8ed87af2ee6cdf188106c298" category="paragraph">现在、可作为故障转移后过程包含在内。通过自定义脚本、您可以在故障转移过程之后让BlueXP灾难恢复运行脚本。例如、您可以使用自定义脚本在故障转移完成后恢复所有数据库事务。</block>
+  <block id="cd6e9b8dd5b2724c597265c71ef73b68" category="section-title">SnapMirror 关系</block>
+  <block id="f0bb29238bd3d3459bd0a9cdefc9d679" category="paragraph">现在、您可以在制定复制计划时创建SnapMirror关系。以前、您必须在BlueXP灾难恢复之外创建此关系。</block>
+  <block id="6165c4352e1504dbaeef34d0cc50c187" category="section-title">一致性组</block>
+  <block id="5d0728ad6fe8457d26285c7e7a96e65a" category="paragraph">创建复制计划时、可以包括来自不同卷和不同SVM的VM。BlueXP灾难恢复可通过包含所有卷来创建一致性组快照、并更新所有二级位置。</block>
+  <block id="b6de59b87799d5ee20b85718ecf57a7c" category="section-title">VM启动延迟选项</block>
+  <block id="4accab62af20649e145108a3dc0ca194" category="paragraph">创建复制计划时、您可以将VM添加到资源组。使用资源组、您可以在每个VM上设置延迟、以便它们按延迟顺序启动。</block>
+  <block id="ae97aa8afbc54f8788161361656855d1" category="section-title">应用程序一致的 Snapshot 副本</block>
+  <block id="e635b0ebf5a6a20310a3597c179abf59" category="paragraph">您可以指定创建应用程序一致的Snapshot副本。该服务将使应用程序处于静修状态、然后创建Snapshot以获得一致的应用程序状态。</block>
+  <block id="a19c46c941eaff1f6354bcd13c9d8e31" category="section-title">更快地显示信息板</block>
+  <block id="3faa7f320285eae50e4b897f584c4219" category="section-title">保护基于NFS的内部VMware工作负载</block>
+  <block id="de9bf2b4fc18ad740d18dc573f01d00d" category="section-title">信息板更新</block>
+  <block id="a50d40a404b06d36129623086efe89e7" category="paragraph">现在、您可以单击信息板上的选项、以便于快速查看信息。此外、信息板现在还会显示故障转移和迁移的状态。</block>
+  <block id="735c557824116485e58c494d903aab33" category="section-title">BlueXP  灾难恢复预览</block>
+  <block id="380047022cd9a81208dbad36b7a00acb" category="section-title">资源组会根据启动顺序进行更新</block>
+  <block id="d6eda1ee7ba9b0544b3abd0dd59e5711" category="paragraph">创建灾难恢复或复制计划时、您可以将虚拟机添加到功能正常的资源组中。通过资源组、您可以将一组相关虚拟机置于符合您要求的逻辑组中。例如、组可以包含可在恢复时执行的启动顺序。在此版本中、每个资源组可以包含一个或多个虚拟机。虚拟机将根据您将其纳入计划的顺序启动。请参阅<block ref="290954acdd6fc55b493b2726d4197a5a" category="inline-link-rx"></block>。</block>
+  <block id="2eadbfcbf9d76cb330a79283e42ad557" category="section-title">复制验证</block>
+  <block id="8ab4a0f7954dedd85afa8b9aaa936c89" category="paragraph">创建灾难恢复或复制计划、在向导中确定重复情况并启动向灾难恢复站点的复制之后、BlueXP  灾难恢复每30分钟验证一次复制是否确实按照计划进行。您可以在"作业监控器"页面中监控进度。请参阅 <block ref="e2d34ab7e7f8a76fb6ba2dcd38a58bb2" category="inline-link-rx"></block>。</block>
+  <block id="095782ee526b72c68df8646a5900ccd1" category="section-title">复制计划显示恢复点目标(RPO)传输计划</block>
+  <block id="19662e7ad081cbe9f63cfc0504f0e369" category="paragraph">在创建灾难恢复或复制计划时、您需要选择VM。在此版本中、您现在可以查看与数据存储库或虚拟机关联的每个卷的SnapMirror。您还可以查看与SnapMirror计划关联的RPO传输计划。RPO可帮助您确定备份计划是否足以在发生灾难后进行恢复。请参阅<block ref="5cf2140f2775e5f1ccc24bb836a069a3" category="inline-link-rx"></block>。</block>
+  <block id="f0d8fca280d8272d1fbf03bd197dc6c6" category="section-title">作业监视器更新</block>
+  <block id="aee89117776781844e5694928335b749" category="paragraph">现在、"作业监控"页面包含"刷新"选项、以便您可以获得最新的操作状态。请参阅 <block ref="701085704c7bdf4268d7fbe3111fe8b9" category="inline-link-rx"></block>。</block>
+  <block id="2f2414748c5c55333b00da7bf5d583fc" category="section-title">基于云的灾难恢复服务</block>
 </blocks>
