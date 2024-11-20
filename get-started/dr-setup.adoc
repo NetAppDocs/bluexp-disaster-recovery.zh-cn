@@ -19,43 +19,58 @@ TIP: 请查看 link:../get-started/dr-prerequisites.html["前提条件"] 以确�
 
 
 
-== 准备好进行BlueXP灾难恢复
+== 准备好进行BlueXP  灾难恢复、以实现内部到内部保护
 
-* 验证您的生产环境。
+在设置BlueXP  灾难恢复以实现内部到内部保护之前、请确保满足以下要求：
+
+* ONTAP存储
++
+** 确保您具有ONTAP凭据。
+** 创建或验证灾难恢复站点。
+** 创建或验证目标ONTAP SVM。
+** 确保源和目标ONTAP SVM已建立对等关系。
+
+
+* vCenter集群
 +
 ** 确保要保护的VM托管在NFS数据存储库(使用ONTAP NFS卷)或VMFS数据存储库(使用NetApp iSCSI LUN)上。
-** 确保您拥有内部ONTAP阵列、vCenter和AWS托管的VMware云实例的凭据和访问密钥。
+** 需要查看link:../reference/vcenter-privileges.html["vCenter Privileges"]BlueXP  灾难恢复。
+** 创建灾难恢复用户帐户(而不是默认vCenter管理员帐户)并将vCenter Privileges分配给该帐户。
 
 
-* 创建或验证灾难恢复站点。
+
+
+
+
+== 准备好使用AWS进行BlueXP  灾难恢复、以实现内部到云的保护
+
+要使用AWS设置BlueXP  灾难恢复以实现内部到云保护、您需要设置以下内容：
+
+* 设置适用于NetApp ONTAP的AWS FSx
+* 在AWS SDDC上设置VMware Cloud
+
+
+
+
+=== 设置适用于NetApp ONTAP的AWS FSx
+
+* 创建Amazon FSx for NetApp ONTAP文件系统。
 +
-** 创建或验证您的Amazon FSx文件系统是否已准备就绪。
-** 确保源VM和目标VM已建立对等关系。
+** 配置和配置FSx for ONTAP。Amazon FSx for NetApp ONTAP是一项完全托管的服务、可提供基于NetApp ONTAP文件系统构建的高度可靠、可扩展、高性能和功能丰富的文件存储。
+** 按照和 https://docs.netapp.com/us-en/bluexp-fsx-ontap/start/task-getting-started-fsx.html["适用于NetApp ONTAP 的Amazon FSX快速入门"]中的步骤 https://docs.netapp.com/us-en/netapp-solutions/ehc/aws/aws-native-overview.html["技术报告4938：使用VMware Cloud on AWS将Amazon FSx ONTAP挂载为NFS数据存储库"^]配置和配置FSx for ONTAP。
+
+
+* 将Amazon FSx for ONTAP添加到工作环境中、并添加FSx for ONTAP的AWS凭据。
+* 在AWS FSx for ONTAP实例中创建或验证目标ONTAP SVM。
+* 在源内部ONTAP集群和BlueXP  中的FSx for ONTAP实例之间配置复制。
+
+
+有关详细步骤、请参见。 https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-creating-fsx-working-environment.html["如何设置FSx for ONTAP工作环境"^]
 
 
 
-
-
-
-== 设置适用于AWS SDDC的VMware Cloud
-
-设置适用于AWS软件定义的数据中心(SDDC)的VMware Cloud。
-
-* 创建Amazon FSx for ONTAP文件系统。配置和配置FSx for ONTAP。适用于NetApp ONTAP 的Amazon FSX是一种完全托管的服务、可提供基于常见NetApp ONTAP 文件系统构建的高度可靠、可扩展、高性能和功能丰富的文件存储。
-* 按照此处和此处的步骤 https://docs.netapp.com/us-en/netapp-solutions/ehc/aws/aws-native-overview.html["链接。"^] https://docs.netapp.com/us-en/bluexp-fsx-ontap/start/task-getting-started-fsx.html["适用于NetApp ONTAP 的Amazon FSX快速入门"] 配置和配置FSx for NetApp ONTAP。
-* 将Amazon FSx for NetApp ONTAP添加到工作环境中、并添加FSx for ONTAP的AWS凭据。
-* 在AWS中、您需要执行以下步骤：
-+
-** 在AWS上部署和配置VMware Cloud。
-** 使用VMware帐户并配置SDDC。确保SDDC已与FSx for ONTAP建立连接。
-
-
-
-
-
-
-=== 部署VMware Cloud
+=== 在AWS SDDC上设置VMware Cloud
 
 https://www.vmware.com/products/vmc-on-aws.html["基于 AWS 的 VMware Cloud"^] 为AWS生态系统中基于VMware的工作负载提供云原生体验。每个VMware软件定义的数据中心(SDDC)都在Amazon虚拟私有云(VPC)中运行、并提供完整的VMware堆栈(包括vCenter Server)、NSX-T软件定义的网络、vSAN软件定义的存储以及一个或多个ESXi主机、用于为工作负载提供计算和存储资源。
 
-要在AWS上配置VMC环境、请按照此处的步骤进行操作 https://docs.netapp.com/us-en/netapp-solutions/ehc/aws/aws-setup.html["链接。"^]。指示灯集群还可用于灾难恢复。
+要在AWS上配置VMware Cloud环境、请按照中的步骤 https://docs.netapp.com/us-en/netapp-solutions/ehc/aws/aws-setup.html["在 AWS 上部署和配置虚拟化环境"^]进行操作。也可以使用轻型试点集群进行灾难恢复。
