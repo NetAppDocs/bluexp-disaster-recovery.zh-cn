@@ -580,7 +580,6 @@
   <block id="924cc6eaf82618251de609e2689ed733" category="paragraph">您可以使用以下许可证类型：</block>
   <block id="2caf85d76a31b7bef7132937ff28e9dc" category="list-text">自带许可证(BYOL)、这是您从NetApp销售代表处获得的NetApp许可证文件(NLL)您可以使用许可证序列号在BlueXP电子钱包中激活BYOL。</block>
   <block id="c809a23426c6fb72cef75816c461ade9" category="paragraph">所有BlueXP服务的许可证均由BlueXP数字钱包服务管理。设置BYOL后、您可以在BlueXP电子钱包中看到此服务的有效许可证。</block>
-  <block id="8eb586b1b79ddd3ae7c3123b39d4420e" category="admonition">如果至少有一个VM具有复制计划、则BlueXP灾难恢复费用基于源站点上数据存储库的已配置容量计算得出。故障转移数据存储库的容量不包括在容量允许值中。对于BYOL、如果数据超过允许的容量、则服务操作将受到限制、直到您获得额外的容量许可证或在BlueXP数字钱包中升级许可证为止。</block>
   <block id="7033a5d3e074f0c7401499ee4e48f38a" category="list-text">确保要保护的虚拟机上正在运行VMware工具(或Open VM工具)。</block>
   <block id="af77ac64a97a80925dee7dc916344004" category="list-text">对于在Linux操作系统上运行的Oracle数据库、应为Oracle数据库SYSDBA角色启用操作系统用户身份验证。</block>
   <block id="e23539b066371b4dcfdd50b7d80417d8" category="paragraph">在免费试用结束或许可证过期后、您仍可在服务中执行以下操作：</block>
@@ -1040,4 +1039,5 @@
   <block id="c71c9ca45b74f3ddf3435fee65f93cfc" category="paragraph">VM的默认值已映射。默认映射使用的设置与VM在生产环境中使用的设置相同(相同的IP地址、子网掩码和网关)。</block>
   <block id="a82971318b0c070daea6677a10d3473c" category="paragraph">如果对默认设置进行了任何更改、则必须将目标IP字段更改为"与源不同"。</block>
   <block id="04b2f4a0441b492909bf4cd55502f663" category="admonition">如果将设置更改为"与源不同"、则需要提供VM子操作系统凭据。</block>
+  <block id="935b6ea2b85c115a6475786fc3f54c7b" category="admonition">如果至少有一个VM具有复制计划、则BlueXP  灾难恢复费用将根据源站点上数据存储库的已用容量计算。故障转移数据存储库的容量不包括在容量允许值中。对于BYOL、如果数据超过允许的容量、则服务操作将受到限制、直到您获得额外的容量许可证或在BlueXP数字钱包中升级许可证为止。</block>
 </blocks>
