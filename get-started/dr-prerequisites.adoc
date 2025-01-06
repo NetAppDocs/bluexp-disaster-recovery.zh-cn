@@ -47,6 +47,7 @@ NOTE: 不应提前在目标SVM或SVM中创建灾难恢复卷。BlueXP灾难恢�
 ** 使用iSCSI或FC协议的VMFS
 
 
+* VMware vSphere 7.0 Update 3 (7.0v3)或更高版本
 * 如果您使用的是VMware Cloud SDDC、则需满足以下前提条件。
 +
 ** 在VMware Cloud Console中、使用管理员和NSX云管理员的服务角色。此外、还可以将组织所有者用于组织角色。请参阅 https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/vmware-cloud-ontap.html["《将VMware云基础与AWS FSx for NetApp ONTAP结合使用》文档"^]。

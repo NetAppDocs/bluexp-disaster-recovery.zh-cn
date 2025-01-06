@@ -335,7 +335,6 @@
   <block id="26ff2655fb5643a3e76370d9248a31df" category="admonition">您可以稍后禁用或删除复制计划。</block>
   <block id="47324a4e5509aeccc192aa7b07cbcac7" category="list-text">选择*添加计划*。</block>
   <block id="a9980df200522b9bbaa257521bc396fe" category="paragraph">该计划将添加到计划列表中。</block>
-  <block id="a9233ff25d3c8ffa3e005e6e453381fc" category="paragraph">在创建灾难恢复计划之前、您需要在BlueXP中添加一个主vCenter站点和一个目标vCenter灾难恢复站点。</block>
   <block id="9809a26603cc2fbdd8049c848bf77835" category="paragraph">添加后、BlueXP灾难恢复会对vCenter环境执行深入发现、包括vCenter集群、ESXi主机、数据存储库、存储库、 虚拟机详细信息、SnapMirror副本和虚拟机网络。</block>
   <block id="6df4f43f22118c6a361990f481e6ed83" category="list-text">登录到BlueXP并从左侧导航栏中选择*保护*&gt;*灾难恢复*。</block>
   <block id="2f11fab4722695438910176065d838b4" category="paragraph">您将登录BlueXP灾难恢复信息板页面。首次启动此服务时、您需要添加vCenter信息。稍后、信息板将显示有关站点和复制计划的数据。</block>
@@ -343,7 +342,6 @@
   <block id="5a05572673bc07b0b94f07c482a67d13" category="inline-image-macro">添加vCenter Server屏幕截图 </block>
   <block id="c65c0c2ea94db5e745008fb8af0f7f2e" category="paragraph"><block ref="c65c0c2ea94db5e745008fb8af0f7f2e" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0eb5074333c815ccb54d1f6917e8d217" category="list-text">添加站点、选择BlueXP Connector并提供vCenter凭据。</block>
-  <block id="50a0d7853565af772351213d1b833aa4" category="list-text">要接受源vCenter的自签名证书、请选中此框。</block>
   <block id="1909b7ffbea69e2cc7b387ed9d255c18" category="admonition">自签名证书不如其他证书安全。如果您的vCenter *未*配置证书颁发机构(CA)证书、则应选中此框；否则、与vCenter的连接将不起作用。</block>
   <block id="fa12509cfb8e8ccded16e2a254e988c4" category="list-text">选择 * 添加 * 。</block>
   <block id="a0fa7543e8627767b57d6c2797fbbda9" category="paragraph">接下来、您将添加目标vCenter。</block>
@@ -1040,4 +1038,12 @@
   <block id="a82971318b0c070daea6677a10d3473c" category="paragraph">如果对默认设置进行了任何更改、则必须将目标IP字段更改为"与源不同"。</block>
   <block id="04b2f4a0441b492909bf4cd55502f663" category="admonition">如果将设置更改为"与源不同"、则需要提供VM子操作系统凭据。</block>
   <block id="935b6ea2b85c115a6475786fc3f54c7b" category="admonition">如果至少有一个VM具有复制计划、则BlueXP  灾难恢复费用将根据源站点上数据存储库的已用容量计算。故障转移数据存储库的容量不包括在容量允许值中。对于BYOL、如果数据超过允许的容量、则服务操作将受到限制、直到您获得额外的容量许可证或在BlueXP数字钱包中升级许可证为止。</block>
+  <block id="6264bc70be3baed8dcf906aafe1dfe41" category="list-text">VMware vSphere 7.0 Update 3 (7.0v3)或更高版本</block>
+  <block id="cbbec7a47b1589919d37bd2c9f68a2dd" category="summary">在创建灾难恢复计划之前、您需要在BlueXP  灾难恢复中添加一个主vCenter站点和一个目标vCenter灾难恢复站点。</block>
+  <block id="7f7acb13c0fa74ab37cf6b6545c8b18a" category="doc">将vCenter添加到站点</block>
+  <block id="d7004fe84ddef44ffb8f6fd482ea7b17" category="paragraph">在创建灾难恢复计划之前、您需要在BlueXP  中将主vCenter Server添加到站点和目标vCenter灾难恢复站点。</block>
+  <block id="1a575de6e97bed53905ae3b55c22dd29" category="admonition">根据要添加的站点类型、会显示不同的字段。</block>
+  <block id="7dbf01d6d33098287eb82c71ea10ea1e" category="list-text">(仅适用于内部站点)要接受源vCenter的自签名证书、请选中此框。</block>
+  <block id="c2a573f83674b01d424b4f0c10fdc5f1" category="list-text">(仅适用于云站点)*API令牌*：输入API令牌以授权组织的服务访问。通过提供特定的组织和服务角色来创建API令牌。</block>
+  <block id="92d0331e97c92cd07178f7a7c2ab56da" category="list-text">(仅适用于云站点)*组织ID长*：输入组织的唯一ID。您可以通过单击BlueXP  控制台"帐户"部分中的用户名来识别此ID。</block>
 </blocks>

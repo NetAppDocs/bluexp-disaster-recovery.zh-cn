@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: use/sites-add.html 
 keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter 
-summary: NetApp BlueXP灾难恢复是一种基于云的灾难恢复服务、可自动执行灾难恢复工作流。 
+summary: 在创建灾难恢复计划之前、您需要在BlueXP  灾难恢复中添加一个主vCenter站点和一个目标vCenter灾难恢复站点。 
 ---
-= 添加vCenter站点
+= 将vCenter添加到站点
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -12,7 +12,7 @@ summary: NetApp BlueXP灾难恢复是一种基于云的灾难恢复服务、可�
 
 
 [role="lead"]
-在创建灾难恢复计划之前、您需要在BlueXP中添加一个主vCenter站点和一个目标vCenter灾难恢复站点。
+在创建灾难恢复计划之前、您需要在BlueXP  中将主vCenter Server添加到站点和目标vCenter灾难恢复站点。
 
 添加后、BlueXP灾难恢复会对vCenter环境执行深入发现、包括vCenter集群、ESXi主机、数据存储库、存储库、 虚拟机详细信息、SnapMirror副本和虚拟机网络。
 
@@ -20,6 +20,10 @@ summary: NetApp BlueXP灾难恢复是一种基于云的灾难恢复服务、可�
 . 登录到BlueXP并从左侧导航栏中选择*保护*>*灾难恢复*。
 +
 您将登录BlueXP灾难恢复信息板页面。首次启动此服务时、您需要添加vCenter信息。稍后、信息板将显示有关站点和复制计划的数据。
+
++
+
+NOTE: 根据要添加的站点类型、会显示不同的字段。
 
 . *Source*：选择*Discover vCenter server*以输入有关源vCenter站点的信息。
 +
@@ -30,17 +34,19 @@ TIP: 如果某些vCenter站点已存在、而您希望添加更多vCenter站点�
 image:vcenter-add.png["添加vCenter Server屏幕截图 "]
 
 +
-.. 添加站点、选择BlueXP Connector并提供vCenter凭据。
-.. 要接受源vCenter的自签名证书、请选中此框。
+** 添加站点、选择BlueXP Connector并提供vCenter凭据。
+** (仅适用于内部站点)要接受源vCenter的自签名证书、请选中此框。
 +
 
 NOTE: 自签名证书不如其他证书安全。如果您的vCenter *未*配置证书颁发机构(CA)证书、则应选中此框；否则、与vCenter的连接将不起作用。
 
-.. 选择 * 添加 * 。
+** (仅适用于云站点)*API令牌*：输入API令牌以授权组织的服务访问。通过提供特定的组织和服务角色来创建API令牌。
+** (仅适用于云站点)*组织ID长*：输入组织的唯一ID。您可以通过单击BlueXP  控制台"帐户"部分中的用户名来识别此ID。
+
+
+. 选择 * 添加 * 。
 +
 接下来、您将添加目标vCenter。
-
-
 
 . *目标*：
 +

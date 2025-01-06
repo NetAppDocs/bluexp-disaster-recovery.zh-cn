@@ -6,7 +6,7 @@ entries:
   url: "/use/use-overview.html"
 - title: 在信息板上查看灾难恢复计划的运行状况
   url: "/use/dashboard-view.html"
-- title: 添加vCenter站点
+- title: 将vCenter添加到站点
   url: "/use/sites-add.html"
 - title: 创建复制计划
   url: "/use/drplan-create.html"

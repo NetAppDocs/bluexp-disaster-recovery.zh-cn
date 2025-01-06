@@ -21,7 +21,7 @@ indexpage:
       url: "/get-started/dr-faq.html"
   - title: 使用BlueXP灾难恢复
     links:
-    - title: 添加vCenter站点
+    - title: 将vCenter添加到站点
       url: "/use/sites-add.html"
     - title: 创建灾难恢复计划
       url: "/use/drplan-create.html"
