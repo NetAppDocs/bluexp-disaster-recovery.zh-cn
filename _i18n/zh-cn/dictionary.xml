@@ -452,7 +452,6 @@
   <block id="901540dd7e45eaf2226327527c8d78b4" category="list-text">*Source*：选择*Discover vCenter server*以输入有关源vCenter站点的信息。</block>
   <block id="bc7f3cb185f48d451eb5ef976e8ad82d" category="list-text">*目标*：</block>
   <block id="d23a9d83c87c6eacef309f00a2beb5d3" category="inline-image-macro">站点页面屏幕截图</block>
-  <block id="28f8c0c78028f2e899f7af50ce138e1b" category="paragraph"><block ref="28f8c0c78028f2e899f7af50ce138e1b" category="inline-image-macro-rx" type="image"></block></block>
   <block id="6f5e3fdfa73285ac2283ba492cf2d47b" category="list-text">AWS上的VMware Cloud (VMC)与Amazon FSx for NetApp ONTAP或</block>
   <block id="b374472b15e644f23d1e6b059b5216b9" category="list-text">采用ONTAP存储的另一个基于NFS的内部VMware环境</block>
   <block id="53c1c0c22e2a647591a0b52427852850" category="paragraph"><block ref="53c1c0c22e2a647591a0b52427852850" category="inline-image-macro-rx" type="image"></block></block>
@@ -1046,4 +1045,5 @@
   <block id="7dbf01d6d33098287eb82c71ea10ea1e" category="list-text">(仅适用于内部站点)要接受源vCenter的自签名证书、请选中此框。</block>
   <block id="c2a573f83674b01d424b4f0c10fdc5f1" category="list-text">(仅适用于云站点)*API令牌*：输入API令牌以授权组织的服务访问。通过提供特定的组织和服务角色来创建API令牌。</block>
   <block id="92d0331e97c92cd07178f7a7c2ab56da" category="list-text">(仅适用于云站点)*组织ID长*：输入组织的唯一ID。您可以通过单击BlueXP  控制台"帐户"部分中的用户名来识别此ID。</block>
+  <block id="15a58a3d11cafa89812a0ab9b55e93b0" category="paragraph"><block ref="15a58a3d11cafa89812a0ab9b55e93b0" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>
