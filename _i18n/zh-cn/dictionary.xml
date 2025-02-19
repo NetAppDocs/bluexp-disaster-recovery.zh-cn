@@ -1046,4 +1046,13 @@
   <block id="c2a573f83674b01d424b4f0c10fdc5f1" category="list-text">(仅适用于云站点)*API令牌*：输入API令牌以授权组织的服务访问。通过提供特定的组织和服务角色来创建API令牌。</block>
   <block id="92d0331e97c92cd07178f7a7c2ab56da" category="list-text">(仅适用于云站点)*组织ID长*：输入组织的唯一ID。您可以通过单击BlueXP  控制台"帐户"部分中的用户名来识别此ID。</block>
   <block id="15a58a3d11cafa89812a0ab9b55e93b0" category="paragraph"><block ref="15a58a3d11cafa89812a0ab9b55e93b0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ca716ff875c64c5d237c8e862b62065c" category="doc">ASA R2支持VMFS存储上的VM和数据存储库</block>
+  <block id="1979efa5817be86acee4a8fbdf309a1a" category="paragraph">此版本的BlueXP  灾难恢复支持对VMFS存储上的VM和数据存储库使用ASA R2。在ASA R2系统上、ONTAP软件支持基本SAN功能、但会删除SAN环境中不支持的功能。</block>
+  <block id="d154d7f159ffe4fedd65f7894a405e59" category="paragraph">此版本支持ASA R2的以下功能：</block>
+  <block id="38e9022b7f95524a99b3126af89eb640" category="list-text">为主存储配置一致性组(仅限平面一致性组、表示只有一个级别没有分层结构)</block>
+  <block id="bbc4e3ff648912e4a892f88fcb03c65b" category="list-text">备份(一致性组)操作、包括SnapMirror自动化</block>
+  <block id="7e13cc5491f076161e0aefc0728bf351" category="paragraph">BlueXP  灾难恢复中对ASA R2的支持使用ONTAP 9.161。</block>
+  <block id="60a0836359d058db16981cf45c24594f" category="paragraph">虽然数据存储库可以挂载在ONTAP卷或ASA R2存储单元上、但BlueXP  灾难恢复中的资源组不能同时包含ONTAP和ASA R2中的数据存储库。您可以从资源组中的ONTAP或ASA R2选择数据存储库。</block>
+  <block id="79043fd5ff3b61216207b60882cd72cd" category="section-title">2025年2月19日</block>
+  <block id="c3687f641cfdd19b41b8fe6f7cb68897" category="paragraph">4.2 版</block>
 </blocks>

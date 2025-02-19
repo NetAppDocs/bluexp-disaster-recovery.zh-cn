@@ -1,0 +1,19 @@
+= ASA R2支持VMFS存储上的VM和数据存储库
+:allow-uri-read: 
+
+
+
+
+=== ASA R2支持VMFS存储上的VM和数据存储库
+
+此版本的BlueXP  灾难恢复支持对VMFS存储上的VM和数据存储库使用ASA R2。在ASA R2系统上、ONTAP软件支持基本SAN功能、但会删除SAN环境中不支持的功能。
+
+此版本支持ASA R2的以下功能：
+
+* 为主存储配置一致性组(仅限平面一致性组、表示只有一个级别没有分层结构)
+* 备份(一致性组)操作、包括SnapMirror自动化
+
+
+BlueXP  灾难恢复中对ASA R2的支持使用ONTAP 9.161。
+
+虽然数据存储库可以挂载在ONTAP卷或ASA R2存储单元上、但BlueXP  灾难恢复中的资源组不能同时包含ONTAP和ASA R2中的数据存储库。您可以从资源组中的ONTAP或ASA R2选择数据存储库。
