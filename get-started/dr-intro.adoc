@@ -47,7 +47,7 @@ BlueXP灾难恢复具有以下优势：
 
 * 使用SnapMirror复制将内部生产站点上的VMware应用程序复制到云中或内部的灾难恢复远程站点。
 * 将VMware工作负载从原始站点迁移到其他站点。
-* 执行故障转移测试；虚拟机是临时创建的。BlueXP  灾难恢复会从选定的Snapshot创建一个新的FlexClone卷、并将为FlexClone卷提供支持的临时数据存储库映射到ESXi主机。此过程不会在AWS中的内部ONTAP存储或FSx for NetApp ONTAP存储上占用额外的物理容量。初始源卷不会被修改、即使在灾难恢复期间、副本作业也可以继续进行。
+* 执行故障转移测试；虚拟机是临时创建的。BlueXP  灾难恢复会从选定快照创建一个新的FlexClone卷、并将为FlexClone卷提供支持的临时数据存储库映射到ESXi主机。此过程不会在AWS中的内部ONTAP存储或FSx for NetApp ONTAP存储上占用额外的物理容量。初始源卷不会被修改、即使在灾难恢复期间、副本作业也可以继续进行。
 * 发生灾难时、可按需将主站点故障转移到灾难恢复站点、灾难恢复站点可以是基于AWS的VMware Cloud和FSx for NetApp ONTAP、也可以是采用ONTAP的内部VMware环境。
 * 解决灾难后、根据需要从灾难恢复站点故障恢复到主站点。
 
@@ -100,7 +100,7 @@ NOTE: 如果至少有一个VM具有复制计划、则BlueXP  灾难恢复费用
 
 BlueXP灾难恢复可以恢复从内部站点复制到Amazon FSx for ONTAP或其他内部站点的工作负载。此服务可通过虚拟机注册到虚拟机云(Virtual Machine Cloud、VMC)以及直接在VMware网络虚拟化和安全平台NSX-T上的网络映射、自动执行从SnapMirror级别的恢复所有虚拟机云环境均包含此功能。
 
-BlueXP灾难恢复使用ONTAP SnapMirror技术、该技术可提供高效复制、并保持ONTAP永久增量Snapshot效率。SnapMirror复制可确保应用程序一致的Snapshot副本始终保持同步、并且数据在故障转移后立即可用。
+BlueXP  灾难恢复使用ONTAP SnapMirror技术、该技术可提供高效复制并保持ONTAP永久增量快照效率。SnapMirror复制可确保应用程序一致的Snapshot副本始终保持同步、并且数据在故障转移后立即可用。
 
 image:dr-architecture-diagram-70-2.png["该图显示了适用于VMware服务基础架构的BlueXP灾难恢复架构"]
 
@@ -112,7 +112,7 @@ image:dr-architecture-diagram-onprem-to-onprem3.png["该图显示了适用于VMw
 
 * 该服务还允许您将虚拟机故障恢复到原始源位置。
 * 您可以在不中断原始虚拟机的情况下测试灾难恢复故障转移过程。此测试通过创建卷的FlexClone将虚拟机恢复到隔离的网络。
-* 对于故障转移或测试故障转移过程、您可以选择要从中恢复虚拟机的最新(默认)或选定Snapshot。
+* 对于故障转移或测试故障转移过程、您可以选择用于恢复虚拟机的最新(默认)快照或选定快照。
 
 
 

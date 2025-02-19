@@ -178,7 +178,6 @@
   <block id="d244f191aaddadced4c31b2f67d06c9c" category="inline-image-macro">该图显示了适用于VMware服务基础架构的BlueXP灾难恢复架构</block>
   <block id="7599cfdf730a164b0625ccc661508efa" category="list-text">该服务还允许您将虚拟机故障恢复到原始源位置。</block>
   <block id="a6d3ce8aba8914f5380d164c99d7dab0" category="list-text">您可以在不中断原始虚拟机的情况下测试灾难恢复故障转移过程。此测试通过创建卷的FlexClone将虚拟机恢复到隔离的网络。</block>
-  <block id="b5a43a585d1a40908cfd5ee656c8579c" category="list-text">对于故障转移或测试故障转移过程、您可以选择要从中恢复虚拟机的最新(默认)或选定Snapshot。</block>
   <block id="b1151aae9531d2f5e85d085e8878cea6" category="summary">如果您只是想快速了解问题解答，此常见问题解答会很有帮助。</block>
   <block id="3c3dfe6244a41574842edaa31699ec7f" category="doc">BlueXP灾难恢复的常见问题</block>
   <block id="942a771213d3b59ba27960f61d97b1ac" category="inline-link"><block ref="942a771213d3b59ba27960f61d97b1ac" category="inline-link-rx"></block></block>
@@ -259,14 +258,11 @@
   <block id="036828752e0e356c83a2f88c3a26b344" category="list-text">在“Test Failover”(测试故障转移)页面中，输入“Clean up Failover”(清理故障转移)并选择“Clean up Failover test*”(清理故障转移测试)。</block>
   <block id="ce68649418f9a08c1ca788541d81a5fc" category="section-title">将源站点故障转移到灾难恢复站点</block>
   <block id="f5a93054f0d69f6d7904ca9d2efa38f0" category="paragraph">故障转移过程涉及以下操作：</block>
-  <block id="f2e9bb6d97b8634fb3fa438072480445" category="list-text">如果选择了最新Snapshot、则会执行SnapMirror更新以复制最新更改。</block>
   <block id="14e6c9bc0f37651c006424bfafce5ae9" category="list-text">源虚拟机已关闭。</block>
   <block id="98699ecbd563a31e2c5c4fbb9c9a84b3" category="list-text">此时、SnapMirror关系将中断、目标卷将设置为读/写卷。</block>
-  <block id="07c2b4a1db2bc2d52a733c5592ccde94" category="list-text">根据所选的Snapshot、活动文件系统将还原到指定的Snapshot (最新或选定)</block>
   <block id="9bddce206efcc2640b7dea26d41cc5fb" category="list-text">目标虚拟机将根据在"资源组"页面中捕获的顺序进行注册并启动。</block>
   <block id="c1942c862f0687fdf3f5a7564e0eadfa" category="list-text">SnapMirror关系会从目标虚拟机反转到源虚拟机。</block>
   <block id="d0d1a7100fd604152ac7b93eb1abc016" category="list-text">在右侧，选择*Actions*选项 <block ref="2fddd650b01c7f9674be856867aae05d" category="inline-image-macro-rx" type="image"></block> 并选择*故障转移*。</block>
-  <block id="c8876c4e46fed1dae800753bc202e67d" category="list-text">为要从中恢复的数据存储库选择Snapshot。  默认值为最新。</block>
   <block id="0362f1f30abcc40f31c3c6618b1a15c3" category="list-text">要检查进度，请在顶部菜单中选择*Job monitoring (作业监控)*。</block>
   <block id="ceeed92bd86d67dc2a2a6016ed40a571" category="paragraph">您可以快速浏览所有灾难恢复资源、也可以详细了解每个资源：</block>
   <block id="3faa64303d5f5bcd043bb88f6768e603" category="list-text">站点</block>
@@ -302,7 +298,6 @@
   <block id="c292b94d404e989038191db88d347fc7" category="list-text">要对资源组执行操作，请选择*Actions*选项 <block ref="2fddd650b01c7f9674be856867aae05d" category="inline-image-macro-rx" type="image"></block>  并选择任意选项，如*Edit resource group*或*Delete resource group*。</block>
   <block id="d88f9a7fc239e91ef7446fdd0e2c26a4" category="list-text">在右侧，选择*Actions*选项 <block ref="2fddd650b01c7f9674be856867aae05d" category="inline-image-macro-rx" type="image"></block> 并选择*复本*。</block>
   <block id="4e76033871d8eb52e7a46330cc531bd8" category="doc">将应用程序故障恢复到原始源</block>
-  <block id="9fd81a4e73d3e91025886de67c06b95d" category="paragraph">解决灾难后、从灾难恢复站点故障恢复到源站点以恢复正常运行。您可以选择要从中恢复的Snapshot。</block>
   <block id="95c065ae2a71de38942ceb973d97399b" category="paragraph">在此工作流中、BlueXP灾难恢复会在反转复制方向之前、将所有更改复制(重新同步)回原始源虚拟机。此过程从已完成故障转移到目标的关系开始、涉及以下步骤：</block>
   <block id="c6e71b0dcb6847124e49e97ed111f902" category="list-text">在目标站点上、虚拟机将关闭并取消注册、卷将被卸载。</block>
   <block id="187b70ae9883d244642e7af4f1b374c6" category="list-text">初始源上的SnapMirror关系将断开、以使其变为读/写状态。</block>
@@ -517,7 +512,6 @@
   <block id="208ae1835c38717d827d78f2184f1eb8" category="paragraph">NetApp不会因使用BlueXP灾难恢复试用版而向您收费。</block>
   <block id="49cc6e59fe89d60aa8a69d475908ad17" category="section-title">BlueXP灾难恢复的工作原理</block>
   <block id="53bb415fa5ffe0063bff5bf128aceea8" category="paragraph">BlueXP灾难恢复可以恢复从内部站点复制到Amazon FSx for ONTAP或其他内部站点的工作负载。此服务可通过虚拟机注册到虚拟机云(Virtual Machine Cloud、VMC)以及直接在VMware网络虚拟化和安全平台NSX-T上的网络映射、自动执行从SnapMirror级别的恢复所有虚拟机云环境均包含此功能。</block>
-  <block id="79121a92993faaa181b6eb7b104f73ea" category="paragraph">BlueXP灾难恢复使用ONTAP SnapMirror技术、该技术可提供高效复制、并保持ONTAP永久增量Snapshot效率。SnapMirror复制可确保应用程序一致的Snapshot副本始终保持同步、并且数据在故障转移后立即可用。</block>
   <block id="e907b41f5f3d7332bee5a43fbbf78a08" category="section-title">设置许可</block>
   <block id="db9425c5e893fb09212aa796b71ab4ff" category="paragraph"><block ref="db9425c5e893fb09212aa796b71ab4ff" category="inline-image-macro-rx" type="image"></block></block>
   <block id="9aea41391b3a188365a351addd6cf6fc" category="list-text">如果您是具有现有Connector的BlueXP用户、则在选择"灾难恢复"时、将显示一条有关注册的消息。</block>
@@ -740,7 +734,6 @@
   <block id="210dfd955522333f74e13d0843ab02ff" category="paragraph">此部分可能已启用或禁用、具体取决于您的选择。</block>
   <block id="30cb4638cdd1e514eba27473e745afb4" category="paragraph">在测试映射选项卡上、虚拟机和存储库映射处于禁用状态。</block>
   <block id="711c35de4b0430b043159f5d91f6752f" category="inline-image-macro">故障转移页面</block>
-  <block id="418818fc05931805b481fbdf48b3a075" category="list-text">在故障转移页面中、立即启动快照或为要从中恢复的数据存储库选择快照。默认值为最新。</block>
   <block id="51d5fa513676d68f3e574487650b021d" category="paragraph">在发生故障转移之前、系统将为当前源创建快照并将其复制到当前目标。</block>
   <block id="7d0da89e5c4df500c537ba4145ed8fae" category="list-text">或者，如果您希望即使检测到通常会阻止故障转移发生的错误，也进行故障转移，请选择*Force Failover。</block>
   <block id="544bb990c26b075198ab3593eb235cab" category="list-text">在框中键入"Failover (故障转移)"。</block>
@@ -792,7 +785,6 @@
   <block id="c28e8a3b83f3f2cce376fe3daa7ad95d" category="paragraph"><block ref="64eb1ec301597178e47fa7deed0121dc" category="inline-image-macro-rx" type="image"></block></block>
   <block id="10936c8535aaede0ed75f5d8d4fa6aaf" category="list-text">*保留数量*：输入要保留的快照数量。</block>
   <block id="8772d236d3c62b688c3b57224d982ee1" category="paragraph"><block ref="8772d236d3c62b688c3b57224d982ee1" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="1267d6fc2aff2a3372b02b4d25a9f397" category="list-text">执行故障转移测试；虚拟机是临时创建的。BlueXP  灾难恢复会从选定的Snapshot创建一个新的FlexClone卷、并将为FlexClone卷提供支持的临时数据存储库映射到ESXi主机。此过程不会在AWS中的内部ONTAP存储或FSx for NetApp ONTAP存储上占用额外的物理容量。初始源卷不会被修改、即使在灾难恢复期间、副本作业也可以继续进行。</block>
   <block id="76e4d72594030fca0b96279d0f8392dc" category="section-title">可能有助于BlueXP  灾难恢复的术语</block>
   <block id="b7b26d16c3d1d84d3872afa1f04c92d6" category="paragraph">了解一些与灾难恢复相关的术语可能会对您有所帮助。</block>
   <block id="7f800e59a5bd3f98ce900fa6e543f67d" category="list-text">*站点*：通常与物理数据中心或云提供商关联的逻辑容器。</block>
@@ -917,7 +909,6 @@
   <block id="950fa88679103c3c7c4e449423d8bfcc" category="list-text">如果VM来自同一个卷和同一个SVM、则该服务将执行标准ONTAP快照并更新二级目标。</block>
   <block id="a47d6910008cc9bb73921a36d6609a08" category="list-text">如果VM来自不同的卷和同一个SVM、则该服务会通过包含所有卷来创建一致性组快照并更新二级目标。</block>
   <block id="3cc1e8e247fa51b1c7d6f2a7c029a515" category="list-text">如果VM来自不同的卷和不同的SVM、则该服务会通过将所有卷包含在相同或不同集群中来执行一致性组开始阶段和提交阶段快照、并更新二级目标。</block>
-  <block id="0657f436653f92c50e703ca7f83a706d" category="list-text">在故障转移期间、您可以选择任何快照。如果您选择最新Snapshot、该服务将创建按需备份、更新目标、并使用该Snapshot进行故障转移。</block>
   <block id="e829ce8109ca652cb970cd9d2014a52e" category="section-title">测试映射</block>
   <block id="a8c55ad0456d667323e1ede0b2d4845d" category="list-text">要为测试环境设置不同的映射，请取消选中该框并选择*Test Mappings *选项卡。</block>
   <block id="3d2d89948829d5041f9ae015297d638b" category="list-text">像以往一样浏览每个选项卡、但这次是针对测试环境。</block>
@@ -1055,4 +1046,13 @@
   <block id="60a0836359d058db16981cf45c24594f" category="paragraph">虽然数据存储库可以挂载在ONTAP卷或ASA R2存储单元上、但BlueXP  灾难恢复中的资源组不能同时包含ONTAP和ASA R2中的数据存储库。您可以从资源组中的ONTAP或ASA R2选择数据存储库。</block>
   <block id="79043fd5ff3b61216207b60882cd72cd" category="section-title">2025年2月19日</block>
   <block id="c3687f641cfdd19b41b8fe6f7cb68897" category="paragraph">4.2 版</block>
+  <block id="75545af7eb41c43555af0a11b94202cc" category="list-text">执行故障转移测试；虚拟机是临时创建的。BlueXP  灾难恢复会从选定快照创建一个新的FlexClone卷、并将为FlexClone卷提供支持的临时数据存储库映射到ESXi主机。此过程不会在AWS中的内部ONTAP存储或FSx for NetApp ONTAP存储上占用额外的物理容量。初始源卷不会被修改、即使在灾难恢复期间、副本作业也可以继续进行。</block>
+  <block id="b5fe2c2cf0d0a4131f853fb3f3902712" category="paragraph">BlueXP  灾难恢复使用ONTAP SnapMirror技术、该技术可提供高效复制并保持ONTAP永久增量快照效率。SnapMirror复制可确保应用程序一致的Snapshot副本始终保持同步、并且数据在故障转移后立即可用。</block>
+  <block id="e626451f7ddf34243167a5b335e8772b" category="list-text">对于故障转移或测试故障转移过程、您可以选择用于恢复虚拟机的最新(默认)快照或选定快照。</block>
+  <block id="7fdb47d52c8257466211bbfeff754a21" category="list-text">在故障转移期间、您可以选择任何快照。如果您选择最新快照、该服务将创建按需备份、更新目标、并使用该快照进行故障转移。</block>
+  <block id="f644f24f13324a7f89c132498723a6bc" category="paragraph">解决灾难后、从灾难恢复站点故障恢复到源站点以恢复正常运行。您可以选择要从中恢复的快照。</block>
+  <block id="55d7313e1fd3e987d9d8070f2418d3a0" category="list-text">为要从中恢复的数据存储库选择快照。默认值为最新。</block>
+  <block id="2b56dea239dc4c074a14290431d91d6a" category="list-text">如果选择了最新快照、则会执行SnapMirror更新以复制最新更改。</block>
+  <block id="380342b2d65f473fe650200caef78e53" category="list-text">根据所选快照、活动文件系统将还原到指定快照(最新快照或选定快照)</block>
+  <block id="c05fbe62f8e4ec67f1b21ca8610fda50" category="list-text">在故障转移页面中、立即启动快照或为要从中恢复的数据存储库选择快照。默认值为最新。</block>
 </blocks>
