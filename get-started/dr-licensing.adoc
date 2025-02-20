@@ -24,7 +24,7 @@ summary: 借助BlueXP灾难恢复、您可以使用不同的许可计划、包�
 
 NOTE: 如果至少有一个VM具有复制计划、则BlueXP  灾难恢复费用将根据源站点上数据存储库的已用容量计算。故障转移数据存储库的容量不包括在容量允许值中。对于BYOL、如果数据超过允许的容量、则服务操作将受到限制、直到您获得额外的容量许可证或在BlueXP数字钱包中升级许可证为止。
 
-设置BYOL后，您可以在BlueXP数字钱包*数据服务许可证*选项卡中看到许可证。
+link:https://docs.netapp.com/us-en/bluexp-digital-wallet/concept-digital-wallet.html["了解有关电子钱包的更多信息"^](英文)
 
 在免费试用结束或许可证过期后、您仍可在服务中执行以下操作：
 
@@ -79,10 +79,7 @@ image:draas-landing2.png["BlueXP灾难恢复的登录页面屏幕截图"]
 . 在AWS Marketplace中、选择*查看购买选项*。使用AWS Marketplace订阅BlueXP灾难恢复。
 . 返回到BlueXP灾难恢复后、系统会显示一条消息、指出您已订阅。
 +
-要在BlueXP数字钱包中查看订阅详细信息，请选择*查看订阅详细信息*，然后在*订阅*页面上查看活动订阅。
-
-+
-image:digital-wallet-subscriptions2.png["BlueXP数字钱包订阅选项卡"]
+您可以在BlueXP  数字钱包中查看订阅详细信息。link:https://docs.netapp.com/us-en/bluexp-digital-wallet/task-homepage.html["了解有关使用数字钱包管理订阅的更多信息"^](英文)
 
 
 
@@ -94,33 +91,9 @@ image:digital-wallet-subscriptions2.png["BlueXP数字钱包订阅选项卡"]
 
 如果您自带许可证(BYOL)、则设置包括购买许可证、获取NetApp许可证文件(NLL)以及将许可证添加到BlueXP数字钱包。
 
-*激活许可证*
-从NetApp销售代表处购买BlueXP灾难恢复许可证后、您可以通过输入BlueXP灾难恢复序列号和NetApp 支持站点(NSS)帐户信息来激活此许可证。
+*将许可证添加到BlueXP  数字钱包**从NetApp销售代表处购买BlueXP  灾难恢复许可证后，您可以在数字钱包中管理许可证。
 
-您需要BlueXP  灾难恢复序列号。从您的销售订单中找到此号码、或者联系客户团队了解此信息。
-
-*将许可证添加到BlueXP  数字钱包*购买BlueXP  灾难恢复许可证后，您需要将许可证添加到BlueXP  数字钱包。
-
-. 获得许可证后、返回到BlueXP灾难恢复。选择右上角的*查看付款方式*选项。或者，在免费试用即将到期的消息中，选择*订阅或购买许可证*。
-+
-image:draas-license-subscribe2.png["BlueXP灾难恢复支付元数据页面"]
-
-. 选择*向BlueXP*添加许可证。您将转到BlueXP电子钱包。
-+
-image:digital-wallet-data-services-licenses-tab3.png["BlueXP数字钱包数据服务许可证选项卡"]
-
-. 在BlueXP数字钱包中，从*数据服务许可证*选项卡中选择*添加许可证*。
-. 在添加许可证页面中、输入序列号和NetApp 支持站点 帐户信息。
-+
-image:byol-digital-wallet-license-add2.png["BlueXP数字钱包添加许可证页面"]
-
-. 选择 * 添加许可证 * 。
-
-
-.结果
-BlueXP数字钱包现在可通过许可证显示灾难恢复。
-
-image:byol-digital-wallet-licenses-added.png["NetApp BlueXP电子钱包"]
+https://docs.netapp.com/us-en/bluexp-digital-wallet/task-manage-data-services-licenses.html["了解如何使用电子钱包添加许可证"^](英文)
 
 
 
@@ -131,19 +104,7 @@ image:byol-digital-wallet-licenses-added.png["NetApp BlueXP电子钱包"]
 
 TIP: 此消息也会显示在BlueXP数字钱包和中 https://docs.netapp.com/us-en/bluexp-setup-admin/task-monitor-cm-operations.html#monitoring-operations-status-using-the-notification-center["通知"]。
 
-.步骤
-. 选择BlueXP右下角的聊天图标、请求延长期限或为特定序列号的许可证增加容量。您还可以发送电子邮件以请求更新许可证。
-+
-在您为许可证付费并将其注册到NetApp 支持站点 之后、BlueXP会自动更新BlueXP电子钱包中的许可证、并且数据服务许可证页面将在5到10分钟内反映此更改。
-
-. 如果BlueXP无法自动更新许可证(例如、安装在非公开站点时)、则需要手动上传许可证文件。
-+
-.. 您可以从NetApp 支持站点 获取许可证文件。
-.. 访问BlueXP电子钱包。
-.. 选择*数据服务许可证*选项卡，选择要更新的服务序列号对应的*操作...*图标，然后选择*更新许可证*。
-
-
-
+https://docs.netapp.com/us-en/bluexp-digital-wallet/task-manage-data-services-licenses.html["了解如何使用数字钱包更新许可证"^](英文)
 
 
 

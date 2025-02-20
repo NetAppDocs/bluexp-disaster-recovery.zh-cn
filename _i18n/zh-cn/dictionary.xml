@@ -481,8 +481,6 @@
   <block id="e6e80588e9fe7cf89218fea44300f7ca" category="inline-link">了解连接器</block>
   <block id="7530875db6f7eceea689fdfeb6a12778" category="paragraph">要添加接头、请参见<block ref="d6df7dcc2fc3105e10967a9194806ce5" category="inline-link-rx"></block>。</block>
   <block id="ee6d03e51dd7b0fc10c6b3c8fcab3718" category="section-title">试用期结束后、通过NetApp购买BYOL许可证</block>
-  <block id="b11106bafac141be455d28549bfe177d" category="list-text">选择*向BlueXP*添加许可证。您将转到BlueXP电子钱包。</block>
-  <block id="d2ec998008b95e1189b9d8f3dbc6ed64" category="inline-image-macro">BlueXP数字钱包添加许可证页面</block>
   <block id="8d4d6551ee286317b2a4f297766952f5" category="section-title">结束免费试用</block>
   <block id="859b0ef2563ddd8c6712d419656bde38" category="paragraph">您可以随时停止免费试用、也可以等到免费试用过期。</block>
   <block id="d940bc2868fa1d10a5c804aa0df8fd1b" category="list-text">在BlueXP灾难恢复中、选择右上角的*免费试用-查看详细信息*。</block>
@@ -494,19 +492,10 @@
   <block id="c3964fe08c9dd95815cc67d8aaee9323" category="list-text">在文本框中键入"结束试用"。</block>
   <block id="44a320573c319d1f30b840c2d11a4e26" category="list-text">选择*end*。</block>
   <block id="3906249fde1cef9339402436007bb4f7" category="paragraph">如果您自带许可证(BYOL)、则设置包括购买许可证、获取NetApp许可证文件(NLL)以及将许可证添加到BlueXP数字钱包。</block>
-  <block id="c8508c0ce4da6dc634b7c66b1df15681" category="list-text">选择 * 添加许可证 * 。</block>
-  <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">结果</block>
-  <block id="7c8c5dfa7e1cbe0ce55b88149d634d69" category="paragraph">BlueXP数字钱包现在可通过许可证显示灾难恢复。</block>
-  <block id="72e3dbb78819e204c1d67c9aaba1d190" category="inline-image-macro">NetApp BlueXP电子钱包</block>
-  <block id="0cc39117ac352982de03de8143c8e3f5" category="paragraph"><block ref="0cc39117ac352982de03de8143c8e3f5" category="inline-image-macro-rx" type="image"></block></block>
   <block id="53ea2f641b462d658be2f78d3070c4e8" category="section-title">在BlueXP许可证过期后更新它</block>
   <block id="847676092f852cc523c768a478d757f1" category="paragraph">如果您的许可期限即将到期、或者您的许可容量即将达到限制、您将在BlueXP灾难恢复UI中收到通知。您可以在BlueXP灾难恢复许可证到期之前对其进行更新、以便不会中断您访问扫描数据的能力。</block>
   <block id="a274f4d4670213a9045ce258c6c56b80" category="inline-link">通知</block>
   <block id="9cb535dcfcda2b04cab5b48ce4b5044b" category="admonition">此消息也会显示在BlueXP数字钱包和中<block ref="b553b83f4f3ab8ad7adf12f36cefd6a6" category="inline-link-rx"></block>。</block>
-  <block id="2f3cc4968532c87cc8b40e840f800717" category="list-text">选择BlueXP右下角的聊天图标、请求延长期限或为特定序列号的许可证增加容量。您还可以发送电子邮件以请求更新许可证。</block>
-  <block id="b23b97d3c26b0f7e2265329756cea9ca" category="paragraph">在您为许可证付费并将其注册到NetApp 支持站点 之后、BlueXP会自动更新BlueXP电子钱包中的许可证、并且数据服务许可证页面将在5到10分钟内反映此更改。</block>
-  <block id="5810a6765696da7b12979cf90b9b287c" category="list-text">如果BlueXP无法自动更新许可证(例如、安装在非公开站点时)、则需要手动上传许可证文件。</block>
-  <block id="147b35ab5352426bba38d99d810db4ed" category="list-text">您可以从NetApp 支持站点 获取许可证文件。</block>
   <block id="3a46f989d3db91bd2030de32947cd608" category="section-title">使用适用于VMware的BlueXP灾难恢复的优势</block>
   <block id="cce8630c08ede8fc88504929ae963b37" category="paragraph">BlueXP灾难恢复具有以下优势：</block>
   <block id="208ae1835c38717d827d78f2184f1eb8" category="paragraph">NetApp不会因使用BlueXP灾难恢复试用版而向您收费。</block>
@@ -577,12 +566,7 @@
   <block id="1594f78ebbb281f7b5359eb6d2b89912" category="list-text">运行在试用期内或在许可证下创建的所有计划操作。</block>
   <block id="01c014f2e37e5bf6d3ce893bea0197cb" category="list-text">设置Connector后、在BlueXP灾难恢复登录页面中、用于添加Connector的按钮会更改为用于开始免费试用的按钮。选择*开始免费试用*。</block>
   <block id="b9ef842238fa8d82db6b7559f33adc6c" category="paragraph">试用期结束后、您可以通过NetApp销售代表购买许可证</block>
-  <block id="9bdfa376bcb2fa79aff92c39d0b24fcd" category="list-text">获得许可证后、返回到BlueXP灾难恢复。选择右上角的*查看付款方式*选项。或者，在免费试用即将到期的消息中，选择*订阅或购买许可证*。</block>
-  <block id="d2a39678e393e2b473354681a2c1e5f4" category="inline-image-macro">BlueXP数字钱包数据服务许可证选项卡</block>
-  <block id="7578ebad24c71aee2f2992e5efe1118d" category="list-text">在添加许可证页面中、输入序列号和NetApp 支持站点 帐户信息。</block>
-  <block id="c6711fc66daa9915490ca9f9bdc7f08f" category="paragraph"><block ref="c6711fc66daa9915490ca9f9bdc7f08f" category="inline-image-macro-rx" type="image"></block></block>
   <block id="be94b7e6fbf892064754b145ecdeb994" category="paragraph"><block ref="be94b7e6fbf892064754b145ecdeb994" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="9fc7e8cb24850b1f0912cebc8da32620" category="list-text">访问BlueXP电子钱包。</block>
   <block id="be976ba4e18c887ae57e14f6ebfbbab3" category="sidebar">灾难恢复到云是一种经济高效的弹性方法、可保护工作负载免受站点中断和数据损坏事件(例如勒索软件)的影响。借助适用于VMware的BlueXP灾难恢复、您可以将运行ONTAP存储的内部VMware工作负载复制到公共云中的VMware软件定义的数据中心、或者复制到作为灾难恢复站点的其他内部站点。</block>
   <block id="93716955add4f66b2af685a33bac4789" category="section-title">2024年5月15日</block>
   <block id="9df62cb4d6f151b560e84723841bd523" category="paragraph">此BlueXP灾难恢复版本包括以下更新：</block>
@@ -591,7 +575,6 @@
   <block id="dd1ef091f49695b9c14e0e34da748ab7" category="list-text">如果尚未添加BlueXP Connector、则需要添加Connector。要添加接头、请参见<block ref="d6df7dcc2fc3105e10967a9194806ce5" category="inline-link-rx"></block>。</block>
   <block id="e2066cd1f4f96874fad4da9c48f8715b" category="list-text">如果您已在使用此服务、则在选择"Disaster Recovery (灾难恢复)"时、将显示信息板。</block>
   <block id="7cc1b1d71d565ea421a16ed9422fe6c2" category="list-text">通过Amazon Web Services (AWS) Marketplace购买按需购买(PAYGO)订阅。</block>
-  <block id="23c019f17394a366e5bf51ef8a23b0a8" category="paragraph">设置BYOL后，您可以在BlueXP数字钱包*数据服务许可证*选项卡中看到许可证。</block>
   <block id="4701248bbe25ed364a5f0c79467e9f29" category="list-text">首先添加vCenter。</block>
   <block id="d780b26d8f0dcbe5b2593febbaacdb60" category="paragraph">有关详细信息，请参见 <block ref="84d66f7662bc8a91a68e93706653efe2" category="inline-link-macro-rx"></block>。</block>
   <block id="ad7911fdd21ff5752d10300d0446de95" category="section-title">试用结束后、通过AWS Marketplace进行订阅</block>
@@ -599,16 +582,6 @@
   <block id="acce4a6c25bc51b4930085d68e3cb0cd" category="list-text">在BlueXP灾难恢复中、您会看到一条消息、指出免费试用即将到期。在消息中，选择*订阅或购买许可证*。</block>
   <block id="584a50ae29d097d233ebd86ad952d305" category="list-text">选择*在AWS Marketplace中订阅*。</block>
   <block id="717132172ed170ccb94cc8674c35dfbd" category="list-text">返回到BlueXP灾难恢复后、系统会显示一条消息、指出您已订阅。</block>
-  <block id="6678054c83157276d9287735dd3e1d92" category="paragraph">要在BlueXP数字钱包中查看订阅详细信息，请选择*查看订阅详细信息*，然后在*订阅*页面上查看活动订阅。</block>
-  <block id="0a504e78221db1ccaf51b7ad21bc16ce" category="inline-image-macro">BlueXP数字钱包订阅选项卡</block>
-  <block id="f3688cd67baeb83949d8b3d8688cda8b" category="paragraph"><block ref="f3688cd67baeb83949d8b3d8688cda8b" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="4052ab6997dacca028b4d726754818d5" category="paragraph">*激活许可证*
-从NetApp销售代表处购买BlueXP灾难恢复许可证后、您可以通过输入BlueXP灾难恢复序列号和NetApp 支持站点(NSS)帐户信息来激活此许可证。</block>
-  <block id="e4822c1e77f0d7746ffdde4c031a2109" category="inline-image-macro">BlueXP灾难恢复支付元数据页面</block>
-  <block id="5646d601e859bd392516de29f6a97047" category="paragraph"><block ref="5646d601e859bd392516de29f6a97047" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="595da0c0edf936a84fa3d6a69bbbb4e5" category="paragraph"><block ref="595da0c0edf936a84fa3d6a69bbbb4e5" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="5d50de45dd75ac0ea74e9c427687d113" category="list-text">在BlueXP数字钱包中，从*数据服务许可证*选项卡中选择*添加许可证*。</block>
-  <block id="7744384d0e7b78819bc53ca36ef36369" category="list-text">选择*数据服务许可证*选项卡，选择要更新的服务序列号对应的*操作...*图标，然后选择*更新许可证*。</block>
   <block id="d66d706cd022ab39ed6479a713135515" category="paragraph"><block ref="d66d706cd022ab39ed6479a713135515" category="inline-image-macro-rx" type="image"></block></block>
   <block id="991e816286764c3a5ea9b023c35e1d77" category="paragraph"><block ref="991e816286764c3a5ea9b023c35e1d77" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b45dfe874eaba6a97e58e0436eba2402" category="sidebar">BlueXP灾难恢复即服务实验室按需入门</block>
@@ -801,8 +774,6 @@
   <block id="8e635b1aadad234871ba0e012309361f" category="list-text">确定重复情况、运行子系统托管的脚本、设置启动顺序并选择恢复点目标。</block>
   <block id="1c10305a999dce53cb52dd4f6b8d89ff" category="list-text">查看计划。</block>
   <block id="054b753af44fc4eeee43c9ba6037caaa" category="doc">创建灾难恢复报告</block>
-  <block id="fca90381d84b0e9a022fdeac2012d4ab" category="paragraph">您需要BlueXP  灾难恢复序列号。从您的销售订单中找到此号码、或者联系客户团队了解此信息。</block>
-  <block id="20efb062527877ed8fd82ba191b8951b" category="paragraph">*将许可证添加到BlueXP  数字钱包*购买BlueXP  灾难恢复许可证后，您需要将许可证添加到BlueXP  数字钱包。</block>
   <block id="61b173efd5c260fd3e3f446d9d4b37e7" category="section-title">开始使用BlueXP</block>
   <block id="eb596a544acd0e757253fec1e32880e2" category="inline-link">注册BlueXP  并创建组织</block>
   <block id="5c162fb1edd17998f73f4b49374c4871" category="paragraph">如果您尚未执行此操作、<block ref="6286584d7da60f5fb185c973c7a25fca" category="inline-link-rx"></block></block>
@@ -1055,4 +1026,13 @@
   <block id="2b56dea239dc4c074a14290431d91d6a" category="list-text">如果选择了最新快照、则会执行SnapMirror更新以复制最新更改。</block>
   <block id="380342b2d65f473fe650200caef78e53" category="list-text">根据所选快照、活动文件系统将还原到指定快照(最新快照或选定快照)</block>
   <block id="c05fbe62f8e4ec67f1b21ca8610fda50" category="list-text">在故障转移页面中、立即启动快照或为要从中恢复的数据存储库选择快照。默认值为最新。</block>
+  <block id="2847599cd91bec7d486721243d329494" category="inline-link-macro">了解有关电子钱包的更多信息</block>
+  <block id="2b04b3177ca047bdf9530f96b48dc58a" category="paragraph"><block ref="177b16e5e66adf0c0c4922a109055a31" category="inline-link-macro-rx"></block>(英文)</block>
+  <block id="9e8edb5d154a8f2c2ab3efde5a90b95d" category="inline-link-macro">了解有关使用数字钱包管理订阅的更多信息</block>
+  <block id="61ebc53e0bf68b97af4405116db69639" category="paragraph">您可以在BlueXP  数字钱包中查看订阅详细信息。<block ref="c076e949682edba51af0e34c4227dbba" category="inline-link-macro-rx"></block>(英文)</block>
+  <block id="745499562c1b6475b616a3cdf246c3d8" category="paragraph">*将许可证添加到BlueXP  数字钱包**从NetApp销售代表处购买BlueXP  灾难恢复许可证后，您可以在数字钱包中管理许可证。</block>
+  <block id="2fb18b7eb7edfd6ac0fa8586ecbd9a12" category="inline-link">了解如何使用电子钱包添加许可证</block>
+  <block id="e2a36029181f04d6208811edf66b0c62" category="paragraph"><block ref="039fd09b60dad6f86188402eac2ef738" category="inline-link-rx"></block>(英文)</block>
+  <block id="5d3579189b9441a8b42010228d169cbc" category="inline-link">了解如何使用数字钱包更新许可证</block>
+  <block id="597c7a7ee6e647859f8aa98b20be3cb0" category="paragraph"><block ref="1180f9bbf40cd0c05f379b347ef1d8f9" category="inline-link-rx"></block>(英文)</block>
 </blocks>
