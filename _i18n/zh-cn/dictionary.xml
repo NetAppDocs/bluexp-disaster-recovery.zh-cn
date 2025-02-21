@@ -435,7 +435,6 @@
   <block id="c7e296ab461bd699a5d9cbf0801b389c" category="paragraph">在开始迁移之前、您应已创建复制计划并选择迁移应用程序。然后，*迁移*选项将出现在操作菜单中。</block>
   <block id="4b832a5ef0d288f92d7b413054dc905f" category="list-text">在右侧，选择*Actions*选项 <block ref="2fddd650b01c7f9674be856867aae05d" category="inline-image-macro-rx" type="image"></block> 并选择*Migrate*。</block>
   <block id="9d8650f8b712e42ae65b817a2d362674" category="inline-link-macro">查看灾难恢复计划的运行状况</block>
-  <block id="baed892bed9a88570cd5a5931581b00c" category="list-text"><block ref="baed892bed9a88570cd5a5931581b00c" category="inline-link-macro-rx"></block></block>
   <block id="15d1e8fd5353c6a7e30202b501b639c3" category="inline-link-macro">迁移VMware应用程序</block>
   <block id="946772510dcd559e9d7d09458b2abd6f" category="list-text"><block ref="4c49990f7ea38fc4135c764bbfcd7786" category="inline-link-macro-rx"></block> 将主站点上的数据迁移到另一个站点。</block>
   <block id="46da469bb05d1d3a2c620e2963f1531a" category="list-text"><block ref="698cc22cc758157d8f18359f8b528216" category="inline-link-macro-rx"></block> 在作业监控页面上。</block>
@@ -1035,4 +1034,44 @@
   <block id="e2a36029181f04d6208811edf66b0c62" category="paragraph"><block ref="039fd09b60dad6f86188402eac2ef738" category="inline-link-rx"></block>(英文)</block>
   <block id="5d3579189b9441a8b42010228d169cbc" category="inline-link">了解如何使用数字钱包更新许可证</block>
   <block id="597c7a7ee6e647859f8aa98b20be3cb0" category="paragraph"><block ref="1180f9bbf40cd0c05f379b347ef1d8f9" category="inline-link-rx"></block>(英文)</block>
+  <block id="4f65b71af0098f41a96bfdb343f2f325" category="doc">创建一个资源组以将VM组织在一起</block>
+  <block id="37c560d4a7e5a6e37f98651719bd2745" category="paragraph">添加vCenter站点后、您可能需要创建将VM分组在一起的资源组。通过资源组、您可以将一组依赖虚拟机组织为符合您要求的逻辑组。例如、您可以对与一个应用程序关联的VM进行分组、也可以对具有类似层的应用程序进行分组。另一个示例是、组可能包含延迟启动顺序、可在恢复时运行。</block>
+  <block id="142aa3cf2c56c4cee9658fbb7fa95634" category="paragraph">您可以使用以下方法创建资源组：</block>
+  <block id="ad2f31d93207199cb75dd53824344fab" category="list-text">从资源组选项卡</block>
+  <block id="0d87bb4775c6c24807b2e814da0b9ca1" category="list-text">创建灾难恢复或_Replication pl뮮_时。如果源vCenter集群托管了大量VM、则在创建复制计划时创建资源组可能会更容易。有关在创建复制计划时创建资源组的说明，请参见<block ref="ea54fcb5e693965efa13773dde42c832" category="inline-link-macro-rx"></block>。</block>
+  <block id="47debb7f83ae8dcccb80828c89238e3a" category="admonition">每个资源组可以包含一个或多个VM。VM将根据您将其包含在复制计划中的顺序启动。您可以通过在资源组列表中上下拖动VM来更改顺序。</block>
+  <block id="ae21aa75d137aec3ba200318a51f9166" category="paragraph-title">关于资源组</block>
+  <block id="f957d687562e057bff825e71ab7e802e" category="paragraph">通过资源组、您可以将操作上相关且需要保护的VM组合为一个单元。</block>
+  <block id="b945eb631601c78c15db23da09ea1c09" category="paragraph">例如、一个销售点应用程序可能包含多个托管数据库的VM、多个托管业务逻辑规则管理的VM以及多个充当基于Web服务器的店面的VM。通过将这些VM放置在一个资源组中、使用一个保护过程来管理整个应用程序的可用性可能会很有用。</block>
+  <block id="97f2b89685ef06c98b9ff744b4147e33" category="paragraph">设置资源组后、您可以应用复制计划规则以确保虚拟机启动顺序正确、网络连接等、从而确保正确恢复应用程序所需的所有虚拟机。</block>
+  <block id="359f9e79e746fa9f684e5cda9e60ca2e" category="paragraph-title">它如何工作？</block>
+  <block id="99cdeb2169c5824046ba94f263a554c7" category="paragraph">BlueXP  灾难恢复通过复制托管资源组中VM的底层ONTAP卷和LUN来保护VM。为此、系统会向vCenter查询托管资源组中VM的每个数据存储的名称。然后、BlueXP  灾难恢复会确定托管该数据存储的源ONTAP卷或LUN。所有保护均通过SnapMirror复制在ONTAP卷级别执行。</block>
+  <block id="6004bd2544cbcf534e33d76e01ce9721" category="paragraph">如果资源组中的VM托管在不同的数据存储上、则BlueXP  灾难恢复将使用以下方法之一为ONTAP卷或LUN创建数据一致的快照。</block>
+  <block id="4c97b19bdb39e81e1e7c0c1a8b6222c5" category="cell">FlexVol卷的相对位置</block>
+  <block id="ddbeb84a2d597ac93e26f8e4ccfed259" category="cell">Snapshot副本过程</block>
+  <block id="6d01f51b0e5a556d95395c7f71ed087e" category="cell">多个数据存储—*同一SVM*中的FlexVol卷</block>
+  <block id="1431ebf6966cf7875d79c646755a0ac4" category="list-text">已创建ONTAP一致性组</block>
+  <block id="244e1723989c81e9a2ce04f721a2db41" category="list-text">为一致性组创建的快照</block>
+  <block id="b73116544f9b4e58ae13b79847ef2c41" category="list-text">已执行卷范围的SnapMirror复制</block>
+  <block id="afb49150087c45237455b2d82f867be8" category="cell">多个数据存储—*多个SVM*中的FlexVol卷</block>
+  <block id="669001397154a9e2d2d9e8a107cb041d" category="list-text">ONTAP API：<block ref="b5ab07cdecf9303ff94db49578282528" prefix=" " category="inline-code"></block>。静默所有卷、以便可以创建快照、并为所有资源组卷启动卷范围的快照。</block>
+  <block id="87f2c3aeec6e1ba638ce1869ba610ea4" category="list-text">ONTAP API：<block ref="393c6bdee070ba1b7e80e63101108f36" prefix=" " category="inline-code"></block>。恢复所有卷上的I/O、并在创建快照后启用卷范围的SnapMirror复制。</block>
+  <block id="8633fcc27ccd2122fe46b210f44553cf" category="paragraph">创建资源组时，请考虑以下问题：</block>
+  <block id="8892a1b3251335ec20c65f05270cae24" category="list-text">一个数据存储库不应托管受多个复制计划保护的VM。</block>
+  <block id="85d8f006f7e8ceeb46f30e2eba810828" category="list-text">请勿在同一数据存储上托管受保护和未受保护的VM。如果受保护和未受保护的VM托管在同一数据存储库中、则可能会出现以下问题：</block>
+  <block id="01c88b8825d68ac74c4f3a900e529850" category="list-text">由于BlueXP  灾难恢复使用SnapMirror、并且系统会复制整个ONTAP卷、因此出于许可考虑、会使用该卷的已用容量。在这种情况下、此计算将包括受保护虚拟机和未受保护虚拟机占用的卷空间。</block>
+  <block id="fd30c9137bf3e65eb4cbb0b3b65c45d8" category="list-text">如果需要将资源组及其关联的数据存储故障转移到灾难恢复站点、则在故障转移过程中、源站点上将不再存在任何未受保护的VM (不属于资源组、但托管在ONTAP卷上的VM)、从而导致源站点上未受保护的VM发生故障。此外、BlueXP  灾难恢复不会在故障转移vCenter站点上启动这些未受保护的VM。</block>
+  <block id="8a63c65b056310ba2a8c9f7b25cb1011" category="list-text">要保护VM、必须将其包含在资源组中。</block>
+  <block id="4314245dac1433ba0b4e2677f01da1cf" category="paragraph">*最佳实践*：在部署BlueXP  灾难恢复之前组织VM、以最大限度地减少"数据存储库无序增长"。将需要保护的VM放置在一部分数据存储上、将不会受到保护的VM放置在另一部分数据存储上。确保任何给定数据存储上的VM未受不同复制计划的保护。</block>
+  <block id="b0111a1bb823a7c75cdcdc06c66703ca" category="list-text">从BlueXP  灾难恢复菜单中，选择*Resource Groups*。</block>
+  <block id="fa4d1c967d467deb12174bc6b1b3355b" category="list-text">输入资源组的名称。</block>
+  <block id="23a0cad5b0151418367a15f201a54ad3" category="list-text">选择VM所在的源vCenter集群。</block>
+  <block id="dca4029f87bca2c081e4f75bba3b9b28" category="list-text">在添加资源组页面的左侧、选择要保护的VM。</block>
+  <block id="38b6edfcfacd5ae9860834f850083003" category="inline-image-macro">显示"Add resource groups"页面的屏幕截图</block>
+  <block id="1a4be911d3882d1b3762fb71915599c8" category="paragraph"><block ref="1a4be911d3882d1b3762fb71915599c8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c021ba8d319c1c5278738c67a531bc28" category="list-text">(可选)通过在列表中上下拖动每个VM来更改右侧VM的顺序。VM将根据您包含的顺序启动。</block>
+  <block id="ee3e1a92f28abbcd26a1a39655c0465a" category="list-text"><block ref="baed892bed9a88570cd5a5931581b00c" category="inline-link-macro-rx"></block>(英文)</block>
+  <block id="1b98100fdedab345bec758f9fe534c9b" category="inline-link-macro">创建资源组以将虚拟机组织在一起</block>
+  <block id="7d1ee868f80080dd430c4c762c071750" category="list-text"><block ref="7d1ee868f80080dd430c4c762c071750" category="inline-link-macro-rx"></block></block>
+  <block id="548b49f4267cb06525a994818f01fc03" category="sidebar">创建资源组</block>
 </blocks>

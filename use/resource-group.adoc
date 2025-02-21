@@ -1,0 +1,82 @@
+---
+sidebar: sidebar 
+permalink: use/resource-group.html 
+keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter, replication plan, protection, disaster, recovery, virtual machines, vm 
+summary: NetApp BlueXP灾难恢复是一种基于云的灾难恢复服务、可自动执行灾难恢复工作流。添加vCenter站点后、即可创建灾难恢复或复制计划。 
+---
+= 创建一个资源组以将VM组织在一起
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/use/
+
+
+[role="lead"]
+添加vCenter站点后、您可能需要创建将VM分组在一起的资源组。通过资源组、您可以将一组依赖虚拟机组织为符合您要求的逻辑组。例如、您可以对与一个应用程序关联的VM进行分组、也可以对具有类似层的应用程序进行分组。另一个示例是、组可能包含延迟启动顺序、可在恢复时运行。
+
+您可以使用以下方法创建资源组：
+
+* 从资源组选项卡
+* 创建灾难恢复或_Replication pl뮮_时。如果源vCenter集群托管了大量VM、则在创建复制计划时创建资源组可能会更容易。有关在创建复制计划时创建资源组的说明，请参见link:dr-plan-create.html["创建复制计划"]。
+
+
+
+TIP: 每个资源组可以包含一个或多个VM。VM将根据您将其包含在复制计划中的顺序启动。您可以通过在资源组列表中上下拖动VM来更改顺序。
+
+.关于资源组
+通过资源组、您可以将操作上相关且需要保护的VM组合为一个单元。
+
+例如、一个销售点应用程序可能包含多个托管数据库的VM、多个托管业务逻辑规则管理的VM以及多个充当基于Web服务器的店面的VM。通过将这些VM放置在一个资源组中、使用一个保护过程来管理整个应用程序的可用性可能会很有用。
+
+设置资源组后、您可以应用复制计划规则以确保虚拟机启动顺序正确、网络连接等、从而确保正确恢复应用程序所需的所有虚拟机。
+
+.它如何工作？
+BlueXP  灾难恢复通过复制托管资源组中VM的底层ONTAP卷和LUN来保护VM。为此、系统会向vCenter查询托管资源组中VM的每个数据存储的名称。然后、BlueXP  灾难恢复会确定托管该数据存储的源ONTAP卷或LUN。所有保护均通过SnapMirror复制在ONTAP卷级别执行。
+
+如果资源组中的VM托管在不同的数据存储上、则BlueXP  灾难恢复将使用以下方法之一为ONTAP卷或LUN创建数据一致的快照。
+
+[cols="30,65a"]
+|===
+| FlexVol卷的相对位置 | Snapshot副本过程 
+
+
+| 多个数据存储—*同一SVM*中的FlexVol卷  a| 
+* 已创建ONTAP一致性组
+* 为一致性组创建的快照
+* 已执行卷范围的SnapMirror复制
+
+
+
+
+| 多个数据存储—*多个SVM*中的FlexVol卷  a| 
+* ONTAP API： `cg_start`。静默所有卷、以便可以创建快照、并为所有资源组卷启动卷范围的快照。
+* ONTAP API： `cg_end`。恢复所有卷上的I/O、并在创建快照后启用卷范围的SnapMirror复制。
+
+
+|===
+创建资源组时，请考虑以下问题：
+
+* 一个数据存储库不应托管受多个复制计划保护的VM。
+* 请勿在同一数据存储上托管受保护和未受保护的VM。如果受保护和未受保护的VM托管在同一数据存储库中、则可能会出现以下问题：
++
+** 由于BlueXP  灾难恢复使用SnapMirror、并且系统会复制整个ONTAP卷、因此出于许可考虑、会使用该卷的已用容量。在这种情况下、此计算将包括受保护虚拟机和未受保护虚拟机占用的卷空间。
+** 如果需要将资源组及其关联的数据存储故障转移到灾难恢复站点、则在故障转移过程中、源站点上将不再存在任何未受保护的VM (不属于资源组、但托管在ONTAP卷上的VM)、从而导致源站点上未受保护的VM发生故障。此外、BlueXP  灾难恢复不会在故障转移vCenter站点上启动这些未受保护的VM。
+
+
+* 要保护VM、必须将其包含在资源组中。
+
+
+*最佳实践*：在部署BlueXP  灾难恢复之前组织VM、以最大限度地减少"数据存储库无序增长"。将需要保护的VM放置在一部分数据存储上、将不会受到保护的VM放置在另一部分数据存储上。确保任何给定数据存储上的VM未受不同复制计划的保护。
+
+.步骤
+. 从BlueXP  灾难恢复菜单中，选择*Resource Groups*。
+. 选择 * 添加 * 。
+. 输入资源组的名称。
+. 选择VM所在的源vCenter集群。
+. 在添加资源组页面的左侧、选择要保护的VM。
++
+image:dr-resource-groups-add.png["显示\"Add resource groups\"页面的屏幕截图"]
+
+. (可选)通过在列表中上下拖动每个VM来更改右侧VM的顺序。VM将根据您包含的顺序启动。
+. 选择 * 添加 * 。
+
