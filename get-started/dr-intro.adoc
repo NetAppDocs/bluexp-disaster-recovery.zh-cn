@@ -12,7 +12,7 @@ summary: 云灾难恢复是一种经济高效的弹性方法、可保护工作�
 
 
 [role="lead"]
-云灾难恢复是一种经济高效的弹性方法、可保护工作负载免受站点中断和数据损坏事件的影响。借助适用于VMware的BlueXP灾难恢复、您可以将运行ONTAP存储的内部VMware工作负载复制到使用NetApp云存储的公共云中的VMware软件定义的数据中心、或者复制到使用ONTAP存储作为灾难恢复站点的其他内部VMware环境。
+云灾难恢复是一种经济高效的弹性方法、可保护工作负载免受站点中断和数据损坏事件的影响。借助适用于VMware的BlueXP  灾难恢复、您可以使用NetApp云存储将运行ONTAP存储的内部VMware VM或数据存储库工作负载复制到公共云中的VMware软件定义的数据中心、或者将ONTAP存储用作灾难恢复站点的其他内部VMware环境。
 
 BlueXP灾难恢复是一种基于云的灾难恢复服务、可自动执行灾难恢复工作流。借助BlueXP  灾难恢复服务、您可以保护运行NetApp存储的iSCSI和FC的内部、基于NFS的工作负载和VMware vSphere虚拟机文件系统(Virtual Machine File System、VMFS)数据存储库、使其符合以下条件之一：
 
@@ -48,8 +48,8 @@ BlueXP灾难恢复具有以下优势：
 * 使用SnapMirror复制将内部生产站点上的VMware应用程序复制到云中或内部的灾难恢复远程站点。
 * 将VMware工作负载从原始站点迁移到其他站点。
 * 执行故障转移测试；虚拟机是临时创建的。BlueXP  灾难恢复会从选定快照创建一个新的FlexClone卷、并将为FlexClone卷提供支持的临时数据存储库映射到ESXi主机。此过程不会在AWS中的内部ONTAP存储或FSx for NetApp ONTAP存储上占用额外的物理容量。初始源卷不会被修改、即使在灾难恢复期间、副本作业也可以继续进行。
-* 发生灾难时、可按需将主站点故障转移到灾难恢复站点、灾难恢复站点可以是基于AWS的VMware Cloud和FSx for NetApp ONTAP、也可以是采用ONTAP的内部VMware环境。
-* 解决灾难后、根据需要从灾难恢复站点故障恢复到主站点。
+* 发生灾难时、可按需将主站点故障转移到灾难恢复站点、灾难恢复站点可以是基于AWS的VMware Cloud和Amazon FSx for NetApp ONTAP、也可以是基于ONTAP的内部VMware环境。
+* 解决灾难后、根据需要从灾难恢复站点故障恢复到主站点。*将虚拟机或数据存储库分组到逻辑资源组中以实现高效管理。
 
 
 

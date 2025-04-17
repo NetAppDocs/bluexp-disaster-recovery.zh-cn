@@ -172,7 +172,6 @@
   <block id="2b62fc3f49aa92691e24ff085ed87ebe" category="list-text">降低运营成本、并能够以最少的资源创建和调整灾难恢复计划、从而降低总拥有成本</block>
   <block id="fdc22ef10c3a7384ef6c52b17d799754" category="list-text">通过虚拟故障转移测试确保持续灾难恢复就绪、不会中断运行</block>
   <block id="06c4e885d0b84b88cbc1cfc207ec029b" category="list-text">通过IT环境中的动态变化以及在灾难恢复计划中解决该问题的能力、更快地实现价值</block>
-  <block id="665fccb70331e8dfa8afd40c0bbb51f0" category="list-text">解决灾难后、根据需要从灾难恢复站点故障恢复到主站点。</block>
   <block id="da43ae6496f10d6bfd475400915e2865" category="admonition">vSphere服务器的配置在vSphere Server的BlueXP灾难恢复之外完成。</block>
   <block id="20b4f77bd00b4f63a49ec8e08f3bf6a6" category="section-title">成本</block>
   <block id="d244f191aaddadced4c31b2f67d06c9c" category="inline-image-macro">该图显示了适用于VMware服务基础架构的BlueXP灾难恢复架构</block>
@@ -291,7 +290,6 @@
   <block id="3849da8702f93c4c73b8b2d18d7d3b4d" category="list-text">选择*虚拟机*。</block>
   <block id="2e91c6382e139b4d3b0307917725df9c" category="list-text">查看虚拟机信息。</block>
   <block id="ec972bce7640d5d440d3549702031815" category="section-title">管理资源组</block>
-  <block id="eb0ce25134b7ddab2efc8b2970a1fd4f" category="paragraph">虽然您可以在创建复制计划过程中添加资源组、但您可能会发现单独添加这些组并稍后在计划中使用这些组会更方便。</block>
   <block id="21b6410f349f79c305b5485d62f171ca" category="paragraph">您还可以编辑和删除资源组。</block>
   <block id="b1190a0ce1a0e51d67d2bdd169a714b0" category="list-text">从顶部菜单中选择*资源组*。</block>
   <block id="fb64cb9f2eb5e660830a8f202d12f794" category="list-text">要添加资源组，请选择*Add group*。</block>
@@ -330,7 +328,6 @@
   <block id="26ff2655fb5643a3e76370d9248a31df" category="admonition">您可以稍后禁用或删除复制计划。</block>
   <block id="47324a4e5509aeccc192aa7b07cbcac7" category="list-text">选择*添加计划*。</block>
   <block id="a9980df200522b9bbaa257521bc396fe" category="paragraph">该计划将添加到计划列表中。</block>
-  <block id="9809a26603cc2fbdd8049c848bf77835" category="paragraph">添加后、BlueXP灾难恢复会对vCenter环境执行深入发现、包括vCenter集群、ESXi主机、数据存储库、存储库、 虚拟机详细信息、SnapMirror副本和虚拟机网络。</block>
   <block id="6df4f43f22118c6a361990f481e6ed83" category="list-text">登录到BlueXP并从左侧导航栏中选择*保护*&gt;*灾难恢复*。</block>
   <block id="2f11fab4722695438910176065d838b4" category="paragraph">您将登录BlueXP灾难恢复信息板页面。首次启动此服务时、您需要添加vCenter信息。稍后、信息板将显示有关站点和复制计划的数据。</block>
   <block id="6b3b905a38750ec7a08fa2e97d6315bf" category="admonition">如果某些vCenter站点已存在、而您希望添加更多vCenter站点、请从顶部菜单中选择*站点*、然后选择*添加*。</block>
@@ -451,7 +448,6 @@
   <block id="53c1c0c22e2a647591a0b52427852850" category="paragraph"><block ref="53c1c0c22e2a647591a0b52427852850" category="inline-image-macro-rx" type="image"></block></block>
   <block id="add8d69a5f7975ffd43124657fc5030d" category="list-text">使用SnapMirror复制将内部生产站点上的VMware应用程序复制到云中或内部的灾难恢复远程站点。</block>
   <block id="dcc9d99320099ed731ca2f05b3e501a7" category="list-text">将VMware工作负载从原始站点迁移到其他站点。</block>
-  <block id="2aefc74ac286c583100431f62049590d" category="list-text">发生灾难时、可按需将主站点故障转移到灾难恢复站点、灾难恢复站点可以是基于AWS的VMware Cloud和FSx for NetApp ONTAP、也可以是采用ONTAP的内部VMware环境。</block>
   <block id="a6a42e8e3070730d19bfd86d6a1d66fe" category="paragraph">下图显示了从内部到内部的灾难恢复计划的架构。</block>
   <block id="20099229ad21726312a6ff50740b0b57" category="paragraph">发生灾难时、此服务可通过中断SnapMirror关系并使目标站点处于活动状态来帮助您恢复其他内部VMware环境或VMC中的虚拟机。</block>
   <block id="96ed64c294e585324853f8f980f9d78e" category="sidebar">将应用程序迁移到其他站点</block>
@@ -485,9 +481,7 @@
   <block id="d940bc2868fa1d10a5c804aa0df8fd1b" category="list-text">在BlueXP灾难恢复中、选择右上角的*免费试用-查看详细信息*。</block>
   <block id="2c6b9011807f7d1e8a37a31be26bb7c0" category="list-text">在下拉详细信息中，选择*结束免费试用*。</block>
   <block id="fc145d0284ba4e60c3b5f315355ac505" category="inline-image-macro">结束免费试用页面</block>
-  <block id="3c90e08e219b34e50a8fec5640b6f2e8" category="list-text">如果要删除所有数据，请选中*在我的试用结束时删除所有数据*。</block>
   <block id="cb4cbd8ce32849060814e41e57e5db7f" category="paragraph">此操作将删除所有计划、复制计划、资源组、vCenter和站点。审核数据、操作日志和作业历史记录会保留到产品使用寿命结束为止。</block>
-  <block id="fd4452ba53d2010757fb183f23851efd" category="admonition">如果您结束免费试用、并且未要求删除数据、并且未购买许可证或订阅、则在免费试用结束60天后、BlueXP灾难恢复将删除您的所有数据。</block>
   <block id="c3964fe08c9dd95815cc67d8aaee9323" category="list-text">在文本框中键入"结束试用"。</block>
   <block id="44a320573c319d1f30b840c2d11a4e26" category="list-text">选择*end*。</block>
   <block id="3906249fde1cef9339402436007bb4f7" category="paragraph">如果您自带许可证(BYOL)、则设置包括购买许可证、获取NetApp许可证文件(NLL)以及将许可证添加到BlueXP数字钱包。</block>
@@ -807,15 +801,7 @@
   <block id="3eddfb488d257605e7713c24d210beee" category="inline-link">管理站点、资源组、复制计划、数据存储库和虚拟机信息</block>
   <block id="310c40c0ef022c90f1370d1fe91ca720" category="paragraph">有关详细信息，请参见<block ref="db7c318fcbcad8cfb9a44ac897b870b2" category="inline-link-rx"></block>。</block>
   <block id="9a3a6422d384602f3e19e123263dc99f" category="paragraph">有关详细信息，请参见<block ref="59c3623215c45197e971057378c86d42" category="inline-link-rx"></block>。</block>
-  <block id="f2cdd0bbe9f89ecac35fe20b5c70e9fb" category="paragraph">下一步是将所需的VM分组到功能资源组中。通过资源组、您可以将一组依赖虚拟机分组为符合您要求的逻辑组。例如、组可能包含延迟启动顺序、可在恢复时运行。</block>
-  <block id="4d179ba15a8047d595a41bbd6175c3be" category="paragraph">在复制计划中选择应用程序时、您可以查看该计划中每个VM的操作系统。这有助于确定如何将虚拟机分组到一个资源组中。</block>
-  <block id="7eb18c1801bc45dc00317e09e6cc2211" category="admonition">每个资源组可以包含一个或多个VM。VM将根据此处包含的顺序启动。</block>
-  <block id="794c0f8f77c0af0e4613492580e6d7ab" category="list-text">在应用程序页面的左侧、选择要保护的VM并将其分配给选定组。</block>
-  <block id="87661bcc452e9da5afed70a3b9cf3e39" category="paragraph">选定虚拟机将自动添加到组1、并启动一个新的组2。每次将虚拟机添加到最后一个组时、都会添加另一个组。</block>
-  <block id="81c61db52db9a56a1819f55910f10afa" category="paragraph"><block ref="37056fc036b85c73069e7f1371212abb" category="inline-image-macro-rx" type="image"></block></block>
   <block id="bcc94af8bc9c7e6ef8fd57214884e7f1" category="list-text">要更改组的名称，请单击组*Edit*<block ref="8254d7ced29032ec76a59e7648759881" category="inline-image-macro-rx" type="image"></block>图标。</block>
-  <block id="a218e8ce5f9879c5e643831c2aa0e36a" category="list-text">要从组中删除某个VM，请选择该VM旁边的*X*。</block>
-  <block id="a63398300e6fbe20dc11a32121bd6bfa" category="list-text">要将虚拟机移动到其他组、请将其拖放到新组中。</block>
   <block id="86cbb58fb6d06cab306fbf4379c5c40e" category="paragraph">组中的每个VM都会根据此处的顺序依次启动。</block>
   <block id="b09b7f24f5b2d0187b19263b47fb2cdf" category="paragraph">在资源映射步骤中、指定源环境中的资源应如何映射到目标。创建复制计划时、您可以为计划中的每个VM设置启动延迟和顺序。这样、您就可以设置VM的启动顺序。</block>
   <block id="da06c5c1d28e308403236438dda209dc" category="list-text">*源数据中心和目标数据中心*</block>
@@ -852,8 +838,6 @@
   <block id="835e92deb53775d3ce75f1bab2ff7fe5" category="list-text">选择复制计划后、选择操作菜单、然后选择*清理旧快照"以删除目标上的旧快照、以匹配新的保留数量。</block>
   <block id="4fcb591c27b70823ff71112c0db6af4f" category="summary">查看灾难恢复报告可以帮助您分析灾难恢复准备情况。预先设计的报告包括故障转移和故障恢复摘要、所有站点上的复制详细信息以及去年的作业详细信息。</block>
   <block id="8c909df77f7b5e2e6b77ff66ee6bd3e7" category="paragraph">查看灾难恢复报告可以帮助您分析灾难恢复准备情况。预先设计的报告包括过去七天帐户内所有站点的测试故障转移摘要、复制计划详细信息和作业详细信息。</block>
-  <block id="50772b7f62153c22aff0a022f47038ef" category="paragraph">您可以下载HTML或JSON格式的报告。</block>
-  <block id="a023ebf9b7aa4bcf4be9bcca1ad988b9" category="admonition">您可以使用浏览器的选项将HTML页面转换为PDF。</block>
   <block id="cd463f7ca5dbc8268a82ea8d8f5e4281" category="paragraph">下载链接的有效期为六小时。</block>
   <block id="5e521694fac83ef0acfcb6f722d2b3cf" category="list-text">从BlueXP  左侧导航栏中，选择*保护*&gt;*灾难恢复*&gt;*复制计划*。</block>
   <block id="40f8ac7caaab02ab3b9834517b54c7a4" category="list-text">从页面顶部选择*创建报告*。</block>
@@ -862,12 +846,10 @@
   <block id="5da6bcdd6ceb1c5910fb17277177402d" category="admonition">此报告可能需要几分钟才能显示。</block>
   <block id="ab6b0c72784c216662673e59f1357cc1" category="list-text">要下载报告，请选择*下载报告*，然后在管理员的下载文件夹中选择该报告。</block>
   <block id="fa9f16c02f8fd7bab6992dec65c5838d" category="paragraph">添加vCenter站点后、即可创建灾难恢复或_Replication pl뮮_。选择源和目标vCenter、选择资源组、然后对应用程序的还原和启动方式进行分组。例如、您可以对与一个应用程序关联的虚拟机(VM)进行分组、也可以对具有类似层的应用程序进行分组。</block>
-  <block id="cfb3b856fe141dd537038393a8052d33" category="list-text">选择要复制的VM并分配组。</block>
   <block id="50e34508d81a64564e31500b942aef1c" category="paragraph">创建计划时、应遵循以下准则：</block>
   <block id="05bbe166de3c0c72c8dde33285c35767" category="list-text">对计划中的所有VM使用相同的凭据。</block>
   <block id="98ce844145386e78d8c9d936d1b8591b" category="list-text">对计划中的所有VM使用相同的脚本。</block>
   <block id="970b99aab999d5cc3afca09ebfb3ae92" category="list-text">对计划中的所有VM使用相同的子网、DNS和网关。</block>
-  <block id="7168b459722d34d971b0a9d5df12edfd" category="list-text">(可选)在应用程序页面的左侧、按虚拟机的数据存储库筛选虚拟机。您还可以按名称搜索特定虚拟机。</block>
   <block id="3380eb8d26d8e7c43e790421698a18a1" category="list-text">*IP地址类型*：重新配置VM配置以满足目标虚拟网络要求。BlueXP  灾难恢复提供两种选项：DHCP或静态IP。对于静态IP、请配置子网掩码、网关和DNS服务器。此外、输入VM的凭据。</block>
   <block id="8914a354aeff1b07a47e178ccae21e27" category="list-text">*DHCP*：如果希望VM从DHCP服务器获取网络配置信息，请选择此设置。如果选择此选项、则只需提供虚拟机的凭据即可。</block>
   <block id="fac29f06ba242d5478f84ec94ec5b901" category="list-text">*脚本*：您可以将.sh、.bat或.ps1格式的自定义脚本作为故障转移后进程。通过自定义脚本、您可以在故障转移过程之后让BlueXP灾难恢复运行脚本。例如、您可以使用自定义脚本在故障转移完成后恢复所有数据库事务。</block>
@@ -1035,13 +1017,9 @@
   <block id="5d3579189b9441a8b42010228d169cbc" category="inline-link">了解如何使用数字钱包更新许可证</block>
   <block id="597c7a7ee6e647859f8aa98b20be3cb0" category="paragraph"><block ref="1180f9bbf40cd0c05f379b347ef1d8f9" category="inline-link-rx"></block>(英文)</block>
   <block id="4f65b71af0098f41a96bfdb343f2f325" category="doc">创建一个资源组以将VM组织在一起</block>
-  <block id="37c560d4a7e5a6e37f98651719bd2745" category="paragraph">添加vCenter站点后、您可能需要创建将VM分组在一起的资源组。通过资源组、您可以将一组依赖虚拟机组织为符合您要求的逻辑组。例如、您可以对与一个应用程序关联的VM进行分组、也可以对具有类似层的应用程序进行分组。另一个示例是、组可能包含延迟启动顺序、可在恢复时运行。</block>
   <block id="142aa3cf2c56c4cee9658fbb7fa95634" category="paragraph">您可以使用以下方法创建资源组：</block>
   <block id="ad2f31d93207199cb75dd53824344fab" category="list-text">从资源组选项卡</block>
-  <block id="0d87bb4775c6c24807b2e814da0b9ca1" category="list-text">创建灾难恢复或_Replication pl뮮_时。如果源vCenter集群托管了大量VM、则在创建复制计划时创建资源组可能会更容易。有关在创建复制计划时创建资源组的说明，请参见<block ref="ea54fcb5e693965efa13773dde42c832" category="inline-link-macro-rx"></block>。</block>
-  <block id="47debb7f83ae8dcccb80828c89238e3a" category="admonition">每个资源组可以包含一个或多个VM。VM将根据您将其包含在复制计划中的顺序启动。您可以通过在资源组列表中上下拖动VM来更改顺序。</block>
   <block id="ae21aa75d137aec3ba200318a51f9166" category="paragraph-title">关于资源组</block>
-  <block id="f957d687562e057bff825e71ab7e802e" category="paragraph">通过资源组、您可以将操作上相关且需要保护的VM组合为一个单元。</block>
   <block id="b945eb631601c78c15db23da09ea1c09" category="paragraph">例如、一个销售点应用程序可能包含多个托管数据库的VM、多个托管业务逻辑规则管理的VM以及多个充当基于Web服务器的店面的VM。通过将这些VM放置在一个资源组中、使用一个保护过程来管理整个应用程序的可用性可能会很有用。</block>
   <block id="97f2b89685ef06c98b9ff744b4147e33" category="paragraph">设置资源组后、您可以应用复制计划规则以确保虚拟机启动顺序正确、网络连接等、从而确保正确恢复应用程序所需的所有虚拟机。</block>
   <block id="359f9e79e746fa9f684e5cda9e60ca2e" category="paragraph-title">它如何工作？</block>
@@ -1056,13 +1034,8 @@
   <block id="afb49150087c45237455b2d82f867be8" category="cell">多个数据存储—*多个SVM*中的FlexVol卷</block>
   <block id="669001397154a9e2d2d9e8a107cb041d" category="list-text">ONTAP API：<block ref="b5ab07cdecf9303ff94db49578282528" prefix=" " category="inline-code"></block>。静默所有卷、以便可以创建快照、并为所有资源组卷启动卷范围的快照。</block>
   <block id="87f2c3aeec6e1ba638ce1869ba610ea4" category="list-text">ONTAP API：<block ref="393c6bdee070ba1b7e80e63101108f36" prefix=" " category="inline-code"></block>。恢复所有卷上的I/O、并在创建快照后启用卷范围的SnapMirror复制。</block>
-  <block id="8633fcc27ccd2122fe46b210f44553cf" category="paragraph">创建资源组时，请考虑以下问题：</block>
-  <block id="8892a1b3251335ec20c65f05270cae24" category="list-text">一个数据存储库不应托管受多个复制计划保护的VM。</block>
-  <block id="85d8f006f7e8ceeb46f30e2eba810828" category="list-text">请勿在同一数据存储上托管受保护和未受保护的VM。如果受保护和未受保护的VM托管在同一数据存储库中、则可能会出现以下问题：</block>
   <block id="01c88b8825d68ac74c4f3a900e529850" category="list-text">由于BlueXP  灾难恢复使用SnapMirror、并且系统会复制整个ONTAP卷、因此出于许可考虑、会使用该卷的已用容量。在这种情况下、此计算将包括受保护虚拟机和未受保护虚拟机占用的卷空间。</block>
-  <block id="fd30c9137bf3e65eb4cbb0b3b65c45d8" category="list-text">如果需要将资源组及其关联的数据存储故障转移到灾难恢复站点、则在故障转移过程中、源站点上将不再存在任何未受保护的VM (不属于资源组、但托管在ONTAP卷上的VM)、从而导致源站点上未受保护的VM发生故障。此外、BlueXP  灾难恢复不会在故障转移vCenter站点上启动这些未受保护的VM。</block>
   <block id="8a63c65b056310ba2a8c9f7b25cb1011" category="list-text">要保护VM、必须将其包含在资源组中。</block>
-  <block id="4314245dac1433ba0b4e2677f01da1cf" category="paragraph">*最佳实践*：在部署BlueXP  灾难恢复之前组织VM、以最大限度地减少"数据存储库无序增长"。将需要保护的VM放置在一部分数据存储上、将不会受到保护的VM放置在另一部分数据存储上。确保任何给定数据存储上的VM未受不同复制计划的保护。</block>
   <block id="b0111a1bb823a7c75cdcdc06c66703ca" category="list-text">从BlueXP  灾难恢复菜单中，选择*Resource Groups*。</block>
   <block id="fa4d1c967d467deb12174bc6b1b3355b" category="list-text">输入资源组的名称。</block>
   <block id="23a0cad5b0151418367a15f201a54ad3" category="list-text">选择VM所在的源vCenter集群。</block>
@@ -1074,4 +1047,81 @@
   <block id="1b98100fdedab345bec758f9fe534c9b" category="inline-link-macro">创建资源组以将虚拟机组织在一起</block>
   <block id="7d1ee868f80080dd430c4c762c071750" category="list-text"><block ref="7d1ee868f80080dd430c4c762c071750" category="inline-link-macro-rx"></block></block>
   <block id="548b49f4267cb06525a994818f01fc03" category="sidebar">创建资源组</block>
+  <block id="f2265cb494c0b6dc346cf3703718b766" category="doc">按计划发现VM</block>
+  <block id="a1cc1dbaf027adca720112f5a8c48e4d" category="paragraph">BlueXP  灾难恢复每24小时执行一次发现。在此版本中、您现在可以自定义发现计划以满足您的需求、并在需要时减少对性能的影响。例如、如果VM数量很多、则可以将发现计划设置为每48小时运行一次。如果VM数量较少、则可以将发现计划设置为每12小时运行一次。</block>
+  <block id="7e2d4377602fe8c7a718d5ef8759c008" category="paragraph">如果您不想计划发现、则可以禁用计划的发现选项、并随时手动刷新发现。</block>
+  <block id="d04fa3ae362a3ea46fde26bdba81b204" category="inline-link">添加vCenter Server站点</block>
+  <block id="0002b275859484d6cdca867fbab8e165" category="paragraph">有关详细信息，请参见<block ref="54555db921feb31b73553520fa282341" category="inline-link-rx"></block>。</block>
+  <block id="84307a139104b06aba6c6de9c728b2ff" category="section-title">资源组数据存储库支持</block>
+  <block id="ed0d134f0d7b751b80633ad848722c7a" category="paragraph">以前、您只能按VM创建资源组。在此版本中、您可以按数据存储库创建资源组。在创建复制计划并为该计划创建资源组时、将列出数据存储库中的所有VM。如果您有大量VM并希望按数据存储库对其进行分组、则此功能非常有用。</block>
+  <block id="84ae8aaf40a4b59fed9a4fa741ccf225" category="paragraph">您可以通过以下方式使用数据存储库创建资源组：</block>
+  <block id="ee64b17e5379b689c5eb4ab50027f625" category="list-text">使用数据存储库添加资源组时、您可以看到数据存储库列表。您可以选择一个或多个数据存储库来创建资源组。</block>
+  <block id="3043e1ee38988e4248b9d1966e6dd1a4" category="list-text">在创建复制计划并在此计划中创建资源组时、您可以看到数据存储库中的VM。</block>
+  <block id="f7a1d657a7b8993c917f63602c0774a1" category="section-title">免费试用或许可证到期通知</block>
+  <block id="38a9b45e86982c8330edcb875da55284" category="paragraph">此版本会通知您免费试用版将在60天后过期、以确保您有时间获取许可证。此版本还会在许可证到期当天发出通知。</block>
+  <block id="5d940e67e8d433508306c751ff0ea678" category="section-title">服务更新通知</block>
+  <block id="9bdd52eb995b6f47a02ffa6aa4318399" category="paragraph">在此版本中、顶部会显示一个横幅、指示服务正在升级、并且此服务处于维护模式。升级服务时会显示此横幅、升级完成后此横幅将消失。虽然升级期间您可以继续在UI中工作、但无法提交新作业。计划作业将在更新完成且服务返回到生产模式后运行。</block>
+  <block id="6bed87054cd375e075020297134f5ec2" category="paragraph">云灾难恢复是一种经济高效的弹性方法、可保护工作负载免受站点中断和数据损坏事件的影响。借助适用于VMware的BlueXP  灾难恢复、您可以使用NetApp云存储将运行ONTAP存储的内部VMware VM或数据存储库工作负载复制到公共云中的VMware软件定义的数据中心、或者将ONTAP存储用作灾难恢复站点的其他内部VMware环境。</block>
+  <block id="ece6a9df8de79d152a543985204b6221" category="list-text">发生灾难时、可按需将主站点故障转移到灾难恢复站点、灾难恢复站点可以是基于AWS的VMware Cloud和Amazon FSx for NetApp ONTAP、也可以是基于ONTAP的内部VMware环境。</block>
+  <block id="75bb2df7399afeb7147c24fce3704107" category="list-text">解决灾难后、根据需要从灾难恢复站点故障恢复到主站点。*将虚拟机或数据存储库分组到逻辑资源组中以实现高效管理。</block>
+  <block id="70fdbb4fe1ac448b07e3ab48c5bd8bb1" category="list-text">如果要删除所有数据，请选中*结束免费试用后立即删除数据*。</block>
+  <block id="ba1769c41cb5cf97045fc108e9213d38" category="admonition">如果您结束了免费试用、未请求删除数据、也未购买许可证或订阅、则BlueXP  灾难恢复将在免费试用结束60天后删除您的所有数据。</block>
+  <block id="801c0fa0d304ca22d8afec06189bcf93" category="section-title">2025年4月16日</block>
+  <block id="e1b61136672bccd13e6828fe7987e4f6" category="paragraph">4.3 版</block>
+  <block id="61e45ffabe7cc2e3542ca9a55a1a53bf" category="paragraph">只有当复制计划处于以下状态之一时、才能保护VM：</block>
+  <block id="e7d31fc0602fb2ede144d18cdffd816b" category="list-text">就绪</block>
+  <block id="eca4b06cc957b067c25916bf563bfcb1" category="list-text">已提交故障恢复</block>
+  <block id="55af57d923ed95c2495c25a0e4762077" category="list-text">已提交测试故障转移</block>
+  <block id="cffe0c1b9d43854c0d95a5d592e6102c" category="list-text">选择要复制的VM或数据存储库并分配资源组。</block>
+  <block id="335e98e9e03c56f037d977ec4b92f533" category="paragraph">下一步是将所需的VM或数据存储库分组到功能资源组中。通过资源组、您可以将一组依赖虚拟机或数据存储库分组到符合您要求的逻辑组中。例如、组可能包含延迟启动顺序、可在恢复时运行。</block>
+  <block id="418330af51c4a26653da43f1476e3d4f" category="paragraph">在复制计划中选择应用程序时、您可以查看该计划中每个虚拟机或数据存储库的操作系统。这有助于确定如何将虚拟机或数据存储库分组到资源组中。</block>
+  <block id="f8842a88bb1ca78d43e06472d4679889" category="admonition">每个资源组可以包含一个或多个VM或数据存储库。VM将根据此处包含的顺序启动。</block>
+  <block id="5e90d93870eb5779de0b40ced0f92445" category="paragraph">创建资源组时，请考虑以下问题：</block>
+  <block id="de634b3bd311c5e5e1c0b9d53d9d242f" category="list-text">在将数据存储库添加到资源组之前、请先手动发现VM或按计划发现VM。这样可确保虚拟机已被发现并列在资源组中。如果不触发手动发现、则虚拟机可能不会列在资源组中。</block>
+  <block id="312258bdb1152123e04c06cf90952de2" category="list-text">确保数据存储库中至少有一个VM。如果数据存储库中没有VM、则不会发现此数据存储库。</block>
+  <block id="9fa2d89f680762c7614753f04e0aad6b" category="list-text">一个数据存储库不应托管受多个复制计划保护的VM。</block>
+  <block id="dfbb0d3c710884104551edbd929afe76" category="list-text">请勿在同一数据存储库中托管受保护和未受保护的VM。如果受保护和未受保护的VM托管在同一数据存储库中、则可能会出现以下问题：</block>
+  <block id="2ec187db789cd0f14313072722cd5c3d" category="list-text">如果需要将资源组及其关联的数据存储库故障转移到灾难恢复站点、则在故障转移过程中、源站点上将不再存在任何未受保护的VM (不属于资源组、但托管在ONTAP卷上的VM)、从而导致源站点上未受保护的VM发生故障。此外、BlueXP  灾难恢复不会在故障转移vCenter站点上启动这些未受保护的VM。</block>
+  <block id="2ff74859cf5b70036f96d6c35b5ac3f0" category="paragraph">*最佳实践*：在部署BlueXP  灾难恢复之前组织VM、以最大限度地减少"数据存储库无序增长"。将需要保护的VM放置在一组数据存储库上、将不会受保护的VM放置在另一组数据存储库上。确保任何给定数据存储库上的虚拟机均未受到不同复制计划的保护。</block>
+  <block id="6f9c40e36ae73e33332b46ebad53611b" category="list-text">选择*虚拟机*或*存储库*。</block>
+  <block id="1e37304672f6f6f473c93804e891eacb" category="list-text">(可选)按名称搜索特定虚拟机或数据存储库。</block>
+  <block id="b3736de6232ff120d2109e988d051825" category="list-text">在应用程序页面的左侧、选择要保护的VM或数据存储库并将其分配给选定组。</block>
+  <block id="08c396946743aa0cf55cd76038c264b7" category="paragraph">选定资源将自动添加到组1、并启动新的组2。每次向最后一个组添加资源时、都会添加另一个组。</block>
+  <block id="0f71807fe3313792a56d8deaefc042cd" category="paragraph"><block ref="fe2b15a06d13ce51dd26ce76b278185c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="9614731ca9a6da0007a983f0a2437843" category="paragraph">或者、对于数据存储库：</block>
+  <block id="07445ca0ae375259d669e5ff34c73c99" category="paragraph"><block ref="0900e5e3c0a693c1efb9cc1c9f020053" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8d2514ca702dd19c69d05151f9ca0dde" category="list-text">要从组中删除某个资源，请选择该资源旁边的*X*。</block>
+  <block id="f0a0692b11f1b8e73cde7a3fa59cce87" category="list-text">要将资源移动到其他组，请将其拖放到新组中。</block>
+  <block id="d92fbdb4e21242a727db9edab622f2e7" category="admonition">要将数据存储库移至其他资源组、请取消选择不需要的数据存储库、然后提交复制计划。然后、创建或编辑另一个复制计划并重新选择数据astore。</block>
+  <block id="df5bd7f92bf7a899cafe7f5f4cede250" category="paragraph">虽然您可以在创建复制计划过程中添加资源组、但您可能会发现单独添加这些组并稍后在计划中使用这些组会更方便。您可以按虚拟机或数据存储库创建资源组。</block>
+  <block id="f14421e984d67b669d82e97c5f322ee1" category="paragraph">您可以通过以下方式按数据存储库创建资源组：</block>
+  <block id="8c0063a0e5fb937e4b6c45cefbf9765b" category="paragraph">您可以下载PDF、HTML或JSON格式的报告。</block>
+  <block id="4f3a59f3915b8beff0db268e9200f32d" category="paragraph">添加vCenter站点后、您可能需要创建资源组、以便按VM或数据存储库将VM分组在一起。通过资源组、您可以将一组依赖虚拟机组织为符合您要求的逻辑组。例如、您可以对与一个应用程序关联的VM进行分组、也可以对具有类似层的应用程序进行分组。另一个示例是、组可能包含延迟启动顺序、可在恢复时运行。</block>
+  <block id="68924c47e2eb51445ff8e93c1ce1bbc2" category="paragraph">您可以将虚拟机本身分组、也可以将虚拟机分组到数据存储库中。</block>
+  <block id="29a34a7d63a066ce71bffd4a4d5c57dd" category="list-text">创建灾难恢复或_Replication pl뮮_时。如果源vCenter集群托管了大量VM、则在创建复制计划时创建资源组可能会更容易。有关在创建复制计划时创建资源组的说明，请参见<block ref="808c9323236f2ed48bff12970a5f1c49" category="inline-link-macro-rx"></block>。</block>
+  <block id="d9d4ae88e38b24479af2edb7b1d29c42" category="admonition">每个资源组可以包含一个或多个VM或数据存储库。VM将根据您将其包含在复制计划中的顺序启动。您可以通过在资源组列表中上下拖动VM或数据存储库来更改顺序。</block>
+  <block id="335cb5cb2353aeb9863b45bfe205a67d" category="paragraph">通过资源组、您可以将包含操作相关且需要作为一个单元进行保护的VM或数据存储库组合在一起。</block>
+  <block id="1525aedb2680936263642e1258b66620" category="list-text">根据要搜索的方式，选择*Virtual Machines*或*DRATORes*。</block>
+  <block id="6bc8606bc16628bb91d45fae4e7a2398" category="list-text">选择*添加资源组*选项卡。系统将列出选定vCenter集群中的所有数据存储库或VM。如果选择了*数据存储库*、则系统将列出选定vCenter集群中的所有数据存储库。如果选择了*虚拟机*，则系统将列出选定vCenter集群中的所有虚拟机。</block>
+  <block id="20391328f727df103455848410020c4e" category="paragraph"><block ref="20391328f727df103455848410020c4e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d4621be8c4e595ac641222751fcbbd4b" category="paragraph">添加vCenter后、BlueXP  灾难恢复会对vCenter环境执行深入发现、包括vCenter集群、ESXi主机、数据存储库、存储足印、虚拟机详细信息、SnapMirror副本和虚拟机网络。</block>
+  <block id="fc548d74f5fe5eda5c2ac1776a3251d8" category="paragraph">如果您在先前版本中添加了vCenter、并希望自定义发现计划、则必须编辑vCenter Server站点并设置计划。</block>
+  <block id="63645e7c57622b218c40eb8c4228f755" category="admonition">BlueXP  灾难恢复每24小时执行一次发现。设置站点后、您可以稍后编辑vCenter以自定义符合自己需要的发现计划。例如、如果VM数量很多、则可以将发现计划设置为每23小时59分钟运行一次。如果VM数量较少、则可以将发现计划设置为每12小时运行一次。最小间隔为30分钟、最大间隔为24小时。</block>
+  <block id="f77a5149ff25436d00205500f56a3671" category="paragraph">您应先手动执行一些查找、以获取有关您的环境的最新信息。之后、您可以将计划设置为自动运行。</block>
+  <block id="89f2a6d4b35cc4d13e0976279d928bd2" category="paragraph">新添加或删除的VM将在下次计划的发现或立即手动发现期间被识别。</block>
+  <block id="478565a725726768e967dd6c2076bfe8" category="section-title">编辑vCenter Server站点并自定义发现计划</block>
+  <block id="c170e69d4eaf4587e77f4ee6b622167a" category="paragraph">您可以编辑vCenter Server站点以自定义发现计划。例如、如果VM数量很多、则可以将发现计划设置为每23小时59分钟运行一次。如果VM数量较少、则可以将发现计划设置为每12小时运行一次。</block>
+  <block id="edb77224438876f48ac2411fc9d426ee" category="paragraph">如果您不想计划发现、则可以禁用计划的发现选项、并随时手动刷新发现。</block>
+  <block id="9dbde0ef17659bc614c76bb72c33cd6a" category="list-text">从BlueXP  灾难恢复菜单中、选择*站点*。</block>
+  <block id="f656f053f38993274db0418e245cdf05" category="list-text">选择要编辑的站点。</block>
+  <block id="5ad3e303fff11348579be9fa7186a3bf" category="inline-image-macro">操作图标</block>
+  <block id="51acadcc6b05f2ea7857f94de518b41c" category="list-text">选择右侧的“操作”<block ref="145ad72607e9a3c177918d31007a191e" category="inline-image-macro-rx" type="image"></block>图标，然后选择*Edit*。</block>
+  <block id="a352c615ea385a6739b336754188419a" category="list-text">在编辑vCenter服务器页面中、根据需要编辑字段。</block>
+  <block id="61704e16fae21afe2e06c2208fb7d289" category="list-text">要自定义发现计划，请选中*启用计划的发现*复选框，然后选择所需的日期和时间间隔。</block>
+  <block id="56b0e91275c81a9a7d2c23d702bfd24f" category="inline-image-macro">编辑发现计划屏幕截图</block>
+  <block id="11db3dad3390f21a6a077fc4dce96388" category="paragraph"><block ref="11db3dad3390f21a6a077fc4dce96388" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7eceff55f91319d0902ed1cce46f6389" category="section-title">手动刷新发现</block>
+  <block id="c2104ad12897a5730ad3b288494cdd97" category="paragraph">您可以随时手动刷新发现。如果您已添加或删除VM、并希望更新BlueXP  灾难恢复中的信息、则此功能非常有用。</block>
+  <block id="5196afaaa8fb34fc7153a30daf14514e" category="list-text">选择要刷新的站点。</block>
+  <block id="c87fc74cb4f8f9196e191287a96f80dd" category="list-text">选择右侧的"Actions"图标<block ref="145ad72607e9a3c177918d31007a191e" category="inline-image-macro-rx" type="image"></block>，然后选择*Refresh*。</block>
 </blocks>
