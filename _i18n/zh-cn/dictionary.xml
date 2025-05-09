@@ -1067,7 +1067,6 @@
   <block id="70fdbb4fe1ac448b07e3ab48c5bd8bb1" category="list-text">如果要删除所有数据，请选中*结束免费试用后立即删除数据*。</block>
   <block id="ba1769c41cb5cf97045fc108e9213d38" category="admonition">如果您结束了免费试用、未请求删除数据、也未购买许可证或订阅、则BlueXP  灾难恢复将在免费试用结束60天后删除您的所有数据。</block>
   <block id="801c0fa0d304ca22d8afec06189bcf93" category="section-title">2025年4月16日</block>
-  <block id="e1b61136672bccd13e6828fe7987e4f6" category="paragraph">4.3 版</block>
   <block id="61e45ffabe7cc2e3542ca9a55a1a53bf" category="paragraph">只有当复制计划处于以下状态之一时、才能保护VM：</block>
   <block id="e7d31fc0602fb2ede144d18cdffd816b" category="list-text">就绪</block>
   <block id="eca4b06cc957b067c25916bf563bfcb1" category="list-text">已提交故障恢复</block>
@@ -1124,4 +1123,18 @@
   <block id="c2104ad12897a5730ad3b288494cdd97" category="paragraph">您可以随时手动刷新发现。如果您已添加或删除VM、并希望更新BlueXP  灾难恢复中的信息、则此功能非常有用。</block>
   <block id="5196afaaa8fb34fc7153a30daf14514e" category="list-text">选择要刷新的站点。</block>
   <block id="c87fc74cb4f8f9196e191287a96f80dd" category="list-text">选择右侧的"Actions"图标<block ref="145ad72607e9a3c177918d31007a191e" category="inline-image-macro-rx" type="image"></block>，然后选择*Refresh*。</block>
+  <block id="78e5de64c036a105265b3f447a5fbbca" category="doc">智能代理支持</block>
+  <block id="12430fc7d9e2c156fb2dc1af2bf60126" category="paragraph">BlueXP  连接器支持智能代理。智能代理是一种将内部环境连接到BlueXP  服务的轻型、安全且高效的方式。它可以在您的环境和BlueXP  服务之间提供安全连接、而无需VPN或直接Internet访问。这种经过优化的代理实施可卸载本地网络中的API流量。</block>
+  <block id="2baae43f4fa62104c66585e956c51e1e" category="paragraph">配置代理后、BlueXP  灾难恢复会尝试直接与VMware或ONTAP进行通信、如果直接通信失败、则会使用配置的代理。</block>
+  <block id="a115e6ab8acfcda534f22a18d1d6940d" category="paragraph">实施BlueXP  灾难恢复代理需要使用HTTPS协议在Connector与任何vCenter Server和ONTAP阵列之间进行端口443通信。在执行任何操作时、连接器中的BlueXP  灾难恢复代理会直接与VMware vSphere、VC或ONTAP进行通信。</block>
+  <block id="a7a0475144b255eccfff4d2ee3e7a5c4" category="paragraph">有关用于BlueXP  灾难恢复的智能代理的详细信息，请参见<block ref="bf1bf7a536149f2406a2eab17db3a297" category="inline-link-rx"></block>。</block>
+  <block id="146adb7944757e88795676b780c31811" category="inline-link">配置Connector以使用代理服务器</block>
+  <block id="635abfb2f80497d39998f2a81dfecd7e" category="paragraph">有关在BlueXP  中设置常规代理的详细信息，请参见<block ref="4d83a369cd8d5456206d71335578eaaa" category="inline-link-rx"></block>。</block>
+  <block id="7469dc0d82ce9411c03b852f2163d515" category="section-title">随时结束免费试用</block>
+  <block id="38567a6024618c3687de90b3e2cff86e" category="paragraph">您可以在任意时间停止免费试用、也可以等到免费试用过期。</block>
+  <block id="b618f30aeca114d464120de119b19ced" category="paragraph">请参阅。<block ref="5f37f8bd4230e4b629c60b7dc23a5850" category="inline-link-rx"></block></block>
+  <block id="74027f9fc959ea61e0fe4228f42245b9" category="list-text">有关为BlueXP  灾难恢复设置智能代理的信息，请参见<block ref="b42f106c81bf8d9365b4d08b31fa2987" category="inline-link-macro-rx"></block>。</block>
+  <block id="848964f0743e2416b5d061a5e088ca73" category="paragraph">4.2.2版</block>
+  <block id="f070435ef55d6c7cc1db59f0a41a4609" category="section-title">2025年3月10日</block>
+  <block id="ae493f6fb938d3c8c6db8b5a9e623794" category="paragraph">4.2.1版</block>
 </blocks>

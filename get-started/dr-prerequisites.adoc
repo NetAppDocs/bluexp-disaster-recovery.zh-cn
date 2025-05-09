@@ -99,6 +99,7 @@ TIP: 对于内部到内部、请使用BlueXP内部部署连接器。对于从内
 +
 请参阅。 https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["发现内部ONTAP 集群"^]
 
+* 有关为BlueXP  灾难恢复设置智能代理的信息，请参见link:../get-started/dr-setup.html["为BlueXP灾难恢复设置基础架构"]。
 
 
 

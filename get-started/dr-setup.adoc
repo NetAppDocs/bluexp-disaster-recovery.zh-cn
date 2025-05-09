@@ -42,6 +42,18 @@ TIP: 请查看 link:../get-started/dr-prerequisites.html["前提条件"] 以确�
 
 
 
+=== 智能代理支持
+
+BlueXP  连接器支持智能代理。智能代理是一种将内部环境连接到BlueXP  服务的轻型、安全且高效的方式。它可以在您的环境和BlueXP  服务之间提供安全连接、而无需VPN或直接Internet访问。这种经过优化的代理实施可卸载本地网络中的API流量。
+
+配置代理后、BlueXP  灾难恢复会尝试直接与VMware或ONTAP进行通信、如果直接通信失败、则会使用配置的代理。
+
+实施BlueXP  灾难恢复代理需要使用HTTPS协议在Connector与任何vCenter Server和ONTAP阵列之间进行端口443通信。在执行任何操作时、连接器中的BlueXP  灾难恢复代理会直接与VMware vSphere、VC或ONTAP进行通信。
+
+有关在BlueXP  中设置常规代理的详细信息，请参见 https://docs.netapp.com/us-en/bluexp-setup-admin/task-configuring-proxy.html["配置Connector以使用代理服务器"^]。
+
+
+
 == 准备好使用AWS进行BlueXP  灾难恢复、以实现内部到云的保护
 
 要使用AWS设置BlueXP  灾难恢复以实现内部到云保护、您需要设置以下内容：
