@@ -313,22 +313,14 @@
   <block id="e6cd86d61f4639c8a27006c6c29b3e9f" category="list-text">选择 * 下一步 * 。</block>
   <block id="4039eb9aa82f9a49f8096e652825e9c9" category="inline-image-macro">显示"Add Replication Plan &amp;gt；Applications to replication"页面的屏幕截图</block>
   <block id="f60de6a7e37982bbcf6e675308bbbeb8" category="list-text">(可选)执行以下任一操作：</block>
-  <block id="84ffccfa6f5368695a086e51333e6494" category="list-text">如果有多个资源组，请确保这些组的顺序与应执行的操作顺序一致。</block>
   <block id="94884044f731a17cf6d266f3acc71d30" category="section-title">将源资源映射到目标</block>
   <block id="15be2bc9d482c70a11a63e89eada5ce4" category="list-text">在"Resource MAPPING (资源映射)"页面中、要对故障转移和测试操作使用相同的映射、请选中此框。</block>
   <block id="137f19e6e2dc1219f33553b812627bc2" category="list-text">虚拟机</block>
   <block id="eff845e03ea7f765e5646b3de0aa3188" category="list-text">数据存储库</block>
   <block id="0516742190fe9dfeaffe988ba6abe786" category="admonition">您可以稍后测试整个计划。现在、您要为测试环境设置映射。</block>
-  <block id="3f015374311e085394976bb9595d4f23" category="section-title">确定重复情况</block>
-  <block id="709c15cd0537a2fac696156d542aebf9" category="list-text">在重复页面中，选择*Migrate*或*Copate*。</block>
-  <block id="b6f87dbacc6d25d61a3ccb8d788eee83" category="list-text">*迁移*：选择此项可将应用程序移动到目标位置。</block>
-  <block id="061664c141fcaa8d32bae574640392e5" category="list-text">*复制*：在重复复制中、使目标副本与源副本中的更改保持最新。</block>
-  <block id="a807f56da9b717d84bb632ebfde49e6e" category="inline-image-macro">显示添加复制计划和重复项的屏幕截图</block>
-  <block id="b6b37c618f509f4cd72b3116ce0f0a69" category="paragraph"><block ref="b647bf0b099c797a2c2c6a3a40882045" category="inline-image-macro-rx" type="image"></block></block>
   <block id="26ff2655fb5643a3e76370d9248a31df" category="admonition">您可以稍后禁用或删除复制计划。</block>
   <block id="47324a4e5509aeccc192aa7b07cbcac7" category="list-text">选择*添加计划*。</block>
   <block id="a9980df200522b9bbaa257521bc396fe" category="paragraph">该计划将添加到计划列表中。</block>
-  <block id="6df4f43f22118c6a361990f481e6ed83" category="list-text">登录到BlueXP并从左侧导航栏中选择*保护*&gt;*灾难恢复*。</block>
   <block id="2f11fab4722695438910176065d838b4" category="paragraph">您将登录BlueXP灾难恢复信息板页面。首次启动此服务时、您需要添加vCenter信息。稍后、信息板将显示有关站点和复制计划的数据。</block>
   <block id="6b3b905a38750ec7a08fa2e97d6315bf" category="admonition">如果某些vCenter站点已存在、而您希望添加更多vCenter站点、请从顶部菜单中选择*站点*、然后选择*添加*。</block>
   <block id="5a05572673bc07b0b94f07c482a67d13" category="inline-image-macro">添加vCenter Server屏幕截图 </block>
@@ -438,8 +430,6 @@
   <block id="3c47c0bca0e482b13e82a95a95df0741" category="list-text">输入复制计划名称以确认并开始故障恢复。</block>
   <block id="d813bc25d25a7f816dde51c17f6c6ba0" category="list-text">映射源环境中的资源与目标之间的映射关系。</block>
   <block id="c456b58190fd5c21d84750f126197baf" category="paragraph">首先、选择源vCenter、然后选择目标vCenter。</block>
-  <block id="7fceed43db5d7f111f8ef8f9351ffecd" category="paragraph">选择是要将数据迁移(一次性移动)到另一个目标还是以SnapMirror频率复制数据。</block>
-  <block id="a6263fdec62a2bd89f463f2208f79331" category="paragraph">如果要复制数据、请确定镜像数据的频率。</block>
   <block id="901540dd7e45eaf2226327527c8d78b4" category="list-text">*Source*：选择*Discover vCenter server*以输入有关源vCenter站点的信息。</block>
   <block id="bc7f3cb185f48d451eb5ef976e8ad82d" category="list-text">*目标*：</block>
   <block id="d23a9d83c87c6eacef309f00a2beb5d3" category="inline-image-macro">站点页面屏幕截图</block>
@@ -526,8 +516,6 @@
   <block id="4e305fe14ce90c5da1d1d11ea08f5fe4" category="list-text">选择要运行这些测试的日期和时间。</block>
   <block id="294642716409ca930af5721f2db940c1" category="list-text">以yyy-mm-dd格式输入要开始测试的日期。</block>
   <block id="e3afddca17ec740a7556918c2bbdc013" category="inline-image-macro">屏幕截图、显示可在其中编辑计划的位置</block>
-  <block id="380f2a79a88b8118529d87c864cff3d8" category="paragraph"><block ref="380f2a79a88b8118529d87c864cff3d8" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="0a003809d85acf4d6a198955e5780ac3" category="list-text">要在故障转移测试完成后清理测试环境，请选中*测试故障转移后自动清理*。</block>
   <block id="20ace5d6661ce95df08950b97c500ddc" category="admonition">此过程会从测试位置注销临时VM、删除已创建的FlexClone卷并卸载临时数据存储库。</block>
   <block id="10492389e94efdebbb66f7b0cd8a1324" category="list-text">选择 * 保存 * 。</block>
   <block id="4d519f9cb24d082270f8f88ccccd42e3" category="paragraph">了解BlueXP灾难恢复的新增功能。</block>
@@ -750,7 +738,6 @@
   <block id="a358a5c755a9f869690207e2a0726737" category="list-text">*Virtual Machines*：在故障转移映射选项卡中，选择*Virtual Machines*旁边的向下箭头。</block>
   <block id="c28e8a3b83f3f2cce376fe3daa7ad95d" category="paragraph"><block ref="64eb1ec301597178e47fa7deed0121dc" category="inline-image-macro-rx" type="image"></block></block>
   <block id="10936c8535aaede0ed75f5d8d4fa6aaf" category="list-text">*保留数量*：输入要保留的快照数量。</block>
-  <block id="8772d236d3c62b688c3b57224d982ee1" category="paragraph"><block ref="8772d236d3c62b688c3b57224d982ee1" category="inline-image-macro-rx" type="image"></block></block>
   <block id="76e4d72594030fca0b96279d0f8392dc" category="section-title">可能有助于BlueXP  灾难恢复的术语</block>
   <block id="b7b26d16c3d1d84d3872afa1f04c92d6" category="paragraph">了解一些与灾难恢复相关的术语可能会对您有所帮助。</block>
   <block id="7f800e59a5bd3f98ce900fa6e543f67d" category="list-text">*站点*：通常与物理数据中心或云提供商关联的逻辑容器。</block>
@@ -802,7 +789,6 @@
   <block id="310c40c0ef022c90f1370d1fe91ca720" category="paragraph">有关详细信息，请参见<block ref="db7c318fcbcad8cfb9a44ac897b870b2" category="inline-link-rx"></block>。</block>
   <block id="9a3a6422d384602f3e19e123263dc99f" category="paragraph">有关详细信息，请参见<block ref="59c3623215c45197e971057378c86d42" category="inline-link-rx"></block>。</block>
   <block id="bcc94af8bc9c7e6ef8fd57214884e7f1" category="list-text">要更改组的名称，请单击组*Edit*<block ref="8254d7ced29032ec76a59e7648759881" category="inline-image-macro-rx" type="image"></block>图标。</block>
-  <block id="86cbb58fb6d06cab306fbf4379c5c40e" category="paragraph">组中的每个VM都会根据此处的顺序依次启动。</block>
   <block id="b09b7f24f5b2d0187b19263b47fb2cdf" category="paragraph">在资源映射步骤中、指定源环境中的资源应如何映射到目标。创建复制计划时、您可以为计划中的每个VM设置启动延迟和顺序。这样、您就可以设置VM的启动顺序。</block>
   <block id="da06c5c1d28e308403236438dda209dc" category="list-text">*源数据中心和目标数据中心*</block>
   <block id="7067fdfe055fabd950bd45a1a17e1642" category="list-text">*目标集群*</block>
@@ -810,14 +796,9 @@
   <block id="6d9f48430941cb04802ac18d9c695e65" category="admonition">如果vCenter配置了Distributed Resource Scheduler (DRS)来管理集群中的多个主机、则无需选择主机。如果选择主机、则BlueXP  灾难恢复会将所有VM置于选定主机上。</block>
   <block id="999becf997185f87ea1b5bd029bf5b34" category="list-text">*目标VM文件夹*(可选)：创建一个新的根文件夹以存储选定的VM。</block>
   <block id="0a8bc9b2bb8f581fa27738fc437d64b3" category="paragraph">根据您的选择、此部分可能会显示不同的字段。</block>
-  <block id="16bd7bddefb51b87ff4fbcf4c8831a1d" category="list-text">*静态IP*：如果要手动指定IP配置信息，请选择此设置。您可以从源VM选择相同或不同的信息。如果选择与源相同的、则无需输入凭据。另一方面、如果您选择使用与源不同的信息、则可以提供凭据、VM的IP地址、子网掩码、DNS和网关信息。应在全局级别或每个VM级别提供VM子操作系统凭据。</block>
   <block id="7b2b025be41dbbc4cda9601c1b5523a5" category="list-text">*目标VM前缀和后缀*：在虚拟机详细信息下、您可以选择为VM名称添加前缀和后缀。</block>
   <block id="230dc85a08275a2466390ae799703f92" category="list-text">*源VM CPU和RAM*：在虚拟机详细信息下，您可以选择调整VM CPU和RAM参数的大小。</block>
   <block id="97bbe2658500151382594a4fae0afc57" category="paragraph"><block ref="1dcb46a6f5cf6fb93122072f061a9e9e" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="77506f26f3b4a989168bfd6da6435808" category="list-text">*Boot Order*：您可以在故障转移后修改资源组中所有选定虚拟机的启动顺序。默认情况下、系统会使用在选择资源组期间选择的引导顺序；但是、您可以在此阶段进行更改。这有助于确保优先级为一个的所有虚拟机在后续优先级为VM启动之前都在运行。</block>
-  <block id="f4acab8352ab5ba21dd2d6ce32fc9f2a" category="paragraph">引导顺序编号仅适用于资源组。如果一个组中有一个"2"、另一个组中有一个"2"、则第一个组中的VM将按其顺序启动、第二个组中的VM将按其顺序启动。</block>
-  <block id="8cad29fca944093d9257fcd28c5a17d5" category="list-text">顺序启动：为每个VM分配一个唯一编号、以便按分配的顺序启动、例如1、2、3、4、5</block>
-  <block id="8043065a3a1affdc7e75a0083d3349b1" category="list-text">同时启动：为所有VM分配相同的数量以同时启动它们、例如1、1、1、1、2、2、3、4、4。</block>
   <block id="aa54fb3621577f63cab9b508032a995d" category="list-text">*Boot Delay*：调整启动操作的延迟(以分钟为单位)。</block>
   <block id="517ed43dc67f057cadcb1c29ecbd75ef" category="admonition">要将启动顺序重置为默认值，请选择*将VM设置重置为默认值*，然后选择要更改回默认值的设置。</block>
   <block id="2a4ddf396205dca12c00a6eb7e16285a" category="section-title">查看复制计划</block>
@@ -855,13 +836,10 @@
   <block id="fac29f06ba242d5478f84ec94ec5b901" category="list-text">*脚本*：您可以将.sh、.bat或.ps1格式的自定义脚本作为故障转移后进程。通过自定义脚本、您可以在故障转移过程之后让BlueXP灾难恢复运行脚本。例如、您可以使用自定义脚本在故障转移完成后恢复所有数据库事务。</block>
   <block id="df6b8c791e4694210c8862ed040048ef" category="list-text">*创建应用程序一致的副本*：指示是否创建应用程序一致的Snapshot副本。该服务将使应用程序处于静修状态、然后创建一个快照、以获得一致的应用程序状态。在Windows上运行的Oracle以及在Windows上运行的Linux和SQL Server支持此功能。</block>
   <block id="708b68cf49e909f729ce67863a2f6de3" category="list-text">*DRAMORes*：选择*DRAMORes*旁边的向下箭头。根据VM的选择、系统会自动选择数据存储库映射。</block>
-  <block id="c5bb1e7845a8d9ffe23d02cceec9e4bf" category="list-text">*RPO *：输入恢复点目标(RPO)以指示要恢复的数据量(以时间为单位)。例如、如果您输入60分钟的RPO、则恢复过程中的数据必须始终不超过60分钟。如果发生灾难、您最多可以丢失60分钟的数据。此外、还可以输入要为所有数据存储库保留的Snapshot副本数。</block>
   <block id="27ee5986957f012b4e37ee29afe29c7f" category="list-text">*源和目标数据存储库*：如果存在多个(扇出) SnapMirror关系、则可以选择要使用的目标。如果卷已建立SnapMirror关系、则会显示相应的源数据存储库和目标数据存储库。如果某个卷没有SnapMirror关系、您现在可以通过选择目标集群、目标SVM并提供卷名称来创建一个。此服务将创建卷和SnapMirror关系。</block>
-  <block id="3c65044e501ce692cb21ad3d837dab25" category="list-text">指定恢复点目标(RPO)后、该服务将根据RPO计划主备份并更新二级目标。</block>
   <block id="950fa88679103c3c7c4e449423d8bfcc" category="list-text">如果VM来自同一个卷和同一个SVM、则该服务将执行标准ONTAP快照并更新二级目标。</block>
   <block id="a47d6910008cc9bb73921a36d6609a08" category="list-text">如果VM来自不同的卷和同一个SVM、则该服务会通过包含所有卷来创建一致性组快照并更新二级目标。</block>
   <block id="3cc1e8e247fa51b1c7d6f2a7c029a515" category="list-text">如果VM来自不同的卷和不同的SVM、则该服务会通过将所有卷包含在相同或不同集群中来执行一致性组开始阶段和提交阶段快照、并更新二级目标。</block>
-  <block id="e829ce8109ca652cb970cd9d2014a52e" category="section-title">测试映射</block>
   <block id="a8c55ad0456d667323e1ede0b2d4845d" category="list-text">要为测试环境设置不同的映射，请取消选中该框并选择*Test Mappings *选项卡。</block>
   <block id="3d2d89948829d5041f9ae015297d638b" category="list-text">像以往一样浏览每个选项卡、但这次是针对测试环境。</block>
   <block id="74ba4c0b5e2da8a64b8dee1c0d8ba2eb" category="paragraph">发生灾难时、请将主内部VMware站点故障转移到另一个内部VMware站点或AWS上的VMware Cloud。您可以在需要时测试故障转移过程以确保成功。</block>
@@ -1072,9 +1050,7 @@
   <block id="eca4b06cc957b067c25916bf563bfcb1" category="list-text">已提交故障恢复</block>
   <block id="55af57d923ed95c2495c25a0e4762077" category="list-text">已提交测试故障转移</block>
   <block id="cffe0c1b9d43854c0d95a5d592e6102c" category="list-text">选择要复制的VM或数据存储库并分配资源组。</block>
-  <block id="335e98e9e03c56f037d977ec4b92f533" category="paragraph">下一步是将所需的VM或数据存储库分组到功能资源组中。通过资源组、您可以将一组依赖虚拟机或数据存储库分组到符合您要求的逻辑组中。例如、组可能包含延迟启动顺序、可在恢复时运行。</block>
   <block id="418330af51c4a26653da43f1476e3d4f" category="paragraph">在复制计划中选择应用程序时、您可以查看该计划中每个虚拟机或数据存储库的操作系统。这有助于确定如何将虚拟机或数据存储库分组到资源组中。</block>
-  <block id="f8842a88bb1ca78d43e06472d4679889" category="admonition">每个资源组可以包含一个或多个VM或数据存储库。VM将根据此处包含的顺序启动。</block>
   <block id="5e90d93870eb5779de0b40ced0f92445" category="paragraph">创建资源组时，请考虑以下问题：</block>
   <block id="de634b3bd311c5e5e1c0b9d53d9d242f" category="list-text">在将数据存储库添加到资源组之前、请先手动发现VM或按计划发现VM。这样可确保虚拟机已被发现并列在资源组中。如果不触发手动发现、则虚拟机可能不会列在资源组中。</block>
   <block id="312258bdb1152123e04c06cf90952de2" category="list-text">确保数据存储库中至少有一个VM。如果数据存储库中没有VM、则不会发现此数据存储库。</block>
@@ -1137,4 +1113,71 @@
   <block id="848964f0743e2416b5d061a5e088ca73" category="paragraph">4.2.2版</block>
   <block id="f070435ef55d6c7cc1db59f0a41a4609" category="section-title">2025年3月10日</block>
   <block id="ae493f6fb938d3c8c6db8b5a9e623794" category="paragraph">4.2.1版</block>
+  <block id="c362166d3b35c5afaa0ddfbe7e69494b" category="doc">子网映射</block>
+  <block id="2418e16fab8ca1ca0d50d0811f88b6eb" category="paragraph">在此版本中、您可以使用子网映射在故障转移时以新的方式管理IP地址、从而可以为每个vCenter添加子网。执行此操作时、需要为每个虚拟网络定义IPv4 CIDR、默认网关和DNS。</block>
+  <block id="eb784040bffb80024e0c56694e09283d" category="paragraph">故障转移后、BlueXP  灾难恢复会通过查看为映射的虚拟网络提供的CIDR来确定每个vNIC的适当IP地址、并使用它来派生新的IP地址。</block>
+  <block id="506c2c0c7f5b70af3df68c45c46f45a7" category="paragraph">例如：</block>
+  <block id="7f1dd179b7af043e895b4af287c713da" category="list-text">网络A = 10.1.0/24</block>
+  <block id="130ee01552bdfbbae122682d96ada96f" category="list-text">网络B = 192.168.1.0/24</block>
+  <block id="c8512209d54525f96f71aef40bda4d89" category="paragraph">VM1具有一个连接到网络A的vNIC (10.1.1.50)。网络A会在复制计划设置中映射到网络B。</block>
+  <block id="54f173771463f16f3b7367756ee8a6df" category="paragraph">故障转移时、BlueXP  灾难恢复将替换原始IP地址(10.1.1)的网络部分、并保留原始IP地址(10.1.1.50)的主机地址(.50)。对于VM1、BlueXP  灾难恢复会查看网络B的CIDR设置、并使用该网络B网络192.168.1、同时保留主机部分(.50)为VM1创建新的IP地址。新IP变为192.168.1.50。</block>
+  <block id="726a53952ba1f868d3ec9d1d32a62b2e" category="paragraph">总之、主机地址保持不变、而网络地址将替换为站点子网映射中配置的任何内容。这样、您就可以更轻松地在故障转移时管理IP地址重新分配、尤其是在需要管理数百个网络和数千个VM的情况下。</block>
+  <block id="774b32328f5b31268d0c32cb8b2b7cba" category="paragraph">有关在站点中包含子网映射的详细信息，请参见<block ref="2646d8ece134cab5b4abb346406774b7" category="inline-link-macro-rx"></block>。</block>
+  <block id="a16eb72c6e9708bc4bdfd310db9a1760" category="section-title">跳过保护</block>
+  <block id="18a26d8a69342321f82f23b0b9667a2b" category="paragraph">现在、您可以跳过保护、这样、在复制计划故障转移之后、服务就不会自动创建反向保护关系。如果要在BlueXP  灾难恢复中将已还原站点恢复联机之前对其执行其他操作、则此功能非常有用。</block>
+  <block id="83f2c5047d69bb49c6372714354b223e" category="paragraph">在您启动故障转移时、如果原始源站点处于联机状态、则默认情况下、该服务会自动为复制计划中的每个卷创建一个反向保护关系。这意味着、该服务将创建从目标站点返回源站点的SnapMirror关系。在您启动故障恢复时、该服务还会自动反转SnapMirror关系。</block>
+  <block id="39adaab4c8da99c378ac7814cd837b82" category="paragraph">启动故障转移时，您现在可以选择*Skip protection (跳过保护)*选项。这样、该服务不会自动反转SnapMirror关系。而是将可写卷保留在复制计划的两端。</block>
+  <block id="0ed1a7f2cfa308cb3f608d5a24b47b8f" category="paragraph">初始源站点恢复联机后，您可以从“复制计划操作”菜单中选择*Protect Res才 可建立反向保护。此操作会尝试为计划中的每个卷创建反向复制关系。您可以重复运行此作业、直到保护还原为止。恢复保护后、您可以按常规方式启动故障恢复。</block>
+  <block id="f53838e4f91966e1f320316dc6686a4a" category="paragraph">有关跳过保护的详细信息，请参见<block ref="524f5a32773e3e832b74877ecf58916f" category="inline-link-macro-rx"></block>。</block>
+  <block id="bc1bbd522e7b060cf5530955a21a60e0" category="section-title">复制计划中的SnapMirror计划更新</block>
+  <block id="c8c9a99c726a6f5a1158a1753fb72b2a" category="paragraph">BlueXP  灾难恢复现在支持使用外部快照管理解决方案、例如本机ONTAP SnapMirror策略计划程序或与ONTAP的第三方集成。如果复制计划中的每个数据存储库(卷)都已具有在其他位置管理的SnapMirror关系、则可以在BlueXP  灾难恢复中使用这些快照作为恢复点。</block>
+  <block id="51b94dd4c3836facc3789590ed219960" category="paragraph">要进行配置、请在复制计划&gt;资源映射部分中、在配置数据存储库映射时选中*使用平台管理的备份和保留计划*复选框。</block>
+  <block id="c837cc2aab74d32ef3dcbbce527bd24b" category="paragraph">选中时、BlueXP  灾难恢复不会配置备份计划。但是、您仍需要配置保留计划、因为仍可能会为测试、故障转移和故障恢复操作创建快照。</block>
+  <block id="84c71600543673f6d7dd403d3e7a164a" category="paragraph">配置此功能后、该服务不会定期创建任何计划的快照、而是依靠外部实体创建和更新这些快照。</block>
+  <block id="e70edcdb01d149c4328ebb491c2aa090" category="paragraph">有关在复制计划中使用外部快照解决方案的详细信息，请参见<block ref="8aa3c94c171b2c9d7252afb28ee019a7" category="inline-link-macro-rx"></block>。</block>
+  <block id="e48502083eb8949c8f65b2ccddd5adec" category="section-title">2025年5月12日</block>
+  <block id="5a31c17caa12408e3b6093ed864c9821" category="paragraph">4.2.3版</block>
+  <block id="f17de33c8bac2ab69dd89149aac16c6c" category="paragraph">下一步是将所需的VM或数据存储库分组到功能资源组中。通过资源组、您可以使用通用快照保护一组VM或数据存储库。</block>
+  <block id="516dbf8e2c43d00664357bb38d1575a6" category="admonition">每个资源组可以包含一个或多个VM或数据存储库。</block>
+  <block id="93e9f135ef101bbb0b9a89e0d337eed7" category="paragraph">*最佳实践*：在部署BlueXP  灾难恢复之前组织VM、以最大限度地减少"数据存储库无序增长"。将需要保护的VM放置在一组数据存储库上、将不会受保护的VM放置在另一组数据存储库上。使用基于数据存储库的保护来确保任何给定数据存储库上的虚拟机均受到保护。</block>
+  <block id="666631afadc4073ef682cc54bda0a691" category="list-text">*静态IP*：如果要手动指定IP配置信息，请选择此设置。您可以选择以下选项之一："与源相同"、"与源不同"或"子网映射"。如果选择与源相同的、则无需输入凭据。另一方面、如果您选择使用与源不同的信息、则可以提供凭据、VM的IP地址、子网掩码、DNS和网关信息。应在全局级别或每个VM级别提供VM子操作系统凭据。</block>
+  <block id="983a4203041e2ae3715f09be44011da8" category="list-text">*Boot Order*：您可以在故障转移后修改资源组中所有选定虚拟机的启动顺序。默认情况下、所有VM会并行启动；但是、您可以在此阶段进行更改。这有助于确保优先级为一个的所有虚拟机在后续优先级为VM启动之前都在运行。</block>
+  <block id="bf14a1ee6deee051f47c837ed6d22140" category="paragraph">所有具有相同启动顺序编号的VM都将并行启动。</block>
+  <block id="354a69710d188806a2240038216a8fe4" category="list-text">顺序启动：为每个VM分配一个唯一编号、以便按分配的顺序启动、例如1、2、3、4、5。</block>
+  <block id="917743345c16934d4f46d0d5f7c82682" category="list-text">同时启动：为任何VM分配相同数量的虚拟机、以便同时启动它们、例如1、1、1、1、2、2、3、4、4。</block>
+  <block id="42c98bfa79541df9e68d059bf2193bb0" category="list-text">*使用平台管理的备份和保留计划*：如果使用外部快照管理解决方案，请选中此框。BlueXP  灾难恢复支持使用外部快照管理解决方案、例如本机ONTAP SnapMirror策略计划程序或第三方集成。如果复制计划中的每个数据存储库(卷)都已具有在其他位置管理的SnapMirror关系、则可以在BlueXP  灾难恢复中使用这些快照作为恢复点。</block>
+  <block id="23c4ec9f7f759cf6773cc360abd2a7ec" category="list-text">*开始时间*：输入希望备份和保留开始运行的日期和时间。</block>
+  <block id="7a565b2606e153ac342f6305eef26c26" category="list-text">*运行间隔*：输入时间间隔(以小时和分钟为单位)。例如、如果输入1小时、则此服务将每小时创建一个快照。</block>
+  <block id="49511806f0e60c638845968f2dbb17f7" category="section-title">添加测试故障转移映射</block>
+  <block id="bb9d0bc96dc8ebc0c65b92fdd57252dc" category="paragraph"><block ref="bb9d0bc96dc8ebc0c65b92fdd57252dc" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="02e6e8fc80c61f6b451734eea7a7f500" category="list-text">*使用按需快照进行计划的测试故障转移*：要在启动自动测试故障转移之前创建新快照、请选中此框。</block>
+  <block id="e2b5a46119afa4b27f999635653125bc" category="list-text">要在故障转移测试完成后清理测试环境，请选中*在测试故障转移后自动清理*并输入清理开始前要等待的分钟数。</block>
+  <block id="746c84b1b109b4fcfeb29ff36be21f14" category="paragraph"><block ref="746c84b1b109b4fcfeb29ff36be21f14" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="98641f673a386c741c6b574c2680a3b0" category="list-text">(可选)如果希望服务在复制计划故障转移后不自动创建反向SnapMirror保护关系，请选择*Skip protection (跳过保护)*。如果要在BlueXP  灾难恢复中将已还原站点恢复联机之前对其执行其他操作、则此功能非常有用。</block>
+  <block id="c446892b6c8669077c04a02123055cec" category="admonition">您可以通过从“复制计划操作”菜单中选择*Protect Resues*来建立反向保护。此操作会尝试为计划中的每个卷创建反向复制关系。您可以重复运行此作业、直到保护还原为止。恢复保护后、您可以按常规方式启动故障恢复。</block>
+  <block id="739e15bc616753303863f1d41c4f1dc8" category="list-text">登录到BlueXP  并从左侧导航菜单中选择*保护*&gt;*灾难恢复*。</block>
+  <block id="cd2cbb6fc58931677c030707b031e23e" category="section-title">为vCenter站点添加子网映射</block>
+  <block id="81d27c563cf029b3cbc2c174dbb30b80" category="paragraph">使用子网映射以新方式管理故障转移时的IP地址、您可以通过子网映射为每个vCenter添加子网。执行此操作时、需要为每个虚拟网络定义IPv4 CIDR、默认网关和DNS。</block>
+  <block id="a1a6715a7937fe9363315624c6ceaadb" category="paragraph">使用子网映射是一个可选的两步过程：</block>
+  <block id="6590c0edd1a0a382e900baf3a1f8a010" category="list-text">首先、为每个vCenter站点添加子网映射。</block>
+  <block id="e4732c2c80313e687a43461e8ec657b5" category="list-text">其次、在复制计划中、指示您要使用子网映射。</block>
+  <block id="4d77e4e4a55e61e8953b736cb501c2ba" category="list-text">从顶部的BlueXP  灾难恢复菜单中、选择*站点*。</block>
+  <block id="b042826a9a8b22d6bf6c06fc590b4075" category="list-text">从右侧的"Actions"图标中<block ref="145ad72607e9a3c177918d31007a191e" category="inline-image-macro-rx" type="image"></block>，选择*Add subnet*。</block>
+  <block id="326afcda8f54b18d75e38743a0369422" category="inline-image-macro">添加子网映射屏幕截图</block>
+  <block id="d585acea0a85edac2c9d2026c5f9248c" category="paragraph"><block ref="d585acea0a85edac2c9d2026c5f9248c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ff511fb5d23236d5840c75032b0fbb69" category="list-text">在配置子网页面中、输入以下信息：</block>
+  <block id="7a0a9fd1dad462e95d3a0078043e2446" category="list-text">Subnet：输入最大为/32的子网的IPv4 CIDR。</block>
+  <block id="0d9abd8b694d3e4ae8a94e1a0a0b18bb" category="admonition">CIDR表示法用于指定IP地址及其网络掩码。/24表示网络掩码。该数字由一个IP地址组成、该地址的编号在"/"后面、表示IP地址的位数表示网络。例如、192.168.0.50/24、IP地址为192.168.0.50、网络地址中的总位数为24。192.168.0.50 255.255.255.0变为192.168.0.0/24。</block>
+  <block id="6e97137634986390ce97649599f559fd" category="list-text">网关：输入子网的默认网关。</block>
+  <block id="63ce92a4f80f0a4537b368a9328864ae" category="list-text">DNS：输入子网的DNS。</block>
+  <block id="dfe0c1da4b3edcbe4d22c95489f82cd4" category="list-text">选择*添加子网映射*。</block>
+  <block id="38fa2ee831111000771942f096ee8f7f" category="section-title">为复制计划选择子网映射</block>
+  <block id="44adc79b2aa170c08a741f65097ea642" category="paragraph">创建复制计划时、您可以为复制计划选择子网映射。</block>
+  <block id="0a9e3f0ed6f4b452c344fdb924016695" category="list-text">选择*Add*以添加复制计划。</block>
+  <block id="807059f044473e420c53e102505d49cf" category="list-text">通过添加vCenter服务器、选择资源组或应用程序并完成映射、以常规方式完成这些字段。</block>
+  <block id="6a1727ba4109844c2f1bf48438eb19f5" category="list-text">在复制计划&gt;资源映射页面中，选择*Virtual Machines*部分。</block>
+  <block id="b743f75136ce51e05e36623ebf8d0373" category="inline-image-macro">子网映射选择屏幕截图</block>
+  <block id="d56562607152896b0efda703821ab816" category="paragraph"><block ref="d56562607152896b0efda703821ab816" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a60af3ebe60a5e3cebadd89e2c407a9c" category="list-text">在*目标IP*字段中，从下拉列表中选择*使用子网映射*。</block>
+  <block id="88497a7ce9c844d7b07cc838ad7754d6" category="list-text">继续创建复制计划。</block>
 </blocks>
