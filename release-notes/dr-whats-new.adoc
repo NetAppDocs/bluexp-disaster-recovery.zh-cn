@@ -54,7 +54,7 @@ VM1具有一个连接到网络A的vNIC (10.1.1.50)。网络A会在复制计划�
 
 初始源站点恢复联机后，您可以从“复制计划操作”菜单中选择*Protect Res才 可建立反向保护。此操作会尝试为计划中的每个卷创建反向复制关系。您可以重复运行此作业、直到保护还原为止。恢复保护后、您可以按常规方式启动故障恢复。
 
-有关跳过保护的详细信息，请参见 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/failover.html["将所有应用程序故障转移到远程站点"]。
+有关跳过保护的详细信息，请参见 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/failover.html["将应用程序故障转移到远程站点"]。
 
 
 
@@ -64,11 +64,11 @@ BlueXP  灾难恢复现在支持使用外部快照管理解决方案、例如�
 
 要进行配置、请在复制计划>资源映射部分中、在配置数据存储库映射时选中*使用平台管理的备份和保留计划*复选框。
 
-选中时、BlueXP  灾难恢复不会配置备份计划。但是、您仍需要配置保留计划、因为仍可能会为测试、故障转移和故障恢复操作创建快照。
+如果选择此选项、则BlueXP  灾难恢复不会配置备份计划。但是、您仍需要配置保留计划、因为仍可能会为测试、故障转移和故障恢复操作创建快照。
 
 配置此功能后、该服务不会定期创建任何计划的快照、而是依靠外部实体创建和更新这些快照。
 
-有关跳过保护的详细信息，请参见 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["创建复制计划"]。
+有关在复制计划中使用外部快照解决方案的详细信息，请参见 https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["创建复制计划"]。
 
 
 
