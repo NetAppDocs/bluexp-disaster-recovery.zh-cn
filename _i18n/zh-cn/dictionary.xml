@@ -1122,20 +1122,16 @@
   <block id="c8512209d54525f96f71aef40bda4d89" category="paragraph">VM1具有一个连接到网络A的vNIC (10.1.1.50)。网络A会在复制计划设置中映射到网络B。</block>
   <block id="54f173771463f16f3b7367756ee8a6df" category="paragraph">故障转移时、BlueXP  灾难恢复将替换原始IP地址(10.1.1)的网络部分、并保留原始IP地址(10.1.1.50)的主机地址(.50)。对于VM1、BlueXP  灾难恢复会查看网络B的CIDR设置、并使用该网络B网络192.168.1、同时保留主机部分(.50)为VM1创建新的IP地址。新IP变为192.168.1.50。</block>
   <block id="726a53952ba1f868d3ec9d1d32a62b2e" category="paragraph">总之、主机地址保持不变、而网络地址将替换为站点子网映射中配置的任何内容。这样、您就可以更轻松地在故障转移时管理IP地址重新分配、尤其是在需要管理数百个网络和数千个VM的情况下。</block>
-  <block id="774b32328f5b31268d0c32cb8b2b7cba" category="paragraph">有关在站点中包含子网映射的详细信息，请参见<block ref="2646d8ece134cab5b4abb346406774b7" category="inline-link-macro-rx"></block>。</block>
   <block id="a16eb72c6e9708bc4bdfd310db9a1760" category="section-title">跳过保护</block>
   <block id="18a26d8a69342321f82f23b0b9667a2b" category="paragraph">现在、您可以跳过保护、这样、在复制计划故障转移之后、服务就不会自动创建反向保护关系。如果要在BlueXP  灾难恢复中将已还原站点恢复联机之前对其执行其他操作、则此功能非常有用。</block>
   <block id="83f2c5047d69bb49c6372714354b223e" category="paragraph">在您启动故障转移时、如果原始源站点处于联机状态、则默认情况下、该服务会自动为复制计划中的每个卷创建一个反向保护关系。这意味着、该服务将创建从目标站点返回源站点的SnapMirror关系。在您启动故障恢复时、该服务还会自动反转SnapMirror关系。</block>
   <block id="39adaab4c8da99c378ac7814cd837b82" category="paragraph">启动故障转移时，您现在可以选择*Skip protection (跳过保护)*选项。这样、该服务不会自动反转SnapMirror关系。而是将可写卷保留在复制计划的两端。</block>
   <block id="0ed1a7f2cfa308cb3f608d5a24b47b8f" category="paragraph">初始源站点恢复联机后，您可以从“复制计划操作”菜单中选择*Protect Res才 可建立反向保护。此操作会尝试为计划中的每个卷创建反向复制关系。您可以重复运行此作业、直到保护还原为止。恢复保护后、您可以按常规方式启动故障恢复。</block>
-  <block id="f53838e4f91966e1f320316dc6686a4a" category="paragraph">有关跳过保护的详细信息，请参见<block ref="524f5a32773e3e832b74877ecf58916f" category="inline-link-macro-rx"></block>。</block>
   <block id="bc1bbd522e7b060cf5530955a21a60e0" category="section-title">复制计划中的SnapMirror计划更新</block>
   <block id="c8c9a99c726a6f5a1158a1753fb72b2a" category="paragraph">BlueXP  灾难恢复现在支持使用外部快照管理解决方案、例如本机ONTAP SnapMirror策略计划程序或与ONTAP的第三方集成。如果复制计划中的每个数据存储库(卷)都已具有在其他位置管理的SnapMirror关系、则可以在BlueXP  灾难恢复中使用这些快照作为恢复点。</block>
   <block id="51b94dd4c3836facc3789590ed219960" category="paragraph">要进行配置、请在复制计划&gt;资源映射部分中、在配置数据存储库映射时选中*使用平台管理的备份和保留计划*复选框。</block>
   <block id="c837cc2aab74d32ef3dcbbce527bd24b" category="paragraph">选中时、BlueXP  灾难恢复不会配置备份计划。但是、您仍需要配置保留计划、因为仍可能会为测试、故障转移和故障恢复操作创建快照。</block>
   <block id="84c71600543673f6d7dd403d3e7a164a" category="paragraph">配置此功能后、该服务不会定期创建任何计划的快照、而是依靠外部实体创建和更新这些快照。</block>
-  <block id="e70edcdb01d149c4328ebb491c2aa090" category="paragraph">有关在复制计划中使用外部快照解决方案的详细信息，请参见<block ref="8aa3c94c171b2c9d7252afb28ee019a7" category="inline-link-macro-rx"></block>。</block>
-  <block id="e48502083eb8949c8f65b2ccddd5adec" category="section-title">2025年5月12日</block>
   <block id="5a31c17caa12408e3b6093ed864c9821" category="paragraph">4.2.3版</block>
   <block id="f17de33c8bac2ab69dd89149aac16c6c" category="paragraph">下一步是将所需的VM或数据存储库分组到功能资源组中。通过资源组、您可以使用通用快照保护一组VM或数据存储库。</block>
   <block id="516dbf8e2c43d00664357bb38d1575a6" category="admonition">每个资源组可以包含一个或多个VM或数据存储库。</block>
@@ -1180,4 +1176,9 @@
   <block id="d56562607152896b0efda703821ab816" category="paragraph"><block ref="d56562607152896b0efda703821ab816" category="inline-image-macro-rx" type="image"></block></block>
   <block id="a60af3ebe60a5e3cebadd89e2c407a9c" category="list-text">在*目标IP*字段中，从下拉列表中选择*使用子网映射*。</block>
   <block id="88497a7ce9c844d7b07cc838ad7754d6" category="list-text">继续创建复制计划。</block>
+  <block id="e28871dd1f9f31bb54d653e42ab61487" category="paragraph">有关在站点中包含子网映射的详细信息，请参见<block ref="54555db921feb31b73553520fa282341" category="inline-link-rx"></block>。</block>
+  <block id="647215431eb63495be0e5e7c6321e640" category="inline-link">将所有应用程序故障转移到远程站点</block>
+  <block id="6631bb487a9f2386aeff1e4dcc55b137" category="paragraph">有关跳过保护的详细信息，请参见<block ref="9e9114c1de2c071902864db54b7b6286" category="inline-link-rx"></block>。</block>
+  <block id="e638472ab7fa0db5c2038455cbfd2531" category="paragraph">有关跳过保护的详细信息，请参见<block ref="5cf2140f2775e5f1ccc24bb836a069a3" category="inline-link-rx"></block>。</block>
+  <block id="71df7d09aaee8e6796df0c3d10989fbd" category="section-title">2025年5月13日</block>
 </blocks>
