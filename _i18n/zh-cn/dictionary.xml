@@ -731,8 +731,6 @@
   <block id="caa1e25984e775c1ab44cfd42620d720" category="inline-image-macro">铅笔图标</block>
   <block id="7906e2e007c3bad108fcd7ed7311a131" category="paragraph"><block ref="7906e2e007c3bad108fcd7ed7311a131" category="inline-image-macro-rx" type="image"></block></block>
   <block id="6dbc81f47f4a822cd11ce7c8403756ed" category="list-text">在故障转移映射选项卡中、选择每个资源右侧的向下箭头并映射每个资源。</block>
-  <block id="022ab008c31f5588f9d15da4dc3439fb" category="list-text">*计算资源*：选择*计算资源*旁边的向下箭头。</block>
-  <block id="a358a5c755a9f869690207e2a0726737" category="list-text">*Virtual Machines*：在故障转移映射选项卡中，选择*Virtual Machines*旁边的向下箭头。</block>
   <block id="c28e8a3b83f3f2cce376fe3daa7ad95d" category="paragraph"><block ref="64eb1ec301597178e47fa7deed0121dc" category="inline-image-macro-rx" type="image"></block></block>
   <block id="10936c8535aaede0ed75f5d8d4fa6aaf" category="list-text">*保留数量*：输入要保留的快照数量。</block>
   <block id="76e4d72594030fca0b96279d0f8392dc" category="section-title">可能有助于BlueXP  灾难恢复的术语</block>
@@ -790,8 +788,6 @@
   <block id="da06c5c1d28e308403236438dda209dc" category="list-text">*源数据中心和目标数据中心*</block>
   <block id="7067fdfe055fabd950bd45a1a17e1642" category="list-text">*目标集群*</block>
   <block id="2c0a2cae30cf923c64bbed704e923521" category="list-text">*目标主机*(可选)：选择集群后、您可以设置此信息。</block>
-  <block id="6d9f48430941cb04802ac18d9c695e65" category="admonition">如果vCenter配置了Distributed Resource Scheduler (DRS)来管理集群中的多个主机、则无需选择主机。如果选择主机、则BlueXP  灾难恢复会将所有VM置于选定主机上。</block>
-  <block id="999becf997185f87ea1b5bd029bf5b34" category="list-text">*目标VM文件夹*(可选)：创建一个新的根文件夹以存储选定的VM。</block>
   <block id="0a8bc9b2bb8f581fa27738fc437d64b3" category="paragraph">根据您的选择、此部分可能会显示不同的字段。</block>
   <block id="7b2b025be41dbbc4cda9601c1b5523a5" category="list-text">*目标VM前缀和后缀*：在虚拟机详细信息下、您可以选择为VM名称添加前缀和后缀。</block>
   <block id="230dc85a08275a2466390ae799703f92" category="list-text">*源VM CPU和RAM*：在虚拟机详细信息下，您可以选择调整VM CPU和RAM参数的大小。</block>
@@ -832,8 +828,6 @@
   <block id="8914a354aeff1b07a47e178ccae21e27" category="list-text">*DHCP*：如果希望VM从DHCP服务器获取网络配置信息，请选择此设置。如果选择此选项、则只需提供虚拟机的凭据即可。</block>
   <block id="fac29f06ba242d5478f84ec94ec5b901" category="list-text">*脚本*：您可以将.sh、.bat或.ps1格式的自定义脚本作为故障转移后进程。通过自定义脚本、您可以在故障转移过程之后让BlueXP灾难恢复运行脚本。例如、您可以使用自定义脚本在故障转移完成后恢复所有数据库事务。</block>
   <block id="df6b8c791e4694210c8862ed040048ef" category="list-text">*创建应用程序一致的副本*：指示是否创建应用程序一致的Snapshot副本。该服务将使应用程序处于静修状态、然后创建一个快照、以获得一致的应用程序状态。在Windows上运行的Oracle以及在Windows上运行的Linux和SQL Server支持此功能。</block>
-  <block id="708b68cf49e909f729ce67863a2f6de3" category="list-text">*DRAMORes*：选择*DRAMORes*旁边的向下箭头。根据VM的选择、系统会自动选择数据存储库映射。</block>
-  <block id="27ee5986957f012b4e37ee29afe29c7f" category="list-text">*源和目标数据存储库*：如果存在多个(扇出) SnapMirror关系、则可以选择要使用的目标。如果卷已建立SnapMirror关系、则会显示相应的源数据存储库和目标数据存储库。如果某个卷没有SnapMirror关系、您现在可以通过选择目标集群、目标SVM并提供卷名称来创建一个。此服务将创建卷和SnapMirror关系。</block>
   <block id="950fa88679103c3c7c4e449423d8bfcc" category="list-text">如果VM来自同一个卷和同一个SVM、则该服务将执行标准ONTAP快照并更新二级目标。</block>
   <block id="a47d6910008cc9bb73921a36d6609a08" category="list-text">如果VM来自不同的卷和同一个SVM、则该服务会通过包含所有卷来创建一致性组快照并更新二级目标。</block>
   <block id="3cc1e8e247fa51b1c7d6f2a7c029a515" category="list-text">如果VM来自不同的卷和不同的SVM、则该服务会通过将所有卷包含在相同或不同集群中来执行一致性组开始阶段和提交阶段快照、并更新二级目标。</block>
@@ -949,7 +943,6 @@
   <block id="07b0eade4402d209b5dbe587a8ad3f6f" category="inline-link">在 AWS 上部署和配置虚拟化环境</block>
   <block id="2eccc2b2612ae991619a18b34919d843" category="paragraph">要在AWS上配置VMware Cloud环境、请按照中的步骤<block ref="0faddedbfeb6e9d451b742468dbfc158" category="inline-link-rx"></block>进行操作。也可以使用轻型试点集群进行灾难恢复。</block>
   <block id="8c587749bc8bd978d85704d9a142b7a6" category="paragraph">您可以保护多个数据存储库上的多个VM。BlueXP  灾难恢复会为托管受保护VM数据存储库的所有ONTAP卷创建ONTAP一致性组。</block>
-  <block id="345f26a72f023b2055826859eb701ceb" category="list-text">*虚拟网络*：在故障转移映射选项卡中，选择*虚拟网络*旁边的向下箭头。选择源虚拟LAN和目标虚拟LAN。</block>
   <block id="02453bc953d0b6e10f85235da7a8cca7" category="paragraph">选择与相应虚拟LAN的网络映射。虚拟LAN应已配置、因此选择适当的虚拟LAN以映射虚拟机。</block>
   <block id="c71c9ca45b74f3ddf3435fee65f93cfc" category="paragraph">VM的默认值已映射。默认映射使用的设置与VM在生产环境中使用的设置相同(相同的IP地址、子网掩码和网关)。</block>
   <block id="a82971318b0c070daea6677a10d3473c" category="paragraph">如果对默认设置进行了任何更改、则必须将目标IP字段更改为"与源不同"。</block>
@@ -1170,7 +1163,6 @@
   <block id="807059f044473e420c53e102505d49cf" category="list-text">通过添加vCenter服务器、选择资源组或应用程序并完成映射、以常规方式完成这些字段。</block>
   <block id="6a1727ba4109844c2f1bf48438eb19f5" category="list-text">在复制计划&gt;资源映射页面中，选择*Virtual Machines*部分。</block>
   <block id="b743f75136ce51e05e36623ebf8d0373" category="inline-image-macro">子网映射选择屏幕截图</block>
-  <block id="d56562607152896b0efda703821ab816" category="paragraph"><block ref="d56562607152896b0efda703821ab816" category="inline-image-macro-rx" type="image"></block></block>
   <block id="a60af3ebe60a5e3cebadd89e2c407a9c" category="list-text">在*目标IP*字段中，从下拉列表中选择*使用子网映射*。</block>
   <block id="88497a7ce9c844d7b07cc838ad7754d6" category="list-text">继续创建复制计划。</block>
   <block id="e28871dd1f9f31bb54d653e42ab61487" category="paragraph">有关在站点中包含子网映射的详细信息，请参见<block ref="54555db921feb31b73553520fa282341" category="inline-link-rx"></block>。</block>
@@ -1182,4 +1174,21 @@
   <block id="c14eff79606049ee3db744788f842d7d" category="list-text">通过Amazon Web Services (AwS) Marketplace购买* NetApp智能服务*的按需购买(PAYGO)订阅。</block>
   <block id="cbb303696e69ece252e4279cf7e650f4" category="paragraph">免费试用结束后、您可以从NetApp购买许可证、也可以通过NetApp Marketplace订阅* AWS智能服务*。本操作步骤简要概述了如何直接在AWS Marketplace中订阅。</block>
   <block id="05d7d2c6dcb40b2ad3598ed40596c890" category="list-text">使用AWS Marketplace订阅* NetApp智能服务*和* BlueXP  灾难恢复*。</block>
+  <block id="ddbdc0fdada8e6466e651115cefbafee" category="section-title">映射资源&gt;计算资源部分</block>
+  <block id="c74f8b35838f9f38552c33a8c05ad01a" category="paragraph">选择*计算资源*旁边的向下箭头。</block>
+  <block id="5044b19178ff5f8de4c9c0246fe12b78" category="admonition">如果vCenter配置了Distributed Resource Scheduler (DRS)来管理集群中的多个主机、则无需选择主机。如果选择主机、则BlueXP  灾难恢复会将所有VM置于选定主机上。**目标VM文件夹*(可选)：创建一个新的根文件夹以存储选定的VM。</block>
+  <block id="74b0088eeb9a4fc43afd0ad0e9f1ef57" category="section-title">映射资源&gt;虚拟网络部分</block>
+  <block id="21538d8465027f7c4a2d65593552875c" category="paragraph">在故障转移映射选项卡中，选择*Virtual networks*旁边的向下箭头。选择源虚拟LAN和目标虚拟LAN。</block>
+  <block id="d43d5aee258367a26705d2e855068453" category="section-title">映射资源&gt;虚拟机部分</block>
+  <block id="27d300eb526c12800753bbfacfc390b6" category="paragraph">在故障转移映射选项卡中，选择*Virtual Machines*旁边的向下箭头。</block>
+  <block id="64a2a2b78e563e79f2c42c8e9d160e0e" category="section-title">映射资源&gt;存储库部分</block>
+  <block id="923805befcdde4aa8fa4752b9e9a277f" category="paragraph">选择*存储库*旁边的向下箭头。根据VM的选择、系统会自动选择数据存储库映射。</block>
+  <block id="c4c09b507b4da4a281d7ce6c068b6a88" category="inline-image-macro">显示添加复制计划&amp;gt；资源映射&amp;gt；数据存储库的屏幕截图</block>
+  <block id="7b6735057ec599457ce14b0629d098bf" category="paragraph"><block ref="383fd741f178abe8be4920d498113a6c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="63882377431b20b814641f0190aa1986" category="list-text">*源和目标数据存储库*：如果存在多个(扇出) SnapMirror关系、则可以选择要使用的目标。如果卷已建立SnapMirror关系、则会显示相应的源数据存储库和目标数据存储库。如果某个卷没有SnapMirror关系、您可以通过选择目标集群、选择目标SVM并提供卷名称来立即创建一个SVM关系。此服务将创建卷和SnapMirror关系。</block>
+  <block id="d3d01ba34a902e9e5d7cb703c2b96a65" category="inline-image-macro">添加子网菜单屏幕截图</block>
+  <block id="6f7c69118d430fce089e3f0f18aba2c5" category="paragraph"><block ref="6f7c69118d430fce089e3f0f18aba2c5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e7be7bda88531d046e21401efd5bd9d5" category="paragraph">此时将显示Configure subnet(配置子网)页面：</block>
+  <block id="aaaeb2ea35c55b4a37b25b328a34587c" category="paragraph"><block ref="aaaeb2ea35c55b4a37b25b328a34587c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="58091bb6c8793ca7ad7178167e36010f" category="admonition">如果有两个VM (例如、一个是Linux、另一个是Windows)、则只有Windows才需要凭据。</block>
 </blocks>

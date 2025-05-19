@@ -112,6 +112,12 @@ VM1具有一个连接到网络A的vNIC (10.1.1.50)。网络A会在复制计划�
 . 从顶部的BlueXP  灾难恢复菜单中、选择*站点*。
 . 从右侧的"Actions"图标中image:icon-vertical-dots.png["操作图标"]，选择*Add subnet*。
 +
+image:dr-sites-subnet-menu.png["添加子网菜单屏幕截图"]
+
++
+此时将显示Configure subnet(配置子网)页面：
+
++
 image:sites-subnet-add.png["添加子网映射屏幕截图"]
 
 . 在配置子网页面中、输入以下信息：
@@ -140,9 +146,13 @@ TIP: CIDR表示法用于指定IP地址及其网络掩码。/24表示网络掩码
 . 通过添加vCenter服务器、选择资源组或应用程序并完成映射、以常规方式完成这些字段。
 . 在复制计划>资源映射页面中，选择*Virtual Machines*部分。
 +
-image:dr-plan-create-subnet-mapping.png["子网映射选择屏幕截图"]
+image:dr-plan-vm-subnet-option.png["子网映射选择屏幕截图"]
 
 . 在*目标IP*字段中，从下拉列表中选择*使用子网映射*。
++
+
+NOTE: 如果有两个VM (例如、一个是Linux、另一个是Windows)、则只有Windows才需要凭据。
+
 . 继续创建复制计划。
 
 
