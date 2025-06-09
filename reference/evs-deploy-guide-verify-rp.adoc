@@ -1,0 +1,25 @@
+---
+sidebar: sidebar 
+permalink: reference/evs-deploy-guide-verify-rp.html 
+keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter 
+summary: 介绍使用 Amazon EVS 和 Amazon FSx for NetApp ONTAP 进行 BlueXP 灾难恢复。 
+---
+= 验证 BlueXP 灾难恢复中一切正常
+:allow-uri-read: 
+
+
+[role="lead"]
+在 BlueXP 灾难恢复中添加复制计划后，您将返回到“复制计划”页面，您可以在其中查看复制计划及其状态。您应该验证复制计划是否处于“健康”状态。如果不是，您应该检查复制计划的状态并纠正所有问题，然后再继续。
+
+图：复制计划页面image:evs-replication-plan-post-create.png["复制计划页面"]
+
+BlueXP 灾难恢复会执行一系列测试，以验证所有组件（ONTAP 集群、vCenter 集群和虚拟机）是否可访问且处于服务保护虚拟机所需的正确状态。这称为合规性检查，会定期运行。
+
+在复制计划页面中，您可以看到以下信息：
+
+* 上次合规性检查的状态
+* 复制计划的复制状态
+* 受保护（源）站点的名称
+* 复制计划保护的资源组列表
+* 故障转移（目标）站点的名称
+

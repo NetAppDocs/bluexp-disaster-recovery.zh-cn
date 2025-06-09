@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: reference/evs-deploy-guide-solution-overview.html 
+keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter 
+summary: 使用 Amazon EVS 和 Amazon FSxN 的 BlueXP 灾难恢复解决方案概述。 
+---
+= 使用 Amazon EVS 和 Amazon FS 为 NetApp ONTAP 进行 BlueXP 灾难恢复的解决方案概述
+:allow-uri-read: 
+
+
+[role="lead"]
+BlueXP 灾难恢复是托管在 BlueXP 软件即服务环境中的一项增值服务，它依赖于 BlueXP 核心架构。BlueXP中用于 VMware 保护的灾难恢复服务由几个主要组件组成。
+
+有关 BlueXP 灾难恢复解决方案的完整概述，请参阅link:../get-started/dr-intro.html["了解适用于VMware的BlueXP灾难恢复"] 。
+
+如果您想要将本地 VMware 托管的虚拟机保护到 Amazon AWS，请使用该服务通过 Amazon FSx for NetApp ONTAP 存储托管数据存储备份到 Amazon EVS。
+
+下图显示了该服务如何使用 Amazon EVS 保护您的虚拟机。
+
+使用 Amazon EVS 和 FSx for ONTAP 的 BlueXP 灾难恢复概述image:evs-soloverview-evs.png["使用 Amazon EVS 和 FSx for ONTAP 的 BlueXP 灾难恢复概述"]
+
+. Amazon EVS 部署在您的帐户中的单个可用区 (AZ) 配置中以及您的虚拟私有云 (VPC) 内。
+. FSx for ONTAP 文件系统与 Amazon EVS 部署在同一可用区中。该文件系统可以通过弹性网络接口 (ENI)、VPC 对等连接或 AmazonTransit 网关直接连接到 Amazon EVS。
+. NetApp BlueXP 连接器已安装在您的 VPC 中。BlueXP连接器托管多个数据管理服务（称为代理），包括 BlueXP 灾难恢复代理，该代理负责管理您本地物理数据中心和 Amazon AWS 托管资源上的 VMware 基础架构的灾难恢复。
+. BlueXP 灾难恢复代理安全地与 BlueXP 云托管服务通信以接收任务，并将这些任务分发到适当的内部部署和 AWS 托管的 vCenter 和 ONTAP 存储实例。
+. 您可以使用 BlueXP 云托管 UI 控制台创建复制计划，指示应保护的虚拟机、应保护这些虚拟机的频率，以及在从内部站点发生故障转移时重新启动这些虚拟机所需执行的程序。
+. 复制计划确定哪些 vCenter 数据存储区托管受保护的虚拟机，以及托管这些数据存储区的 ONTAP 卷。如果 FSx for ONTAP 集群上尚不存在卷，BlueXP 灾难恢复会自动创建这些卷。
+. 为每个已识别的源 ONTAP 卷与每个目标 FSx for ONTAP 托管 ONTAP 卷创建 SnapMirror 关系，并根据复制计划中用户提供的 RPO 创建复制计划。
+. 如果主站点发生故障，管理员会在 BlueXP 控制台内启动手动故障转移过程，并选择备份作为还原点。
+. BlueXP 灾难恢复代理激活 FSx for ONTAP 托管的数据保护卷。
+. 该代理向 Amazon EVS vCenter 注册每个激活的 FSx for ONTAP 卷，向 Amazon EVS vCenter 注册每个受保护的虚拟机，并根据复制计划中包含的预定义规则启动每个虚拟机。
+

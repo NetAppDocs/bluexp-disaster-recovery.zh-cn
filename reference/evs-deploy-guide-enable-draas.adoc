@@ -1,0 +1,57 @@
+---
+sidebar: sidebar 
+permalink: reference/evs-deploy-guide-enable-draas.html 
+keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter 
+summary: 介绍使用 Amazon EVS 和 Amazon FSx for NetApp ONTAP 进行 BlueXP 灾难恢复。BlueXP灾难恢复是一款许可产品，必须先购买才能使用。我们提供多种类型的许可证，并且有多种购买方式。 
+---
+= 将 BlueXP 灾难恢复服务添加到您的 Amazon EVS 的 BlueXP 账户
+:allow-uri-read: 
+
+
+[role="lead"]
+BlueXP 灾难恢复是一款授权产品，必须先购买才能使用。我们提供多种类型的许可证，您可以通过多种方式购买许可证。许可证允许您在特定时间段内保护特定数量的数据。
+
+有关 BlueXP 灾难恢复许可证的更多信息，请参阅link:../get-started/dr-licensing.html["为BlueXP灾难恢复设置许可"] 。
+
+
+
+== 许可证类型
+
+主要有两种许可证类型：
+
+* NetApp 提供link:../get-started/dr-licensing.html["30天试用许可证"]您可以使用它来评估使用 ONTAP 和 VMware 资源的 BlueXP 灾难恢复。此许可证提供 30 天的使用期限，可无限量使用受保护的容量。
+* 如果您希望在 30 天试用期结束后获得灾难恢复保护，请购买生产许可证。您可以通过任何 NetApp 云合作伙伴的市场购买此许可证，但在本指南中，我们建议您使用 Amazon AWS Marketplace 购买用于 BlueXP 灾难恢复的 *NetApp 智能服务* 许可证。要了解有关通过 Amazon Marketplace 购买许可证的更多信息，请参阅link:../get-started/dr-licensing.html["通过AWS Marketplace订阅"] 。
+
+
+
+
+== 确定灾难恢复容量需求
+
+在购买许可证之前，您应该了解需要保护多少 ONTAP 存储容量。使用 NetApp ONTAP 存储的优势之一是 NetApp 存储数据的高效性。所有存储在 ONTAP 卷中的数据（例如托管虚拟机的 VMware 数据存储区）都以高效的方式存储。在将数据写入物理存储时，ONTAP 默认采用三种存储效率：压缩、重复数据删除和数据压缩。最终结果是存储效率在 1.5:1 到 4:1 之间，具体取决于存储的数据类型。事实上，NetApp 提供了 https://www.netapp.com/media/79014-ng-937-Efficiency-Guarantee-Customer-Flyer.pdf["存储效率担保"^]对于某些工作负载。
+
+这会对您有利，因为 BlueXP 灾难恢复会在应用所有 ONTAP 存储效率后计算许可容量。例如，假设您在 vCenter 中配置了一个 100 TB (TiB) 的 NFS 数据存储区，用于托管 100 台要使用该服务保护的虚拟机。此外，假设当数据写入 ONTAP 卷时，自动应用的存储效率技术会使这些虚拟机仅消耗 33 TiB（3:1 的存储效率）。那么BlueXP 灾难恢复只需获得 33 TiB 的许可，而不是 100 TiB。与其他灾难恢复解决方案相比，这将极大地降低您的灾难恢复解决方案的总拥有成本。
+
+.步骤
+. 要确定托管要保护的 VMware 数据存储库的每个卷上消耗的数据量，请通过对每个卷运行 ONTAP CLI 命令来确定磁盘容量消耗：  `volume show-space -volume < _volume name_ > -vserver < _SVM name_ >` 。
++
+例如：
+
++
+[listing]
+----
+cluster1::> volume show-space
+Vserver : vm-nfs-ds1
+Volume  : vol0
+Feature                                Used      Used%
+-----------------------------      --------     ------
+User Data                           163.4MB         3%
+Filesystem Metadata                   172KB         0%
+Inodes                               2.93MB         0%
+Snapshot Reserve                    292.9MB         5%
+Total Metadata                        185KB         0%
+Total Used                          459.4MB         8%
+Total Physical Used                 166.4MB         3%
+
+----
+. 记下每个卷的“总物理已用量”值。这是 BlueXP 灾难恢复需要保护的数据量，您将使用该值来确定需要许可的容量。
+

@@ -431,7 +431,6 @@
   <block id="d23a9d83c87c6eacef309f00a2beb5d3" category="inline-image-macro">站点页面屏幕截图</block>
   <block id="6f5e3fdfa73285ac2283ba492cf2d47b" category="list-text">AWS上的VMware Cloud (VMC)与Amazon FSx for NetApp ONTAP或</block>
   <block id="b374472b15e644f23d1e6b059b5216b9" category="list-text">采用ONTAP存储的另一个基于NFS的内部VMware环境</block>
-  <block id="53c1c0c22e2a647591a0b52427852850" category="paragraph"><block ref="53c1c0c22e2a647591a0b52427852850" category="inline-image-macro-rx" type="image"></block></block>
   <block id="add8d69a5f7975ffd43124657fc5030d" category="list-text">使用SnapMirror复制将内部生产站点上的VMware应用程序复制到云中或内部的灾难恢复远程站点。</block>
   <block id="dcc9d99320099ed731ca2f05b3e501a7" category="list-text">将VMware工作负载从原始站点迁移到其他站点。</block>
   <block id="a6a42e8e3070730d19bfd86d6a1d66fe" category="paragraph">下图显示了从内部到内部的灾难恢复计划的架构。</block>
@@ -1211,4 +1210,434 @@
   <block id="b12e5762638e8dca606f02345a47867a" category="paragraph">查看 BlueXP 灾难恢复报告可以帮助您分析灾难恢复准备情况。预先设计的报告包括过去七天帐户内所有站点的测试故障转移摘要、复制计划详细信息和作业详细信息。</block>
   <block id="b3d496fccdf5d0b52dd71622cd01ca4c" category="doc">创建资源组以在 BlueXP 灾难恢复中将虚拟机组织在一起</block>
   <block id="4931eee83a268b667e0c868104ec1e32" category="doc">在 BlueXP 灾难恢复中将 vCenter 添加到站点</block>
+  <block id="4fdc7ce994e20231977a950f50d2bd8c" category="inline-link-macro">使用 Amazon Elastic VMware Service 和 Amazon FSx for NetApp ONTAP 介绍 BlueXP 灾难恢复</block>
+  <block id="23c676c1e2805ccfa79b1d5b119b359b" category="admonition">有关 AWS EVS 的此文档作为技术预览提供。对于此预览版产品、NetApp保留在正式发布之前修改产品详细信息、内容和时间表的权利。有关详细信息，请参见 <block ref="cdad8a3d7f20169c4ae7abb02cbfb952" category="inline-link-macro-rx"></block>。</block>
+  <block id="307333c16acf811cbdcbc49b7e1ffe0c" category="paragraph"><block ref="307333c16acf811cbdcbc49b7e1ffe0c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="820dcf757b538e0c3906feee7e248e9b" category="inline-image-macro">该图展示了 BlueXP 灾难恢复对 VMware 的用例</block>
+  <block id="0730a606f26806e8598f89fee000aa77" category="paragraph"><block ref="0730a606f26806e8598f89fee000aa77" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ce42bd6214051346d73d33c0caeff3ad" category="summary">在保护虚拟机基础架构之前，BlueXP 灾难恢复服务需要了解哪些 VMware vCenter 集群托管着需要保护的虚拟机，以及这些 vCenter 的位置。第一步是创建一个站点来代表源数据中心和目标数据中心。站点可以是故障域，也可以是恢复域。</block>
+  <block id="df43b28c9b444f6234798d82beab12eb" category="doc">在 BlueXP 灾难恢复中为 Amazon EVS 添加站点</block>
+  <block id="59cabc3db90da0724955c7298ca562a1" category="paragraph">在保护虚拟机基础架构之前，请先确定哪些 VMware vCenter 群集托管着要保护的虚拟机，以及这些 vCenter 的位置。第一步是创建一个站点来代表源数据中心和目标数据中心。站点可以是故障域，也可以是恢复域。</block>
+  <block id="45dca8e7e249dec0e75baf3601093792" category="paragraph">您需要创建以下内容：</block>
+  <block id="d9c29ccbb6b2d06447761e6cf0756684" category="list-text">一个站点，代表生产 vCenter 集群所在的每个生产数据中心</block>
+  <block id="394c227a36683c802c819b3f34846545" category="list-text">适用于 NetApp ONTAP 云数据中心的 Amazon EVS/Amazon FSx 站点</block>
+  <block id="f45637027169066618b4feb69cd78735" category="section-title">创建本地站点</block>
+  <block id="0b865754d79945616dd5a93fa7db75ee" category="paragraph">创建生产 vCenter 站点。</block>
+  <block id="dd1d9dbb557d73a1fd153af81b0bcd7b" category="list-text">从 BlueXP 左侧导航中，选择 *保护* &gt; *灾难恢复*。</block>
+  <block id="3655395c09d80221e5f491b2eb9dcc2f" category="list-text">从 BlueXP 灾难恢复中的任何页面中，选择“*站点*”选项卡。</block>
+  <block id="d0310d41f74b1c1cdc6c79c71a025b7f" category="inline-image-macro">“站点”选项卡</block>
+  <block id="50c021e4f2a31fdef8036a8dba8a16b8" category="paragraph"><block ref="50c021e4f2a31fdef8036a8dba8a16b8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="935bee5f068d88e60f2dea6bf673db0a" category="list-text">从“站点”选项卡中，选择“*添加*”。</block>
+  <block id="5df91129083187f72c022108dc40019a" category="inline-image-macro">在“站点”选项卡上添加选项</block>
+  <block id="f39c93b508f63c5847ca27a8a58d4063" category="paragraph"><block ref="f39c93b508f63c5847ca27a8a58d4063" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="800da9fc10adce98d89711c116529b76" category="list-text">在添加站点对话框中，提供站点名称。</block>
+  <block id="308b16c04c14fc9c7831597351d20046" category="list-text">选择“On-prem”作为位置。</block>
+  <block id="b2fc60f51b5a0628891f2dc6ca9c3dc9" category="inline-image-macro">创建站点对话框</block>
+  <block id="b4775672cce6d5c4397de54127eb400c" category="paragraph"><block ref="b4775672cce6d5c4397de54127eb400c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2f07f3f9af6f682449f80e9bbf3ca8c3" category="paragraph">如果您有其他生产 vCenter 站点，则可以使用相同的步骤添加它们。</block>
+  <block id="548c9c96147a0426f260364305e15190" category="section-title">创建亚马逊云站点</block>
+  <block id="ddbae8bd4240ed180de1f145025881e2" category="paragraph">使用 Amazon FSx for NetApp ONTAP 存储为 Amazon EVS 创建 DR 站点。</block>
+  <block id="92904974c00ca9b28d9ec7f0efadbe4a" category="inline-image-macro">在站点页面上添加选项</block>
+  <block id="07ff11e38338c53ad9f51049256db866" category="paragraph"><block ref="07ff11e38338c53ad9f51049256db866" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b0497cc454b3915328ab40ece8c6cc62" category="list-text">选择“AWS-EVS”作为位置。</block>
+  <block id="f4c51cf5363b5651017e61e046acbe01" category="inline-image-macro">添加对话框</block>
+  <block id="20320c5a5509e9d8a3970bb66e3976b5" category="paragraph"><block ref="20320c5a5509e9d8a3970bb66e3976b5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">结果</block>
+  <block id="0da98ea5899daa91a1bbac1ea476d6cf" category="paragraph">现在您已经创建了一个生产（源）站点和一个 DR（目标）站点。</block>
+  <block id="669ca9c2ff6e928c4aff69471cec6d12" category="summary">使用 Amazon EVS 和 Amazon FSxN 进行 BlueXP 灾难恢复简介。创建站点后，您现在可以将 vCenter 集群添加到 BlueXP 灾难恢复中的每个站点。创建每个站点时，我们会指明每个站点的类型。这会告知 BlueXP 灾难恢复对每种站点类型中托管的 vCenter 需要哪种类型的访问权限。AmazonEVS 的优势之一是 Amazon EVS vCenter 与本地 vCenter 之间没有真正的区别。两者都需要相同的连接和身份验证信息。</block>
+  <block id="7d189e80ea869464c06f8e85295498f7" category="doc">在 BlueXP 灾难恢复中添加本地和 Amazon EVS vCenter 集群</block>
+  <block id="1460c23a88ded3dce057fa4478405940" category="paragraph">创建站点后，您现在可以将 vCenter 集群添加到 BlueXP 灾难恢复中的每个站点。创建每个站点时，我们都会指明相应的站点类型。这会告知 BlueXP 灾难恢复系统，每个站点类型中托管的 vCenter 需要哪种类型的访问权限。AmazonEVS 的优势之一是 Amazon EVS vCenter 与本地 vCenter 之间没有真正的区别。两者都需要相同的连接和身份验证信息。</block>
+  <block id="3ac596c5aa435dd12f683335e2d27760" category="list-title">向每个站点添加 vCenter 的步骤</block>
+  <block id="0b6924fcba425d50ef4e409dab53b25f" category="list-text">从“*站点*”选项卡中，选择所需站点的“*添加 vCenter*”。</block>
+  <block id="59662aacba84700bcc666a989987c405" category="inline-image-macro">添加 vCenter 选项</block>
+  <block id="11c7214c26259f50d59799950f134613" category="paragraph"><block ref="11c7214c26259f50d59799950f134613" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="744f4f3b56736e13f1a146b4bfbfbd67" category="list-text">在添加 vCenter 服务器对话框中，选择或提供以下信息：</block>
+  <block id="9f64cafc10d07a328fe9975be672e3fc" category="list-text">BlueXP 连接器托管在您的 AWS VPC 内。</block>
+  <block id="8bf4e0d4e225ffb8df46f2ccff910a1e" category="list-text">要添加的 vCenter 的 IP 地址或 FQDN。</block>
+  <block id="5b89f24b8876b95ec77cbbec46ac7f03" category="list-text">如果不同，请将端口值更改为 vCenter 集群管理器使用的 TCP 端口。</block>
+  <block id="80f8a73ad31bbfe56cc8ab47d411f0a0" category="list-text">先前创建的帐户的 vCenter 用户名，BlueXP 灾难恢复将使用该用户名来管理 vCenter。</block>
+  <block id="dcbbf9ae46e44ee95b9d29aafbb41fec" category="list-text">所提供用户名的 vCenter 密码。</block>
+  <block id="090ccdeb67b025c4f8b7081fde3f9701" category="list-text">如果您的公司使用外部证书颁发机构 (CA) 或 vCenter Endpoint 证书存储来访问您的 vCenter，请取消选中“使用自签名证书”复选框。否则，请保留此复选框。</block>
+  <block id="b3a5c8845f853fe3c75c53b6ba4b310a" category="inline-image-macro">添加 vCenter 对话框</block>
+  <block id="34fdfb7ad906ce66a12a8da2c109d447" category="paragraph"><block ref="34fdfb7ad906ce66a12a8da2c109d447" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d3c22eda98eb023fc784b057b8ec04c3" category="summary">介绍使用 Amazon EVS 和 Amazon FSxN 的 BlueXP 灾难恢复。</block>
+  <block id="6f8b794f3246b0c1e1780bb4d4d5dc53" category="doc">结论</block>
+  <block id="eed7fbcbb7e8c74c99d0ddc3abdfe7cf" category="paragraph">BlueXP 灾难恢复功能可为您的本地 VMware 基础架构提供经济高效的混合云灾难恢复解决方案，前提是配置 Amazon EVS 和 Amazon FSx for NetApp ONTAP 作为灾难恢复目标。这为您提供了适用于关键任务基础架构的强大灾难恢复目标。BlueXP灾难恢复功能利用原生 ONTAP 数据保护功能，这些功能以数十年的数据保护经验为后盾，并经过深入测试，确保您的数据得到全面保护。</block>
+  <block id="55707b4848b3a26a39057e3af6948b43" category="paragraph">更多信息：</block>
+  <block id="0f5cc47067a5c4b536ab91f1a843de82" category="inline-link">适用于 NetApp ONTAP 的 Amazon FSX 入门</block>
+  <block id="6c289628dee43319166eea9002566c44" category="list-text"><block ref="6c289628dee43319166eea9002566c44" category="inline-link-rx"></block></block>
+  <block id="419107ae99e5cc9fd7d65d66f41050c1" category="inline-link">NetApp BlueXP 灾难恢复文档</block>
+  <block id="a2c58b1632d6fbf942b246bd8c002cc2" category="list-text"><block ref="a2c58b1632d6fbf942b246bd8c002cc2" category="inline-link-rx"></block></block>
+  <block id="8e7c387f461b2ac490bda493fdceda5f" category="summary">在使用 BlueXP 灾难恢复之前，您必须将本地和云托管存储实例添加到 BlueXP 工作环境中。</block>
+  <block id="e68cb1824e09c8e066467d97cdb1991f" category="doc">将本地阵列添加到具有 BlueXP 灾难恢复功能的 Amazon EVS 的 BlueXP 工作环境中</block>
+  <block id="110cf9f49141b2330ac27d9a9baedd2f" category="paragraph">您需要执行以下操作：</block>
+  <block id="79b0e4663ef0a0fffd9246da087a5308" category="list-text">将内部部署阵列添加到您的 BlueXP 工作环境。</block>
+  <block id="52aceff615a8a353fa689f93ef3614ef" category="list-text">将 Amazon FSx for NetApp ONTAP（FSx for ONTAP）实例添加到您的 BlueXP 工作环境。</block>
+  <block id="1914a92b9fef7e409053598090207e08" category="section-title">将本地存储阵列添加到 BlueXP 工作环境</block>
+  <block id="e21237ad7d28d5241dd6cdcffc9c2a00" category="paragraph">将本地 ONTAP 存储资源添加到您的 BlueXP 工作环境。</block>
+  <block id="b14257c652d14d8515d271f0212bd2ce" category="list-text">从 BlueXP Canvas 中，选择 *添加工作环境*。</block>
+  <block id="ddf0d84991cb06158f6eca119f5aa89c" category="inline-image-macro">添加工作环境</block>
+  <block id="349b2d7a1ca6eac6636f21a00ce0501d" category="paragraph"><block ref="349b2d7a1ca6eac6636f21a00ce0501d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="71fc6ede309a71bb3c4f28f1d6d83a62" category="list-text">在添加工作环境页面中，选择*On-Premises*卡。</block>
+  <block id="4a31ad94d282b19a1c5f3be4e28ec3c8" category="inline-image-macro">添加工作环境图像</block>
+  <block id="59018ab7657eb07f7057ada9d34538f1" category="paragraph"><block ref="59018ab7657eb07f7057ada9d34538f1" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7804069ae091dd822cf8b497e221fdb2" category="list-text">在 On-Premises ONTAP 卡上选择 *发现*。</block>
+  <block id="149ae88688585ac8b68e0c2f04f70fe0" category="paragraph"><block ref="149ae88688585ac8b68e0c2f04f70fe0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d326900fbed47108b04e2c8cee7b6041" category="list-text">在发现集群页面上，输入以下信息：</block>
+  <block id="843fd4d49aab9b9f4784cd919767936c" category="list-text">ONTAP 阵列集群管理端口的 IP 地址</block>
+  <block id="91c00f03a2fb5b93f522598c117611c6" category="list-text">管理员用户名</block>
+  <block id="8aa764ffa66fb398df5f40185e9f98ac" category="list-text">管理员密码</block>
+  <block id="8189eb9cbf13731a1a9d4488541f2942" category="list-text">选择页面底部的“发现”。</block>
+  <block id="e693301ddfb0ef44a5b2b45d11ae3467" category="paragraph"><block ref="e693301ddfb0ef44a5b2b45d11ae3467" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="39097babd0c6218dcf46c3ecd7d97c32" category="list-text">对将托管 vCenter 数据存储库的每个 ONTAP 阵列重复步骤 1-5。</block>
+  <block id="7602a1228d8b945d5cf0149d28c82adb" category="section-title">将 Amazon FSx for NetApp ONTAP 存储实例添加到 BlueXP 工作环境</block>
+  <block id="4d8658bf6b366b5551718e0a00428893" category="paragraph">接下来，将 Amazon FSx for NetApp ONTAP 存储资源添加到您的 BlueXP 工作环境中。</block>
+  <block id="483ca1341a0e86a331b54f24705ed59e" category="paragraph"><block ref="483ca1341a0e86a331b54f24705ed59e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="191b215e1bafcf454d046bf2a04ebe00" category="list-text">在添加工作环境页面中，选择*Amazon Web Services*卡。</block>
+  <block id="9c84afb7256f6d1b08c629cfe97393c3" category="paragraph"><block ref="9c84afb7256f6d1b08c629cfe97393c3" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="60307118e9d612ff41db44d4ac4a8b91" category="list-text">选择 Amazon FSx for ONTAP 卡上的 *Discover Existing* 链接。</block>
+  <block id="beea635ab0d5488f092f8b6d53762427" category="paragraph"><block ref="beea635ab0d5488f092f8b6d53762427" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="4d0606ca8000d6887d04df726f54bb08" category="list-text">选择托管 FSx for ONTAP 实例的凭证和 AWS 区域。</block>
+  <block id="8d4ff1357f113705b6f30662ff7b14aa" category="list-text">选择一个或多个要添加的 FSx for ONTAP 文件系统。</block>
+  <block id="d6d547f4a67e7da1e6a84ec13d6fd5c6" category="paragraph"><block ref="d6d547f4a67e7da1e6a84ec13d6fd5c6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7de461c253e2cd429a574e5ca48a6fa4" category="list-text">对将托管 vCenter 数据存储区的每个 FSx for ONTAP 实例重复步骤 1-6。</block>
+  <block id="04eb0ac30625c6312809ae3605f0b08f" category="summary">安装 BlueXP Connector 后，您需要集成所有将参与 DR 过程的 ONTAP 存储和 VMware vCenter 资源。</block>
+  <block id="5ddf5a2becf40d46416c1ecf397acead" category="doc">为 Amazon EVS 配置 BlueXP 灾难恢复概述</block>
+  <block id="8b9d6b5951a36c9d339854816f5a2864" category="paragraph">安装 BlueXP Connector 后，您需要将参与灾难恢复过程的所有 ONTAP 存储和 VMware vCenter 资源与 BlueXP 灾难恢复集成。</block>
+  <block id="300a6a9739ccd40ce80dbf01d1f81a3d" category="inline-link-macro">具有 BlueXP 灾难恢复的 Amazon EVS 的先决条件</block>
+  <block id="1196a09d760180a49604d32a98c45733" category="list-text"><block ref="1196a09d760180a49604d32a98c45733" category="inline-link-macro-rx"></block></block>
+  <block id="b90bda5398de68e1d85b7a6c119bd42b" category="inline-link-macro">将 ONTAP 存储阵列添加到 BlueXP 灾难恢复</block>
+  <block id="74037e15fb74898fc2741e1fd0de2c1b" category="list-text"><block ref="74037e15fb74898fc2741e1fd0de2c1b" category="inline-link-macro-rx"></block></block>
+  <block id="948fdcd481f1b60f64cd0a1415b8772c" category="inline-link-macro">为 Amazon EVS 启用 BlueXP 灾难恢复</block>
+  <block id="3b4041796a7d19952ce4f05d7ac1296e" category="list-text"><block ref="3b4041796a7d19952ce4f05d7ac1296e" category="inline-link-macro-rx"></block></block>
+  <block id="48640808aa8de0e397783c9f0bf7d38c" category="inline-link-macro">将 vCenter 站点添加到 BlueXP 灾难恢复</block>
+  <block id="b1a91a36f01e2b398842c4fafba5b827" category="list-text"><block ref="b1a91a36f01e2b398842c4fafba5b827" category="inline-link-macro-rx"></block></block>
+  <block id="4870ca95287127b763711668002ae46a" category="inline-link-macro">将 vCenter 集群添加到 BlueXP 灾难恢复</block>
+  <block id="b58a5282def19b2cfa0d6a21a2fb1873" category="list-text"><block ref="b58a5282def19b2cfa0d6a21a2fb1873" category="inline-link-macro-rx"></block></block>
+  <block id="77b6a574c8fd563a40ba5d3ced2f6995" category="summary">在继续使用 BlueXP 灾难恢复配置 Amazon EVS 之前，您应该确保满足几个先决条件。</block>
+  <block id="3cfd631225e4a5cd11bb7f070aa490d3" category="paragraph">具体来说，请执行以下操作：</block>
+  <block id="0c16cce0fa7cbfe2c47b9b35b500ef09" category="list-text">创建一个具有 BlueXP 灾难恢复所需的特定 VMware 权限的 vCenter 用户帐户，以执行必要的操作。</block>
+  <block id="f1b035e723ce8afdf6da2bf6a610f72a" category="admonition">我们不建议使用默认的“administrator@vsphere.com”管理员帐户。相反，您应该在所有将参与 DR 流程的 vCenter 集群上创建一个 BlueXP 灾难恢复专用用户帐户。有关所需特定权限的列表，请参阅<block ref="81359e3dc28c5def835ffa82482dcdcf" category="inline-link-macro-rx"></block> 。</block>
+  <block id="99c420b6898c190b219ba1e25a1f737e" category="list-text">确保所有托管受 BlueXP 灾难恢复保护的虚拟机的 vCenter 数据存储都位于 NetApp ONTAP 存储资源上。</block>
+  <block id="8fc09ae0803e50a45a94b04ffd9379bf" category="paragraph">在 NetApp ONTAP 上使用 Amazon FSx 时，该服务支持 iSCSI 上的 NFS 和 VMFS（而非 FC）。虽然该服务支持 FC，但 Amazon FSx for NetApp ONTAP 不支持。</block>
+  <block id="aaa40fdffdb9b8b6db1fa18723bcd15b" category="list-text">确保您的 Amazon EVS vCenter 已连接到 Amazon FSx for NetApp ONTAP 存储集群。</block>
+  <block id="9709c4e90ccd66fb37391b201a587f74" category="list-text">确保所有受保护的虚拟机上都安装了 VMware 工具。</block>
+  <block id="77bc05bf2afea788cd5090d62741ed3d" category="list-text">确保您的本地网络已使用 Amazon 批准的连接方法连接到 AWS VPC 网络。我们建议您使用 AWS Direct Connect、AWS Private Link 或 AWS Site-to-Site VPN。</block>
+  <block id="8629f12efbc40885b1243e421cd3c4e5" category="summary">首先，使用 BlueXP 灾难恢复提供复制计划名称并选择复制的源和目标 vCenter。</block>
+  <block id="ea588d0f7f6f9983920d0d0e39b7f7d4" category="doc">创建复制计划：步骤 1 - 在 BlueXP 灾难恢复中选择 vCenter</block>
+  <block id="88e5c616aef10d1e25cd80753b2956cb" category="paragraph">首先，使用 BlueXP 灾难恢复，提供复制计划名称并选择复制的源和目标 vCenter。</block>
+  <block id="3d5a9945f1a8ed1fc9f6c0e5c4eee4f6" category="list-text">为复制计划输入一个唯一的名称。</block>
+  <block id="31e93095cb1f78296c5a4bfdd4647cd5" category="paragraph">复制计划名称仅允许使用字母数字字符和下划线 (_)。</block>
+  <block id="431ee8ca0b3802786f62aed1da9220ed" category="list-text">选择源 vCenter 集群。</block>
+  <block id="eb1e43df314e70cda644140a164ce3c9" category="list-text">选择目标 vCenter 集群。</block>
+  <block id="ecced8ecd9dc616f00d9f567714d6265" category="inline-image-macro">创建复制计划，选择 vCenter</block>
+  <block id="d35b9c993df2e12890476ca19b659441" category="paragraph"><block ref="d35b9c993df2e12890476ca19b659441" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b191b6f49b0765d360681184e8222444" category="inline-link-macro">创建复制计划向导步骤2</block>
+  <block id="5003f822127ac9a9c7547da6e214573c" category="paragraph">继续<block ref="517e532aa0c56fe7f6a8ea55b263a992" category="inline-link-macro-rx"></block> 。</block>
+  <block id="4114dbae62a1d9485e06d7737e06fb0e" category="summary">介绍如何使用 Amazon EVS 和 Amazon FSx for NetApp ONTAP 进行 BlueXP 灾难恢复。选择要使用 BlueXP 灾难恢复保护的虚拟机。</block>
+  <block id="2819f8d1ba00dd72cf62a7b3471938cb" category="doc">创建复制计划：步骤 2 - 在 BlueXP 灾难恢复中选择虚拟机资源</block>
+  <block id="6e842216ff79e66b8c0032bbe5e0bb9b" category="paragraph">选择要使用 BlueXP 灾难恢复保护的虚拟机。</block>
+  <block id="610fc4dc6e77d6a138be8851cd39ce5a" category="paragraph">有多种方法可以选择要保护的虚拟机：</block>
+  <block id="ce621c7003512f5ad0a4858f15d9be63" category="list-text">*选择单个虚拟机*：点击“虚拟机”按钮，您可以选择要保护的单个虚拟机。选择每个虚拟机后，该服务会将其添加到位于屏幕右侧的默认资源组中。</block>
+  <block id="b4a2c2844cd161d3c25a32cbc39d36d8" category="list-text">*选择先前创建的资源组*：您可以使用 BlueXP 灾难恢复 UI 顶部的“资源组”选项卡预先创建自定义资源组。这不是必需的，因为您可以使用其他两种方法在复制计划过程中创建资源组。有关详细信息，请参见 <block ref="8aa3c94c171b2c9d7252afb28ee019a7" category="inline-link-macro-rx"></block>。</block>
+  <block id="3a9512d2d8c9e9f0f69ee9b535c77a83" category="list-text">*选择整个 vCenter 数据存储*：如果您使用此复制计划保护大量虚拟机，则选择单个虚拟机可能效率不高。由于 BlueXP 灾难恢复使用基于卷的 SnapMirror 复制来保护虚拟机，因此位于数据存储上的所有虚拟机都将作为卷的一部分进行复制。在大多数情况下，您应该使用 BlueXP 灾难恢复保护并重新启动位于数据存储上的所有虚拟机。使用此选项可指示服务将托管在选定数据存储上的所有虚拟机添加到受保护虚拟机列表中。</block>
+  <block id="28da8b5b38656ce6567ddf373453c269" category="paragraph">对于本指导说明，我们选择整个 vCenter 数据存储。</block>
+  <block id="7b9830c740b374eb20e5c17ea81bb1ab" category="list-title">访问此页面的步骤</block>
+  <block id="fc85d703602655afa214ccfc6b2ef4af" category="list-text">从“*复制计划*”页面继续到“*应用程序*”部分。</block>
+  <block id="32f270bdb81f946e928264e11584d291" category="list-text">查看打开的“*应用程序*”页面中的信息。</block>
+  <block id="adea8c3ade175d7b99a99a269bb1b136" category="inline-image-macro">复制计划，应用程序页面</block>
+  <block id="a66155ae2edcdc831993816e795e2cb4" category="paragraph"><block ref="a66155ae2edcdc831993816e795e2cb4" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a538750f5afffe988fa99e8ccc24c31a" category="list-title">选择数据存储区的步骤：</block>
+  <block id="950f1daebd3c43f88a40dc7c475d8bf9" category="list-text">选中您想要保护的每个数据存储旁边的复选框。</block>
+  <block id="256c31a6dcdbd7ede927d725d062abd1" category="list-text">（可选）通过选择资源组名称旁边的铅笔图标将资源组重命名为合适的名称。</block>
+  <block id="5cdb6865395a5a7c648eec3a4bfdc0cf" category="inline-link-macro">创建复制计划向导步骤3</block>
+  <block id="97ff8b16c5655b92ed53df0dd71843fa" category="paragraph">继续<block ref="adffaab82c54ec90442b4418979dfb11" category="inline-link-macro-rx"></block> 。</block>
+  <block id="0a6ee28fe0af80a5803af0f506660dca" category="summary">介绍使用 Amazon EVS 和 Amazon FSx for NetApp ONTAP 进行 BlueXP 灾难恢复。在您获得需要保护的虚拟机列表后，BlueXP 灾难恢复要求您提供故障转移映射和虚拟机配置信息，以便在故障转移期间使用。</block>
+  <block id="843027f2f65b4fc9479458b57fe23e59" category="doc">创建复制计划：步骤 3 - 在 BlueXP 灾难恢复中映射资源</block>
+  <block id="68630913837d4522c0b315316fa20616" category="paragraph">在您获得要使用 BlueXP 灾难恢复保护的虚拟机列表后，请提供故障转移期间要使用的故障转移映射和虚拟机配置信息。</block>
+  <block id="d2ff096b4d4a2f5f4848cf23e9c25e0d" category="paragraph">您需要映射四种主要类型的信息：</block>
+  <block id="9cdd09a5b2d217b34fdab06b6438a3ea" category="list-text">计算资源</block>
+  <block id="30c53d4188dc7e116970e74000c9c914" category="list-text">虚拟网络</block>
+  <block id="99060ab16c8117b10834f3ad1dd732c8" category="list-text">虚拟机重新配置</block>
+  <block id="f443508dbf8673a0459dd93afb702a1c" category="list-text">数据存储映射</block>
+  <block id="76e8c836ee964f4fa864d6333268999a" category="paragraph">每个虚拟机都需要前三种类型的信息。每个托管要保护的虚拟机的数据存储都需要进行数据存储映射。</block>
+  <block id="daa6be73716dc44624a55224ae2ed0af" category="inline-image-macro">25.25</block>
+  <block id="35939d9e04d73376eda45b2b13922f28" category="list-text">带有警告图标 ( <block ref="8bb617320337469159947c2ee9a52889" category="inline-image-macro-rx" type="image"></block> ) 要求您提供地图信息。</block>
+  <block id="5574c8f31b4cf0921b32111194d0542a" category="list-text">标有复选图标 ( <block ref="61783be3aca45cad43d97d02f3268d3c" category="inline-image-macro-rx" type="image"></block> ) 已映射或具有默认映射。请检查这些映射以确保当前配置符合您的要求。</block>
+  <block id="6028265a3b574aed8497e66443fac28c" category="list-text">从“*复制计划*”页面继续到“*资源映射*”部分。</block>
+  <block id="c983acef9845cc75bd306109d8a52c00" category="list-text">查看打开的“资源映射”页面上的信息。</block>
+  <block id="fa1610ddfa2152b9e8f5778144e74473" category="inline-image-macro">创建复制计划，资源映射页面</block>
+  <block id="fe4f9d685407c3d061ae56d4bb07c056" category="paragraph"><block ref="fe4f9d685407c3d061ae56d4bb07c056" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="740199b79705af0b0465a7ac59ab8f62" category="list-text">要打开所需的每个映射类别，请选择该部分旁边的向下箭头（*v*）。</block>
+  <block id="1d695da8be5a808b287d79de335b03ee" category="section-title">计算资源映射</block>
+  <block id="0a235ac401a30cfb7078a7aa681d6763" category="paragraph">由于一个站点可以托管多个虚拟数据中心和多个 vCenter 集群，因此您需要确定在发生故障转移时在哪个 vCenter 集群上恢复虚拟机。</block>
+  <block id="bf6fa7ffbe6eb7d1755d6cbf9113608e" category="list-title">映射计算资源的步骤</block>
+  <block id="5f284173a4e05543b1d3f4f96396fe44" category="list-text">从位于 DR 站点的数据中心列表中选择虚拟数据中心。</block>
+  <block id="98b8fc331440708a4300daf2feca158c" category="list-text">从所选虚拟数据中心内的集群列表中选择用于托管数据存储区和虚拟机的集群。</block>
+  <block id="26101477fa982299ccdcb9317d953d1f" category="list-text">（可选）选择目标集群中的目标主机。</block>
+  <block id="8203a86e2a380c7c9948059ac5bafea4" category="paragraph">此步骤并非必需，因为 BlueXP 灾难恢复会选择在 vCenter 中添加到集群的第一个主机。此时，虚拟机要么继续在该 ESXi 主机上运行，要么 VMware DRS 根据配置的 DRS 规则将虚拟机根据需要移动到其他 ESXi 主机。</block>
+  <block id="6604b6a796234e71213e8532c2e0ac4d" category="list-text">（可选）提供用于放置 VM 注册的顶级 vCenter 文件夹的名称。</block>
+  <block id="19ec7913efad483c20da5162901ba76d" category="paragraph">这是为了满足您的组织需求，并不是必需的。</block>
+  <block id="b98800e8cefd33a1732635723a78893e" category="inline-image-macro">创建复制计划、计算资源</block>
+  <block id="7e7f922d36944c2c720506b1664eb3a6" category="paragraph"><block ref="7e7f922d36944c2c720506b1664eb3a6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5bb09905caece74967f31a8b9acdfec6" category="section-title">映射虚拟网络资源</block>
+  <block id="735422ecadbce7a10ea51451e2684498" category="paragraph">每个虚拟机可以有一个或多个虚拟网卡连接到 vCenter 网络基础架构中的虚拟网络。为了确保每个虚拟机在灾难恢复站点重启后都能正确连接到所需的网络，请确定要连接这些虚拟机的灾难恢复站点虚拟网络。为此，请将本地站点中的每个虚拟网络映射到灾难恢复站点上的关联网络。</block>
+  <block id="8a498354f2b10b57cd6a21abef44b84b" category="list-title">选择每个源虚拟网络要映射到哪个目标虚拟网络</block>
+  <block id="be8a0f52b3f89ec52898a687a46d98d3" category="list-text">从下拉列表中选择目标段。</block>
+  <block id="ffbce16aa92393c36f22c436fb54ba16" category="list-text">对列出的每个源虚拟网络重复上一步。</block>
+  <block id="579a4f796bf2b17e04e79c92ced90e7c" category="inline-image-macro">创建复制计划、网络资源</block>
+  <block id="b7e6f42742ecf3f82ee5efd7c340a0c4" category="paragraph"><block ref="b7e6f42742ecf3f82ee5efd7c340a0c4" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="101a1653e9b88e3b9342a8d62b2a73b7" category="section-title">定义故障转移期间虚拟机重新配置的选项</block>
+  <block id="6d53be845ac6f380dbbdf61cb744f18f" category="paragraph">每个虚拟机可能需要进行修改才能在 DR vCenter 站点中正常工作。“虚拟机”部分可让您提供必要的更改。</block>
+  <block id="727a4cbcb1c8c2a574698ac39f8a0e01" category="paragraph">默认情况下，BlueXP 灾难恢复对每个虚拟机使用与源本地站点相同的设置。这假设虚拟机将使用相同的 IP 地址、虚拟 CPU 和虚拟 DRAM 配置。</block>
+  <block id="50fca5dd60bc7595c14d877fcc09a35b" category="section-title">网络重新配置</block>
+  <block id="7e7f909a784ac97b548d1c0c896ffda7" category="paragraph">支持的 IP 地址类型为静态和 DHCP。对于静态 IP 地址，您有以下目标 IP 设置：</block>
+  <block id="7ab1e4417fd162d1f894cc7ff7d92781" category="list-text">*与源相同*：顾名思义，该服务在目标虚拟机上使用的 IP 地址与源站点虚拟机上的 IP 地址相同。这要求您将上一步中映射的虚拟网络配置为相同的子网设置。</block>
+  <block id="f8711a934a3ad5b6455a62a3295f6b92" category="list-text">*与源不同*：该服务为每个虚拟机提供一组 IP 地址字段，这些字段必须根据目标虚拟网络（您在上一节中已映射）上使用的相应子网进行配置。您必须为每个虚拟机提供 IP 地址、子网掩码、DNS 和默认网关值。（可选）当所有虚拟机连接到同一子网时，为所有虚拟机使用相同的子网掩码、DNS 和网关设置，以简化流程。</block>
+  <block id="4542f9e955c7d2139505f9e26a9ba8c7" category="list-text">*子网映射*：此选项根据目标虚拟网络的 CIDR 配置重新配置每个虚拟机的 IP 地址。要使用此功能，请确保每个 vCenter 的虚拟网络在服务中都具有已定义的 CIDR 设置，该设置已在“站点”选项卡中的 vCenter 信息中进行了更改。</block>
+  <block id="9878b8f9706d43985e2e2c7735cc56d9" category="paragraph">配置子网后，子网映射将对源虚拟机和目标虚拟机配置使用相同的 IP 地址单元组件，但会根据提供的 CIDR 信息替换 IP 地址的子网组件。此功能还要求源虚拟网络和目标虚拟网络具有相同的 IP 地址类别（ <block ref="0b93165f79d16271b738282c36905f88" prefix=" " category="inline-code"></block>受保护的虚拟机（CIDR 的组成部分）。这可确保目标站点有足够的 IP 地址来托管所有受保护的虚拟机。</block>
+  <block id="ae5627da5802cb3e1a62f67e6b52b520" category="paragraph">对于此 EVS 设置，我们假设源和目标 IP 配置相同，不需要任何额外的重新配置。</block>
+  <block id="7df032e1e3b26bcc6394803e16ee36e3" category="list-title">更改网络设置重新配置</block>
+  <block id="8faacc5c62c7b4f41379c86745cf1320" category="list-text">选择用于故障转移虚拟机的 IP 寻址类型。</block>
+  <block id="bd65c978b90114c74862fa1e6c2fb3a0" category="list-text">（可选）通过提供可选的前缀和后缀值为重新启动的虚拟机提供虚拟机重命名方案。</block>
+  <block id="ee8fa5ed67895f2bd56b15818f6ba9db" category="paragraph"><block ref="ee8fa5ed67895f2bd56b15818f6ba9db" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a31bffcdbc06bba08556f1bcdb9efd4e" category="section-title">虚拟机计算资源重新配置</block>
+  <block id="ac267974fdea0c3212164d8a231aa92a" category="paragraph">重新配置虚拟机计算资源有多种选项。BlueXP灾难恢复支持更改虚拟 CPU 数量、虚拟 DRAM 容量以及虚拟机名称。</block>
+  <block id="b84568179180e997fe88daef837b9e44" category="list-title">指定任何 VM 配置更改</block>
+  <block id="cbcc2cf21c1cabd12aef3bdc6989b58a" category="list-text">（可选）修改每个虚拟机应使用的虚拟 CPU 数量。如果您的 DR vCenter 集群主机的 CPU 核心数不如源 vCenter 集群多，则可能需要执行此操作。</block>
+  <block id="f99ff1887350d7bcdc532d81459bbcba" category="list-text">（可选）修改每个虚拟机应使用的虚拟 DRAM 容量。如果您的 DR vCenter 集群主机的物理 DRAM 容量不如源 vCenter 集群主机，则可能需要执行此操作。</block>
+  <block id="cb1cacde7ecdf6468ab80da9dc29aeaf" category="inline-image-macro">创建复制计划、虚拟机资源</block>
+  <block id="b7de53c41bbac8d240c11204a8336fe6" category="paragraph"><block ref="b7de53c41bbac8d240c11204a8336fe6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="41500e64be223d1286ec9ed56e434a6b" category="section-title">启动顺序</block>
+  <block id="a4e6ee2bbdad3a4d8407b47d0c2282dd" category="paragraph">BlueXP 灾难恢复支持根据启动顺序字段按顺序重启虚拟机。“启动顺序”字段指示每个资源组中虚拟机的启动方式。“启动顺序”字段中值相同的虚拟机将并行启动。</block>
+  <block id="c2aa8df176e82c22e3798ddeaf162829" category="list-title">修改启动顺序设置</block>
+  <block id="b092f60611c99cfbfadc573fde035e2b" category="list-text">（可选）修改您希望虚拟机重启的顺序。此字段可采用任意数值。BlueXP灾难恢复会尝试并行重启具有相同数值的虚拟机。</block>
+  <block id="c6abc4f53ac73ee608655639d83b459e" category="list-text">（可选）提供每次虚拟机重启之间的延迟时间。该时间将在此虚拟机重启完成后、启动顺序编号更高的虚拟机之前注入。该时间以分钟为单位。</block>
+  <block id="146293c3e8323d5de7fab758380284c9" category="inline-image-macro">创建复制计划、启动顺序</block>
+  <block id="2285aa38909854998b9c1f6afd655df5" category="paragraph"><block ref="2285aa38909854998b9c1f6afd655df5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e1dc360c00065acba449e872783c58c4" category="section-title">自定义客户操作系统操作</block>
+  <block id="95ab07a7c85a76ed75c195f0f531e106" category="paragraph">BlueXP 灾难恢复支持对每个虚拟机执行一些客户操作系统操作：</block>
+  <block id="f19c5dbfcb41e02dccb768d27c27e533" category="list-text">BlueXP 灾难恢复可以为运行 Oracle 数据库和 Microsoft SQL Server 数据库的虚拟机进行应用程序一致的虚拟机备份。</block>
+  <block id="357207d20bb8864f20f28c1189fce357" category="list-text">BlueXP 灾难恢复可以为每个虚拟机执行适用于客户操作系统的自定义脚本。执行此类脚本需要客户操作系统可接受的用户凭据，并且该凭据必须具有足够的权限才能执行脚本中列出的操作。</block>
+  <block id="abe3fe6dfef4ae381fe90e2ed48d5c00" category="list-title">修改每个虚拟机的自定义客户操作系统操作</block>
+  <block id="014767c5a4f585d6656d983919cb2c72" category="list-text">（可选）如果虚拟机托管 Oracle 或 SQL Server 数据库，请选中“创建应用程序一致副本”复选框。</block>
+  <block id="763e27fb652b34b1adbac7f8f2a991a8" category="list-text">（可选）如需在启动过程中在客户机操作系统中执行自定义操作，请为所有虚拟机上传脚本。如需在所有虚拟机中运行单个脚本，请勾选突出显示的复选框并填写相应字段。</block>
+  <block id="52e6c6e94ae36e19143bcae9a858c5f5" category="list-text">某些配置更改需要具有足够权限的用户凭据才能执行操作。在以下情况下提供凭据：</block>
+  <block id="4527e376733ff2c1c7e7ff3c53308fea" category="list-text">客户操作系统将在虚拟机内执行脚本。</block>
+  <block id="b81b7d3cf119376fc1e91c8228a69fc7" category="list-text">需要执行应用程序一致的快照。</block>
+  <block id="035c4fd259e9e7ca1c071c63887a2ee9" category="inline-image-macro">创建复制计划、自定义客户操作系统操作</block>
+  <block id="7535f841f34db2e7c20c7c0a70d45f9d" category="paragraph"><block ref="7535f841f34db2e7c20c7c0a70d45f9d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="bde5353b2d9b0eb001221c6d160f86dd" category="section-title">地图数据存储</block>
+  <block id="d22d2b8c7fff83090c0de04eabc1fd68" category="paragraph">创建复制计划的最后一步是确定 ONTAP 应如何保护数据存储库。这些设置定义了复制计划的恢复点目标 (RPO)、应维护的备份数量以及将每个 vCenter 数据存储库托管的 ONTAP 卷复制到何处。</block>
+  <block id="ae2e5a024e6dfc76cacf68c5a3c12f2c" category="paragraph">默认情况下，BlueXP 灾难恢复管理其自己的快照复制计划；但是，您可以选择指定使用现有的 SnapMirror 复制策略计划来保护数据存储区。</block>
+  <block id="69368a9520c0c7af90c332022566762a" category="paragraph">此外，您还可以选择自定义要使用的数据 LIF（逻辑接口）和导出策略。如果您不提供这些设置，BlueXP 灾难恢复将使用与相应协议（NFS、iSCSI 或 FC）关联的所有数据 LIF，并使用 NFS 卷的默认导出策略。</block>
+  <block id="000dc760e354ae9b58065262bae7e919" category="list-title">配置数据存储（卷）映射</block>
+  <block id="dd4695a3f0c9a5b23084d00c405cdb48" category="list-text">（可选）决定是否要使用现有的 ONTAP SnapMirror 复制计划或让 BlueXP 灾难恢复管理虚拟机的保护（默认）。</block>
+  <block id="eb315e77d04175ba27a28688bbf3625b" category="list-text">提供服务开始备份的起点。</block>
+  <block id="2f8abd67ba85ff243c7fd1a96e395c01" category="list-text">指定服务应多久进行一次备份并将其复制到 DR 目标 Amazon FSx for NetApp ONTAP 集群。</block>
+  <block id="fe0f24f024a5d540c8832cca7b543154" category="list-text">指定应保留多少个历史备份。该服务在源存储群集和目标存储群集上维护相同数量的备份。</block>
+  <block id="b9ddc614a5fc5a45bff5e0c4ae6d66f8" category="list-text">（可选）为每个卷选择一个默认逻辑接口（数据 LIF）。如果未选择任何接口，则会配置目标 SVM 中所有支持卷访问协议的数据 LIF。</block>
+  <block id="a367507541752e287e151e706fb73880" category="list-text">（可选）为任何 NFS 卷选择导出策略。如果未选择，则使用默认导出策略</block>
+  <block id="0aca0237d66ff2a0ecd9688925663da8" category="inline-image-macro">创建复制计划、数据存储映射</block>
+  <block id="3e9f2fba72a59f060462aaf417bde827" category="paragraph"><block ref="3e9f2fba72a59f060462aaf417bde827" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="4f3c7993b4a0eec366f6c0122e605a04" category="inline-link-macro">创建复制计划向导步骤4</block>
+  <block id="850540557deea1ebe75231ef329e63e0" category="paragraph">继续<block ref="63ce8d54120138184ac6b85905fdfc39" category="inline-link-macro-rx"></block> 。</block>
+  <block id="9727ae43ed1ad8fcdb2151f2520082bb" category="summary">介绍如何使用 Amazon EVS 和 Amazon FSx for NetApp ONTAP 进行 BlueXP 灾难恢复。在 BlueXP 灾难恢复中添加所有复制计划信息后，请验证您输入的信息是否正确。</block>
+  <block id="9f98a6c7b0522caaf62dfb7dc693692b" category="doc">创建复制计划：步骤 4 - 验证 BlueXP 灾难恢复中的设置</block>
+  <block id="7cdc68d83dd3fc1f7568e8b25da420ff" category="paragraph">在 BlueXP 灾难恢复中添加复制计划信息后，请验证您输入的信息是否正确。</block>
+  <block id="1ec333fbe816bd59b32c3043688dce3a" category="list-text">在激活复制计划之前，选择“*保存*”来检查您的设置。</block>
+  <block id="eaf1d2a5a85db51c895eec091024fcdb" category="paragraph">您可以选择每个选项卡来查看设置，并通过选择铅笔图标在任何选项卡上进行更改。</block>
+  <block id="02a14a8411578842546f29f1aa48aa03" category="inline-image-macro">复制计划设置审查</block>
+  <block id="a6028cc77f12edef30126bf564d7e12c" category="paragraph">复制计划设置审查<block ref="039af1de0de6af1a755c0ff0c52a0bf3" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b25ad10e439d0b73b0ace76c8b82f32e" category="list-text">当您确认所有设置正确无误后，选择屏幕底部的*添加计划*。</block>
+  <block id="5b8fe5ae3c38b512fafe1a0eda3235b7" category="inline-link-macro">验证复制计划</block>
+  <block id="d3137afd2501d96b6f91fb0cd319a97e" category="paragraph">继续<block ref="9b042902ca8b7f8d8a3f6659df0dd9bf" category="inline-link-macro-rx"></block> 。</block>
+  <block id="c12bcbed25714ea7a70d91fad1a8f2ed" category="summary">介绍使用 Amazon EVS 和 Amazon FSx for NetApp ONTAP 进行 BlueXP 灾难恢复。在您需要保护本地站点上的 vCenter 并且已将 Amazon EVS 站点配置为使用 Amazon FSx for NetApp ONTAP 并将其用作灾难恢复目标后，您现在可以创建复制计划 (RP) 来保护本地站点内 vCenter 集群上托管的任何虚拟机集。</block>
+  <block id="99424dc3dfb90e3bb1d8e290464f7a16" category="doc">在 BlueXP 灾难恢复概述中创建复制计划</block>
+  <block id="fef9019000b5b750b8ceb6b358e2b27d" category="paragraph">在您需要保护本地站点上的 vCenter 并且已将 Amazon EVS 站点配置为使用 Amazon FSx for NetApp ONTAP 并将其用作 DR 目标后，您可以创建复制计划 (RP) 来保护本地站点内 vCenter 集群上托管的任何虚拟机集。</block>
+  <block id="70d88db53e9d0a0893575ab9645014d9" category="list-title">要开始复制计划创建过程：</block>
+  <block id="659f5306fff0dcab09d03ea0979acdac" category="list-text">从任何 BlueXP 灾难恢复屏幕中，选择“*复制计划*”选项卡。</block>
+  <block id="4a43d8d7de6e2a08eef995c648a14226" category="inline-image-macro">复制计划选项卡</block>
+  <block id="8ee3fdc5b8caacff3838ba90f649b7ec" category="paragraph"><block ref="8ee3fdc5b8caacff3838ba90f649b7ec" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="76e3d410eb73bcf4af10532c24c11b70" category="list-text">从复制计划屏幕中，选择*添加*。</block>
+  <block id="990690bbac7cce3d6ec74f7ad2092ce9" category="inline-image-macro">复制计划屏幕</block>
+  <block id="6304a64bfb4ed5a846d90fa245489b8b" category="paragraph"><block ref="6304a64bfb4ed5a846d90fa245489b8b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="001c8602fd8350b7fdcf0372ede572df" category="paragraph">这将打开创建复制计划向导。</block>
+  <block id="172e660321773233c788b5ea98a12f2b" category="inline-link-macro">创建复制计划向导步骤1</block>
+  <block id="16a01d811080f0448945a1a3745c6964" category="paragraph">继续<block ref="2602b8e50a671483fcbb79c7b3fae673" category="inline-link-macro-rx"></block> 。</block>
+  <block id="ad8d7b3f0324f4490bc3ec526980cf93" category="summary">介绍使用 Amazon EVS 和 Amazon FSx for NetApp ONTAP 进行 BlueXP 灾难恢复。BlueXP灾难恢复是一款许可产品，必须先购买才能使用。我们提供多种类型的许可证，并且有多种购买方式。</block>
+  <block id="4f51d56e1adc27bcb44a867549b62db2" category="doc">将 BlueXP 灾难恢复服务添加到您的 Amazon EVS 的 BlueXP 账户</block>
+  <block id="c0f1e0513a47504d43666dd3be27308f" category="paragraph">BlueXP 灾难恢复是一款授权产品，必须先购买才能使用。我们提供多种类型的许可证，您可以通过多种方式购买许可证。许可证允许您在特定时间段内保护特定数量的数据。</block>
+  <block id="a7c3607166959d0e07d06ffbc46756b3" category="paragraph">有关 BlueXP 灾难恢复许可证的更多信息，请参阅<block ref="04fbd25a14ae34b1a7095776d7fb43d8" category="inline-link-macro-rx"></block> 。</block>
+  <block id="2b2fba693aacdb90002ef3efdb1f458b" category="section-title">许可证类型</block>
+  <block id="04a3ac6103cdf5bc7a2c80f16be09f23" category="paragraph">主要有两种许可证类型：</block>
+  <block id="e817fd3836b1cf9d7c7644535354e579" category="inline-link-macro">30天试用许可证</block>
+  <block id="6b3361f01e2e64455153a1af81df53b0" category="list-text">NetApp 提供<block ref="0502060ba4bb25d46a7cc9c87b10aae3" category="inline-link-macro-rx"></block>您可以使用它来评估使用 ONTAP 和 VMware 资源的 BlueXP 灾难恢复。此许可证提供 30 天的使用期限，可无限量使用受保护的容量。</block>
+  <block id="286857925b326719163f0acf5623cc04" category="inline-link-macro">通过AWS Marketplace订阅</block>
+  <block id="203aa85007f6906e905fdfd138ee68e7" category="list-text">如果您希望在 30 天试用期结束后获得灾难恢复保护，请购买生产许可证。您可以通过任何 NetApp 云合作伙伴的市场购买此许可证，但在本指南中，我们建议您使用 Amazon AWS Marketplace 购买用于 BlueXP 灾难恢复的 *NetApp 智能服务* 许可证。要了解有关通过 Amazon Marketplace 购买许可证的更多信息，请参阅<block ref="e94dd95fc067f0bccce76d5e611ed19c" category="inline-link-macro-rx"></block> 。</block>
+  <block id="234355df259fd03a62f7b631b0fc7843" category="section-title">确定灾难恢复容量需求</block>
+  <block id="e4408096d206b1fb1a79ce8ad173f2fe" category="inline-link">存储效率担保</block>
+  <block id="ac10f87078fcd040a1c080e865f1e1dc" category="paragraph">在购买许可证之前，您应该了解需要保护多少 ONTAP 存储容量。使用 NetApp ONTAP 存储的优势之一是 NetApp 存储数据的高效性。所有存储在 ONTAP 卷中的数据（例如托管虚拟机的 VMware 数据存储区）都以高效的方式存储。在将数据写入物理存储时，ONTAP 默认采用三种存储效率：压缩、重复数据删除和数据压缩。最终结果是存储效率在 1.5:1 到 4:1 之间，具体取决于存储的数据类型。事实上，NetApp 提供了<block ref="9babe97d729d3736fdf7efb1977e157a" category="inline-link-rx"></block>对于某些工作负载。</block>
+  <block id="7a9d562cb820239393838fa8adecaf2a" category="paragraph">这会对您有利，因为 BlueXP 灾难恢复会在应用所有 ONTAP 存储效率后计算许可容量。例如，假设您在 vCenter 中配置了一个 100 TB (TiB) 的 NFS 数据存储区，用于托管 100 台要使用该服务保护的虚拟机。此外，假设当数据写入 ONTAP 卷时，自动应用的存储效率技术会使这些虚拟机仅消耗 33 TiB（3:1 的存储效率）。那么BlueXP 灾难恢复只需获得 33 TiB 的许可，而不是 100 TiB。与其他灾难恢复解决方案相比，这将极大地降低您的灾难恢复解决方案的总拥有成本。</block>
+  <block id="1cac620f7757c79970587895922abdb9" category="list-text">要确定托管要保护的 VMware 数据存储库的每个卷上消耗的数据量，请通过对每个卷运行 ONTAP CLI 命令来确定磁盘容量消耗： <block ref="5dcefe180a68e24e1f2547c10ed74406" prefix=" " category="inline-code"></block> 。</block>
+  <block id="b2c5103f5e7d26eaa7889c8f6de88694" category="list-text">记下每个卷的“总物理已用量”值。这是 BlueXP 灾难恢复需要保护的数据量，您将使用该值来确定需要许可的容量。</block>
+  <block id="3d377102f65fdc239c428d801dacfcac" category="summary">介绍使用 Amazon EVS 和 Amazon FSx for NetApp ONTAP 进行 BlueXP 灾难恢复。虽然连接器可以安装在您的任何网络位置，但为了实现 BlueXP 灾难恢复，我们建议您将连接器安装在灾难恢复站点。这可确保在主站点发生故障时，BlueXP 基于云的控制台 UI 能够继续与连接器保持联系，并能够在该灾难恢复站点内协调恢复流程。</block>
+  <block id="8c802a39edfdd0b2a599284298bd56ac" category="doc">安装 BlueXP 连接器以进行 BlueXP 灾难恢复</block>
+  <block id="f1844479320277fd1e46211d122dc736" category="paragraph">BlueXP 连接器是运行在您的云或本地网络中的 NetApp 软件。它执行 BlueXP 管理数据基础架构所需的操作。连接器会持续轮询作为服务层的 BlueXP 灾难恢复软件，以了解其需要执行的任何操作。</block>
+  <block id="d98ac8362ccd7255d20fdcefbdbb5187" category="paragraph">对于 BlueXP 灾难恢复服务，执行的操作会使用针对每个相应服务的原生 API 来协调 VMware vCenter 集群和 ONTAP 存储实例，从而为在本地位置运行的生产虚拟机提供保护。虽然连接器可以安装在您的任何网络位置，但对于 BlueXP 灾难恢复，我们建议您将连接器安装在灾难恢复站点。这可确保在主站点发生故障时，BlueXP 基于云的控制台 UI 能够继续与连接器保持联系，并能够在该灾难恢复站点内协调恢复过程。</block>
+  <block id="e5901be946f21587f4728e9c30f5de03" category="inline-link">了解 BlueXP 部署模式 | NetApp 文档</block>
+  <block id="7197235181daa6c664b3246064877a20" category="paragraph">要使用该服务，请以标准模式安装连接器。要详细了解连接器的安装类型，请访问<block ref="0461f373f13493d6dbe2b5bfd88ff556" category="inline-link-rx"></block> 。</block>
+  <block id="66a46d25931269402cdb193de674535f" category="paragraph">虽然连接器对于使用该服务至关重要，但安装步骤取决于您的需求和网络配置。提供具体的安装说明超出了本文的范围。</block>
+  <block id="a04a55560279e49c7d25e51d949885e0" category="inline-link">从 AWS Marketplace 创建连接器 | NetApp 文档</block>
+  <block id="7e32586e492cc38625a195803b8f96f6" category="paragraph">使用 Amazon AWS 安装连接器的最简单方法是使用 AWS Marketplace。有关使用 AWS Marketplace 安装连接器的详细信息，请参阅<block ref="c2e19d334e5a1e3e11c5811eeb4b25db" category="inline-link-rx"></block> 。</block>
+  <block id="66390c88c62c14dc63b6422323c35074" category="summary">介绍使用 Amazon EVS 和 Amazon FSx for NetApp ONTAP 进行 BlueXP 灾难恢复。</block>
+  <block id="2062bf54e67da4951d69646f671e78dd" category="paragraph">客户越来越依赖虚拟化基础架构来处理生产计算工作负载，例如基于 VMware vSphere 的基础架构。随着这些虚拟机 (VM) 对业务的重要性日益提升，客户需要保护这些虚拟机免受与物理计算资源相同类型的灾难的影响。目前提供的灾难恢复 (DR) 解决方案既复杂又昂贵，而且资源密集。作为最大的虚拟化基础架构存储提供商，NetApp 致力于确保其客户的虚拟机受到与我们保护 ONTAP 存储托管的任何类型的数据相同的保护。为了实现这一目标，NetApp 创建了 BlueXP 灾难恢复服务。</block>
+  <block id="259c572679c64fd6d53917c0e7cf4a56" category="admonition">有关 AMAZON EVS 的本文档作为技术预览提供。对于此预览版产品、NetApp保留在正式发布之前修改产品详细信息、内容和时间表的权利。</block>
+  <block id="a3fe2ebdabea83ec0809c3eaabe8b916" category="paragraph">任何灾难恢复解决方案面临的主要挑战之一是，仅仅为了提供灾难恢复复制和恢复基础架构，就需要管理购买、配置和维护额外计算、网络和存储资源的增量成本。保护关键本地虚拟资源的一个常见选择是使用云托管虚拟资源作为灾难恢复复制和恢复基础架构。亚马逊就是此类解决方案的一个例子，它可以提供与 NetApp ONTAP 托管虚拟机基础架构兼容的经济高效的资源。</block>
+  <block id="9139aacb33b5be42b71413b7de021e19" category="paragraph">亚马逊推出了 Amazon Elastic VMware 服务 (Amazon EVS)，该服务可在您的虚拟私有云 (VPC) 中支持 VMware Cloud Foundation。AmazonEVS 提供 AWS 的弹性和性能，以及熟悉的 VMware 软件和工具，使 Amazon EVS vCenters 可以集成到您的本地虚拟化基础设施中作为扩展。</block>
+  <block id="79a48534a0ca0e870aba3fff8407f860" category="paragraph">虽然 Amazon EVS 附带存储资源，但对于存储工作负载繁重的组织来说，使用原生存储可能会降低其效率。在这种情况下，将 Amazon EVS 与 Amazon FSx for NetApp ONTAP 存储 (Amazon FSxN) 结合使用可以提供更灵活的存储解决方案。此外，当您在本地使用 NetApp ONTAP 存储解决方案托管 VMware 基础设施时，将 Amazon EVS 与 FSx for ONTAP 结合使用意味着您可以在本地和云托管基础设施之间获得一流的数据互操作性和保护功能。</block>
+  <block id="0f1d73d6c66361ba80e19cc22b86a1b5" category="paragraph">有关Amazon FSx for NetApp ONTAP的信息，请参见<block ref="ec78c81b4b092cfc0332e21528365cfc" category="inline-link-rx"></block>。</block>
+  <block id="dd7fe5a484ddce24b2554586a2d09b2e" category="summary">介绍如何使用 Amazon EVS 和 Amazon FSx for NetApp ONTAP 进行 BlueXP 灾难恢复。结合使用 BlueXP 灾难恢复与 Amazon EVS 和 Amazon FSx for NetApp ONTAP 来执行故障转移、测试故障转移、刷新资源、迁移、立即拍摄快照、禁用或启用复制计划、清理旧快照、协调快照、删除复制计划以及编辑计划。</block>
+  <block id="c356b30bc347bc1eb2fe74945fbe77be" category="doc">使用 BlueXP 灾难恢复执行复制计划操作</block>
+  <block id="2732faab06b2878c1eb17b5e1b7b8db7" category="paragraph">使用 BlueXP 灾难恢复与 Amazon EVS 和 Amazon FSx for NetApp ONTAP 执行以下操作：故障转移、测试故障转移、刷新资源、迁移、立即拍摄快照、禁用/启用复制计划、清理旧快照、协调快照、删除复制计划和编辑计划。</block>
+  <block id="568e662aeb6cb5f3abafa0083f29082f" category="section-title">故障转移</block>
+  <block id="06345068bbff395a98cb1b4d92fd19f4" category="paragraph">您可能需要执行的主要操作是您希望永远不会发生的操作：在生产本地站点发生灾难性故障时故障转移到 DR（目标）数据中心。</block>
+  <block id="929f8200b5d5745bf0922d67a7aeb702" category="paragraph">故障转移是一个手动启动的过程。</block>
+  <block id="033c7809cb7db2bd9967ed41da27d653" category="list-title">访问故障转移操作的步骤</block>
+  <block id="ffbbd53d5c02ce88979e91f9635fbac5" category="list-text">从 BlueXP 灾难恢复菜单中，选择*复制计划*。</block>
+  <block id="f4a6c3bf5bb7636434870ae725dace9f" category="list-title">执行故障转移的步骤</block>
+  <block id="f4881bd41f5a7647a1ad9e140812c61d" category="inline-image-macro">操作菜单的水平点</block>
+  <block id="22e32b6ad42ff1fd375bc414d39ca7de" category="list-text">在复制计划页面中，选择复制计划的操作选项<block ref="35af0c4f66ae1fc18521df2bc2505df9" category="inline-image-macro-rx" type="image"></block> 。</block>
+  <block id="ddc60b12aae4cd21161c3a6683677d87" category="inline-image-macro">故障转移菜单选项</block>
+  <block id="c305b5d48bfc67e6e7d94d4a83c19af7" category="paragraph"><block ref="c305b5d48bfc67e6e7d94d4a83c19af7" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="20c7ba7512d44b333596e490ae04d69f" category="list-text">如果生产（受保护）站点无法访问，请选择之前创建的快照作为恢复映像。为此，请选择“选择”。</block>
+  <block id="36205d97887256b59c0bcc3691656408" category="list-text">选择要用于恢复的备份。</block>
+  <block id="e0284ae2e32742abbe7a72ddcf9b0e50" category="list-text">（可选）选择是否希望 BlueXP 灾难恢复强制执行故障转移过程，无论复制计划的状态如何。这应该作为最后的手段。</block>
+  <block id="ab44d8018ba6f6491680d87eefee732a" category="list-text">（可选）选择是否希望 BlueXP 灾难恢复在生产站点恢复后自动创建反向保护关系。</block>
+  <block id="059eb5c46c8a4f2a16c9ab4f012bed54" category="list-text">输入单词“Failover”来确认您是否要继续。</block>
+  <block id="c702a6b12de6915199f47fdf61c95c51" category="list-text">选择“*故障转移*”。</block>
+  <block id="4b39a048f359a09fa9de4a3100583f07" category="inline-image-macro">故障转移对话框</block>
+  <block id="e5fb7c23867a153ae9816a76aa6c1717" category="paragraph"><block ref="e5fb7c23867a153ae9816a76aa6c1717" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="cebb1167d3e78885137c837f0abf8026" category="section-title">测试故障转移</block>
+  <block id="accf14ae6f3081fa79e8a9271568ea7f" category="paragraph">测试故障转移与故障转移类似，但有两个区别。</block>
+  <block id="ba8a22877412b2a764fcaf1377013701" category="list-text">生产站点仍然处于活动状态，并且所有虚拟机仍在按预期运行。</block>
+  <block id="ffe3447af4d39751e653c77bef31adce" category="list-text">BlueXP 对生产虚拟机的灾难恢复保护仍在继续。</block>
+  <block id="0455e75b717d7af99d737c181265b3e7" category="inline-link-macro">将应用程序故障转移到远程站点 | NetApp 文档</block>
+  <block id="eb60cd435a46cb2a72dad0bad90e83b3" category="paragraph">这是通过在目标站点上使用原生 ONTAP FlexClone 卷来实现的。要了解有关测试故障转移的更多信息，请参阅<block ref="c5a4b51f9800467d8f72f63c8e6bec54" category="inline-link-macro-rx"></block> 。</block>
+  <block id="ac66d74de7e9b01bf8b83eda420d69b5" category="paragraph">执行测试故障转移的步骤与执行实际故障转移的步骤相同，只是您使用复制计划的上下文菜单上的测试故障转移操作。</block>
+  <block id="c49b8221e89f41789a2a43043e0ab7f0" category="list-text">选择复制计划的操作选项<block ref="35af0c4f66ae1fc18521df2bc2505df9" category="inline-image-macro-rx" type="image"></block> 。</block>
+  <block id="40e274aabe3c10540248c941dbd05cb8" category="list-text">从菜单中选择*测试故障转移*。</block>
+  <block id="1a559345b987e0575e0a1c51e219c16d" category="inline-image-macro">测试故障转移菜单选项</block>
+  <block id="c32e1e17085ed0ca2906e246ecc689ec" category="paragraph"><block ref="c32e1e17085ed0ca2906e246ecc689ec" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e3806a4f1466635f7c69ffd13c31e9dc" category="list-text">决定是否要获取生产环境的最新状态（立即拍摄快照）或使用先前创建的复制计划备份（选择）</block>
+  <block id="96f32afb6fcdd8b721d52f9a62dc7958" category="list-text">如果您选择了之前创建的备份，则选择要用于恢复的备份。</block>
+  <block id="8d7c2e2984f4134b60d86fd761b977b7" category="list-text">输入“测试故障转移”一词来验证您是否要继续。</block>
+  <block id="bf63515cf285de8238ef0309a2d05678" category="list-text">选择*测试故障转移*。</block>
+  <block id="a8c93ee4438aec7783049b88778065db" category="inline-image-macro">测试故障转移对话框</block>
+  <block id="d891ef4e4be2988a8f7404e3e66a3966" category="paragraph"><block ref="d891ef4e4be2988a8f7404e3e66a3966" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="4a65f707ef88c886c08d9126f6f72c65" category="section-title">运行合规性检查</block>
+  <block id="6710f330c40545389369acfdd947c822" category="paragraph">默认情况下，合规性检查每三小时运行一次。您随时都可以手动运行合规性检查。</block>
+  <block id="6ac022abcddbfb10ff9a36fc1114e3b4" category="list-text">选择“操作”选项<block ref="2fddd650b01c7f9674be856867aae05d" category="inline-image-macro-rx" type="image"></block>复制计划旁边。</block>
+  <block id="324da46f7d1dc598142515e5f155488c" category="list-text">从复制计划的操作菜单中选择*运行合规性检查*选项：</block>
+  <block id="f08f80a5eaf7192568c9739fc7270c46" category="inline-image-macro">运行合规性检查菜单选项</block>
+  <block id="6cba37ba047ae347eaaaaf21a41e3c59" category="paragraph"><block ref="6cba37ba047ae347eaaaaf21a41e3c59" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a2599e121910c54c28626814ebb5a109" category="list-text">要更改 BlueXP 灾难恢复自动运行合规性检查的频率，请从复制计划的操作菜单中选择*编辑计划*选项。</block>
+  <block id="5a3b6e2d03ca148a71790459c4bc4819" category="section-title">刷新资源</block>
+  <block id="a612a35c47d9f35be9b55995ee6cb4be" category="paragraph">每当您对虚拟基础架构进行更改（例如添加或删除虚拟机、添加或删除数据存储区，或在数据存储区之间移动虚拟机）时，您都需要在 BlueXP 灾难恢复服务中对受影响的 vCenter 集群执行刷新。该服务默认每 24 小时自动执行一次刷新，但手动刷新可确保最新的虚拟基础架构信息可用，并将其纳入灾难恢复保护的考量。</block>
+  <block id="2a713d2af75a9ff3c8198a63eadd3dd6" category="paragraph">有两种情况需要刷新：</block>
+  <block id="8f6b3dc59a290a90778b85f93d204e04" category="list-text">vCenter 刷新：每当在 vCenter 群集中添加、删除或移出虚拟机时，执行 vCenter 刷新：</block>
+  <block id="bb2c5ba75ada770045e8e19979f779ff" category="list-text">复制计划刷新：每当虚拟机在同一源 vCenter 集群中的数据存储之间移动时，执行复制计划刷新。</block>
+  <block id="53172f45c3f78e0f0a061b9894edb469" category="image-alt">刷新资源菜单选项</block>
+  <block id="10b5b21ed1ee90eca305b558caf7d03b" category="section-title">迁移</block>
+  <block id="a3e4a29e1d44dad8e2034cf381100cf8" category="paragraph">虽然 BlueXP 灾难恢复主要用于灾难恢复用例，但它也可以支持将一组虚拟机从源站点一次性迁移到目标站点。这可以用于协同迁移到云的项目，也可以用于避免灾难——例如恶劣天气、政治冲突或其他潜在的暂时性灾难事件。</block>
+  <block id="36a6fe238d0277d3060c69841bde3fef" category="list-text">要将复制计划中的虚拟机移动到目标 Amazon EVS 集群，请从复制计划的操作菜单中选择*迁移*：</block>
+  <block id="b90eea17869e8ebbc46d383dec36f3ea" category="image-alt">迁移菜单选项</block>
+  <block id="11e33978297a963679c0024ac124cb29" category="list-text">在“迁移”对话框中输入信息。</block>
+  <block id="b0a94d0ad57a282321e08a6112475ed3" category="section-title">立即拍摄快照</block>
+  <block id="3b51f6a2afb744108dc17e8832a59b3c" category="paragraph">您可以随时立即创建复制计划的快照。此快照包含在复制计划的快照保留计数设置的 BlueXP 灾难恢复考虑因素中。</block>
+  <block id="3e92c173af93522420b1ed9f2a158fc5" category="list-text">要立即拍摄复制计划资源的快照，请在复制计划的操作菜单上选择*立即拍摄快照*：</block>
+  <block id="477b039d0d8b7335fba316394ab00728" category="image-alt">立即拍摄快照菜单选项</block>
+  <block id="b79fde821703aeeb373761de4bdb405a" category="section-title">禁用或启用复制计划</block>
+  <block id="71b68393c3d6f6b900ba97b739bc2f19" category="paragraph">您可能需要暂时停止复制计划来执行某些可能会影响复制过程的操作或维护。该服务提供了停止和启动复制的方法。</block>
+  <block id="617b3e452b60d43e9d805106e772b377" category="list-text">要暂时停止复制，请在复制计划的操作菜单上选择*禁用*。</block>
+  <block id="b811b71901befdd021e2e8bc473fe80d" category="list-text">要重新启动复制，请在复制计划的操作菜单上选择*启用*。</block>
+  <block id="b63cfe13603d1211e9388962694b20b6" category="paragraph">当复制计划处于活动状态时，“*启用*”命令将显示为灰色。当复制计划处于禁用状态时，“*禁用*”命令将显示为灰色。</block>
+  <block id="d88986f4db78f1f6136188fe813b4670" category="image-alt">禁用/启用菜单选项</block>
+  <block id="fb5d4ab92a440f8da6d5245c90702cd8" category="paragraph">您可能需要清理源站点和目标站点上保留的旧快照。如果复制计划的快照保留计数发生更改，则可能会发生这种情况。</block>
+  <block id="9ead1435f555cbe5194ac03aa3f14153" category="list-text">要手动删除这些旧快照，请从复制计划的操作菜单中选择*清理旧快照*。</block>
+  <block id="776f371e9915a30a6e7a35215c9f6a31" category="image-alt">清理旧快照菜单选项</block>
+  <block id="931f869d33d2ed4eb4467347cbb6c599" category="paragraph">由于该服务会协调 ONTAP 卷快照，因此 ONTAP 存储管理员可以在服务不知情的情况下使用 ONTAP 系统管理器、ONTAP CLI 或 ONTAP REST API 直接删除快照。该服务会每 24 小时自动删除源集群上所有不在目标集群上的快照。但是、您可以按需执行此操作。通过此功能、您可以确保快照在所有站点之间保持一致。</block>
+  <block id="2aea80cc7878ee06ac853bd5825acb61" category="list-text">要从源集群中删除目标集群上不存在的快照，请从复制计划的操作菜单中选择*协调快照*。</block>
+  <block id="910e6231110d3f8f9c342ffd45869c29" category="image-alt">协调快照菜单选项</block>
+  <block id="1a6a6c930de0933fd7db6de4d1dc477e" category="section-title">删除复制计划</block>
+  <block id="9309fcfe23272451df79fcb4773985df" category="paragraph">如果不再需要复制计划，您可以将其删除。</block>
+  <block id="e241fe7ce1ba08d73054f679cb698007" category="list-text">要删除复制计划，请从复制计划的上下文菜单中选择“*删除*”。</block>
+  <block id="d213af6118a6949387ba381bee0bb7f1" category="image-alt">删除菜单选项</block>
+  <block id="846afbe1ece5e037b307cf0360a40102" category="paragraph">两项操作会定期自动执行：测试故障转移和合规性检查。</block>
+  <block id="96e2d810b99dbb7ce1dd1f69c7f5b3a0" category="list-text">要更改这两个操作中的任一个的计划，请选择复制计划的*编辑计划*。</block>
+  <block id="f90ed7446ee302336082ca6e7a8728d7" category="image-alt">编辑时间表菜单选项</block>
+  <block id="9d74fe59f9a87947edf62917622cab78" category="section-title">更改合规性检查间隔</block>
+  <block id="43ab0a50eaca605fa6eb7379ca9cd35c" category="paragraph">默认情况下，合规性检查每三小时执行一次。您可以将其更改为 30 分钟到 24 小时之间的任意间隔。</block>
+  <block id="711fdca29a368838868cdb8b66f5a25c" category="paragraph">要更改此间隔，请更改“编辑计划”对话框中的“频率”字段：</block>
+  <block id="0ab78235e06733ff844354f29286ea23" category="image-alt">合规性检查时间表</block>
+  <block id="8f5df8633aaecbef608d9f81c44f3e01" category="section-title">安排自动测试故障转移</block>
+  <block id="5ec888c1fbbe1d4b124a9f90e95da2a9" category="paragraph">默认情况下，测试故障转移是手动执行的。您可以安排自动测试故障转移，这有助于确保您的复制计划按预期执行。要了解有关测试故障转移过程的更多信息，请参阅<block ref="d58fab57695dd294173a1098cf8b113b" category="inline-link-macro-rx"></block> 。</block>
+  <block id="f05be0f99c71d57183f9a4476e824824" category="list-title">安排测试故障转移的步骤</block>
+  <block id="f3a1acf074fe227d89274501b493c1ab" category="list-text">选择*运行故障转移*。</block>
+  <block id="fcae7526a431169e3f609e220077c278" category="list-text">选中*按计划运行测试故障转移*复选框。</block>
+  <block id="6826a637ec211049ebd15b1557d244cd" category="list-text">（可选）选中*使用按需快照进行计划测试故障转移*。</block>
+  <block id="f4ed67dfc5fcda264bcb9e52308fcb69" category="list-text">在重复下拉菜单中选择间隔类型。</block>
+  <block id="2dad2f5282a0f02ee2cf3dd2668245d9" category="list-text">选择何时执行测试故障转移</block>
+  <block id="6466fec301c85db6711549707f814c6d" category="list-text">每周：选择星期几</block>
+  <block id="9bdde146f3734db431d846a9b67c14be" category="list-text">每月：选择月份中的日期</block>
+  <block id="1a45def86f00623d408295cfcdeaf9c7" category="list-text">选择运行测试故障转移的时间</block>
+  <block id="d286831c6fab295be218cee5293be970" category="list-text">选择开始日期。</block>
+  <block id="9662b1330eade6367225de0265b6ab4c" category="list-text">决定是否希望服务自动清理测试环境，以及希望测试环境在清理过程开始之前运行多长时间。</block>
+  <block id="fd859d2ad3a0f7f4658b9ab4b3f761a3" category="image-alt">编辑计划测试故障转移</block>
+  <block id="8608cf17c3f258a4509ebf3c91882d39" category="summary">使用 Amazon EVS 和 Amazon FSxN 的 BlueXP 灾难恢复解决方案概述。</block>
+  <block id="2d12473c9d31db5d5a029ace437be2ba" category="doc">使用 Amazon EVS 和 Amazon FS 为 NetApp ONTAP 进行 BlueXP 灾难恢复的解决方案概述</block>
+  <block id="827916298fcdb6ea05601d2539662179" category="paragraph">BlueXP 灾难恢复是托管在 BlueXP 软件即服务环境中的一项增值服务，它依赖于 BlueXP 核心架构。BlueXP中用于 VMware 保护的灾难恢复服务由几个主要组件组成。</block>
+  <block id="fe9fdb931480bc69810bdbb893d31164" category="paragraph">有关 BlueXP 灾难恢复解决方案的完整概述，请参阅<block ref="aaf343642f2ab725a2ff6fd93343dece" category="inline-link-macro-rx"></block> 。</block>
+  <block id="dcf4eaae5b7bdb68e0250499844bbcb5" category="paragraph">如果您想要将本地 VMware 托管的虚拟机保护到 Amazon AWS，请使用该服务通过 Amazon FSx for NetApp ONTAP 存储托管数据存储备份到 Amazon EVS。</block>
+  <block id="562f4ec7d85420cef97dbbe985cc8083" category="paragraph">下图显示了该服务如何使用 Amazon EVS 保护您的虚拟机。</block>
+  <block id="beb72ff0d6394d9b5dcea1009ef441bc" category="inline-image-macro">使用 Amazon EVS 和 FSx for ONTAP 的 BlueXP 灾难恢复概述</block>
+  <block id="e7f96e3d7df592d32d84823f40e1fade" category="paragraph">使用 Amazon EVS 和 FSx for ONTAP 的 BlueXP 灾难恢复概述<block ref="ae6a61e6ad048345581bdd81689298c5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="15c9bef1ed46153c52fda03a9fab4114" category="list-text">Amazon EVS 部署在您的帐户中的单个可用区 (AZ) 配置中以及您的虚拟私有云 (VPC) 内。</block>
+  <block id="a11362436af6843b2406e8f85c0484cf" category="list-text">FSx for ONTAP 文件系统与 Amazon EVS 部署在同一可用区中。该文件系统可以通过弹性网络接口 (ENI)、VPC 对等连接或 AmazonTransit 网关直接连接到 Amazon EVS。</block>
+  <block id="f4a3a5cbc3485bfaddfa0155cb5cd3b2" category="list-text">NetApp BlueXP 连接器已安装在您的 VPC 中。BlueXP连接器托管多个数据管理服务（称为代理），包括 BlueXP 灾难恢复代理，该代理负责管理您本地物理数据中心和 Amazon AWS 托管资源上的 VMware 基础架构的灾难恢复。</block>
+  <block id="9bee8355a7cdefc29b053e9b3c88fb8b" category="list-text">BlueXP 灾难恢复代理安全地与 BlueXP 云托管服务通信以接收任务，并将这些任务分发到适当的内部部署和 AWS 托管的 vCenter 和 ONTAP 存储实例。</block>
+  <block id="3f7c8b2439e1827cd25075624d026918" category="list-text">您可以使用 BlueXP 云托管 UI 控制台创建复制计划，指示应保护的虚拟机、应保护这些虚拟机的频率，以及在从内部站点发生故障转移时重新启动这些虚拟机所需执行的程序。</block>
+  <block id="4bac4e102e6c979bf229fc5de1c9333b" category="list-text">复制计划确定哪些 vCenter 数据存储区托管受保护的虚拟机，以及托管这些数据存储区的 ONTAP 卷。如果 FSx for ONTAP 集群上尚不存在卷，BlueXP 灾难恢复会自动创建这些卷。</block>
+  <block id="2b7f0130e9379c81a15287a813fe65da" category="list-text">为每个已识别的源 ONTAP 卷与每个目标 FSx for ONTAP 托管 ONTAP 卷创建 SnapMirror 关系，并根据复制计划中用户提供的 RPO 创建复制计划。</block>
+  <block id="4e87308c8d965550dc58bd69a92f3136" category="list-text">如果主站点发生故障，管理员会在 BlueXP 控制台内启动手动故障转移过程，并选择备份作为还原点。</block>
+  <block id="0849675035707d4b6e0667b3fb89d269" category="list-text">BlueXP 灾难恢复代理激活 FSx for ONTAP 托管的数据保护卷。</block>
+  <block id="e49a8f44b1507573b41346a957317fdc" category="list-text">该代理向 Amazon EVS vCenter 注册每个激活的 FSx for ONTAP 卷，向 Amazon EVS vCenter 注册每个受保护的虚拟机，并根据复制计划中包含的预定义规则启动每个虚拟机。</block>
+  <block id="a75372b318b93c0a6de6b9b4b2b710ec" category="doc">验证 BlueXP 灾难恢复中一切正常</block>
+  <block id="c6c4a414ae0fccd70f534087b621762b" category="paragraph">在 BlueXP 灾难恢复中添加复制计划后，您将返回到“复制计划”页面，您可以在其中查看复制计划及其状态。您应该验证复制计划是否处于“健康”状态。如果不是，您应该检查复制计划的状态并纠正所有问题，然后再继续。</block>
+  <block id="2a52c80686f82be8aa2a3e4f3ff7df31" category="inline-image-macro">复制计划页面</block>
+  <block id="d257cabecabcc55ca3f6b7a3cd75ac7b" category="paragraph">图：复制计划页面<block ref="de37ff63ad6c037e77db1184d40c66f9" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="976fd34ddaf02a83851d294cc50564d0" category="paragraph">BlueXP 灾难恢复会执行一系列测试，以验证所有组件（ONTAP 集群、vCenter 集群和虚拟机）是否可访问且处于服务保护虚拟机所需的正确状态。这称为合规性检查，会定期运行。</block>
+  <block id="cfd75699026c8ccf116d7cc822922048" category="paragraph">在复制计划页面中，您可以看到以下信息：</block>
+  <block id="ccb238eb4af46f131c1c95298789caf9" category="list-text">上次合规性检查的状态</block>
+  <block id="ff73ef921a2595317c8ebcfd745b9525" category="list-text">复制计划的复制状态</block>
+  <block id="dae6a888dd76ab8af615bbd14bb0d970" category="list-text">受保护（源）站点的名称</block>
+  <block id="faf0d22a90ba1218a90118919579cdab" category="list-text">复制计划保护的资源组列表</block>
+  <block id="693eee995124fe1d32610314f6e68c30" category="list-text">故障转移（目标）站点的名称</block>
+  <block id="12033a3d8e0d7f3fb480fa5483fa00f3" category="sidebar">将 BlueXP 灾难恢复与 Amazon EVS 结合使用</block>
+  <block id="b1334639d8bfe77d3582e2378dc38a08" category="sidebar">使用 Amazon EVS 的 BlueXP 灾难恢复概述</block>
+  <block id="c0c4b60d27032c028c91440e9d3be949" category="sidebar">解决方案概述</block>
+  <block id="28312bff8dd6c634a03c918b3596d5f7" category="sidebar">安装BlueXP Connector</block>
+  <block id="c56bd649320b98b22e1f05d40935c0f6" category="sidebar">为 Amazon EVS 配置 BlueXP 灾难恢复</block>
+  <block id="4f94a228aaf45b495bf1d0a2993b0783" category="sidebar">Amazon EVS 的先决条件</block>
+  <block id="d1b981f857dccafd90e2d47d3dd9b84c" category="sidebar">为 Amazon EVS 添加阵列</block>
+  <block id="429e79e40c66df3fe31a40b9087107f5" category="sidebar">为 Amazon EVS 添加 BlueXP 灾难恢复</block>
+  <block id="456d07ca1e92ff93932f43241f478198" category="sidebar">为 Amazon EVS 添加 vCenter 集群</block>
+  <block id="ad115bee9be4ef501777f6719a0fe513" category="sidebar">为 Amazon EVS 创建复制计划</block>
+  <block id="46942b0e0b0069545de09c85b8d0a7fb" category="sidebar">为 Amazon EVS 创建复制计划概述</block>
+  <block id="7b797e6e5b968f50231b064bf226a71c" category="sidebar">为 Amazon EVS 创建复制计划步骤 1</block>
+  <block id="c881eec8e2a2e7f61032f79bd49b2dce" category="sidebar">为 Amazon EVS 创建复制计划第 2 步</block>
+  <block id="9f67090f69f4143c82e2283b43a86ad9" category="sidebar">为 Amazon EVS 创建复制计划步骤 3</block>
+  <block id="3a83143b77a0b90d82bf03cbf43e4443" category="sidebar">为 Amazon EVS 创建复制计划第 4 步</block>
+  <block id="5a72de72f8b0ba4525e25ce937621889" category="sidebar">验证 Amazon EVS 的复制计划</block>
+  <block id="f260d0f12b515f0ab789c0349e49a0fc" category="sidebar">执行复制计划操作</block>
 </blocks>

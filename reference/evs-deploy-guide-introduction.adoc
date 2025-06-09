@@ -1,0 +1,23 @@
+---
+sidebar: sidebar 
+permalink: reference/evs-deploy-guide-introduction.html 
+keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter, netapp, ontap 
+summary: 介绍使用 Amazon EVS 和 Amazon FSx for NetApp ONTAP 进行 BlueXP 灾难恢复。 
+---
+= 使用 Amazon Elastic VMware Service 和 Amazon FSx for NetApp ONTAP 介绍 BlueXP 灾难恢复
+:allow-uri-read: 
+
+
+[role="lead"]
+客户越来越依赖虚拟化基础架构来处理生产计算工作负载，例如基于 VMware vSphere 的基础架构。随着这些虚拟机 (VM) 对业务的重要性日益提升，客户需要保护这些虚拟机免受与物理计算资源相同类型的灾难的影响。目前提供的灾难恢复 (DR) 解决方案既复杂又昂贵，而且资源密集。作为最大的虚拟化基础架构存储提供商，NetApp 致力于确保其客户的虚拟机受到与我们保护 ONTAP 存储托管的任何类型的数据相同的保护。为了实现这一目标，NetApp 创建了 BlueXP 灾难恢复服务。
+
+
+NOTE: 有关 AMAZON EVS 的本文档作为技术预览提供。对于此预览版产品、NetApp保留在正式发布之前修改产品详细信息、内容和时间表的权利。
+
+任何灾难恢复解决方案面临的主要挑战之一是，仅仅为了提供灾难恢复复制和恢复基础架构，就需要管理购买、配置和维护额外计算、网络和存储资源的增量成本。保护关键本地虚拟资源的一个常见选择是使用云托管虚拟资源作为灾难恢复复制和恢复基础架构。亚马逊就是此类解决方案的一个例子，它可以提供与 NetApp ONTAP 托管虚拟机基础架构兼容的经济高效的资源。
+
+亚马逊推出了 Amazon Elastic VMware 服务 (Amazon EVS)，该服务可在您的虚拟私有云 (VPC) 中支持 VMware Cloud Foundation。AmazonEVS 提供 AWS 的弹性和性能，以及熟悉的 VMware 软件和工具，使 Amazon EVS vCenters 可以集成到您的本地虚拟化基础设施中作为扩展。
+
+虽然 Amazon EVS 附带存储资源，但对于存储工作负载繁重的组织来说，使用原生存储可能会降低其效率。在这种情况下，将 Amazon EVS 与 Amazon FSx for NetApp ONTAP 存储 (Amazon FSxN) 结合使用可以提供更灵活的存储解决方案。此外，当您在本地使用 NetApp ONTAP 存储解决方案托管 VMware 基础设施时，将 Amazon EVS 与 FSx for ONTAP 结合使用意味着您可以在本地和云托管基础设施之间获得一流的数据互操作性和保护功能。
+
+有关Amazon FSx for NetApp ONTAP的信息，请参见 https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/getting-started.html["适用于 NetApp ONTAP 的 Amazon FSX 入门"^]。

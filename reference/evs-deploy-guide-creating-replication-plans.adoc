@@ -1,0 +1,27 @@
+---
+sidebar: sidebar 
+permalink: reference/evs-deploy-guide-creating-replication-plans.html 
+keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter 
+summary: '介绍使用 Amazon EVS 和 Amazon FSx for NetApp ONTAP 进行 BlueXP 灾难恢复。在您需要保护本地站点上的 vCenter 并且已将 Amazon EVS 站点配置为使用 Amazon FSx for NetApp ONTAP 并将其用作灾难恢复目标后，您现在可以创建复制计划 (RP) 来保护本地站点内 vCenter 集群上托管的任何虚拟机集。' 
+---
+= 在 BlueXP 灾难恢复概述中创建复制计划
+:allow-uri-read: 
+
+
+[role="lead"]
+在您需要保护本地站点上的 vCenter 并且已将 Amazon EVS 站点配置为使用 Amazon FSx for NetApp ONTAP 并将其用作 DR 目标后，您可以创建复制计划 (RP) 来保护本地站点内 vCenter 集群上托管的任何虚拟机集。
+
+.要开始复制计划创建过程：
+. 从任何 BlueXP 灾难恢复屏幕中，选择“*复制计划*”选项卡。
++
+image:evs-create-rp-1.png["复制计划选项卡"]
+
+. 从复制计划屏幕中，选择*添加*。
++
+image:evs-create-rp-2.png["复制计划屏幕"]
+
+
+
+这将打开创建复制计划向导。
+
+继续link:evs-deploy-guide-create-rp-wiz-01.html["创建复制计划向导步骤1"] 。
