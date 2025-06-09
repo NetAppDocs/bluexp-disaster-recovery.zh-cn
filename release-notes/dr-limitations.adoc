@@ -4,7 +4,7 @@ permalink: release-notes/dr-limitations.html
 keywords: disaster recovery, bluexp 
 summary: 已知限制用于标识此服务版本不支持或无法与之正确交互的平台、设备或功能。 
 ---
-= 限制
+= BlueXP 灾难恢复的局限性
 :hardbreaks:
 :allow-uri-read: 
 :icons: font

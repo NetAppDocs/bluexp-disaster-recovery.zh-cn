@@ -4,7 +4,7 @@ permalink: use/drplan-create.html
 keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter, replication plan, protection, disaster, recovery, virtual machines, vm 
 summary: NetApp BlueXP灾难恢复是一种基于云的灾难恢复服务、可自动执行灾难恢复工作流。添加vCenter站点后、即可创建灾难恢复或复制计划。 
 ---
-= 创建复制计划
+= 在 BlueXP 灾难恢复中创建复制计划
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -186,9 +186,28 @@ NOTE: 如果将设置更改为"与源不同"、则需要提供VM子操作系统�
 在将大型环境恢复到较小的目标集群时、或者在无需配置一对一物理VMware基础架构的情况下执行灾难恢复测试时、这一点非常有用。
 
 +
-image:dr-plan-create-mapping-vms2.png["显示添加复制计划"]
+image:dr-plan-vm-subnet-option2.png["显示添加复制计划"]
 
 
+
+* *目标 IP* 字段，选择以下选项之一：
++
+** *与来源相同*
+** *与来源不同*
+** *子网映射*：如果要将源子网映射到不同的目标子网，请选择此选项。您可以选择源子网，然后选择目标子网。当您想更改目标环境中虚拟机的 IP 地址时，此选项非常有用。
++
+
+NOTE: 使用子网映射是一个可选的两步过程：首先，在“站点”选项卡中为每个 vCenter 站点添加子网映射。其次、在复制计划中、指示您要使用子网映射。
+
++
+
+NOTE: 如果有两个VM (例如、一个是Linux、另一个是Windows)、则只有Windows才需要凭据。
+
+
+
+* *使用 Windows LAPS*：如果您使用 Windows 本地管理员密码解决方案 (Windows LAPS)，请勾选此框。此选项仅在您选择“静态 IP”选项时可用。勾选此框后，您无需为每个虚拟机提供密码，只需提供域控制器详细信息即可。
++
+如果您不使用 Windows LAPS，则该虚拟机为 Windows 虚拟机，并且虚拟机行上的凭据选项已启用。您可以提供该虚拟机的凭据。
 
 * *脚本*：您可以将.sh、.bat或.ps1格式的自定义脚本作为故障转移后进程。通过自定义脚本、您可以在故障转移过程之后让BlueXP灾难恢复运行脚本。例如、您可以使用自定义脚本在故障转移完成后恢复所有数据库事务。
 * *目标VM前缀和后缀*：在虚拟机详细信息下、您可以选择为VM名称添加前缀和后缀。

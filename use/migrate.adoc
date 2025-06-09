@@ -4,7 +4,7 @@ permalink: use/migrate.html
 keywords: disaster recovery, bluexp disaster recovery, migrate, vmware, vcenter 
 summary: 使用BlueXP灾难恢复、您可以将源站点上的VMware应用程序迁移到其他站点。 
 ---
-= 将应用程序迁移到其他站点
+= 使用 BlueXP 灾难恢复将应用程序迁移到另一个站点
 :hardbreaks:
 :allow-uri-read: 
 :icons: font

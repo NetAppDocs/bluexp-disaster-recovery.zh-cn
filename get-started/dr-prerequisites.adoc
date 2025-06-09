@@ -84,6 +84,7 @@ NOTE: 不应提前在目标SVM或SVM中创建灾难恢复卷。BlueXP灾难恢�
 必须在BlueXP中设置BlueXP连接器。使用BlueXP Connector时、它将包括灾难恢复服务的相应功能。
 
 * BlueXP灾难恢复仅适用于标准模式的Connector部署。请参阅。 https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-standard-mode.html["标准模式下的BlueXP入门"^]
+* 确保源 vCenter 和目标 vCenter 都使用相同的 BlueXP 连接器。
 * 所需BlueXP连接器的类型：
 +
 ** *内部到内部灾难恢复*：在灾难恢复站点中安装BlueXP内部部署连接器。请参阅 https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.html["在内部安装和设置连接器"^]。

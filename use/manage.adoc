@@ -4,7 +4,7 @@ permalink: use/manage.html
 keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter, replication plans, resource groups 
 summary: 您可以快速浏览所有BlueXP灾难恢复资源、并管理vCenter站点、资源组和复制计划。 
 ---
-= 管理站点、资源组、复制计划、数据存储库和虚拟机信息
+= 使用 BlueXP 灾难恢复管理站点、资源组、复制计划、数据存储和虚拟机信息
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -12,7 +12,7 @@ summary: 您可以快速浏览所有BlueXP灾难恢复资源、并管理vCenter�
 
 
 [role="lead"]
-您可以快速浏览所有灾难恢复资源、也可以详细了解每个资源：
+您可以快速浏览所有 BlueXP 灾难恢复资源或详细查看每个资源：
 
 * 站点
 * 资源组

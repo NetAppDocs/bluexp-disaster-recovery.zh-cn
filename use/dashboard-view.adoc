@@ -4,7 +4,7 @@ permalink: use/dashboard-view.html
 keywords: disaster recovery remediate, disaster recovery, failover, failback, replication 
 summary: NetApp BlueXP灾难恢复是一种基于云的灾难恢复服务、可自动执行灾难恢复工作流。 
 ---
-= 在信息板上查看灾难恢复计划的运行状况
+= 在仪表板上查看 BlueXP 灾难恢复计划的运行状况
 :hardbreaks:
 :allow-uri-read: 
 :icons: font

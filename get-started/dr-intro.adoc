@@ -20,9 +20,6 @@ BlueXP灾难恢复是一种基于云的灾难恢复服务、可自动执行灾�
 * 采用ONTAP存储的另一个基于NFS的内部VMware环境
 
 
-
-IMPORTANT: 此版本支持通过技术预览将内部VMware工作负载灾难恢复到具有VMware vSphere虚拟机文件系统(Virtual Machine File System、VMFS)数据存储库的内部VMware环境。NetApp不会对任何预览的工作负载容量收取任何费用。
-
 BlueXP灾难恢复使用ONTAP SnapMirror技术作为到灾难恢复站点的复制传输。这样可以在主站点和二级站点上实现行业最佳的存储效率(数据压缩和重复数据删除)。
 
 image:draas-onprem-to-cloud-onprem.png["显示适用于VMware的BlueXP灾难恢复组件的示意图"]

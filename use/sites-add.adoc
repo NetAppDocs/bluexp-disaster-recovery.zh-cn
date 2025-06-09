@@ -4,7 +4,7 @@ permalink: use/sites-add.html
 keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter 
 summary: 在创建灾难恢复计划之前、您需要在BlueXP  灾难恢复中添加一个主vCenter站点和一个目标vCenter灾难恢复站点。 
 ---
-= 将vCenter添加到站点
+= 在 BlueXP 灾难恢复中将 vCenter 添加到站点
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -13,6 +13,9 @@ summary: 在创建灾难恢复计划之前、您需要在BlueXP  灾难恢复�
 
 [role="lead"]
 在创建灾难恢复计划之前、您需要在BlueXP  中将主vCenter Server添加到站点和目标vCenter灾难恢复站点。
+
+
+TIP: 确保源 vCenter 和目标 vCenter 都使用相同的 BlueXP 连接器。
 
 添加vCenter后、BlueXP  灾难恢复会对vCenter环境执行深入发现、包括vCenter集群、ESXi主机、数据存储库、存储足印、虚拟机详细信息、SnapMirror副本和虚拟机网络。
 
@@ -139,6 +142,12 @@ TIP: CIDR表示法用于指定IP地址及其网络掩码。/24表示网络掩码
 === 为复制计划选择子网映射
 
 创建复制计划时、您可以为复制计划选择子网映射。
+
+使用子网映射是一个可选的两步过程：
+
+* 首先、为每个vCenter站点添加子网映射。
+* 其次、在复制计划中、指示您要使用子网映射。
+
 
 .步骤
 . 从BlueXP灾难恢复顶部菜单中、选择*复制计划*。

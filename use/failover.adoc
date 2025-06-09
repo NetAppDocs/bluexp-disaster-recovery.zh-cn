@@ -4,7 +4,7 @@ permalink: use/failover.html
 keywords: disaster recovery, bluexp disaster recovery, failover, replicate, fail over, vmware, vcenter 
 summary: NetApp BlueXP灾难恢复是一种基于云的灾难恢复服务、可自动执行灾难恢复工作流。 
 ---
-= 将应用程序故障转移到远程站点
+= 使用 BlueXP 灾难恢复将应用程序故障转移到远程站点
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
