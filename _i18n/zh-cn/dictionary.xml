@@ -1640,4 +1640,12 @@
   <block id="3a83143b77a0b90d82bf03cbf43e4443" category="sidebar">为 Amazon EVS 创建复制计划第 4 步</block>
   <block id="5a72de72f8b0ba4525e25ce937621889" category="sidebar">验证 Amazon EVS 的复制计划</block>
   <block id="f260d0f12b515f0ab789c0349e49a0fc" category="sidebar">执行复制计划操作</block>
+  <block id="a1e044c84ca270d3adc998b256510801" category="doc">子网映射改进</block>
+  <block id="494053c615ca0aa0debeb6eac90b3e5a" category="paragraph">本次更新增强了“添加和编辑子网映射”对话框，新增了搜索功能。现在，您可以通过输入搜索词快速查找特定子网，从而更轻松地管理子网映射。</block>
+  <block id="dc729c135725ed28b09cd35258e2a28d" category="doc">发现改进</block>
+  <block id="778d15d21e8eaffc6a6c8069d8fa5872" category="paragraph">此更新改进了发现过程，从而减少了发现所需的时间。</block>
+  <block id="b77e8ec0a3425747f32b3dbc303adecb" category="section-title">2025年6月30日</block>
+  <block id="f5939a7e3fd75d2d5422c1d6029f44c8" category="paragraph">版本4.2.4P2</block>
+  <block id="1d498761d9b5afe7d166fb15809b8000" category="section-title">2025年6月23日</block>
+  <block id="c114a433f08237cc585990ed9e9e88d5" category="paragraph">版本4.2.4P1</block>
 </blocks>
