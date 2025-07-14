@@ -14,6 +14,10 @@ summary: NetApp BlueXP灾难恢复是一种基于云的灾难恢复服务、可�
 [role="lead"]
 发生灾难时、请将主内部VMware站点故障转移到另一个内部VMware站点或AWS上的VMware Cloud。您可以在需要时测试故障转移过程以确保成功。
 
+*必需的BlueXP角色* 组织管理员、文件夹或项目管理员、灾难恢复管理员或灾难恢复故障转移管理员角色。
+
+link:../reference/dr-reference-roles.html["了解BlueXP disaster recovery中的用户角色和权限"](英文)https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["了解所有服务的 BlueXP 访问角色"^](英文)
+
 在故障转移期间、将使用最新的SnapMirror Snapshot副本。或者、您也可以根据SnapMirror的保留策略从时间点快照中选择特定快照。如果您正面临勒索软件等损坏事件、而最近的副本已被泄露或加密、则时间点选项会很有用。BlueXP灾难恢复显示所有可用时间点。
 
 根据生产站点是否运行正常以及您是否出于非关键基础架构故障的原因而故障转移到灾难恢复站点、此过程会有所不同：

@@ -14,6 +14,10 @@ summary: 通过BlueXP灾难恢复、您可以使用SnapMirror复制功能将源�
 [role="lead"]
 通过BlueXP灾难恢复、您可以使用SnapMirror复制功能将源站点上的VMware应用程序复制到云中的灾难恢复远程站点。
 
+*必需的BlueXP角色* 组织管理员、文件夹或项目管理员、灾难恢复管理员或灾难恢复故障转移管理员角色。
+
+link:../reference/dr-reference-roles.html["了解BlueXP disaster recovery中的用户角色和权限"](英文)https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["了解所有服务的 BlueXP 访问角色"^](英文)
+
 
 TIP: 创建灾难恢复计划、在向导中确定重复情况并启动到灾难恢复站点的复制之后、BlueXP灾难恢复每30分钟验证一次复制是否确实按照计划进行。您可以在"作业监控器"页面中监控进度。
 

@@ -14,6 +14,10 @@ summary: 借助BlueXP灾难恢复、您可以使用不同的许可计划、包�
 [role="lead"]
 借助BlueXP灾难恢复、您可以使用不同的许可计划、包括免费试用版、按需购买订阅或自带许可证。
 
+*必需的BlueXP角色* 组织管理员、文件夹或项目管理员、灾难恢复管理员或灾难恢复应用程序管理员角色。
+
+link:../reference/dr-reference-roles.html["了解BlueXP disaster recovery中的用户角色和权限"](英文)https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["了解所有服务的 BlueXP 访问角色"^](英文)
+
 您可以使用以下许可证类型：
 
 * 注册30天免费试用。

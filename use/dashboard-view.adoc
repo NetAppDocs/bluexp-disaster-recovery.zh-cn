@@ -14,6 +14,10 @@ summary: NetApp BlueXP灾难恢复是一种基于云的灾难恢复服务、可�
 [role="lead"]
 使用BlueXP灾难恢复信息板、您可以确定灾难恢复站点和复制计划的运行状况。您可以快速确定哪些站点和计划运行状况良好、已断开连接或已降级。
 
+*必需的BlueXP角色* 组织管理员、文件夹或项目管理员、灾难恢复管理员、灾难恢复应用程序管理员或灾难恢复查看器角色。
+
+link:../reference/dr-reference-roles.html["了解BlueXP disaster recovery中的用户角色和权限"](英文)https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["了解所有服务的 BlueXP 访问角色"^](英文)
+
 .步骤
 . 从BlueXP左侧导航栏中、选择*保护*>*灾难恢复*。
 . 从BlueXP灾难恢复顶部菜单中、选择*仪表板*。

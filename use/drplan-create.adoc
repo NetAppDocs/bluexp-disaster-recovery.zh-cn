@@ -16,6 +16,10 @@ summary: NetApp BlueXP灾难恢复是一种基于云的灾难恢复服务、可�
 
 此类计划有时称为_Blueprints_。
 
+*必需的BlueXP角色* 组织管理员、文件夹或项目管理员、灾难恢复管理员、灾难恢复故障转移管理员或灾难恢复应用程序管理员角色。
+
+link:../reference/dr-reference-roles.html["了解BlueXP disaster recovery中的用户角色和权限"](英文)https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["了解所有服务的 BlueXP 访问角色"^](英文)
+
 您可以创建复制计划、还可以编辑合规性和测试计划。
 
 您可以保护多个数据存储库上的多个VM。BlueXP  灾难恢复会为托管受保护VM数据存储库的所有ONTAP卷创建ONTAP一致性组。

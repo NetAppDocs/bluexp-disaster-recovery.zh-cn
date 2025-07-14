@@ -19,6 +19,10 @@ TIP: 确保源 vCenter 和目标 vCenter 都使用相同的 BlueXP 连接器。
 
 添加vCenter后、BlueXP  灾难恢复会对vCenter环境执行深入发现、包括vCenter集群、ESXi主机、数据存储库、存储足印、虚拟机详细信息、SnapMirror副本和虚拟机网络。
 
+*必需的BlueXP角色* 组织管理员、文件夹或项目管理员或灾难恢复管理员。
+
+link:../reference/dr-reference-roles.html["了解BlueXP disaster recovery中的用户角色和权限"](英文)https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["了解所有服务的 BlueXP 访问角色"^](英文)
+
 如果您在先前版本中添加了vCenter、并希望自定义发现计划、则必须编辑vCenter Server站点并设置计划。
 
 
