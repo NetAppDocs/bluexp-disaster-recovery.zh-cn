@@ -1317,7 +1317,6 @@
   <block id="77b6a574c8fd563a40ba5d3ced2f6995" category="summary">在继续使用 BlueXP 灾难恢复配置 Amazon EVS 之前，您应该确保满足几个先决条件。</block>
   <block id="3cfd631225e4a5cd11bb7f070aa490d3" category="paragraph">具体来说，请执行以下操作：</block>
   <block id="0c16cce0fa7cbfe2c47b9b35b500ef09" category="list-text">创建一个具有 BlueXP 灾难恢复所需的特定 VMware 权限的 vCenter 用户帐户，以执行必要的操作。</block>
-  <block id="f1b035e723ce8afdf6da2bf6a610f72a" category="admonition">我们不建议使用默认的“administrator@vsphere.com”管理员帐户。相反，您应该在所有将参与 DR 流程的 vCenter 集群上创建一个 BlueXP 灾难恢复专用用户帐户。有关所需特定权限的列表，请参阅<block ref="81359e3dc28c5def835ffa82482dcdcf" category="inline-link-macro-rx"></block> 。</block>
   <block id="99c420b6898c190b219ba1e25a1f737e" category="list-text">确保所有托管受 BlueXP 灾难恢复保护的虚拟机的 vCenter 数据存储都位于 NetApp ONTAP 存储资源上。</block>
   <block id="8fc09ae0803e50a45a94b04ffd9379bf" category="paragraph">在 NetApp ONTAP 上使用 Amazon FSx 时，该服务支持 iSCSI 上的 NFS 和 VMFS（而非 FC）。虽然该服务支持 FC，但 Amazon FSx for NetApp ONTAP 不支持。</block>
   <block id="aaa40fdffdb9b8b6db1fa18723bcd15b" category="list-text">确保您的 Amazon EVS vCenter 已连接到 Amazon FSx for NetApp ONTAP 存储集群。</block>
@@ -1727,4 +1726,5 @@
   <block id="bdc1d9aa4d279b8a12963cdbced8ce50" category="paragraph">*必需的BlueXP角色* 组织管理员、文件夹或项目管理员、灾难恢复管理员、灾难恢复故障转移管理员、灾难恢复应用程序管理员或灾难恢复查看器角色。</block>
   <block id="c63f107526be606f4a1357ceb85fa571" category="paragraph">*必需的BlueXP角色* 组织管理员、文件夹或项目管理员或灾难恢复管理员。</block>
   <block id="bfc307710c1f872e4dfb6ec657573e8a" category="sidebar">BlueXP disaster recovery角色和权限</block>
+  <block id="0b6db37b4e08c0c7d93c7363682d4617" category="admonition">我们不建议使用默认的“\administrator@vsphere.com”管理员帐户。相反，您应该在所有将参与 DR 流程的 vCenter 集群上创建一个 BlueXP 灾难恢复专用用户帐户。有关所需特定权限的列表，请参阅<block ref="81359e3dc28c5def835ffa82482dcdcf" category="inline-link-macro-rx"></block> 。</block>
 </blocks>

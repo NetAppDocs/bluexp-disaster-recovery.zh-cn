@@ -16,7 +16,7 @@ summary: 在继续使用 BlueXP 灾难恢复配置 Amazon EVS 之前，您应该
 * 创建一个具有 BlueXP 灾难恢复所需的特定 VMware 权限的 vCenter 用户帐户，以执行必要的操作。
 +
 
-NOTE: 我们不建议使用默认的“administrator@vsphere.com”管理员帐户。相反，您应该在所有将参与 DR 流程的 vCenter 集群上创建一个 BlueXP 灾难恢复专用用户帐户。有关所需特定权限的列表，请参阅link:vcenter-privileges.html["BlueXP灾难恢复所需的vCenter特权"] 。
+NOTE: 我们不建议使用默认的“\administrator@vsphere.com”管理员帐户。相反，您应该在所有将参与 DR 流程的 vCenter 集群上创建一个 BlueXP 灾难恢复专用用户帐户。有关所需特定权限的列表，请参阅link:vcenter-privileges.html["BlueXP灾难恢复所需的vCenter特权"] 。
 
 * 确保所有托管受 BlueXP 灾难恢复保护的虚拟机的 vCenter 数据存储都位于 NetApp ONTAP 存储资源上。
 +
