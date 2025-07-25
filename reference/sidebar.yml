@@ -20,7 +20,7 @@ entries:
       url: "/reference/evs-deploy-guide-config-draas.html"
     - title: Amazon EVS 的先决条件
       url: "/reference/evs-deploy-guide-config-prereqs.html"
-    - title: 为 Amazon EVS 添加阵列
+    - title: 为 Amazon EVS 添加ONTAP存储阵列
       url: "/reference/evs-deploy-guide-config-add-arrays.html"
     - title: 为 Amazon EVS 添加 BlueXP 灾难恢复
       url: "/reference/evs-deploy-guide-enable-draas.html"
