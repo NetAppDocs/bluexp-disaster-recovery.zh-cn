@@ -547,9 +547,7 @@
   <block id="e2066cd1f4f96874fad4da9c48f8715b" category="list-text">如果您已在使用此服务、则在选择"Disaster Recovery (灾难恢复)"时、将显示信息板。</block>
   <block id="4701248bbe25ed364a5f0c79467e9f29" category="list-text">首先添加vCenter。</block>
   <block id="d780b26d8f0dcbe5b2593febbaacdb60" category="paragraph">有关详细信息，请参见 <block ref="84d66f7662bc8a91a68e93706653efe2" category="inline-link-macro-rx"></block>。</block>
-  <block id="ad7911fdd21ff5752d10300d0446de95" category="section-title">试用结束后、通过AWS Marketplace进行订阅</block>
   <block id="acce4a6c25bc51b4930085d68e3cb0cd" category="list-text">在BlueXP灾难恢复中、您会看到一条消息、指出免费试用即将到期。在消息中，选择*订阅或购买许可证*。</block>
-  <block id="584a50ae29d097d233ebd86ad952d305" category="list-text">选择*在AWS Marketplace中订阅*。</block>
   <block id="717132172ed170ccb94cc8674c35dfbd" category="list-text">返回到BlueXP灾难恢复后、系统会显示一条消息、指出您已订阅。</block>
   <block id="d66d706cd022ab39ed6479a713135515" category="paragraph"><block ref="d66d706cd022ab39ed6479a713135515" category="inline-image-macro-rx" type="image"></block></block>
   <block id="991e816286764c3a5ea9b023c35e1d77" category="paragraph"><block ref="991e816286764c3a5ea9b023c35e1d77" category="inline-image-macro-rx" type="image"></block></block>
@@ -1155,10 +1153,6 @@
   <block id="981aed0e5104e08339386a1c5379d13f" category="paragraph">有关跳过保护的详细信息，请参见<block ref="1cbf59ee3e77dd0082612a21b0900f81" category="inline-link-rx"></block>。</block>
   <block id="a104b856c104ac1d20a94ca4ed8ba3f8" category="paragraph">如果选择此选项、则BlueXP  灾难恢复不会配置备份计划。但是、您仍需要配置保留计划、因为仍可能会为测试、故障转移和故障恢复操作创建快照。</block>
   <block id="05861d9bf485f3b7dc6f56871ad28892" category="paragraph">有关在复制计划中使用外部快照解决方案的详细信息，请参见<block ref="5cf2140f2775e5f1ccc24bb836a069a3" category="inline-link-rx"></block>。</block>
-  <block id="d1b560a6ba275c266fdac08bcd1ba2d5" category="list-text">通过Amazon Web Services (AwS) Marketplace购买* NetApp智能服务*的按需购买(PAYGO)订阅。</block>
-  <block id="c14eff79606049ee3db744788f842d7d" category="list-text">通过Amazon Web Services (AwS) Marketplace购买* NetApp智能服务*的按需购买(PAYGO)订阅。</block>
-  <block id="cbb303696e69ece252e4279cf7e650f4" category="paragraph">免费试用结束后、您可以从NetApp购买许可证、也可以通过NetApp Marketplace订阅* AWS智能服务*。本操作步骤简要概述了如何直接在AWS Marketplace中订阅。</block>
-  <block id="05d7d2c6dcb40b2ad3598ed40596c890" category="list-text">使用AWS Marketplace订阅* NetApp智能服务*和* BlueXP  灾难恢复*。</block>
   <block id="ddbdc0fdada8e6466e651115cefbafee" category="section-title">映射资源&gt;计算资源部分</block>
   <block id="c74f8b35838f9f38552c33a8c05ad01a" category="paragraph">选择*计算资源*旁边的向下箭头。</block>
   <block id="5044b19178ff5f8de4c9c0246fe12b78" category="admonition">如果vCenter配置了Distributed Resource Scheduler (DRS)来管理集群中的多个主机、则无需选择主机。如果选择主机、则BlueXP  灾难恢复会将所有VM置于选定主机上。**目标VM文件夹*(可选)：创建一个新的根文件夹以存储选定的VM。</block>
@@ -1727,4 +1721,34 @@
   <block id="759d32287efdf88cd8ac71dccc0ecf8d" category="inline-image-macro">屏幕截图显示了帐户序列号、绿色复选框和文本“已注册支持”。</block>
   <block id="4c441b388bebcddf8c08fb782095b864" category="paragraph"><block ref="4c441b388bebcddf8c08fb782095b864" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b48bf926273d62cab06e1bce2eeec67f" category="sidebar">为 Amazon EVS 添加ONTAP存储阵列</block>
+  <block id="d4b79f85bf29ad80a3ae386050c77c87" category="doc">BlueXP disaster recovery更新</block>
+  <block id="36088b35355e766d544b98140baa439a" category="list-text">改进了 VMFS 支持，以处理来自多个存储虚拟机的相同 LUN。</block>
+  <block id="5958ae417b9ca044a24e8a3629b195bb" category="list-text">改进了测试拆卸清理以处理已被卸载或删除的数据存储。</block>
+  <block id="1a2957b0c8fb36225440df520076e072" category="list-text">改进了子网映射，以便现在可以验证输入的网关是否包含在提供的网络中。</block>
+  <block id="7f5267deccdc08e8591ec8b4dccfcc03" category="list-text">解决了虚拟机名称包含“.com”时可能导致复制计划失败的问题。</block>
+  <block id="8af129ac3a817923db5feb647660eb7c" category="list-text">在创建复制计划的过程中，删除了阻止目标卷与源卷相同的限制。</block>
+  <block id="4de413f6189881cc6b259fb6e68df02c" category="list-text">在 Azure 市场中添加了对NetApp智能服务的即用即付 (PAYGO) 订阅支持，并在免费试用对话框中添加了 Azure 市场的链接。</block>
+  <block id="276ba658474d8685c0925cd2bcb486a8" category="inline-link">BlueXP disaster recovery许可</block>
+  <block id="17c3f7bad28af5667bbaacbe3fe4f6d1" category="paragraph">有关详细信息，请参阅<block ref="ea68973aac8ca707300074d97a0eb98d" category="inline-link-rx"></block>和<block ref="1e6c39dcb2e36546ede605d53a914ae9" category="inline-link-rx"></block>。</block>
+  <block id="b9c1cdf7f87b0afdb4912dd1210368b2" category="doc">测试故障转移的脚本配置</block>
+  <block id="23b8df4f947d4876b62a4f35651dc9da" category="paragraph">在此版本中，您现在可以在测试故障转移过程中启动虚拟机后在其上运行脚本。这使您能够测试和验证脚本。例如，您可以更新 NFS 挂载以指向新的目标服务器，确保来宾应用程序完全在线，并且可以端到端测试您的恢复过程。</block>
+  <block id="c50483baf55d5fc84eb7cde2deb8dbbe" category="paragraph">有关故障转移过程的更多信息，请参阅<block ref="971d0cd2e9d374816901b4e00433e2bb" category="inline-link-macro-rx"></block>。</block>
+  <block id="bf6db1e2a0fdc4928d739c9a62b174a9" category="section-title">改进的故障恢复过程</block>
+  <block id="3409a7280b540ad3a82c8fa7bda31a54" category="paragraph">在故障转移期间，故障回复过程现在被禁用，直到发现完成。这可确保在启动故障恢复之前正确识别和考虑所有配置，并降低发生错误的风险。</block>
+  <block id="4e76033871d8eb52e7a46330cc531bd8" category="inline-link-macro">将应用程序故障回复到原始源</block>
+  <block id="61a1bcd67556c0aafb06a8820e6e7dce" category="paragraph">有关故障恢复过程的更多信息，请参阅<block ref="5386470d7b73cea41e5e361ec83bbd7a" category="inline-link-macro-rx"></block>。</block>
+  <block id="45e704b7096fcf6ac27af9311b96c07a" category="list-text">通过 Amazon Web Services (AWS) Marketplace 和 Microsoft Azure Marketplace 购买 * NetApp Intelligent Services* 的即用即付 (PAYGO) 订阅。</block>
+  <block id="caf89067dc5383afa96e1ac3e7c34bb7" category="paragraph">*许可选项* 您可以使用以下许可选项：</block>
+  <block id="3c0bdabbea501ff7dea57775a21c6a85" category="list-text">通过 Amazon Web Services (AWS) Marketplace 或 Microsoft Azure Marketplace 购买 * NetApp Intelligent Services* 的即用即付 (PAYGO) 订阅。</block>
+  <block id="919574c2e1cf45885dfdded4236ff487" category="section-title">试用期结束后，通过其中一个市场进行订阅</block>
+  <block id="446691d02deb2b03ca183c5fd9738d38" category="paragraph">免费试用结束后，您可以从NetApp购买许可证，也可以通过 AWS Marketplace 或 Microsoft Azure Marketplace 订阅 * NetApp智能服务*。此过程提供了如何在其中一个市场中直接订阅的高级概述。</block>
+  <block id="56e5cf5f883e7b888ddd4a1ac7202af2" category="paragraph">或者，从右上角选择“查看付款方式”。</block>
+  <block id="89642db6eeb3c89414135d980b0f379c" category="inline-image-macro">BlueXP disaster recovery付款方式页面</block>
+  <block id="de623a7bc4167d216e4ecab40f63a530" category="paragraph"><block ref="de623a7bc4167d216e4ecab40f63a530" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d54ccf88bc5eb0a90680898e52b66685" category="list-text">选择*在 AWS Marketplace 中订阅*或*在 Azure Marketplace 中订阅*。</block>
+  <block id="ea9723858fffb6cdd001caff1cc4ed38" category="list-text">使用 AWS Marketplace 或 Microsoft Azure Marketplace 订阅 * NetApp智能服务 * 和 * BlueXP disaster recovery*。</block>
+  <block id="2f5c8ea43e93d972b7a25e5290de1a89" category="section-title">2025年9月15日</block>
+  <block id="7b79550b0f239051cee47679029d92d0" category="paragraph">版本 4.3.5P3</block>
+  <block id="3488d38349240c72f75d081c2a79fa3b" category="section-title">2025年8月4日</block>
+  <block id="4a32789f771ba902fef02cd0f2a544e6" category="paragraph">版本 4.2.5P2</block>
 </blocks>
